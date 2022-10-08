@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/screens/test_screen.dart';
+import 'package:flutter_ui/UI_Pages/testUI/test_screen.dart';
 import '../widgets/heading.dart';
 import '../widgets/screen_display.dart';
 import '../widgets/searchbar.dart';

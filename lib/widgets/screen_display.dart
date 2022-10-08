@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/screens/test_screen.dart';
+import 'package:flutter_ui/UI_Pages/testUI/test_screen.dart';
 
 class WidgetButton extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
@@ -7,8 +7,12 @@ class WidgetButton extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final subTitle;
   final Widget screen;
-  const WidgetButton(
-      {super.key, this.title, this.subTitle, required this.screen});
+  const WidgetButton({
+    super.key,
+    required this.title,
+    required this.subTitle,
+    required this.screen,
+  });
 
   @override
   Widget build(BuildContext context) {
