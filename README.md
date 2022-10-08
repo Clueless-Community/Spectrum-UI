@@ -31,15 +31,6 @@ Simply pick up a template UI from our collection list which you love and then pl
 
 ### You can choose from following UI's:
 1. Login 
-
-    * Retro Login
-    * Simple Login
-    * Dark Theme Loginx
-    * Glassmorphism Login
-    * Minimal Login
-    * Cute Login
-    * Abstract Login
-
 2. Sign Up
 3. App Bar
 4. Modals
@@ -48,11 +39,10 @@ Simply pick up a template UI from our collection list which you love and then pl
 
 ... and many more.
 
-
 #
 ## Screenshots 🤩
 
-<img width="257" alt="image" src="https://user-images.githubusercontent.com/32421196/194718774-0c6388c8-e087-487b-9357-30243fc70e14.png"><img width="258" alt="image" src="https://user-images.githubusercontent.com/32421196/194718996-52097eb6-2c80-442f-b2f8-1d0b616f8f7f.png"><img width="257" alt="image" src="https://user-images.githubusercontent.com/32421196/194719073-5af810cf-9519-4f31-ac2e-4ce96333c999.png">
+<img height="550" alt="image" src="https://user-images.githubusercontent.com/32421196/194718774-0c6388c8-e087-487b-9357-30243fc70e14.png"><img height="550" alt="image" src="https://user-images.githubusercontent.com/32421196/194718996-52097eb6-2c80-442f-b2f8-1d0b616f8f7f.png"><img height="545" alt="image" src="https://user-images.githubusercontent.com/32421196/194721176-a0477f7c-ae66-4383-bcb9-3cda68922df1.png">
 
 
 [Read More](https://github.com/Clueless-Community/flutter-ui-components/blob/master/About.md)
