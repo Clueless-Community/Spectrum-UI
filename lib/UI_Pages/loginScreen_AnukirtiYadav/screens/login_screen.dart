@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
             end: Alignment.bottomRight,
             colors: [
               const Color(0xFFffffff).withOpacity(0.04),
-              const Color(0xFFFFFFFF).withOpacity(0.05),
+              const Color(0xFFFFFFFF).withOpacity(0.1),
             ],
           ),
           borderGradient: LinearGradient(
@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
                 const TextFormFieldWidget(
                   hintText: 'Email',
@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
                 const SizedBox(
-                  height: 40,
+                  height: 50,
                 ),
                 Center(
                   child: ElevatedButton(
@@ -140,7 +140,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                 ),
-                //
               ],
             ),
           ),
