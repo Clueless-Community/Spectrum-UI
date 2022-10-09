@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Heading extends StatelessWidget {
-  final title;
-  final count;
-  const Heading({super.key, this.title, this.count});
+  final String title;
+  final dynamic count;
+  const Heading({super.key, required this.title, this.count});
 
   @override
   Widget build(BuildContext context) {

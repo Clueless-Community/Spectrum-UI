@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/UI_Pages/testUI/test_screen.dart';
 import '../widgets/heading.dart';
 import '../widgets/screen_display.dart';
@@ -11,22 +12,39 @@ class UiCollection extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: const [
-          Heading(
+        children: [
+          const Heading(
             title: "UI Collections",
             count: "2",
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          SearchBar(),
-          SizedBox(
+          const SearchBar(),
+          const SizedBox(
             height: 20,
           ),
           WidgetButton(
             title: "Login UI",
             subTitle: "Login UI design made by Roshan",
-            screen: Test(),
+            screen: const Test(),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Test()),
+              );
+            },
+          ),
+          WidgetButton(
+            title: "Sign Up",
+            subTitle: "A collection of signup page UI",
+            screen: const SignUpScreen(),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SignUpScreen()),
+              );
+            },
           ),
         ],
       ),
