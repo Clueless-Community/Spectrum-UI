@@ -29,14 +29,14 @@ class _LoginScreenState extends State<LoginScreen> {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              const Color(0xFFffffff).withOpacity(0.01),
+              const Color(0xFFffffff).withOpacity(0.04),
               const Color(0xFFFFFFFF).withOpacity(0.05),
             ],
           ),
           borderGradient: LinearGradient(
             colors: [
-              const Color(0xFFffffff).withOpacity(0),
-              const Color((0xFFFFFFFF)).withOpacity(0),
+              const Color(0xFFffffff).withOpacity(0.6),
+              const Color((0xFFFFFFFF)).withOpacity(0.2),
             ],
           ),
           child: Padding(
