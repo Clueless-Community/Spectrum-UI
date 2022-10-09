@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/UI_Pages/testUI/test_screen.dart';
 import '../widgets/heading.dart';
@@ -27,11 +28,11 @@ class UiCollection extends StatelessWidget {
           WidgetButton(
             title: "Login UI",
             subTitle: "Login UI design made by Roshan",
-            screen: const Test(),
+            screen: const LoginScreen(),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Test()),
+                MaterialPageRoute(builder: (context) => const LoginScreen()),
               );
             },
           ),
