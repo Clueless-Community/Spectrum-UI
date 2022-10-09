@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/UI_Pages/testUI/test_screen.dart';
 
 class WidgetButton extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
@@ -7,22 +6,19 @@ class WidgetButton extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final subTitle;
   final Widget screen;
+  final void Function()? onTap;
   const WidgetButton({
     super.key,
     required this.title,
     required this.subTitle,
     required this.screen,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const Test()),
-        );
-      },
+      onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         child: Container(
