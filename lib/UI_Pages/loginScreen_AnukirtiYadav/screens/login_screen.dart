@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
             end: Alignment.bottomRight,
             colors: [
               const Color(0xFFffffff).withOpacity(0.04),
-              const Color(0xFFFFFFFF).withOpacity(0.1),
+              const Color(0xFFFFFFFF).withOpacity(0.3),
             ],
           ),
           borderGradient: LinearGradient(
