@@ -18,7 +18,7 @@ class CheckBoxWidget<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        onChanged!(value as T);
+        onChanged!(value!);
       },
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,16 +27,16 @@ class CheckBoxWidget<T> extends StatelessWidget {
             margin: const EdgeInsets.all(4),
             height: 12,
             width: 12,
-            color: value != groupValue
+            color: value == groupValue
                 ? const Color.fromARGB(255, 89, 200, 106)
-                : Colors.grey,
+                : const Color.fromARGB(255, 112, 102, 134),
             child: Center(
               child: Container(
                 height: 12,
                 width: 12,
-                color: value != groupValue
+                color: value == groupValue
                     ? const Color.fromARGB(255, 89, 200, 106)
-                    : Colors.grey,
+                    : const Color.fromARGB(255, 112, 102, 134),
               ),
             ),
           ),

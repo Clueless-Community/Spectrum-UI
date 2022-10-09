@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
-import 'package:flutter_ui/UI_Pages/testUI/test_screen.dart';
 import '../widgets/heading.dart';
 import '../widgets/screen_display.dart';
 import '../widgets/searchbar.dart';

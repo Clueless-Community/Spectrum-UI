@@ -13,6 +13,8 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   String? _value;
+  Color? color;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,18 +42,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
             const TextFormFieldWidget(
               hintText: 'Email',
+              keyboardType: TextInputType.emailAddress,
             ),
             const TextFormFieldWidget(
               hintText: 'Password',
+              obscureText: true,
+              keyboardType: TextInputType.visiblePassword,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CheckBoxWidget(
-                    text: 'Remember me',
-                    value: 'YES',
-                    groupValue: _value,
-                    onChanged: (String value) {}),
+                  text: 'Remember me',
+                  value: 'YES',
+                  groupValue: _value,
+                  onChanged: (String value) {
+                    setState(() {
+                      _value = value;
+                      color = const Color.fromARGB(255, 89, 200, 106);
+                    });
+                  },
+                ),
                 TextButton(
                   onPressed: () {},
                   child: const Text(
@@ -122,16 +133,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   'assets/signUpImages_AnukirtiYadav/google-img.png',
                   height: 45,
                   width: 45,
+                  color: Colors.white,
                 ),
                 Image.asset(
                   'assets/signUpImages_AnukirtiYadav/twitter-img.png',
                   height: 45,
                   width: 45,
+                  color: Colors.white,
                 ),
                 Image.asset(
                   'assets/signUpImages_AnukirtiYadav/github-img.png',
                   height: 45,
                   width: 45,
+                  color: Colors.white,
                 ),
               ],
             ),

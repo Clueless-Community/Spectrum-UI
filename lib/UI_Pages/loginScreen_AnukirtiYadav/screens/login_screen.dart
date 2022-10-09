@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/widgets/textFormField_widget.dart';
 
@@ -39,9 +37,12 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             const TextFormFieldWidget(
               hintText: 'Email',
+              keyboardType: TextInputType.emailAddress,
             ),
             const TextFormFieldWidget(
               hintText: 'Password',
+              obscureText: true,
+              keyboardType: TextInputType.visiblePassword,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -89,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Don\'t have an account? ',
+                  'Don\'t have an account?',
                   style: TextStyle(
                     color: Color.fromARGB(255, 112, 102, 134),
                     fontWeight: FontWeight.w400,

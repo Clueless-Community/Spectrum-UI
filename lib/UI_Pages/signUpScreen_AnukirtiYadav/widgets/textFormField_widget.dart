@@ -4,9 +4,13 @@ import 'package:flutter/material.dart';
 
 class TextFormFieldWidget extends StatefulWidget {
   final String? hintText;
+  final TextInputType? keyboardType;
+  final bool? obscureText;
   const TextFormFieldWidget({
     super.key,
     this.hintText,
+    this.keyboardType,
+    this.obscureText = false,
   });
 
   @override
@@ -31,7 +35,13 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
         ),
       ),
       child: TextFormField(
+        style: const TextStyle(
+          fontSize: 20,
+          color: Color.fromARGB(255, 112, 102, 134),
+        ),
         cursorColor: const Color.fromARGB(255, 112, 102, 134),
+        keyboardType: widget.keyboardType,
+        obscureText: widget.obscureText!,
         decoration: InputDecoration(
           border: InputBorder.none,
           hintText: widget.hintText,
