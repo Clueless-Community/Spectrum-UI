@@ -32,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   build_runner: ^2.2.1
+  glassmorphism: ^3.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
