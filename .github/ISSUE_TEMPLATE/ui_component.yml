@@ -1,0 +1,20 @@
+name: 💡 Add UI component
+description: Have a new UI component for the project? Please add!
+title: "[UI component] <description>"
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the UI that you want to add and its type
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+
