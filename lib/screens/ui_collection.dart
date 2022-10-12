@@ -16,7 +16,7 @@ class UiCollection extends StatelessWidget {
         children: [
           const Heading(
             title: "UI Collections",
-            count: "2",
+            count: "3",
           ),
           const SizedBox(
             height: 20,
@@ -50,7 +50,7 @@ class UiCollection extends StatelessWidget {
           WidgetButton(
             title: "Buttons",
             subTitle: "A collection of button designs",
-            screen: const SignUpScreen(),
+            screen: const ButtonScreen(),
             onTap: () {
               Navigator.push(
                           context,
