@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/UI_Pages/bottomNavigation_Roshaen/screen/bottom_bar.dart';
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/buttons/buttons_screen.dart';
@@ -8,7 +9,7 @@ import '../widgets/searchbar.dart';
 
 class UiCollection extends StatelessWidget {
   const UiCollection({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -16,7 +17,7 @@ class UiCollection extends StatelessWidget {
         children: [
           const Heading(
             title: "UI Collections",
-            count: "3",
+            count: "4",
           ),
           const SizedBox(
             height: 20,
@@ -53,10 +54,20 @@ class UiCollection extends StatelessWidget {
             screen: const ButtonScreen(),
             onTap: () {
               Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ButtonScreen()),
-                        );
+                context,
+                MaterialPageRoute(builder: (context) => const ButtonScreen()),
+              );
+            },
+          ),
+          WidgetButton(
+            title: "Bottom Navigation Bar",
+            subTitle: "A simple bottom navigation bar UI",
+            screen: const BottomBar(),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const BottomBar()),
+              );
             },
           ),
         ],
