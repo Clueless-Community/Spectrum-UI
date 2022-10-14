@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
-import 'package:flutter_ui/buttons/buttons_screen.dart';
+import 'package:flutter_ui/buttons_sagardev2301/buttons_screen.dart';
+import 'package:flutter_ui/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
 import '../widgets/heading.dart';
 import '../widgets/screen_display.dart';
 import '../widgets/searchbar.dart';
 
 class UiCollection extends StatelessWidget {
   const UiCollection({super.key});
-  
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -16,7 +16,7 @@ class UiCollection extends StatelessWidget {
         children: [
           const Heading(
             title: "UI Collections",
-            count: "2",
+            count: "4",
           ),
           const SizedBox(
             height: 20,
@@ -50,12 +50,24 @@ class UiCollection extends StatelessWidget {
           WidgetButton(
             title: "Buttons",
             subTitle: "A collection of button designs",
-            screen: const SignUpScreen(),
+            screen: const ButtonScreen(),
             onTap: () {
               Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => const ButtonScreen()),
+                        );
+            },
+          ),
+          WidgetButton(
+            title: "Dialog Box",
+            subTitle: "A collection of Dialog Box",
+            screen: const DialogScreen(),
+            onTap: () {
+              Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DialogScreen()),
                         );
             },
           ),
