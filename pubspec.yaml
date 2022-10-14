@@ -40,6 +40,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_neumorphic: ^3.2.0
   google_fonts: ^3.0.1
+  fluentui_icons: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +68,7 @@ flutter:
   assets:
     - assets/signUpImages_AnukirtiYadav/
     - assets/loginImages_Aaliya-Ali/
+    - assets/buttons_images/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

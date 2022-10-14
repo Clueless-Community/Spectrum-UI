@@ -58,6 +58,21 @@ You can contribute to this project under [Hacktoberfest 2022](https://hacktoberf
 If you are willing to contibute to this project, you are warmly welcome.
 Do check the [Contribution](https://github.com/Clueless-Community/flutter-ui-components/blob/master/CONTRIBUTING.md) guidelines before contributing.
 
+
+<h2 align='center'> Project maintainers </h2>
+<table align='center'>
+<tr>
+    <td align="center">
+        <a href="https://github.com/roshaen">
+            <img src="https://avatars.githubusercontent.com/u/58213083?v=4" width="100;" alt="Roshan Kumar"/>
+            <br />
+            <sub><b>Roshan Kumar</b></sub>
+        </a>
+    </td>
+  </tr>
+</table>
+
+
 #### Take a moment to star ⭐ the project if you like it 😊
 
 Do checkout the other repos 💫

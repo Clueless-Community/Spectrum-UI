@@ -18,7 +18,7 @@ class CheckBoxWidget<T> extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        onChanged!(value!);
+        onChanged!(value as T);
       },
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
