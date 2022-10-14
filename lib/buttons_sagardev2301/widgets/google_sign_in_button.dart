@@ -11,9 +11,7 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        print("Sign in button pressed");
-      },
+      onTap: () {},
       child: Card(
         elevation: 3,
         child: SizedBox(
