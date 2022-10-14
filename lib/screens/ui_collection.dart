@@ -50,7 +50,7 @@ class UiCollection extends StatelessWidget {
           WidgetButton(
             title: "Buttons",
             subTitle: "A collection of button designs",
-            screen: const ButtonScreen(),
+            screen: const SignUpScreen(),
             onTap: () {
               Navigator.push(
                           context,
