@@ -38,6 +38,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  fluentui_icons: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,7 @@ flutter:
 
   assets:
     - assets/signUpImages_AnukirtiYadav/
+    - assets/buttons_images/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
