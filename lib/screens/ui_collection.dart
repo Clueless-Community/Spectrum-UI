@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/UI_Pages/bottomNavigation_Roshaen/screen/bottom_bar.dart';
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
+import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 
 import '../UI_Pages/upperTabbar_pratikagr/screens/upper_tab_bar.dart';
@@ -27,6 +28,18 @@ class UiCollection extends StatelessWidget {
           const SearchBar(),
           const SizedBox(
             height: 20,
+          ),
+          WidgetButton(
+            title: "Login UI",
+            subTitle: "Login UI design made by Aaliya",
+            screen: const SkeuomorphicLoginScreen(),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const SkeuomorphicLoginScreen()),
+              );
+            },
           ),
           WidgetButton(
             title: "Login UI",
