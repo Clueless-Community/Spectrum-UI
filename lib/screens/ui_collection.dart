@@ -13,7 +13,7 @@ import '../widgets/searchbar.dart';
 
 class UiCollection extends StatelessWidget {
   const UiCollection({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -21,7 +21,7 @@ class UiCollection extends StatelessWidget {
         children: [
           const Heading(
             title: "UI Collections",
-            count: "6",
+            count: "8",
           ),
           const SizedBox(
             height: 20,
@@ -64,8 +64,6 @@ class UiCollection extends StatelessWidget {
               );
             },
           ),
-
-
           WidgetButton(
             title: "Upper Tab Bar",
             subTitle: "Tabbar designed by pratik",
@@ -74,7 +72,6 @@ class UiCollection extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const uTabBar()),
-
               );
             },
           ),
@@ -84,10 +81,43 @@ class UiCollection extends StatelessWidget {
             screen: const DialogScreen(),
             onTap: () {
               Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DialogScreen()),
-                        );
+                context,
+                MaterialPageRoute(builder: (context) => const DialogScreen()),
+              );
+            },
+          ),
+          WidgetButton(
+            title: "Buttons",
+            subTitle: "A collection of Buttons",
+            screen: const ButtonScreen(),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ButtonScreen()),
+              );
+            },
+          ),
+          WidgetButton(
+            title: "Bottom Bar",
+            subTitle: "A collection of Bottom Bar",
+            screen: const BottomBar(),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const BottomBar()),
+              );
+            },
+          ),
+          WidgetButton(
+            title: "Toggle Button",
+            subTitle: "A collection of Toggle Buttons",
+            screen: const ToggleButtonScreen(),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ToggleButtonScreen()),
+              );
             },
           ),
         ],

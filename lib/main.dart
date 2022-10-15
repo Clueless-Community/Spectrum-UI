@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
-        child: const uTabBar(),
+        child: const UiCollection(),
       ),
     );
   }
