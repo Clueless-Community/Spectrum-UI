@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/buttons/widgets/google_sign_in_button.dart';
+import 'package:flutter_ui/buttons_sagardev2301/widgets/google_sign_in_button.dart';
 import '../widgets/heading.dart';
 import '../widgets/searchbar.dart';
 
@@ -23,7 +23,8 @@ class ButtonScreen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            GoogleSignInButton()
+            GoogleSignInButton(),
+            
           ],
         ),
       ),
