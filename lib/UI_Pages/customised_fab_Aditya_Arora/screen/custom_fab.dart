@@ -9,13 +9,16 @@ class CustomFAB extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Customised FAB"),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
+      floatingActionButton: SizedBox(
+        height: 60,
+        child: FloatingActionButton.extended(
+          onPressed: () {
 
-        },
-        label: const Text("DIRECTIONS"),
-        icon: const Icon(Icons.directions),
-        backgroundColor: const Color(0xff275EE4)
+          },
+          label: const Text("DIRECTIONS"),
+          icon: const Icon(Icons.directions),
+          backgroundColor: const Color(0xff275EE4),
+        ),
       ),
     );
   }
