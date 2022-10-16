@@ -7,9 +7,11 @@ import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
 import '../UI_Pages/toggleButton_ismailyegnr/screens/toggle_button_screen.dart';
 import '../UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
 import '../UI_Pages/upperTabbar_pratikagr/screens/upper_tab_bar.dart';
+import '../UI_Pages/appBar_ArpitSahu01/screens/appBarUI_screen.dart';
 import '../widgets/heading.dart';
 import '../widgets/screen_display.dart';
 import '../widgets/searchbar.dart';
+
 
 class UiCollection extends StatelessWidget {
   const UiCollection({super.key});
@@ -29,6 +31,17 @@ class UiCollection extends StatelessWidget {
           const SearchBar(),
           const SizedBox(
             height: 20,
+          ),
+          WidgetButton(
+            title: "App Bar UI",
+            subTitle: "App Bar design made by Arpit",
+            screen: const AppBarScreen(),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AppBarScreen()),
+              );
+            },
           ),
           WidgetButton(
             title: "Login UI",
