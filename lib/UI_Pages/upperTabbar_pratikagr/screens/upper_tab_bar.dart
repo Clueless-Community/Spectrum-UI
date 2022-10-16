@@ -43,6 +43,7 @@ class _uTabBarState extends State<uTabBar> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
+          automaticallyImplyLeading: false,
           actions: const [
             Padding(
               padding: EdgeInsets.only(right: 24),
