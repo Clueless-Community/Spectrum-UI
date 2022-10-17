@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/UI_Pages/bottomNavigation_Roshaen/screen/bottom_bar.dart';
+import 'package:flutter_ui/UI_Pages/customised_fab_AdiAr11/screen/custom_fab.dart';
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
@@ -140,6 +141,18 @@ class UiCollection extends StatelessWidget {
             },
           ),
           WidgetButton(
+            title: "Floating Action Button",
+            subTitle: "A Customised FAB by Aditya Arora",
+            screen: const ToggleButtonScreen(),
+             onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const CustomFAB()),
+              );
+            },
+          ),
+          WidgetButton(
             title: "Model Nav Bar",
             subTitle: "NavBar created",
             screen: const navbar(),
@@ -149,8 +162,8 @@ class UiCollection extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) => const navbar()),
               );
-             },
-            ),
+            },
+          ),
           WidgetButton(
             title: "OnBoarding Screen",
             subTitle: "OnBoarding Screen designed by sagardev2301",
