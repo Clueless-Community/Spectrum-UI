@@ -85,7 +85,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   backgroundColor: const Color.fromARGB(255, 89, 200, 106),
                   padding: EdgeInsets.symmetric(
-                    horizontal: MediaQuery.of(context).size.width / 2.8,
+                    horizontal: MediaQuery.of(context).size.width / 3,
                     vertical: 18,
                   ),
                   textStyle: const TextStyle(
@@ -164,7 +164,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 Text(
-                  'Create new',
+                  ' Create new',
                   style: TextStyle(
                     color: Color.fromARGB(255, 89, 200, 106),
                     fontWeight: FontWeight.w800,
