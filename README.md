@@ -69,6 +69,13 @@ Do check the [Contribution](https://github.com/Clueless-Community/flutter-ui-com
             <sub><b>Roshan Kumar</b></sub>
         </a>
     </td>
+      <td align="center">
+        <a href="https://github.com/Debajyoti14">
+            <img src="https://avatars.githubusercontent.com/u/91759192?v=4" width="100;" alt="Debajyoti Saha"/>
+            <br />
+            <sub><b>Debajyoti Saha</b></sub>
+        </a>
+    </td>
   </tr>
 </table>
 
