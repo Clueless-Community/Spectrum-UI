@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui/UI_Pages/bottomNavigation_Roshaen/screen/bottom_bar.dart';
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
+import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
-import '../UI_Pages/toggleButton_ismailyegnr/screens/toggle_button_screen.dart';
-import '../UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
+import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
+import 'package:flutter_ui/UI_Pages/toggleButton_ismailyegnr/screens/toggle_button_screen.dart';
+
 import '../UI_Pages/upperTabbar_pratikagr/screens/upper_tab_bar.dart';
 import '../widgets/heading.dart';
 import '../widgets/screen_display.dart';
@@ -21,7 +23,7 @@ class UiCollection extends StatelessWidget {
         children: [
           const Heading(
             title: "UI Collections",
-            count: "8",
+            count: "9",
           ),
           const SizedBox(
             height: 20,
@@ -117,6 +119,20 @@ class UiCollection extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => const ToggleButtonScreen()),
+              );
+            },
+          ),
+          WidgetButton(
+            title: "OnBoarding Screen",
+            subTitle: "OnBoarding Screen designed by sagardev2301",
+            screen: OnBoardingScreen(
+              onPressed: (){},
+            ),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => OnBoardingScreen(onPressed: (){})),
               );
             },
           ),
