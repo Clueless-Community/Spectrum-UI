@@ -4,6 +4,10 @@ import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_scre
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
+import 'package:flutter_ui/buttons_sagardev2301/buttons_screen.dart';
+import '../UI_Pages/modelNavBar_Perumall/screens/navbar.dart';
+import '../UI_Pages/toggleButton_ismailyegnr/screens/toggleButton_screen.dart';
+import '../dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
 import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
 import 'package:flutter_ui/UI_Pages/toggleButton_ismailyegnr/screens/toggle_button_screen.dart';
@@ -122,6 +126,18 @@ class UiCollection extends StatelessWidget {
               );
             },
           ),
+          WidgetButton(
+            title: "Model Nav Bar",
+            subTitle: "NavBar created",
+            screen: const navbar(),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const navbar()),
+              );
+             },
+            ),
           WidgetButton(
             title: "OnBoarding Screen",
             subTitle: "OnBoarding Screen designed by sagardev2301",
