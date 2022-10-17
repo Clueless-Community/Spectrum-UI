@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/screens/ui_collection.dart';
 
-import 'UI_Pages/upperTabbar_pratikagr/screens/upper_tab_bar.dart';
-
-
 void main() {
   runApp(const MyApp());
 }

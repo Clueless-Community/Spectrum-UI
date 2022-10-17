@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/dialog_box_sagardev2301/scrollable_dialog/model/dialog_model.dart';
-import 'package:flutter_ui/dialog_box_sagardev2301/scrollable_dialog/widget/scrollable_dialog_box.dart';
-import '../../widgets/heading.dart';
-import '../../widgets/searchbar.dart';
+import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/model/dialog_model.dart';
+import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/widget/scrollable_dialog_box.dart';
+import '../../../widgets/heading.dart';
+import '../../../widgets/searchbar.dart';
 
 class DialogScreen extends StatefulWidget {
   const DialogScreen({super.key});

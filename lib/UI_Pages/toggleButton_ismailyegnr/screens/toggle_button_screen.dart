@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/toggleButton_widget.dart';
+import '../widgets/toggle_button_widget.dart';
 
 class ToggleButtonScreen extends StatelessWidget {
   const ToggleButtonScreen({super.key});
