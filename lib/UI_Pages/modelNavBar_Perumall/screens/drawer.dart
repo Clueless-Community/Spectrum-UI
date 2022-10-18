@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
 class drawerheader extends StatefulWidget {
@@ -14,23 +16,23 @@ class _drawerheaderState extends State<drawerheader> {
       color: Colors.white,
       width: double.infinity,
       height: 260,
-      padding: EdgeInsets.only(top: 43),
+      padding: const EdgeInsets.only(top: 43),
       child: Container(
-        padding: EdgeInsets.only(left: 20),
+        padding: const EdgeInsets.only(left: 20),
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               width: 80,
-              margin: EdgeInsets.only(bottom: 25),
+              margin: const EdgeInsets.only(bottom: 25),
               height: 80,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.grey,
               ),
             ),
-            Text(
+            const Text(
               "Title",
               style: TextStyle(
                   color: Colors.black,
@@ -39,10 +41,10 @@ class _drawerheaderState extends State<drawerheader> {
                   letterSpacing: 1.5),
             ),
             Padding(
-              padding: EdgeInsets.only(right: 20),
+              padding: const EdgeInsets.only(right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Text(
                     "hello@uikit.co",
                     style: TextStyle(color: Colors.grey, fontSize: 18),
@@ -55,7 +57,7 @@ class _drawerheaderState extends State<drawerheader> {
                 ],
               ),
             ),
-            Divider(
+            const Divider(
               height: 40,
               thickness: 2,
             ),
