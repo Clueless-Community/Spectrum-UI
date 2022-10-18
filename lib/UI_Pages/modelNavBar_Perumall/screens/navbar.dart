@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/UI_Pages/modelNavBar_Perumall/screens/drawer.dart';
 import 'package:flutter_ui/UI_Pages/modelNavBar_Perumall/screens/drawerlist.dart';
@@ -15,21 +17,19 @@ class _navbarState extends State<navbar> {
     return Scaffold(
       drawer: Drawer(
         child: SingleChildScrollView(
-          child: Container(
-            child: Column(
-              children: [
-                drawerheader(),
-                drawerlist(),
-              ],
-            ),
+          child: Column(
+            children: const [
+              drawerheader(),
+              drawerlist(),
+            ],
           ),
         ),
       ),
       appBar: AppBar(
-        title: Text("Model Nav Bar"),
+        title: const Text("Model Nav Bar"),
         centerTitle: true,
       ),
-      body: Center(),
+      body: const Center(),
     );
   }
 }

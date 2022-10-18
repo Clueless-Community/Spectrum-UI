@@ -19,164 +19,166 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 3, 11, 57),
-      body: Container(
-        margin: const EdgeInsets.all(12),
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
-              'Sign In',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w500,
-                fontSize: 30,
+      body: SingleChildScrollView(
+        child: Container(
+          margin: const EdgeInsets.all(12),
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 20,
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const TextFormFieldWidget(
-              hintText: 'Email',
-              keyboardType: TextInputType.emailAddress,
-            ),
-            const TextFormFieldWidget(
-              hintText: 'Password',
-              obscureText: true,
-              keyboardType: TextInputType.visiblePassword,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CheckBoxWidget(
-                  text: 'Remember me',
-                  value: 'YES',
-                  groupValue: _value,
-                  onChanged: (String value) {
-                    setState(() {
-                      _value = value;
-                      color = const Color.fromARGB(255, 89, 200, 106);
-                    });
-                  },
+              const Text(
+                'Sign In',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 30,
                 ),
-                TextButton(
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const TextFormFieldWidget(
+                hintText: 'Email',
+                keyboardType: TextInputType.emailAddress,
+              ),
+              const TextFormFieldWidget(
+                hintText: 'Password',
+                obscureText: true,
+                keyboardType: TextInputType.visiblePassword,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CheckBoxWidget(
+                    text: 'Remember me',
+                    value: 'YES',
+                    groupValue: _value,
+                    onChanged: (String value) {
+                      setState(() {
+                        _value = value;
+                        color = const Color.fromARGB(255, 89, 200, 106);
+                      });
+                    },
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Forgot Password',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 112, 102, 134),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Center(
+                child: ElevatedButton(
                   onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    backgroundColor: const Color.fromARGB(255, 89, 200, 106),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 3,
+                      vertical: 18,
+                    ),
+                    textStyle: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   child: const Text(
-                    'Forgot Password',
+                    'Sign In',
+                    style: TextStyle(color: Color.fromARGB(255, 3, 11, 57)),
+                  ),
+                ),
+              ),
+              Row(
+                children: const [
+                  Expanded(
+                    child: Divider(
+                      thickness: 1,
+                      color: Color.fromARGB(255, 112, 102, 134),
+                    ),
+                  ),
+                  Text(
+                    'or',
                     style: TextStyle(
                       color: Color.fromARGB(255, 112, 102, 134),
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
                     ),
                   ),
-                ),
-              ],
-            ),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
+                  Expanded(
+                    child: Divider(
+                      thickness: 1,
+                      color: Color.fromARGB(255, 112, 102, 134),
+                    ),
                   ),
-                  backgroundColor: const Color.fromARGB(255, 89, 200, 106),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: MediaQuery.of(context).size.width / 3,
-                    vertical: 18,
-                  ),
-                  textStyle: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                child: const Text(
-                  'Sign In',
-                  style: TextStyle(color: Color.fromARGB(255, 3, 11, 57)),
-                ),
+                ],
               ),
-            ),
-            Row(
-              children: const [
-                Expanded(
-                  child: Divider(
-                    thickness: 1,
-                    color: Color.fromARGB(255, 112, 102, 134),
+              const SizedBox(
+                height: 2,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Image.asset(
+                    'assets/signUpImages_AnukirtiYadav/google-img.png',
+                    height: 45,
+                    width: 45,
+                    color: Colors.white,
                   ),
-                ),
-                Text(
-                  'or',
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 112, 102, 134),
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16,
+                  Image.asset(
+                    'assets/signUpImages_AnukirtiYadav/twitter-img.png',
+                    height: 45,
+                    width: 45,
+                    color: Colors.white,
                   ),
-                ),
-                Expanded(
-                  child: Divider(
-                    thickness: 1,
-                    color: Color.fromARGB(255, 112, 102, 134),
+                  Image.asset(
+                    'assets/signUpImages_AnukirtiYadav/github-img.png',
+                    height: 45,
+                    width: 45,
+                    color: Colors.white,
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 2,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Image.asset(
-                  'assets/signUpImages_AnukirtiYadav/google-img.png',
-                  height: 45,
-                  width: 45,
-                  color: Colors.white,
-                ),
-                Image.asset(
-                  'assets/signUpImages_AnukirtiYadav/twitter-img.png',
-                  height: 45,
-                  width: 45,
-                  color: Colors.white,
-                ),
-                Image.asset(
-                  'assets/signUpImages_AnukirtiYadav/github-img.png',
-                  height: 45,
-                  width: 45,
-                  color: Colors.white,
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text(
-                  'Don\'t have an account? ',
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 112, 102, 134),
-                    fontWeight: FontWeight.w400,
-                    fontSize: 18,
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(
+                    'Don\'t have an account? ',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 112, 102, 134),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 18,
+                    ),
                   ),
-                ),
-                Text(
-                  ' Create new',
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 89, 200, 106),
-                    fontWeight: FontWeight.w800,
-                    fontSize: 18,
+                  Text(
+                    ' Create new',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 89, 200, 106),
+                      fontWeight: FontWeight.w800,
+                      fontSize: 18,
+                    ),
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-          ],
+                ],
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+            ],
+          ),
         ),
       ),
     );
