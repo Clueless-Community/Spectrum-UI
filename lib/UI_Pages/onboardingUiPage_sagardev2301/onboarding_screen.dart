@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/widget/onboarding_widget.dart';
@@ -80,7 +82,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           MaterialStateProperty.all(Colors.orangeAccent),
                     ),
                     onPressed: () {
-                      print("get started");
+                      debugPrint("get started");
                       widget.onPressed;
                     },
                     child: SizedBox(
