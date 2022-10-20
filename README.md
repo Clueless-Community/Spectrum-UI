@@ -3,10 +3,9 @@
 <h3 align=center> Amazing UI Designs for you to choose from. 📜 </h3>
 
 ----
-
+#
+## Screenshots 🤩
 <p align="center">
- 
- 
   ![Screenshot (283)](https://user-images.githubusercontent.com/67668844/196859370-a58e8277-95b5-4d13-b410-5a92136a4f75.png)
 ![Screenshot (284)](https://user-images.githubusercontent.com/67668844/196859378-3c82376c-4519-4444-adaf-f4486183904a.png)
 ![Screenshot (285)](https://user-images.githubusercontent.com/67668844/196859384-9d6da12a-460b-4c25-99b6-f889d85fee32.png)
@@ -20,9 +19,7 @@
 ![Screenshot (293)](https://user-images.githubusercontent.com/67668844/196859463-c8c9ba79-f295-4d9c-9866-2724a3e67f0c.png)
 ![Screenshot (280)](https://user-images.githubusercontent.com/67668844/196859472-3d152349-bdf7-45ea-b118-b7a72b13f1f2.png)
 ![Screenshot (281)](https://user-images.githubusercontent.com/67668844/196859478-8eae49b3-8162-4172-85cd-3fb8c4e328cf.png)
-![Screenshot (282)](https://user-images.githubusercontent.com/67668844/196859483-e3238972-32bc-4d6c-a1ab-2e8c7f3ad697.png)
-
- 
+![Screenshot (282)](https://user-images.githubusercontent.com/67668844/196859483-e3238972-32bc-4d6c-a1ab-2e8c7f3ad697.png) 
 </p>
 
 --- 
@@ -51,10 +48,9 @@ Simply pick up a template UI from our collection list which you love and then pl
 
 ... and many more.
 
-#
-## Screenshots 🤩
 
-<img height="550" alt="image" src="https://user-images.githubusercontent.com/32421196/194718774-0c6388c8-e087-487b-9357-30243fc70e14.png"><img height="550" alt="image" src="https://user-images.githubusercontent.com/32421196/194718996-52097eb6-2c80-442f-b2f8-1d0b616f8f7f.png"><img height="545" alt="image" src="https://user-images.githubusercontent.com/32421196/194721176-a0477f7c-ae66-4383-bcb9-3cda68922df1.png">
+
+
 
 
 [Read More](https://github.com/Clueless-Community/flutter-ui-components/blob/master/About.md)
