@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
 class drawerlist extends StatefulWidget {
@@ -16,11 +18,11 @@ class _drawerlistState extends State<drawerlist> {
       // height: 100,
       color: Colors.white,
       child: Padding(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         child: ListView.builder(
           shrinkWrap: true,
           scrollDirection: Axis.vertical,
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           itemCount: topics.length,
           itemBuilder: ((context, index) {
             return ListTile(
@@ -29,7 +31,7 @@ class _drawerlistState extends State<drawerlist> {
                       Icons.inbox,
                       size: topicChoose == topics[index] ? 26 : 20,
                       color: topicChoose == topics[index]
-                          ? Color.fromARGB(255, 25, 93, 149)
+                          ? const Color.fromARGB(255, 25, 93, 149)
                           : Colors.black,
                     )
                   : index == 1
@@ -37,7 +39,7 @@ class _drawerlistState extends State<drawerlist> {
                           Icons.send,
                           size: topicChoose == topics[index] ? 26 : 20,
                           color: topicChoose == topics[index]
-                              ? Color.fromARGB(255, 25, 93, 149)
+                              ? const Color.fromARGB(255, 25, 93, 149)
                               : Colors.black,
                         )
                       : index == 2
@@ -45,7 +47,7 @@ class _drawerlistState extends State<drawerlist> {
                               Icons.delete,
                               size: topicChoose == topics[index] ? 26 : 20,
                               color: topicChoose == topics[index]
-                                  ? Color.fromARGB(255, 25, 93, 149)
+                                  ? const Color.fromARGB(255, 25, 93, 149)
                                   : Colors.black,
                             )
                           : index == 3
@@ -53,7 +55,7 @@ class _drawerlistState extends State<drawerlist> {
                                   Icons.error,
                                   size: topicChoose == topics[index] ? 26 : 20,
                                   color: topicChoose == topics[index]
-                                      ? Color.fromARGB(255, 25, 93, 149)
+                                      ? const Color.fromARGB(255, 25, 93, 149)
                                       : Colors.black,
                                 )
                               : index == 4
@@ -63,7 +65,8 @@ class _drawerlistState extends State<drawerlist> {
                                           ? 26
                                           : 20,
                                       color: topicChoose == topics[index]
-                                          ? Color.fromARGB(255, 25, 93, 149)
+                                          ? const Color.fromARGB(
+                                              255, 25, 93, 149)
                                           : Colors.black,
                                     )
                                   : Icon(
@@ -72,7 +75,8 @@ class _drawerlistState extends State<drawerlist> {
                                           ? 26
                                           : 20,
                                       color: topicChoose == topics[index]
-                                          ? Color.fromARGB(255, 25, 93, 149)
+                                          ? const Color.fromARGB(
+                                              255, 25, 93, 149)
                                           : Colors.black,
                                     ),
               title: Text(
@@ -81,7 +85,7 @@ class _drawerlistState extends State<drawerlist> {
                     fontSize: topicChoose == topics[index] ? 21 : 17,
                     fontWeight: FontWeight.bold,
                     color: topicChoose == topics[index]
-                        ? Color.fromARGB(255, 25, 93, 149)
+                        ? const Color.fromARGB(255, 25, 93, 149)
                         : Colors.black),
               ),
               onTap: () {
@@ -90,7 +94,9 @@ class _drawerlistState extends State<drawerlist> {
                 });
                 // Navigator.pop(context);
               },
-              tileColor: topicChoose == topics[index] ? Color.fromARGB(255, 84, 164, 230) : null,
+              tileColor: topicChoose == topics[index]
+                  ? const Color.fromARGB(255, 84, 164, 230)
+                  : null,
             );
           }),
         ),

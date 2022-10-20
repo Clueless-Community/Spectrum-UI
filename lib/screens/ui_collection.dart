@@ -15,7 +15,6 @@ import '../UI_Pages/upperTabbar_pratikagr/screens/upper_tab_bar.dart';
 import '../UI_Pages/appBar_ArpitSahu01/screens/appBarUI_screen.dart';
 import '../widgets/heading.dart';
 import '../widgets/screen_display.dart';
-import '../widgets/searchbar.dart';
 
 class UiCollection extends StatefulWidget {
   const UiCollection({super.key});
@@ -25,7 +24,7 @@ class UiCollection extends StatefulWidget {
 }
 
 class _UiCollectionState extends State<UiCollection> {
-  List<Map<String, dynamic>> _components = [
+  final List<Map<String, dynamic>> _components = [
     {
       "id": 1,
       "title": "AppBar UI",
@@ -156,7 +155,7 @@ class _UiCollectionState extends State<UiCollection> {
                     ? ListView.builder(
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
-                        physics: BouncingScrollPhysics(),
+                        physics: const BouncingScrollPhysics(),
                         itemCount: _found.length,
                         itemBuilder: ((context, index) {
                           return WidgetButton(
@@ -193,7 +192,8 @@ class _UiCollectionState extends State<UiCollection> {
                                                       builder: (context) =>
                                                           const SignUpScreen()),
                                                 )
-                                              : _found[index]['id'].toString() ==
+                                              : _found[index]['id']
+                                                          .toString() ==
                                                       '5'
                                                   ? Navigator.push(
                                                       context,
@@ -269,7 +269,7 @@ class _UiCollectionState extends State<UiCollection> {
                           );
                         }),
                       )
-                    : Padding(
+                    : const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Text(
                           'No results found, Please try with diffrent search',

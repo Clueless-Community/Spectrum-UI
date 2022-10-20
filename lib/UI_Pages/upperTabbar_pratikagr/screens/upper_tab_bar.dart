@@ -8,62 +8,59 @@ class UpperTabBar extends StatefulWidget {
 }
 
 class _UpperTabBarState extends State<UpperTabBar> {
-  final upperTab = const TabBar(
-      labelColor: Color.fromARGB(255, 0, 7, 202),
-      unselectedLabelColor: Colors.grey,
-      indicator: UnderlineTabIndicator(
-          borderSide:
-              BorderSide(width: 5.0, color: Color.fromARGB(255, 0, 7, 202)),
-          insets: EdgeInsets.symmetric(horizontal: 16.0)),
-      tabs: <Tab>[
-        Tab(icon: Icon(Icons.home)),
-        Tab(
-            icon: Icon(
-          Icons.contacts,
-        )),
-        Tab(
-            icon: Icon(
-          Icons.favorite,
-        )),
-        Tab(
-            icon: Icon(
-          Icons.shopping_cart,
-        )),
-        Tab(
-            icon: Icon(
-          Icons.menu,
-        )),
-      ]);
+  int tabIndex = 0;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 4,
+      initialIndex: tabIndex,
       child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          automaticallyImplyLeading: false,
-          actions: const [
-            Padding(
-              padding: EdgeInsets.only(right: 24),
-              child: Icon(
-                Icons.search,
-                color: Colors.black,
+        appBar: AppBar(),
+        body: TabBarView(
+          physics: const NeverScrollableScrollPhysics(),
+          children: [
+            Container(
+              color: Colors.green,
+              child: const Center(
+                child: GoToThirdTabButton(),
               ),
             ),
+            Container(color: Colors.red),
+            Container(color: Colors.yellow),
+            Container(color: Colors.cyan),
           ],
-          title: const Padding(
-            padding: EdgeInsets.only(left: 8),
-            child: Text(
-              'My App',
-              style: TextStyle(color: Colors.black),
-            ),
-          ),
-          bottom: upperTab,
         ),
-        body: const TabBarView(
-          children: [],
+        bottomNavigationBar: const TabBar(
+          labelColor: Colors.black45,
+          tabs: [
+            Padding(
+                padding: EdgeInsets.only(top: 12, bottom: 12),
+                child: Text('green')),
+            Padding(
+                padding: EdgeInsets.only(top: 12, bottom: 12),
+                child: Text('red')),
+            Padding(
+                padding: EdgeInsets.only(top: 12, bottom: 12),
+                child: Text('yellow')),
+            Padding(
+                padding: EdgeInsets.only(top: 12, bottom: 12),
+                child: Text('cyan')),
+          ],
         ),
       ),
     );
+  }
+}
+
+class GoToThirdTabButton extends StatelessWidget {
+  const GoToThirdTabButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+        child: const Text('to Tab 3'),
+        onPressed: () {
+          DefaultTabController.of(context)!.animateTo(2);
+        });
   }
 }
