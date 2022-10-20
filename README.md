@@ -3,8 +3,7 @@
 <h3 align=center> Amazing UI Designs for you to choose from. 📜 </h3>
 
 ----
-#
-## Screenshots 🤩
+
 <p align="center">
   ![Screenshot (283)](https://user-images.githubusercontent.com/67668844/196859370-a58e8277-95b5-4d13-b410-5a92136a4f75.png)
 ![Screenshot (284)](https://user-images.githubusercontent.com/67668844/196859378-3c82376c-4519-4444-adaf-f4486183904a.png)
@@ -21,8 +20,6 @@
 ![Screenshot (281)](https://user-images.githubusercontent.com/67668844/196859478-8eae49b3-8162-4172-85cd-3fb8c4e328cf.png)
 ![Screenshot (282)](https://user-images.githubusercontent.com/67668844/196859483-e3238972-32bc-4d6c-a1ab-2e8c7f3ad697.png) 
 </p>
-
---- 
 
 
 ## Tech Stack 💻
