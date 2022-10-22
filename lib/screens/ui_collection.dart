@@ -11,6 +11,7 @@ import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
 import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
 import 'package:flutter_ui/UI_Pages/toggleButton_ismailyegnr/screens/toggle_button_screen.dart';
 
+import '../UI_Pages/profile_screen_balamurugan213/screens/profile_screen.dart';
 import '../UI_Pages/upperTabbar_pratikagr/screens/upper_tab_bar.dart';
 import '../UI_Pages/appBar_ArpitSahu01/screens/appBarUI_screen.dart';
 import '../widgets/heading.dart';
@@ -85,6 +86,11 @@ class _UiCollectionState extends State<UiCollection> {
       "title": "OnBoarding Screen",
       "subTitle": "OnBoarding Screen by sagardev2301",
     },
+    {
+      "id": 13,
+      "title": "Profile Screen",
+      "subTitle": "Profile Screen by balamurugan213",
+    },
   ];
 
   List<Map<String, dynamic>> _found = [];
@@ -119,7 +125,7 @@ class _UiCollectionState extends State<UiCollection> {
         children: [
           const Heading(
             title: "UI Collections",
-            count: "12",
+            count: "13",
           ),
           const SizedBox(
             height: 20,
@@ -258,10 +264,15 @@ class _UiCollectionState extends State<UiCollection> {
                                                                               context,
                                                                               MaterialPageRoute(builder: (context) => const navbar()),
                                                                             )
-                                                                          : Navigator.push(
-                                                                              context,
-                                                                              MaterialPageRoute(builder: (context) => OnBoardingScreen(onPressed: () {})),
-                                                                            );
+                                                                          : _found[index]['id'].toString() == '12'
+                                                                              ? Navigator.push(
+                                                                                  context,
+                                                                                  MaterialPageRoute(builder: (context) => OnBoardingScreen(onPressed: () {})),
+                                                                                )
+                                                                              : Navigator.push(
+                                                                                  context,
+                                                                                  MaterialPageRoute(builder: (context) => const ProfileScreen()),
+                                                                                );
                             },
                           );
                         }),
