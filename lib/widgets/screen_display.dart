@@ -5,13 +5,13 @@ class WidgetButton extends StatelessWidget {
   final title;
   // ignore: prefer_typing_uninitialized_variables
   final subTitle;
-  final Widget screen;
+  // final Widget screen;
   final void Function()? onTap;
   const WidgetButton({
     super.key,
     required this.title,
     required this.subTitle,
-    required this.screen,
+    // required this.screen,
     required this.onTap,
   });
 

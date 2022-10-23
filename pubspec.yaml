@@ -42,6 +42,8 @@ dependencies:
   google_fonts: ^3.0.1
   fluentui_icons: ^1.0.0
   intl: ^0.17.0
+  carousel_slider: ^4.1.1
+  dots_indicator: ^2.1.0
   
 dev_dependencies:
   flutter_test:
@@ -70,6 +72,8 @@ flutter:
     - assets/signUpImages_AnukirtiYadav/
     - assets/loginImages_Aaliya-Ali/
     - assets/buttons_images/
+    - assets/onboardingScreen_images_sagardev2301/
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
