@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/UI_Pages/bottomNavigation_Roshaen/screen/bottom_bar.dart';
+import 'package:flutter_ui/UI_Pages/bottomSheet/screen/bottom_sheet_screen.dart';
 import 'package:flutter_ui/UI_Pages/customised_fab_AdiAr11/screen/custom_fab.dart';
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
@@ -281,6 +282,18 @@ class _UiCollectionState extends State<UiCollection> {
                       ),
               ],
             ),
+          ),
+           WidgetButton(
+            title: "Bottom Sheet Form",
+            subTitle: "A collection of Bottom Sheet Forms",
+            screen: const BottomSheetScreen(),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const BottomSheetScreen()),
+              );
+            },
           ),
         ],
       ),
