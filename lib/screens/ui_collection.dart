@@ -6,6 +6,7 @@ import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_scre
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
+import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listView.dart';
 import '../UI_Pages/modelNavBar_Perumall/screens/navbar.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
 import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
@@ -88,6 +89,11 @@ class _UiCollectionState extends State<UiCollection> {
     },
     {
       "id": 13,
+      "title": "Simple ListView Screen",
+      "subTitle": "Simple ListView by Perumall",
+    },
+    {
+      "id": 14,
       "title": "Profile Screen",
       "subTitle": "Profile Screen by balamurugan213",
     },
@@ -193,8 +199,7 @@ class _UiCollectionState extends State<UiCollection> {
                                                       builder: (context) =>
                                                           const SignUpScreen()),
                                                 )
-                                              : _found[index]['id']
-                                                          .toString() ==
+                                              : _found[index]['id'].toString() ==
                                                       '5'
                                                   ? Navigator.push(
                                                       context,
@@ -262,6 +267,8 @@ class _UiCollectionState extends State<UiCollection> {
                                                                                   context,
                                                                                   MaterialPageRoute(builder: (context) => OnBoardingScreen(onPressed: () {})),
                                                                                 )
+                                                                               : _found[index]['id'].toString() == '13'
+                                                                               ? Navigator.push(context, MaterialPageRoute(builder: (context) => listView()))
                                                                               : Navigator.push(
                                                                                   context,
                                                                                   MaterialPageRoute(builder: (context) => const ProfileScreen()),
