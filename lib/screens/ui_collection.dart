@@ -6,7 +6,6 @@ import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_scre
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
-import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listView.dart';
 import 'package:flutter_ui/UI_Pages/testUI/test_screen.dart';
 import '../UI_Pages/modelNavBar_Perumall/screens/navbar.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
@@ -32,72 +31,92 @@ class _UiCollectionState extends State<UiCollection> {
       "id": 1,
       "title": "AppBar UI",
       "subTitle": "App Bar design made by Arpit",
+      "widget": const AppBarScreen()
     },
     {
       "id": 2,
       "title": "Login UI",
       "subTitle": "Login UI design made by Aaliya",
+      "widget": const SkeuomorphicLoginScreen()
     },
     {
       "id": 3,
       "title": "Login UI",
       "subTitle": "Login UI design made by Roshan",
+      "widget": const LoginScreen()
     },
     {
       "id": 4,
       "title": "Sign Up",
       "subTitle": "A collection of signup page UI",
+      "widget": const SignUpScreen()
     },
     {
       "id": 5,
       "title": "Upper Tab Bar",
       "subTitle": "Tabbar designed by pratik",
+      "widget": const UpperTabBar()
     },
     {
       "id": 6,
       "title": "Dialog Box",
       "subTitle": "A collection of Dialog Box",
+      "widget": const DialogScreen()
     },
     {
       "id": 7,
       "title": "Buttons",
       "subTitle": "A collection of Buttons",
+      "widget": const ButtonScreen()
     },
     {
       "id": 8,
       "title": "Bottom Bar",
       "subTitle": "A collection of Bottom Bar",
+      "widget": const BottomBar()
     },
     {
       "id": 9,
       "title": "Toggle Button",
       "subTitle": "A collection of Toggle Buttons",
+      "widget": const ToggleButtonScreen()
     },
     {
       "id": 10,
       "title": "Floating Action Button",
       "subTitle": "A Customised FAB by Aditya Arora",
+      "widget": const CustomFAB()
     },
     {
       "id": 11,
       "title": "Model Nav Bar",
       "subTitle": "NavBar created",
+      "widget": const navbar()
     },
     {
       "id": 12,
       "title": "OnBoarding Screen",
       "subTitle": "OnBoarding Screen by sagardev2301",
+      "widget": OnBoardingScreen(onPressed: () {})
     },
     {
       "id": 13,
       "title": "Simple ListView Screen",
       "subTitle": "Simple ListView by Perumall",
+      "widget": ListView()
     },
     {
       "id": 14,
       "title": "Profile Screen",
       "subTitle": "Profile Screen by balamurugan213",
+      "widget": const ProfileScreen()
     },
+    {
+      "id": 14,
+      "title": "Bottom Sheet Form",
+      "subTitle": "A collection of Bottom Sheet Forms",
+      "widget": const BottomSheetScreen()
+    }
   ];
 
   List<Map<String, dynamic>> _found = [];
@@ -130,9 +149,9 @@ class _UiCollectionState extends State<UiCollection> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          const Heading(
+          Heading(
             title: "UI Collections",
-            count: "13",
+            count: _found.length.toString(),
           ),
           const SizedBox(
             height: 20,
@@ -178,109 +197,16 @@ class _UiCollectionState extends State<UiCollection> {
                             subTitle: "${_found[index]['subTitle']}".toString(),
                             // screen: AppBarScreen(),
                             onTap: () {
-                              _found[index]['id'].toString() == '1'
-                                  ? Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const AppBarScreen()),
-                                    )
-                                  : _found[index]['id'].toString() == '2'
-                                      ? Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const SkeuomorphicLoginScreen()),
-                                        )
-                                      : _found[index]['id'].toString() == '3'
-                                          ? Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginScreen()),
-                                            )
-                                          : _found[index]['id'].toString() ==
-                                                  '4'
-                                              ? Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          const SignUpScreen()),
-                                                )
-                                              : _found[index]['id'].toString() ==
-                                                      '5'
-                                                  ? Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              const UpperTabBar()),
-                                                    )
-                                                  : _found[index]['id']
-                                                              .toString() ==
-                                                          '6'
-                                                      ? Navigator.push(
-                                                          context,
-                                                          MaterialPageRoute(
-                                                              builder: (context) =>
-                                                                  const DialogScreen()),
-                                                        )
-                                                      : _found[index]['id']
-                                                                  .toString() ==
-                                                              '7'
-                                                          ? Navigator.push(
-                                                              context,
-                                                              MaterialPageRoute(
-                                                                  builder:
-                                                                      (context) =>
-                                                                          const ButtonScreen()),
-                                                            )
-                                                          : _found[index]['id']
-                                                                      .toString() ==
-                                                                  '8'
-                                                              ? Navigator.push(
-                                                                  context,
-                                                                  MaterialPageRoute(
-                                                                      builder:
-                                                                          (context) =>
-                                                                              const BottomBar()),
-                                                                )
-                                                              : _found[index]['id']
-                                                                          .toString() ==
-                                                                      '9'
-                                                                  ? Navigator
-                                                                      .push(
-                                                                      context,
-                                                                      MaterialPageRoute(
-                                                                          builder: (context) =>
-                                                                              const ToggleButtonScreen()),
-                                                                    )
-                                                                  : _found[index]['id']
-                                                                              .toString() ==
-                                                                          '10'
-                                                                      ? Navigator
-                                                                          .push(
-                                                                          context,
-                                                                          MaterialPageRoute(
-                                                                              builder: (context) => const CustomFAB()),
-                                                                        )
-                                                                      : _found[index]['id'].toString() ==
-                                                                              '11'
-                                                                          ? Navigator
-                                                                              .push(
-                                                                              context,
-                                                                              MaterialPageRoute(builder: (context) => const navbar()),
-                                                                            )
-                                                                          : _found[index]['id'].toString() == '12'
-                                                                              ? Navigator.push(
-                                                                                  context,
-                                                                                  MaterialPageRoute(builder: (context) => OnBoardingScreen(onPressed: () {})),
-                                                                                )
-                                                                               : _found[index]['id'].toString() == '13'
-                                                                               ? Navigator.push(context, MaterialPageRoute(builder: (context) => listView()))
-                                                                              : Navigator.push(
-                                                                                  context,
-                                                                                  MaterialPageRoute(builder: (context) => const ProfileScreen()),
-                                                                                );
+                              for (int i = 1; i <= _found.length; i++) {
+                                if (_found[index]['id'] == i) {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            _found[index]['widget']),
+                                  );
+                                }
+                              }
                             },
                           );
                         }),
@@ -297,18 +223,6 @@ class _UiCollectionState extends State<UiCollection> {
                       ),
               ],
             ),
-          ),
-           WidgetButton(
-            title: "Bottom Sheet Form",
-            subTitle: "A collection of Bottom Sheet Forms",
-            screen: const BottomSheetScreen(),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const BottomSheetScreen()),
-              );
-            },
           ),
         ],
       ),
