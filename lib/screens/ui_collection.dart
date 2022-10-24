@@ -228,18 +228,6 @@ class _UiCollectionState extends State<UiCollection> {
               ],
             ),
           ),
-           WidgetButton(
-            title: "Bottom Sheet Form",
-            subTitle: "A collection of Bottom Sheet Forms",
-            screen: const BottomSheetScreen(),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const BottomSheetScreen()),
-              );
-            },
-          ),
         ],
       ),
     );
