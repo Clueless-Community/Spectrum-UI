@@ -20,12 +20,12 @@ class ProfilePictureWidget extends StatelessWidget {
                   clipper: ShapeClipper(),
                   child: Container(
                     width: double.infinity,
-                    color: Color(0xFFB12341),
+                    color: const Color(0xFFB12341),
                   )),
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: Container(
+              child: SizedBox(
                 height: 160,
                 width: 160,
                 child: Stack(
@@ -48,7 +48,8 @@ class ProfilePictureWidget extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(32),
                         child: Container(
-                          color: Color(0xFFF99D5F3),
+                          // ignore: use_full_hex_values_for_flutter_colors
+                          color: const Color(0xfff99d5f3),
                           child: IconButton(
                               onPressed: () {},
                               icon: const Icon(Icons.camera_enhance_rounded)),

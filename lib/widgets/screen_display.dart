@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/UI_Pages/appBar_ArpitSahu01/screens/appBarUI_screen.dart';
 
 class WidgetButton extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
@@ -13,6 +14,7 @@ class WidgetButton extends StatelessWidget {
     required this.subTitle,
     // required this.screen,
     required this.onTap,
+    required AppBarScreen screen,
   });
 
   @override
