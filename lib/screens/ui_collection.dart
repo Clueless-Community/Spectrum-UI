@@ -6,6 +6,7 @@ import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_scre
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
+import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listView.dart';
 import 'package:flutter_ui/UI_Pages/testUI/test_screen.dart';
 import '../UI_Pages/modelNavBar_Perumall/screens/navbar.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
@@ -26,6 +27,8 @@ class UiCollection extends StatefulWidget {
 }
 
 class _UiCollectionState extends State<UiCollection> {
+  // Add Your Widget Here
+  
   final List<Map<String, dynamic>> _components = [
     {
       "id": 1,
@@ -103,7 +106,7 @@ class _UiCollectionState extends State<UiCollection> {
       "id": 13,
       "title": "Simple ListView Screen",
       "subTitle": "Simple ListView by Perumall",
-      "widget": ListView()
+      "widget": const CustomListView()
     },
     {
       "id": 14,

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listViewScreen.dart';
 
-class ListView extends StatefulWidget {
-  const ListView({super.key});
+class CustomListView extends StatefulWidget {
+  const CustomListView({super.key});
 
   @override
-  State<ListView> createState() => _ListViewState();
+  State<CustomListView> createState() => _CustomListViewState();
 }
 
-class _ListViewState extends State<ListView> {
+class _CustomListViewState extends State<CustomListView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
