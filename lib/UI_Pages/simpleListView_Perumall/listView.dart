@@ -14,7 +14,7 @@ class _listViewState extends State<listView> {
     return Scaffold(
       body: SizedBox(
         width: MediaQuery.of(context).size.width,
-        child: listViewScreen(),
+        child: const listViewScreen(),
       ),
     );
   }

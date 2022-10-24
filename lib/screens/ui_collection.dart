@@ -7,6 +7,7 @@ import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listView.dart';
+import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listViewScreen.dart';
 import '../UI_Pages/modelNavBar_Perumall/screens/navbar.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
 import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
@@ -168,7 +169,7 @@ class _UiCollectionState extends State<UiCollection> {
                           return WidgetButton(
                             title: "${_found[index]['title']}".toString(),
                             subTitle: "${_found[index]['subTitle']}".toString(),
-                            // screen: AppBarScreen(),
+                            screen: const AppBarScreen(),
                             onTap: () {
                               _found[index]['id'].toString() == '1'
                                   ? Navigator.push(
@@ -267,12 +268,15 @@ class _UiCollectionState extends State<UiCollection> {
                                                                                   context,
                                                                                   MaterialPageRoute(builder: (context) => OnBoardingScreen(onPressed: () {})),
                                                                                 )
-                                                                               : _found[index]['id'].toString() == '13'
-                                                                               ? Navigator.push(context, MaterialPageRoute(builder: (context) => listView()))
-                                                                              : Navigator.push(
-                                                                                  context,
-                                                                                  MaterialPageRoute(builder: (context) => const ProfileScreen()),
-                                                                                );
+                                                                              : _found[index]['id'].toString() == '13'
+                                                                                  ? Navigator.push(
+                                                                                      context,
+                                                                                      MaterialPageRoute(builder: (context) => const listView()),
+                                                                                    )
+                                                                                  : Navigator.push(
+                                                                                      context,
+                                                                                      MaterialPageRoute(builder: (context) => const ProfileScreen()),
+                                                                                    );
                             },
                           );
                         }),
@@ -289,18 +293,6 @@ class _UiCollectionState extends State<UiCollection> {
                       ),
               ],
             ),
-          ),
-           WidgetButton(
-            title: "Bottom Sheet Form",
-            subTitle: "A collection of Bottom Sheet Forms",
-            screen: const BottomSheetScreen(),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const BottomSheetScreen()),
-              );
-            },
           ),
         ],
       ),

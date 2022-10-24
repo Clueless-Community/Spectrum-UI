@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/UI_Pages/appBar_ArpitSahu01/screens/appBarUI_screen.dart';
 import 'package:flutter_ui/widgets/heading.dart';
 import 'package:flutter_ui/widgets/screen_display.dart';
 import 'package:flutter_ui/widgets/searchbar.dart';
@@ -109,6 +110,7 @@ class _listViewScreenState extends State<listViewScreen> {
                       title: "${_items[index]['title']}".toString(),
                       subTitle: "${_items[index]['subTitle']}".toString(),
                       onTap: () {},
+                      screen: const AppBarScreen(),
                     );
                   }),
                 ),
