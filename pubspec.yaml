@@ -44,7 +44,15 @@ dependencies:
   intl: ^0.17.0
   carousel_slider: ^4.1.1
   dots_indicator: ^2.1.0
-  
+  animate_icons: ^2.0.0
+  url_launcher: ^6.1.6
+  shimmer: ^2.0.0
+  responsive_builder: ^0.4.3
+  flutter_syntax_view: ^4.0.0
+  font_awesome_flutter: ^10.2.1
+  flutter_inappwebview: ^5.5.0+4
+  like_button: ^2.0.5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -73,7 +81,6 @@ flutter:
     - assets/loginImages_Aaliya-Ali/
     - assets/buttons_images/
     - assets/onboardingScreen_images_sagardev2301/
-
 
   # To add assets to your application, add an assets section, like this:
   # assets:

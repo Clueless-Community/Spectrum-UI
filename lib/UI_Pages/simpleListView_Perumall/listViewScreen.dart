@@ -4,14 +4,14 @@ import 'package:flutter_ui/widgets/heading.dart';
 import 'package:flutter_ui/widgets/screen_display.dart';
 import 'package:flutter_ui/widgets/searchbar.dart';
 
-class listViewScreen extends StatefulWidget {
-  const listViewScreen({super.key});
+class ListViewScreen extends StatefulWidget {
+  const ListViewScreen({super.key});
 
   @override
-  State<listViewScreen> createState() => _listViewScreenState();
+  State<ListViewScreen> createState() => _ListViewScreenState();
 }
 
-class _listViewScreenState extends State<listViewScreen> {
+class _ListViewScreenState extends State<ListViewScreen> {
   final List<Map<String, dynamic>> _items = [
     {
       "id": 1,
