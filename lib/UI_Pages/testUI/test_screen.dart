@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
 import 'package:flutter_ui/screens/individual_design/individual_design.dart';
 
@@ -21,9 +20,10 @@ class Test extends StatelessWidget {
             "lib/UI_Pages/onboardingUiPage_sagardev2301/widget/onboarding_widget.dart",
           ],
           widget: OnBoardingScreen(
-            onPressed: (){},
+            onPressed: () {},
           ),
-          image: Image.asset("assets/onboardingScreen_images_sagardev2301/widget.png"),
+          image: Image.asset(
+              "assets/onboardingScreen_images_sagardev2301/widget.png"),
         ),
       ),
     );

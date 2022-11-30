@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/link.dart';
-import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 import 'copy_button.dart';
 import 'multiple_requests_http_client.dart';
@@ -43,7 +42,7 @@ abstract class AbstractGithubViewState<T extends AbstractGithubView>
   constructing the FutureBuilder. If the future is created at the same time as the FutureBuilder, 
   then every time the FutureBuilder's parent is rebuilt, the asynchronous task will be restarted.
   */
-  Future<Response>? getGithubContent;
+  Future? getGithubContent;
   static const GITHUB_HTTP_HEADERS = {
     'Accept': 'application/vnd.github.v3.raw',
   };
@@ -54,7 +53,7 @@ abstract class AbstractGithubViewState<T extends AbstractGithubView>
     getGithubContent = _fetchGithubContent();
   }
 
-  Future<Response> _fetchGithubContent() {
+  Future _fetchGithubContent() {
     if (widget.client != null) {
       return widget.client!.get(
         Uri.parse(widget.apiUrl),
@@ -71,7 +70,7 @@ abstract class AbstractGithubViewState<T extends AbstractGithubView>
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    final contentWidget = FutureBuilder<Response>(
+    final contentWidget = FutureBuilder(
       future: getGithubContent,
       builder: (context, snapshot) {
         final linkText =
@@ -153,7 +152,7 @@ abstract class AbstractGithubViewState<T extends AbstractGithubView>
           );
   }
 
-  Widget _buildWidget(BuildContext context, AsyncSnapshot<Response> snapshot) {
+  Widget _buildWidget(BuildContext context, AsyncSnapshot snapshot) {
     if (snapshot.hasData) {
       final response = snapshot.data;
       return response!.statusCode == 200

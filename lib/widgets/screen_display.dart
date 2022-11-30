@@ -59,7 +59,7 @@ class WidgetButton extends StatelessWidget {
                 ),
                 const Icon(
                   Icons.arrow_forward_ios_rounded,
-                  size: 35,
+                  size: 20,
                 )
               ],
             ),

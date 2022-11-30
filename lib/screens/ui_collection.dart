@@ -8,7 +8,6 @@ import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listView.dart';
-import 'package:flutter_ui/UI_Pages/testUI/test_screen.dart';
 import '../UI_Pages/modelNavBar_Perumall/screens/navbar.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
 import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
@@ -181,16 +180,16 @@ class _UiCollectionState extends State<UiCollection> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Test()));
-            },
-            child: const Text("Individual Design Screen"),
-          ),
+          // const SizedBox(
+          //   height: 20,
+          // ),
+          // ElevatedButton(
+          //   onPressed: () {
+          //     Navigator.push(context,
+          //         MaterialPageRoute(builder: (context) => const Test()));
+          //   },
+          //   child: const Text("Individual Design Screen"),
+          // ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 3),
             child: Column(
