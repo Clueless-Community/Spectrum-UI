@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_ui/UI_Pages/bottomNavigation_Roshaen/screen/bottom_bar.dart';
 import 'package:flutter_ui/UI_Pages/bottomSheet/screen/bottom_sheet_screen.dart';
 import 'package:flutter_ui/UI_Pages/customised_fab_AdiAr11/screen/custom_fab.dart';
@@ -27,6 +28,30 @@ class UiCollection extends StatefulWidget {
 }
 
 class _UiCollectionState extends State<UiCollection> {
+  Future<bool> showExitPopup() async {
+    return await showDialog(
+          //show confirm dialogue
+          //the return value will be from "Yes" or "No" options
+          context: context,
+          builder: (context) => AlertDialog(
+            title: const Text('Exit App'),
+            content: const Text('Do you want to exit an App?'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(false),
+                //return false when click on "NO"
+                child: const Text('No'),
+              ),
+              TextButton(
+                onPressed: () => SystemNavigator.pop(),
+                //return true when click on "Yes"
+                child: const Text('Yes'),
+              ),
+            ],
+          ),
+        ) ??
+        false; //if showDialouge had returned null, then return false
+  }
   // Add Your Widget Here
 
   final List<Map<String, dynamic>> _components = [
@@ -155,85 +180,89 @@ class _UiCollectionState extends State<UiCollection> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Heading(
-            title: "UI Collections",
-            count: _found.length.toString(),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: TextField(
-              onChanged: (value) => _runFilter(value),
-              decoration: InputDecoration(
-                labelText: "Search",
-                prefixIcon: const Icon(Icons.search),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(40),
-                  borderSide: const BorderSide(
-                      width: 1, color: Color.fromARGB(200, 200, 200, 200)),
+    return WillPopScope(
+      onWillPop: showExitPopup,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Heading(
+              title: "UI Collections",
+              count: _found.length.toString(),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15),
+              child: TextField(
+                onChanged: (value) => _runFilter(value),
+                decoration: InputDecoration(
+                  labelText: "Search",
+                  prefixIcon: const Icon(Icons.search),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(40),
+                    borderSide: const BorderSide(
+                        width: 1, color: Color.fromARGB(200, 200, 200, 200)),
+                  ),
                 ),
               ),
             ),
-          ),
-          // const SizedBox(
-          //   height: 20,
-          // ),
-          // ElevatedButton(
-          //   onPressed: () {
-          //     Navigator.push(context,
-          //         MaterialPageRoute(builder: (context) => const Test()));
-          //   },
-          //   child: const Text("Individual Design Screen"),
-          // ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 3),
-            child: Column(
-              children: [
-                _found.isNotEmpty
-                    ? ListView.builder(
-                        shrinkWrap: true,
-                        scrollDirection: Axis.vertical,
-                        physics: const BouncingScrollPhysics(),
-                        itemCount: _found.length,
-                        itemBuilder: ((context, index) {
-                          return WidgetButton(
-                            title: "${_found[index]['title']}".toString(),
-                            subTitle: "${_found[index]['subTitle']}".toString(),
-                            screen: const AppBarScreen(),
-                            onTap: () {
-                              for (int i = 1; i <= _found.length; i++) {
-                                if (_found[index]['id'] == i) {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            _found[index]['widget']),
-                                  );
+            // const SizedBox(
+            //   height: 20,
+            // ),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.push(context,
+            //         MaterialPageRoute(builder: (context) => const Test()));
+            //   },
+            //   child: const Text("Individual Design Screen"),
+            // ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 3),
+              child: Column(
+                children: [
+                  _found.isNotEmpty
+                      ? ListView.builder(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.vertical,
+                          physics: const BouncingScrollPhysics(),
+                          itemCount: _found.length,
+                          itemBuilder: ((context, index) {
+                            return WidgetButton(
+                              title: "${_found[index]['title']}".toString(),
+                              subTitle:
+                                  "${_found[index]['subTitle']}".toString(),
+                              screen: const AppBarScreen(),
+                              onTap: () {
+                                for (int i = 1; i <= _found.length; i++) {
+                                  if (_found[index]['id'] == i) {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              _found[index]['widget']),
+                                    );
+                                  }
                                 }
-                              }
-                            },
-                          );
-                        }),
-                      )
-                    : const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
-                        child: Text(
-                          'No results found, Please try with diffrent search',
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.grey),
+                              },
+                            );
+                          }),
+                        )
+                      : const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            'No results found, Please try with diffrent search',
+                            style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.grey),
+                          ),
                         ),
-                      ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
