@@ -3,7 +3,28 @@
 <h3 align=center> Amazing UI Designs for you to choose from. 📜 </h3>
 
 ----
+## Want to contribute? 🎯
 
+
+<h1 align='center'>Contribute to CodePeak 2022</h1>
+
+![codepeak-readme-cover](https://user-images.githubusercontent.com/91758830/205308086-df454271-2d7a-4158-a743-4359a18e8038.jpeg)
+
+
+
+## About CodePeak 
+CODE PEAK is a month-long program that helps students understand the paradigm of Open Source contribution and gives them real-world software development experience. The event targets first-timers who wish to participate in Free and Open Source(FOSS) Contributions and the experienced developers who want to show their skills by contributing to real-world projects.
+
+## Rewards
+Do you know we are sponsering CodePeak 2022 : 
+1. Top 5 contributors of CodePeak will get an amazing swag kit from us. ( Which includes a t-shirt, stickers and custom printed cheatsheets and much more.)
+2. Top Contributors of ClueLess projects may get an opportunity to work with ClueLess.  
+3. Top 5 winners will be both featured on ClueLess official website as well as social media handles.
+
+
+
+If you are willing to contibute to this project, you are warmly welcome.
+Do check the [Contribution](https://github.com/Clueless-Community/flutter-ui-components/blob/master/CONTRIBUTING.md) guidelines before contributing.
 
 
 
@@ -30,26 +51,7 @@ Simply pick up a template UI from our collection list which you love and then pl
 
 ... and many more.
 
-
-
-
-
-
 [Read More](https://github.com/Clueless-Community/flutter-ui-components/blob/master/About.md)
-
-
-## Want to contribute? 🎯
-
-
-You can contribute to this project under [Codepeak 2022](https://www.codepeak.tech/) 🤩
-
-
-![Orange and Teal Summer Sale Kids Fashion Bright Website Banner (2)](https://user-images.githubusercontent.com/58213083/204863466-c953d658-1901-4a31-8284-36b8d2dd13d8.png)
-
-
-
-If you are willing to contibute to this project, you are warmly welcome.
-Do check the [Contribution](https://github.com/Clueless-Community/flutter-ui-components/blob/master/CONTRIBUTING.md) guidelines before contributing.
 
 
 <h2 align='center'> Project maintainers </h2>
