@@ -1,20 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ProfileScreen2 extends StatelessWidget {
+class ProfileScreen2 extends StatefulWidget {
   const ProfileScreen2({Key? key}) : super(key: key);
+
+  @override
+  State<ProfileScreen2> createState() => _ProfileScreen2State();
+}
+
+class _ProfileScreen2State extends State<ProfileScreen2> {
+
+  bool _isDark = true;
 
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: ThemeData.dark(),
+      data: _isDark ? ThemeData.dark() : ThemeData.light(),
       child: Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
+          leading: IconButton(icon: Icon(Icons.arrow_back, color: _isDark ? Colors.white : Colors.black,),onPressed: (){
+            Navigator.of(context).pop();
+          },),
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.light_mode_outlined))
+            IconButton(onPressed: () {
+              setState((){
+                _isDark = !_isDark;
+              });
+            }, icon: Icon(_isDark ? Icons.light_mode_outlined : Icons.dark_mode_outlined, color: _isDark ? Colors.white : Colors.black,))
           ],
         ),
         body: Padding(
@@ -42,7 +57,7 @@ class ProfileScreen2 extends StatelessWidget {
               Text("Chandan Gowda", style: GoogleFonts.poppins(fontSize: 30),),
               Text("chandan@example.com", style: GoogleFonts.poppins(fontSize: 15),),
               SizedBox(height: MediaQuery.of(context).size.height/30,),
-              ElevatedButton(onPressed: (){}, child: Text("Upgrade to PRO"), style: ElevatedButton.styleFrom(
+              ElevatedButton(onPressed: (){}, child: Text("Upgrade to PRO", style: GoogleFonts.poppins(),), style: ElevatedButton.styleFrom(
                 shape: StadiumBorder()
               ),),
               SizedBox(height: 20,),
