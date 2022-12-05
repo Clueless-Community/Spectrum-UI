@@ -15,6 +15,7 @@ import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/di
 import 'package:flutter_ui/UI_Pages/toggleButton_ismailyegnr/screens/toggle_button_screen.dart';
 
 import '../UI_Pages/profile_screen_balamurugan213/screens/profile_screen.dart';
+import '../UI_Pages/profile_screen_chandansgowda/screens/profile_screen2.dart';
 import '../UI_Pages/upperTabbar_pratikagr/screens/upper_tab_bar.dart';
 import '../UI_Pages/appBar_ArpitSahu01/screens/appBarUI_screen.dart';
 import '../widgets/heading.dart';
@@ -141,12 +142,18 @@ class _UiCollectionState extends State<UiCollection> {
     },
     {
       "id": 15,
-      "title": "Profile Screen",
+      "title": "Profile Screen 1",
       "subTitle": "Profile Screen by balamurugan213",
       "widget": const ProfileScreen()
     },
     {
       "id": 16,
+      "title": "Profile Screen 2",
+      "subTitle": "Profile Screen by chandansgowda",
+      "widget": const ProfileScreen2()
+    },
+    {
+      "id": 17,
       "title": "Bottom Sheet Form",
       "subTitle": "A collection of Bottom Sheet Forms",
       "widget": const BottomSheetScreen()
