@@ -47,7 +47,7 @@ class _ProfileScreen2State extends State<ProfileScreen2> {
           ],
         ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 50),
+          padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width/10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -77,6 +77,7 @@ class _ProfileScreen2State extends State<ProfileScreen2> {
               Text(
                 "Chandan Gowda",
                 style: GoogleFonts.poppins(fontSize: 30),
+                textAlign: TextAlign.center,
               ),
               Text(
                 "chandan@example.com",
@@ -100,9 +101,7 @@ class _ProfileScreen2State extends State<ProfileScreen2> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   ProfileAttributeButton("Rating", "4.8"),
-                  VerticalDivider(),
                   ProfileAttributeButton("Following", "54"),
-                  VerticalDivider(),
                   ProfileAttributeButton("Followers", "2M"),
                 ],
               ),
@@ -112,7 +111,7 @@ class _ProfileScreen2State extends State<ProfileScreen2> {
               Text(
                 "Actively looking for Summer Internships | Youtuber 25k+ | Flutter | Python | Django | "
                 "CyberSec Lead @gdsc-jssstu | JPMC Code for Good'22 Winner",
-                style: GoogleFonts.poppins(color: Colors.grey, fontSize: 15),
+                style: GoogleFonts.poppins(color: Colors.grey, fontSize: 12),
                 textAlign: TextAlign.center,
               )
             ],

@@ -8,17 +8,17 @@ class ProfileAttributeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+      padding: const EdgeInsets.symmetric(vertical: 5),
       onPressed: () {},
       child: Column(
         children: [
           Text(
             value,
-            style: GoogleFonts.poppins(fontSize: 35),
+            style: GoogleFonts.poppins(fontSize: MediaQuery.of(context).size.width/13),
           ),
           Text(
             title,
-            style: GoogleFonts.poppins(fontSize: 15),
+            style: GoogleFonts.poppins(fontSize: MediaQuery.of(context).size.width/30),
           )
         ],
       ),
