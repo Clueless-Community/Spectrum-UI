@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_ui/UI_Pages/bottomNavigation_Roshaen/screen/bottom_bar.dart';
@@ -13,6 +15,7 @@ import '../UI_Pages/modelNavBar_Perumall/screens/navbar.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
 import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
 import 'package:flutter_ui/UI_Pages/toggleButton_ismailyegnr/screens/toggle_button_screen.dart';
+import 'package:flutter_ui/UI_Pages/Skeuomorphism/UI.dart';
 
 import '../UI_Pages/profile_screen_balamurugan213/screens/profile_screen.dart';
 import '../UI_Pages/profile_screen_chandansgowda/screens/profile_screen2.dart';
@@ -157,6 +160,12 @@ class _UiCollectionState extends State<UiCollection> {
       "title": "Bottom Sheet Form",
       "subTitle": "A collection of Bottom Sheet Forms",
       "widget": const BottomSheetScreen()
+    },
+    {
+      "id": 18,
+      "title": "Skeuomorphism",
+      "subTitle": "A new Skeuomorphism UI",
+      "widget": const Skeumorphism()
     }
   ];
 
