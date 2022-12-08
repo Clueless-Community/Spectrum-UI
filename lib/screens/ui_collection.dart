@@ -9,6 +9,7 @@ import 'package:flutter_ui/UI_Pages/glassmorphism_login_harsh8833/login_screen.d
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
+import 'package:flutter_ui/UI_Pages/product_screen_chandansgowda/screens/product_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listView.dart';
 import '../UI_Pages/modelNavBar_Perumall/screens/navbar.dart';
@@ -163,10 +164,16 @@ class _UiCollectionState extends State<UiCollection> {
     },
     {
       "id": 18,
+      "title": "Single Product Screen",
+      "subTitle": "Product Screen by chandansgowda",
+      "widget": const SingleProductScreen()
+    },
+    {
+      "id": 19,
       "title": "Skeuomorphism",
       "subTitle": "A new Skeuomorphism UI",
       "widget": const Skeumorphism()
-    }
+    },
   ];
 
   List<Map<String, dynamic>> _found = [];
