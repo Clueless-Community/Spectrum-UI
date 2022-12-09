@@ -167,8 +167,8 @@ class _UiCollectionState extends State<UiCollection> {
       "title": "Glassmorphism Login Screen",
       "subTitle": "Login screen by Arpit",
       "widget": const GlassmorphismLoginScreen()
-    }
-
+    },
+    {
       "id": 18,
       "title": "Single Product Screen",
       "subTitle": "Product Screen by chandansgowda",
