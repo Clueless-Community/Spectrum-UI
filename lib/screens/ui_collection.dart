@@ -8,16 +8,17 @@ import 'package:flutter_ui/UI_Pages/customised_fab_AdiAr11/screen/custom_fab.dar
 import 'package:flutter_ui/UI_Pages/glassmorphism_login_harsh8833/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
-import 'package:flutter_ui/UI_Pages/loginUI_mauryakshitij/welcome_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
+import 'package:flutter_ui/UI_Pages/product_screen_chandansgowda/screens/product_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listView.dart';
+import '../UI_Pages/loginUI_mauryakshitij/welcome_screen.dart';
 import '../UI_Pages/modelNavBar_Perumall/screens/navbar.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
 import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
 import 'package:flutter_ui/UI_Pages/toggleButton_ismailyegnr/screens/toggle_button_screen.dart';
+import '../UI_Pages/glassmorphismLoginPage_ArpitSahu01/screens/glassmorphism_login_screen.dart';
 import 'package:flutter_ui/UI_Pages/Skeuomorphism/UI.dart';
-
 import '../UI_Pages/profile_screen_balamurugan213/screens/profile_screen.dart';
 import '../UI_Pages/profile_screen_chandansgowda/screens/profile_screen2.dart';
 import '../UI_Pages/upperTabbar_pratikagr/screens/upper_tab_bar.dart';
@@ -35,26 +36,26 @@ class UiCollection extends StatefulWidget {
 class _UiCollectionState extends State<UiCollection> {
   Future<bool> showExitPopup() async {
     return await showDialog(
-          //show confirm dialogue
-          //the return value will be from "Yes" or "No" options
-          context: context,
-          builder: (context) => AlertDialog(
-            title: const Text('Exit App'),
-            content: const Text('Do you want to exit an App?'),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(false),
-                //return false when click on "NO"
-                child: const Text('No'),
-              ),
-              TextButton(
-                onPressed: () => SystemNavigator.pop(),
-                //return true when click on "Yes"
-                child: const Text('Yes'),
-              ),
-            ],
+      //show confirm dialogue
+      //the return value will be from "Yes" or "No" options
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Exit App'),
+        content: const Text('Do you want to exit an App?'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            //return false when click on "NO"
+            child: const Text('No'),
           ),
-        ) ??
+          TextButton(
+            onPressed: () => SystemNavigator.pop(),
+            //return true when click on "Yes"
+            child: const Text('Yes'),
+          ),
+        ],
+      ),
+    ) ??
         false; //if showDialouge had returned null, then return false
   }
   // Add Your Widget Here
@@ -163,13 +164,25 @@ class _UiCollectionState extends State<UiCollection> {
       "widget": const BottomSheetScreen()
     },
     {
+      "id": 17,
+      "title": "Glassmorphism Login Screen",
+      "subTitle": "Login screen by Arpit",
+      "widget": const GlassmorphismLoginScreen()
+    },
+    {
       "id": 18,
+      "title": "Single Product Screen",
+      "subTitle": "Product Screen by chandansgowda",
+      "widget": const SingleProductScreen()
+    },
+    {
+      "id": 19,
       "title": "Skeuomorphism",
       "subTitle": "A new Skeuomorphism UI",
       "widget": const Skeumorphism()
     },
     {
-      "id": 19,
+      "id": 20,
       "title": "Welcome and Login Screen",
       "subTitle": "Splash screen with login and sign up pages",
       "widget": const WelcomeScreen()
@@ -191,8 +204,8 @@ class _UiCollectionState extends State<UiCollection> {
     } else {
       results = _components
           .where((user) => (user["title"])
-              .toLowerCase()
-              .contains(enteredKeyword.toLowerCase()))
+          .toLowerCase()
+          .contains(enteredKeyword.toLowerCase()))
           .toList();
     }
 
@@ -246,41 +259,41 @@ class _UiCollectionState extends State<UiCollection> {
                 children: [
                   _found.isNotEmpty
                       ? ListView.builder(
-                          shrinkWrap: true,
-                          scrollDirection: Axis.vertical,
-                          physics: const BouncingScrollPhysics(),
-                          itemCount: _found.length,
-                          itemBuilder: ((context, index) {
-                            return WidgetButton(
-                              title: "${_found[index]['title']}".toString(),
-                              subTitle:
-                                  "${_found[index]['subTitle']}".toString(),
-                              screen: const AppBarScreen(),
-                              onTap: () {
-                                for (int i = 1; i <= _found.length; i++) {
-                                  if (_found[index]['id'] == i) {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              _found[index]['widget']),
-                                    );
-                                  }
-                                }
-                              },
-                            );
-                          }),
-                        )
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    physics: const BouncingScrollPhysics(),
+                    itemCount: _found.length,
+                    itemBuilder: ((context, index) {
+                      return WidgetButton(
+                        title: "${_found[index]['title']}".toString(),
+                        subTitle:
+                        "${_found[index]['subTitle']}".toString(),
+                        screen: const AppBarScreen(),
+                        onTap: () {
+                          for (int i = 1; i <= _found.length; i++) {
+                            if (_found[index]['id'] == i) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                    _found[index]['widget']),
+                              );
+                            }
+                          }
+                        },
+                      );
+                    }),
+                  )
                       : const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 10),
-                          child: Text(
-                            'No results found, Please try with diffrent search',
-                            style: TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.grey),
-                          ),
-                        ),
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      'No results found, Please try with diffrent search',
+                      style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey),
+                    ),
+                  ),
                 ],
               ),
             ),
