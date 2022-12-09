@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/widgets/Instagram_Login_button.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/widgets/google_sign_in_button.dart';
 import '../../widgets/heading.dart';
 import '../../widgets/searchbar.dart';
@@ -24,6 +25,10 @@ class ButtonScreen extends StatelessWidget {
               height: 20,
             ),
             GoogleSignInButton(),
+            SizedBox(
+              height: 20,
+            ),
+            Insta_Login()
           ],
         ),
       ),
