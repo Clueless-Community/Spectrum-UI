@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/UI_Pages/loginUI_mauryakshitij/signup_screen.dart';
+import 'package:flutter_ui/UI_Pages/loginUI_mauryakshitij/widgets/my_text_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../widgets/my_password_field.dart';
-import '../widgets/my_text_button.dart';
-import '../widgets/my_text_field.dart';
+import 'widgets/my_password_field.dart';
+import 'widgets/my_text_field.dart';
 
-class AppSignUpScreen extends StatefulWidget {
-  const AppSignUpScreen({super.key});
+class AppLoginScreen extends StatefulWidget {
+  const AppLoginScreen({super.key});
 
   @override
-  State<AppSignUpScreen> createState() => _AppSignUpScreenState();
+  State<AppLoginScreen> createState() => _AppLoginScreenState();
 }
 
-class _AppSignUpScreenState extends State<AppSignUpScreen> {
+class _AppLoginScreenState extends State<AppLoginScreen> {
   final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmController = TextEditingController();
   bool isPasswordVisible = true;
   bool isChecked = false;
 
@@ -42,9 +41,9 @@ class _AppSignUpScreenState extends State<AppSignUpScreen> {
                   Image(
                       image: isDarkMode
                           ? const AssetImage(
-                          "assets/clueless_logo/logo_dark.png")
+                              "assets/clueless_logo/logo_dark.png")
                           : const AssetImage(
-                          'assets/clueless_logo/logo_light.png'),
+                              'assets/clueless_logo/logo_light.png'),
                       width: width / 6),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,7 +63,7 @@ class _AppSignUpScreenState extends State<AppSignUpScreen> {
                           style: GoogleFonts.poppins(
                             fontSize: 18,
                             fontWeight: FontWeight.w400,
-                            color: isDarkMode ?const Color(0xffF0EEEE) : Colors.black,
+                            color: isDarkMode ? const Color(0xffF0EEEE) : Colors.black,
                           ))
                     ],
                   ),
@@ -72,16 +71,7 @@ class _AppSignUpScreenState extends State<AppSignUpScreen> {
                 ],
               ),
               SizedBox(
-                height: height / 25,
-              ),
-              SizedBox(
-                width: width / 1.2,
-                child: MyTextField(
-                  labelText: 'Username',
-                  hintText: 'Enter Username',
-                  inputType: TextInputType.text,
-                  controller: _usernameController,
-                ),
+                height: height / 15,
               ),
               SizedBox(
                 width: width / 1.2,
@@ -104,23 +94,77 @@ class _AppSignUpScreenState extends State<AppSignUpScreen> {
                   },
                 ),
               ),
-              SizedBox(
-                width: width / 1.2,
-                child: MyTextField(
-                  labelText: 'Confirm Password',
-                  hintText: 'Enter Password',
-                  inputType: TextInputType.visiblePassword,
-                  controller: _confirmController,
+              Container(
+                padding: EdgeInsets.symmetric(
+                    horizontal: width / 12, vertical: height / 50),
+                alignment: Alignment.centerRight,
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    'Forgot Password?',
+                    style: GoogleFonts.poppins(
+                        color: const Color(0xFF5C5B5B),
+                        decoration: TextDecoration.underline,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14),
+                  ),
                 ),
               ),
               SizedBox(
-                height: height/40,
+                width: width / 1.1,
+                child: Row(
+                  children: [
+                    Checkbox(
+                      checkColor: Colors.white,
+                      activeColor: Colors.black,
+                      value: isChecked,
+                      onChanged: (bool? value) {
+                        setState(() {
+                          isChecked = value!;
+                        });
+                      },
+                    ),
+                    Text(
+                      'I agree to ',
+                      style: GoogleFonts.poppins(
+                          color: Colors.grey,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Text(
+                        'Terms and Conditions ',
+                        style: GoogleFonts.poppins(
+                            fontSize: 10, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    Text(
+                      'and ',
+                      style: GoogleFonts.poppins(
+                          color: Colors.grey,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w500),
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: Text(
+                        'Privacy Policy',
+                        style: GoogleFonts.poppins(
+                            fontSize: 10, fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: height / 40,
               ),
               SizedBox(
                 width: width / 1.2,
                 child: MyTextButton(
                   onTap: () {},
-                  buttonName: 'Sign up',
+                  buttonName: 'Login',
                   bgColor: const Color(0xFF136DD6),
                   textColor: Colors.white,
                 ),
@@ -130,7 +174,7 @@ class _AppSignUpScreenState extends State<AppSignUpScreen> {
               ),
               Center(
                 child: Text(
-                  'Or sign up with',
+                  'Or login with',
                   style: GoogleFonts.poppins(
                       fontSize: 14, fontWeight: FontWeight.w400),
                 ),
@@ -225,7 +269,7 @@ class _AppSignUpScreenState extends State<AppSignUpScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Already have an account? ",
+                      "Don't have an account? ",
                       style: GoogleFonts.poppins(
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
@@ -233,10 +277,13 @@ class _AppSignUpScreenState extends State<AppSignUpScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).pop();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context)=>const AppSignUpScreen())
+                        );
                       },
                       child: Text(
-                        "Login",
+                        "Sign up",
                         style: GoogleFonts.poppins(
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
