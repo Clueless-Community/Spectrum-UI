@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/link.dart';
+// ignore: depend_on_referenced_packages
 import 'package:http/http.dart' as http;
 import 'copy_button.dart';
 import 'multiple_requests_http_client.dart';
@@ -43,6 +44,7 @@ abstract class AbstractGithubViewState<T extends AbstractGithubView>
   then every time the FutureBuilder's parent is rebuilt, the asynchronous task will be restarted.
   */
   Future? getGithubContent;
+  // ignore: constant_identifier_names
   static const GITHUB_HTTP_HEADERS = {
     'Accept': 'application/vnd.github.v3.raw',
   };

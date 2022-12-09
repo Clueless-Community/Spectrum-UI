@@ -20,35 +20,6 @@ class _GlassmorphismLoginPageState extends State<GlassmorphismLoginPage> {
   bool obscure = true;
   @override
   Widget build(BuildContext context) {
-    Future showLoading(text) async {
-      showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (BuildContext context) {
-          return Dialog(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            child: Container(
-              height: 100,
-              padding: const EdgeInsets.all(24),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  CircularProgressIndicator(
-                    color: Theme.of(context).primaryColor,
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Text(text),
-                ],
-              ),
-            ),
-          );
-        },
-      );
-    }
-
     final totalWidth = MediaQuery.of(context).size.width;
     final totalHeight = MediaQuery.of(context).size.height;
     return Scaffold(

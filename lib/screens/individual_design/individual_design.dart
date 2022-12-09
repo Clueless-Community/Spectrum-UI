@@ -76,8 +76,6 @@ class IndividualDesign extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       LikeButton(
-                        // TODO: Implement OnTap, what happens when like button is pressed
-                        //onTap: ,
                         circleColor: CircleColor(
                             start: Colors.red, end: Colors.redAccent.shade400),
                         bubblesColor: BubblesColor(
@@ -92,8 +90,6 @@ class IndividualDesign extends StatelessWidget {
                             )),
                       ),
                       LikeButton(
-                        // TODO: Implement OnTap, wherever you want to save saved widgets
-                        //onTap: ,
                         circleColor: const CircleColor(
                             start: Color.fromARGB(255, 59, 13, 213),
                             end: Color.fromARGB(255, 7, 24, 91)),

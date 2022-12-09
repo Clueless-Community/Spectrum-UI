@@ -14,11 +14,11 @@ class LoginCredentials extends StatelessWidget {
       left: 0,
       right: 0,
       child: Padding(
-        padding: EdgeInsets.all(appPadding),
+        padding: const EdgeInsets.all(appPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'Hello',
               style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
             ),
@@ -32,37 +32,33 @@ class LoginCredentials extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: appPadding),
-              child: Container(
-                child: ClayContainer(
-                  color: white,
-                  borderRadius: 30,
-                  depth: -30,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: appPadding),
-                    child: TextField(
-                      decoration: InputDecoration(
-                          hintText: 'Email',
-                          border: InputBorder.none,
-                          fillColor: black),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Container(
               child: ClayContainer(
                 color: white,
                 borderRadius: 30,
                 depth: -30,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: appPadding),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: appPadding),
                   child: TextField(
-                    obscureText: true,
                     decoration: InputDecoration(
-                        hintText: 'Password',
+                        hintText: 'Email',
                         border: InputBorder.none,
                         fillColor: black),
                   ),
+                ),
+              ),
+            ),
+            ClayContainer(
+              color: white,
+              borderRadius: 30,
+              depth: -30,
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: appPadding),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      hintText: 'Password',
+                      border: InputBorder.none,
+                      fillColor: black),
                 ),
               ),
             ),
