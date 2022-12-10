@@ -8,6 +8,7 @@ import 'package:flutter_ui/UI_Pages/customised_fab_AdiAr11/screen/custom_fab.dar
 import 'package:flutter_ui/UI_Pages/glassmorphism_login_harsh8833/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
+import 'package:flutter_ui/UI_Pages/loginUI_mauryakshitij/welcome_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
 import 'package:flutter_ui/UI_Pages/product_screen_chandansgowda/screens/product_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
@@ -179,6 +180,12 @@ class _UiCollectionState extends State<UiCollection> {
       "title": "Skeuomorphism",
       "subTitle": "A new Skeuomorphism UI",
       "widget": const Skeumorphism()
+    },
+    {
+      "id": 20,
+      "title": "Welcome and Login Screen",
+      "subTitle": "Splash Screen and Login Screen UI",
+      "widget": const WelcomeScreen()
     },
   ];
 
