@@ -33,10 +33,9 @@ dependencies:
     sdk: flutter
   build_runner: ^2.2.1
   glassmorphism: ^3.0.0
+  clay_containers: ^0.3.2
+ 
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_neumorphic: ^3.2.0
   google_fonts: ^3.0.1
@@ -56,6 +55,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+ 
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -82,6 +82,8 @@ flutter:
     - assets/buttons_images/
     - assets/onboardingScreen_images_sagardev2301/
     - assets/glassmorph_login_harsh8833/
+    - assets/glassmorphism_ArpitSahu01/
+    - assets/product_screen_chandansgowda/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

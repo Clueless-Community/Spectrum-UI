@@ -8,8 +8,8 @@ class SourceCodeView extends StatelessWidget {
   final String ref;
   final List<String> paths;
   final MultipleRequestsHttpClient? client;
-  
-  SourceCodeView({
+
+  const SourceCodeView({
     required this.owner,
     required this.repository,
     required this.ref,
@@ -24,7 +24,7 @@ class SourceCodeView extends StatelessWidget {
 
     return Column(
       children: [
-        for(String path in paths)
+        for (String path in paths)
           GithubSyntaxView(
             owner: owner,
             repository: repository,

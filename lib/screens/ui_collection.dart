@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_ui/UI_Pages/AppBar_Jhalak_Upadhyay/Screen/TabBar_View.dart';
@@ -8,13 +10,15 @@ import 'package:flutter_ui/UI_Pages/glassmorphism_login_harsh8833/login_screen.d
 import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
+import 'package:flutter_ui/UI_Pages/product_screen_chandansgowda/screens/product_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listView.dart';
 import '../UI_Pages/modelNavBar_Perumall/screens/navbar.dart';
 import 'package:flutter_ui/UI_Pages/buttons_sagardev2301/buttons_screen.dart';
 import 'package:flutter_ui/UI_Pages/dialog_box_sagardev2301/scrollable_dialog/dialog_box_screen.dart';
 import 'package:flutter_ui/UI_Pages/toggleButton_ismailyegnr/screens/toggle_button_screen.dart';
-
+import '../UI_Pages/glassmorphismLoginPage_ArpitSahu01/screens/glassmorphism_login_screen.dart';
+import 'package:flutter_ui/UI_Pages/Skeuomorphism/UI.dart';
 import '../UI_Pages/profile_screen_balamurugan213/screens/profile_screen.dart';
 import '../UI_Pages/profile_screen_chandansgowda/screens/profile_screen2.dart';
 import '../UI_Pages/upperTabbar_pratikagr/screens/upper_tab_bar.dart';
@@ -160,11 +164,29 @@ class _UiCollectionState extends State<UiCollection> {
       "widget": const BottomSheetScreen()
     },
     {
+      "id": 17,
+      "title": "Glassmorphism Login Screen",
+      "subTitle": "Login screen by Arpit",
+      "widget": const GlassmorphismLoginScreen()
+    },
+    {
       "id": 18,
+      "title": "Single Product Screen",
+      "subTitle": "Product Screen by chandansgowda",
+      "widget": const SingleProductScreen()
+    },
+    {
+      "id": 19,
+      "title": "Skeuomorphism",
+      "subTitle": "A new Skeuomorphism UI",
+      "widget": const Skeumorphism()
+    },
+    {
+      "id": 20,
       "title": "App_Bar_Tab_View",
       "subTitle": "A appbar with Tabs",
       "widget": const TabDesign()
-    }
+    },
   ];
 
   List<Map<String, dynamic>> _found = [];

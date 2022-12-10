@@ -8,6 +8,7 @@ import 'multiple_requests_http_client.dart';
 class GithubSyntaxView extends AbstractGithubView {
   final SyntaxTheme syntaxTheme;
   final Syntax? syntax;
+  // ignore: constant_identifier_names
   static const Map<String, Syntax> FILE_EXTENSION_SYNTAX_MAPPING = {
     '.dart': Syntax.DART,
     '.c': Syntax.C,
@@ -45,6 +46,7 @@ class GithubSyntaxView extends AbstractGithubView {
         );
 
   @override
+  // ignore: library_private_types_in_public_api
   _GithubSyntaxViewState createState() => _GithubSyntaxViewState();
 }
 
@@ -53,7 +55,7 @@ class _GithubSyntaxViewState extends AbstractGithubViewState<GithubSyntaxView> {
   Widget buildWidget(BuildContext context, String responseBody) {
     final numberOfLines = const LineSplitter().convert(responseBody).length;
     final fontSize = Theme.of(context).textTheme.bodyText1!.fontSize;
-    
+
     return SizedBox(
       height: numberOfLines * fontSize!,
       child: SyntaxView(
