@@ -14,20 +14,20 @@ class CartButton extends StatelessWidget {
           IconButton(
             onPressed: () {},
             splashRadius: 25,
-            icon: Icon(Icons.shopping_cart_outlined),
+            icon: const Icon(Icons.shopping_cart_outlined),
           ),
-          Positioned(
+          const Positioned(
               top: 5,
               right: 5,
               child: CircleAvatar(
+                radius: 7,
                 child: Padding(
-                  padding: const EdgeInsets.all(2.0),
+                  padding: EdgeInsets.all(2.0),
                   child: FittedBox(
-                    child: Text("12",style: TextStyle(color: Colors.white),),
                     fit: BoxFit.scaleDown,
+                    child: Text("12",style: TextStyle(color: Colors.white),),
                   ),
                 ),
-                radius: 7,
               ))
         ],
       ),

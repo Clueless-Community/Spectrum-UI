@@ -15,13 +15,13 @@ class SingleProductScreen2 extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.of(context).pop(),
         ),
         actions: [
           IconButton(
-              splashRadius: 25, onPressed: () {}, icon: Icon(Icons.search)),
-          CartButton(),
+              splashRadius: 25, onPressed: () {}, icon: const Icon(Icons.search)),
+          const CartButton(),
         ],
       ),
       body: Stack(
@@ -29,7 +29,7 @@ class SingleProductScreen2 extends StatelessWidget {
           Container(
             width: double.infinity,
             height: MediaQuery.of(context).size.height * 0.55,
-            decoration: BoxDecoration(color: Color.fromRGBO(61, 128, 175, 1)),
+            decoration: const BoxDecoration(color: Color.fromRGBO(61, 128, 175, 1)),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
               child: Column(
@@ -49,7 +49,7 @@ class SingleProductScreen2 extends StatelessWidget {
                         fontSize: 30,
                         fontWeight: FontWeight.w500),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Row(
                     children: [
                       Column(
@@ -70,7 +70,7 @@ class SingleProductScreen2 extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 100,
                   )
                 ],
@@ -99,7 +99,7 @@ class SingleProductScreen2 extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: 8, horizontal: 25),
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 80,
                     ),
                     Row(
@@ -112,11 +112,11 @@ class SingleProductScreen2 extends StatelessWidget {
                               "Color",
                               style: GoogleFonts.poppins(color: Colors.black45),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
-                              children: [
+                              children: const [
                                 SizedBox(
                                   width: 2,
                                 ),
@@ -143,7 +143,7 @@ class SingleProductScreen2 extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 100,
                         ),
                         Column(
@@ -164,16 +164,16 @@ class SingleProductScreen2 extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     Text(
                       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
                       style: GoogleFonts.poppins(color: Colors.black54),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        IconButtonWithBorder(icon: Icons.remove,padding: EdgeInsets.all(1),),
+                        IconButtonWithBorder(icon: Icons.remove,padding: const EdgeInsets.all(1),),
                         Text(
                           "1",
                           style: GoogleFonts.poppins(
@@ -181,22 +181,22 @@ class SingleProductScreen2 extends StatelessWidget {
                               fontSize: 25,
                               fontWeight: FontWeight.w600),
                         ),
-                        IconButtonWithBorder(icon: Icons.add,padding: EdgeInsets.all(1),),
+                        IconButtonWithBorder(icon: Icons.add,padding: const EdgeInsets.all(1),),
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Row(
                       children: [
-                        IconButtonWithBorder(icon: Icons.add_shopping_cart_outlined ,padding: EdgeInsets.all(14),),
-                        SizedBox(width: 20,),
+                        IconButtonWithBorder(icon: Icons.add_shopping_cart_outlined ,padding: const EdgeInsets.all(14),),
+                        const SizedBox(width: 20,),
                         Expanded(
                           child: Container(
-                            padding: EdgeInsets.all(10),
-                            child: Text("BUY NOW",style: GoogleFonts.poppins(fontSize: 20, color: Colors.white), textAlign: TextAlign.center,),
+                            padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
-                              color: Color.fromRGBO(61, 128, 175, 1),
+                              color: const Color.fromRGBO(61, 128, 175, 1),
                               borderRadius: BorderRadius.circular(15)
                             ),
+                            child: Text("BUY NOW",style: GoogleFonts.poppins(fontSize: 20, color: Colors.white), textAlign: TextAlign.center,),
                           ),
                         )
                       ],
@@ -207,7 +207,7 @@ class SingleProductScreen2 extends StatelessWidget {
             ),
           ),
           Align(
-              alignment: Alignment(0.8, -0.35),
+              alignment: const Alignment(0.8, -0.35),
               child:
                   Image.asset("assets/product_screen2_chandansgowda/bag_1.png"))
         ],
