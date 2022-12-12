@@ -11,6 +11,7 @@ import 'package:flutter_ui/UI_Pages/loginScreen_AnukirtiYadav/screens/login_scre
 import 'package:flutter_ui/UI_Pages/loginUI_Aaliya-Ali/screens/login_screen.dart';
 import 'package:flutter_ui/UI_Pages/loginUI_mauryakshitij/welcome_screen.dart';
 import 'package:flutter_ui/UI_Pages/onboardingUiPage_sagardev2301/onboarding_screen.dart';
+import 'package:flutter_ui/UI_Pages/product_screen2_chandansgowda/screens/product_screen.dart';
 import 'package:flutter_ui/UI_Pages/product_screen_chandansgowda/screens/product_screen.dart';
 import 'package:flutter_ui/UI_Pages/signUpScreen_AnukirtiYadav/screens/signUp_screen.dart';
 import 'package:flutter_ui/UI_Pages/simpleListView_Perumall/listView.dart';
@@ -194,6 +195,13 @@ class _UiCollectionState extends State<UiCollection> {
       "subTitle": "Splash Screen and Login Screen UI",
       "widget": const WelcomeScreen()
     },
+    {
+      "id": 21,
+      "title": "Single Product Screen 2",
+      "subTitle": "Product Screen by chandansgowda",
+      "widget": const SingleProductScreen2()
+    },
+
   ];
 
   List<Map<String, dynamic>> _found = [];
