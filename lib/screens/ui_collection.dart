@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_ui/UI_Pages/AppBar_Jhalak_Upadhyay/Screen/TabBar_View.dart';
 import 'package:flutter_ui/UI_Pages/bottomNavigation_Roshaen/screen/bottom_bar.dart';
 import 'package:flutter_ui/UI_Pages/bottomSheet/screen/bottom_sheet_screen.dart';
 import 'package:flutter_ui/UI_Pages/customised_fab_AdiAr11/screen/custom_fab.dart';
@@ -183,6 +184,12 @@ class _UiCollectionState extends State<UiCollection> {
     },
     {
       "id": 20,
+      "title": "App_Bar_Tab_View",
+      "subTitle": "A appbar with Tabs",
+      "widget": const TabDesign()
+    },
+    {
+      "id": 21,
       "title": "Welcome and Login Screen",
       "subTitle": "Splash Screen and Login Screen UI",
       "widget": const WelcomeScreen()
