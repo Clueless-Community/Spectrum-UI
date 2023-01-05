@@ -2,7 +2,7 @@
 
 <h3 align=center> Amazing UI Designs for you to choose from. 📜 </h3>
 
-----
+---
 ## Want to contribute? 🎯
 
 
