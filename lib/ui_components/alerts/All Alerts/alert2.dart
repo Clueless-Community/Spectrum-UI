@@ -6,10 +6,10 @@ class Alert2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30,
+      height: 50,
       width: double.infinity,
-      decoration: const BoxDecoration(color: Colors.pink),
-      child: const Text("Alert 2"),
+      decoration: const BoxDecoration(color: Color.fromARGB(255, 73, 173, 231)),
+      child: const Center(child: Text("Alert 2")),
     );
   }
 }
