@@ -41,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
               alignment: Alignment.bottomRight,
               child: FloatingActionButton(
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                           builder: (context) => const ComponentScreen()));
