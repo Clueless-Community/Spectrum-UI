@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_component_ui/screens/home.dart';
 
 class ComponentScreen extends StatefulWidget {
   const ComponentScreen({super.key});
@@ -8,11 +9,53 @@ class ComponentScreen extends StatefulWidget {
 }
 
 class _ComponentScreenState extends State<ComponentScreen> {
+  int _selectedIndex = 0;
+  static final List<Widget> _widgetOptions = [
+    const Home(),
+    const Home(),
+    const Home(),
+    const Home(),
+  ];
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
-      bottomNavigationBar: Container(),
+      body: _widgetOptions.elementAt(_selectedIndex),
+      bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          backgroundColor: Colors.white,
+          type: BottomNavigationBarType.fixed,
+          onTap: _onItemTapped,
+          selectedItemColor: const Color.fromRGBO(55, 80, 206, 1),
+          currentIndex: _selectedIndex,
+          items: const [
+            BottomNavigationBarItem(
+              label: 'Home',
+              icon: ImageIcon(AssetImage('assets/home.png')),
+            ),
+            BottomNavigationBarItem(
+              label: 'Dark',
+              icon: ImageIcon(AssetImage('assets/dark.png')),
+            ),
+            BottomNavigationBarItem(
+              label: 'Run',
+              icon: Icon(
+                Icons.directions_walk,
+              ),
+            ),
+            BottomNavigationBarItem(
+              label: 'People',
+              icon: Icon(
+                Icons.people,
+              ),
+            ),
+          ]),
     );
   }
 }
