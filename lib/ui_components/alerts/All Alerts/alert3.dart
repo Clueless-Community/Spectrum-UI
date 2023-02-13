@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Alert2 extends StatelessWidget {
-  const Alert2({super.key});
+class Alert3 extends StatelessWidget {
+  const Alert3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +11,13 @@ class Alert2 extends StatelessWidget {
       height: 68,
       width: double.infinity,
       decoration: BoxDecoration(
-          color: const Color.fromRGBO(253, 192, 78, 1),
+          color: const Color.fromRGBO(26, 132, 73, 1),
           borderRadius: BorderRadius.circular(8)),
       child: Row(
         children: [
           const Icon(
-            Icons.info,
-            color: Colors.black,
+            Icons.verified,
+            color: Colors.white,
           ),
           const SizedBox(
             width: 15,
@@ -34,7 +34,7 @@ class Alert2 extends StatelessWidget {
                           GoogleFonts.publicSans(fontWeight: FontWeight.w600)
                               .fontFamily,
                       fontSize: 18,
-                      color: Colors.black),
+                      color: Colors.white),
                 ),
                 Text('Description',
                     style: TextStyle(
@@ -42,13 +42,13 @@ class Alert2 extends StatelessWidget {
                             GoogleFonts.publicSans(fontWeight: FontWeight.w400)
                                 .fontFamily,
                         fontSize: 18,
-                        color: Colors.black)),
+                        color: Colors.white)),
               ],
             ),
           ),
           const Icon(
             Icons.cancel_sharp,
-            color: Colors.black,
+            color: Colors.white,
           )
         ],
       ),
