@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert1.dart';
+import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert3.dart';
+import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert4.dart';
 
 import 'All Alerts/alert2.dart';
 
 class AlertScreen extends StatelessWidget {
   AlertScreen({super.key});
 
-  final List<Widget> alerts = [const Alert1(), const Alert2()];
+  final List<Widget> alerts = [
+    const Alert1(),
+    const Alert2(),
+    const Alert3(),
+    const Alert4()
+  ];
 
   @override
   Widget build(BuildContext context) {
