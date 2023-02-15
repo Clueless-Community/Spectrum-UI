@@ -1,7 +1,12 @@
 import 'package:flutter_component_ui/ui_components/avatars/avatar.dart';
 import '../ui_components/alerts/alert.dart';
+import '../ui_components/buttons/buttons.dart';
 
 final List<Map<String, dynamic>> widgetCategoryData = [
+  {
+    'categoryName': 'Buttons',
+    'categoryScreen': ButtonScreen(),
+  },
   {
     'categoryName': 'Alerts',
     'categoryScreen': AlertScreen(),

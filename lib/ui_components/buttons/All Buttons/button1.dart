@@ -5,6 +5,14 @@ class Button1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: () {}, child: const Text('Button1'));
+    return ElevatedButton(onPressed: (
+    ) {
+    }, 
+     style: ElevatedButton.styleFrom(
+              backgroundColor: Color.fromARGB(255, 0, 194, 203),
+              fixedSize: const Size(100, 100),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50))),
+    child: const Text('Button1'));
   }
 }
