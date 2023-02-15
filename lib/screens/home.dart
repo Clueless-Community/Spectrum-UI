@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_component_ui/data/widget_category.dart';
 import 'package:flutter_component_ui/screens/main_app_widgets/components_card.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -53,38 +54,12 @@ class StagList extends StatelessWidget {
       crossAxisCount: 2,
       mainAxisSpacing: 15,
       crossAxisSpacing: 18,
-      children: const [
-        StaggeredGridTile.count(
-          crossAxisCellCount: 1,
-          mainAxisCellCount: 1,
-          child: ComponentsCard(text: 'Buttons'),
-        ),
-        StaggeredGridTile.count(
-          crossAxisCellCount: 1,
-          mainAxisCellCount: 1,
-          child: ComponentsCard(text: 'Labels'),
-        ),
-        StaggeredGridTile.count(
-          crossAxisCellCount: 1,
-          mainAxisCellCount: 1,
-          child: ComponentsCard(text: 'Bottom Navigation Bars'),
-        ),
-        StaggeredGridTile.count(
-          crossAxisCellCount: 1,
-          mainAxisCellCount: 1,
-          child: ComponentsCard(text: 'Avatars'),
-        ),
-        StaggeredGridTile.count(
-          crossAxisCellCount: 1,
-          mainAxisCellCount: 1,
-          child: ComponentsCard(text: 'Cards'),
-        ),
-        StaggeredGridTile.count(
-          crossAxisCellCount: 1,
-          mainAxisCellCount: 1,
-          child: ComponentsCard(text: 'Inputs'),
-        ),
-      ],
+      children: widgetCategoryData
+          .map((e) => ComponentsCard(
+                title: e['categoryName'],
+                components: e['categoryScreen'],
+              ))
+          .toList(),
     );
   }
 }

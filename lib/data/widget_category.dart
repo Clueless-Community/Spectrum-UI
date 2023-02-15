@@ -3,7 +3,7 @@ import '../ui_components/alerts/alert.dart';
 
 final List<Map<String, dynamic>> widgetCategoryData = [
   {
-    'categoryName': 'Buttons',
+    'categoryName': 'Alerts',
     'categoryScreen': AlertScreen(),
   },
   {
