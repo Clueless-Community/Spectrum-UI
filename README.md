@@ -42,24 +42,28 @@ Do check the [Contribution guidelines](https://github.com/ISHITA-ROY016/flutter-
 ## Screenshots of some of the UI components :iphone:
 <table>
   <tr>
-    <td>Calender</td>
-     <td>Text Field</td>
-     <td>Alert</td>
+    <td>Mobile Header</td>
+     <td>Media Player</td>
+     <td>Progress Bar</td>
   </tr>
   <tr>
+    <td><img src="assets/Screenshots/Mobile header.png" width=300 height=450></td>
+    <td><img src="assets/Screenshots/Media player.png" width=470 height=200></td>
+    <td><img src="assets/Screenshots/Progress Bar.png" width=270 height=450></td>
+  </tr>
+  </table>
+  <table>
+    <tr>
+    <td>Banner</td>
+     <td>CheckBox</td>
+    <td>Calender</td>
+      <td>Text Field</td>
+  </tr>
+  <tr>
+    <td><img src="assets/Screenshots/Banner alert.png" width=270 height=450></td>
+    <td><img src="assets/Screenshots/checkbox.png" width=270 height=450></td>
     <td><img src="assets/Screenshots/calender.png" width=270 height=450></td>
     <td><img src="assets/Screenshots/text field.png" width=270 height=450></td>
-    <td><img src="assets/Screenshots/alert.jpeg" width=270 height=450></td>
-  </tr>
-    <tr>
-    <td>Appbar</td>
-     <td>Notification</td>
-    <td>Progress Indicator</td>
-  </tr>
-  <tr>
-    <td><img src="assets/Screenshots/appbar.png" width=270 height=200></td>
-    <td><img src="assets/Screenshots/notification.jpg" width=270 height=450></td>
-    <td><img src="assets/Screenshots/progress indicator.jpg" width=270 height=450></td>
   </tr>
  </table>
 
