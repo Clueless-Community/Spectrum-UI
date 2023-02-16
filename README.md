@@ -2,15 +2,8 @@
 
 <h3 align=center> Amazing UI Components for you to choose from. 📜 </h3>
 
----
-Flutter UI Component is an easy to use plug and play collection of UI components which will be converted into a flutter package in the future
 
-## Tech Stack 💻
-
-![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
-
----
+User Interface(UI) components are the most integral parts of any application or website. They can be thought of building blocks or pieces that come together to make the complete user interface. Flutter UI Components are  easy to use pre-designed plug and play collection of UI components which will be converted into a flutter package in the future. These make the layout of any iOS or Android application much **quicker**, **simpler**, **affordable**, **compatible** and **easier to implement**. Each one includes a variety of different widgets which can be customized to meet speicific needs of a project. Overall These will help you to save your time and efforts with a faster workflow.
 
 <h1 align='center'>Contribute to this project under JWoC 2023.</h1>
 
@@ -19,22 +12,56 @@ Flutter UI Component is an easy to use plug and play collection of UI components
 JWoC (JGEC Winter of Code) is a begineer friendly open-source coding event organised annually by JGEC which helps students to plunge into Open Source contribution and get the realm of Software Development.
 
 If you are willing to contibute to this project, you are warmly welcome.
-Do check the [Contribution](https://github.com/Clueless-Community/flutter-ui-components/blob/master/CONTRIBUTING.md) guidelines before contributing.
+Do check the [Contribution guidelines](https://github.com/ISHITA-ROY016/flutter-ui-components/blob/ishita/Contribution.md) before contributing.
+
+## Tech Stacks used 💻
+
+[![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)](https://flutter.dev/)
+[![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
 
 
-## UI Components 📖
 
-### You can choose from following UI's:
+
+
+## UI Components include but are not limited to 📖
 1. App Bar
 2. Bottom Navigation Bar
 3. Alerts
 4. Calendars UI
-5. Buttons
+5. Buttons 
 6. Labels
+7. Text Fields
+8. Search Fields
+9. Slider
+10. Notification 
+11. Pop up
+12. Progress bar 
 
-... and many more.
+... and many [more](https://docs.flutter.dev/development/ui/widgets/material).
 
-[Read More](https://github.com/Clueless-Community/flutter-ui-components/blob/master/About.md)
+## Screenshots of some of the UI components :iphone:
+<table>
+  <tr>
+    <td>Calender</td>
+     <td>Text Field</td>
+     <td>Alert</td>
+  </tr>
+  <tr>
+    <td><img src="assets/Screenshots/calender.png" width=270 height=450></td>
+    <td><img src="assets/Screenshots/text field.png" width=270 height=450></td>
+    <td><img src="assets/Screenshots/alert.jpeg" width=270 height=450></td>
+  </tr>
+    <tr>
+    <td>Appbar</td>
+     <td>Notification</td>
+    <td>Progress Indicator</td>
+  </tr>
+  <tr>
+    <td><img src="assets/Screenshots/appbar.png" width=270 height=200></td>
+    <td><img src="assets/Screenshots/notification.jpg" width=270 height=450></td>
+    <td><img src="assets/Screenshots/progress indicator.jpg" width=270 height=450></td>
+  </tr>
+ </table>
 
 
 <h2 align='center'> Project maintainers </h2>
