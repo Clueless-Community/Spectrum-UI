@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 class InputField_3 extends StatelessWidget {
-  const InputField_3({Key? key}) : super(key: key);
-
+  // const InputField_3({Key? key}) : super(key: key);
+  const InputField_3({required this.hinttext});
+  final String hinttext;
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
     return Container(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -16,7 +19,7 @@ class InputField_3 extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 200,
+            width: width - 20,
             child: Padding(
               padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
               child: Container(
@@ -31,7 +34,7 @@ class InputField_3 extends StatelessWidget {
                       filled: true,
                       fillColor: Colors.white,
                       border: InputBorder.none,
-                      hintText: "Hint Text",
+                      hintText: hinttext,
                       hintStyle: TextStyle(color: Colors.grey, fontSize: 13),
                       // enabledBorder: OutlineInputBorder()
                     ),
