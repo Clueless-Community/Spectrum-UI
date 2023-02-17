@@ -24,13 +24,13 @@ To get an overview of the project, read the [README]()
   * [Creating flutter UI Components](#creating-flutter-ui-componenet)
   * [Updating flutter UI Components](#updating-flutter-ui-components)
   * [Reporting Bugs](#reporting-bugs)
-  * [Suggesting Enhancements](#suggesting-enhancements)
+<!--   * [Suggesting Enhancements](#suggesting-enhancements)
   * [Your First Code Contribution](#your-first-code-contribution)
   * [Pull Requests](#pull-requests)
 
 [Additional Notes](#additional-notes)
   * [Issue and Pull Request Labels](#issue-and-pull-request-labels)
-
+ -->
 ---
 
 ## Creating Flutter UI Components
