@@ -12,7 +12,7 @@ User Interface(UI) components are the most integral parts of any application or 
 JWoC (JGEC Winter of Code) is a begineer friendly open-source coding event organised annually by JGEC which helps students to plunge into Open Source contribution and get the realm of Software Development.
 
 If you are willing to contibute to this project, you are warmly welcome.
-Do check the [Contribution guidelines](https://github.com/ISHITA-ROY016/flutter-ui-components/blob/ishita/Contribution.md) before contributing.
+Do check the [Contribution guidelines](https://github.com/radar101/flutter-ui-components/blob/master/CONTRIBUTION.md) before contributing.
 
 ## Tech Stacks used 💻
 
