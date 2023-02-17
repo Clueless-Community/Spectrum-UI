@@ -1,3 +1,12 @@
+
+<!-- [What should I know before I get started?](#what-should-i-know-before-i-get-started)
+  * [Github](#github)
+  * [Flutter](#flutter) -->
+
+
+
+
+
 ## Welcome to Flutter UI Components contributing guide
  ---
 
@@ -10,27 +19,43 @@ Use the table of contents icon on the top left corner of this document to get to
 
 ### For the new Contributors
 
-To get an overview of the project, read the [README]()
+To get an overview of the project, read the [README](https://github.com/Clueless-Community/flutter-ui-components#readme)
 
 ---
 
 ### Table of Contents
-
-<!-- [What should I know before I get started?](#what-should-i-know-before-i-get-started)
-  * [Github](#github)
-  * [Flutter](#flutter) -->
-
 [How Can I Contribute?](#how-can-i-contribute)
-  * [Creating flutter UI Components](#creating-flutter-ui-componenet)
+  * [Folder Structure](#folder-structure)
+  * [Creating flutter UI Components](#creating-flutter-ui-components)
   * [Updating flutter UI Components](#updating-flutter-ui-components)
   * [Reporting Bugs](#reporting-bugs)
-<!--   * [Suggesting Enhancements](#suggesting-enhancements)
-  * [Your First Code Contribution](#your-first-code-contribution)
-  * [Pull Requests](#pull-requests)
 
-[Additional Notes](#additional-notes)
-  * [Issue and Pull Request Labels](#issue-and-pull-request-labels)
- -->
+---
+## Folder Structure
+
+Following tree depicts the folder structure for the `lib` folder.
+
+ ```
+├── lib
+│   ├── data
+|   |   ├── widget_category.dart     # To display the components card at home screen
+│   ├── screens
+|   |   ├── main_app_widgets        
+|   |   |   ├── components_card.dart
+|   |   ├── about.dart
+|   |   ├── bottom_navigation.dart
+|   |   ├── display.dart
+|   |   ├── home.dart
+|   |   ├── request.dart
+|   |   ├── search.dart
+|   |   ├── splash_screen.dart
+│   ├── ui_components               # Add/update the ui components here
+|   |   ├── alerts
+|   |   ├── avatars
+|   |   ├── bottom_nav
+|   |   ├── ...
+│   ├── main.dart
+```
 ---
 
 ## Creating Flutter UI Components
@@ -48,7 +73,7 @@ Step 4 : Once you are done with designing ui screen. It's time to create it's ca
 
 Here, `categoryName` is the key for the title name of a card and `categoryScreen` is the key for the Screen name of the component you have added.
 
-Step 5 : Test it one more time. `Happy Coding.`
+Step 5 : Test it one more time. `Happy Coding🤗.`
 
 ---
 
@@ -67,11 +92,11 @@ Step 4 (`Optional`): Once you are done with designing ui screen. It's time to cr
 
 Here, `categoryName` is the key for the title name of a card and `categoryScreen` is the key for the Screen name of the component you have added.
 
-Step 5 : Test it one more time. `Happy Coding.`
+Step 5 : Test it one more time. `Happy Coding🤗.`
 
 ---
 
-## Reporting Bugs 🪲
+## Reporting Bugs 
 
 It's always welcomed to report and fix the bugs. 
 
