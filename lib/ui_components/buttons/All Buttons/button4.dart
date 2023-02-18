@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Button4 extends StatelessWidget {
-  const Button4({super.key});
+  String buttonName;
+  Button4(this.buttonName,{super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: (){},
+    return TextButton(onPressed: (){},
       style: ElevatedButton.styleFrom(
 
    backgroundColor: Color.fromARGB(255, 255, 255, 255),
@@ -17,7 +18,7 @@ class Button4 extends StatelessWidget {
         ),
         fixedSize: const Size(240, 80),
       ),
-      child: const Text('Button4',
+      child:  Text(buttonName,
       style: TextStyle(
         color: Color.fromARGB(255, 0, 194, 203)
       ),
