@@ -88,7 +88,9 @@ Do check the [Contribution guidelines](https://github.com/radar101/flutter-ui-co
   </tr>
 </table>
 
+--- 
+<div align="center">
+    <h3><b>Take a moment to star ⭐ the project if you like it</b></h3>
+    <h3>Do checkout the other repos 💫</h3> 
+</div>
 
-#### Take a moment to star ⭐ the project if you like it 😊
-
-Do checkout the other repos 💫
