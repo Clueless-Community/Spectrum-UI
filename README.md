@@ -67,6 +67,8 @@ Do check the [Contribution guidelines](https://github.com/radar101/flutter-ui-co
   </tr>
  </table>
 
+<hr>
+<br>
 
  ## 👩🏽‍💻 Contribution
 
@@ -74,6 +76,7 @@ Do check the [Contribution guidelines](https://github.com/radar101/flutter-ui-co
 - Any contributions you make are greatly appreciated.
 - Check out our [contribution guidelines](/CONTRIBUTION.md) for more information.
 
+<br>
 
 <h2 align='center'> Project maintainers </h2>
 <table align='center'>
@@ -103,6 +106,7 @@ Thanks to all the contributors who worked for this project to stay alive! 😊�
   <img src="https://contrib.rocks/image?repo=Clueless-Community/flutter-ui-components&&max=817" />  
 </a>
 
+<br>
 
 --- 
 <div align="center">
