@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Alert3 extends StatefulWidget {
-  const Alert3({super.key});
+class Alert6 extends StatefulWidget {
+  const Alert6({super.key});
 
   @override
-  State<Alert3> createState() => _Alert3State();
+  State<Alert6> createState() => _Alert6State();
 }
 
-class _Alert3State extends State<Alert3> {
+class _Alert6State extends State<Alert6> {
   late bool _visible = true;
   @override
   Widget build(BuildContext context) {
@@ -16,17 +16,25 @@ class _Alert3State extends State<Alert3> {
       opacity: _visible ? 1.0 : 0.0,
       duration: const Duration(milliseconds: 500),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        padding: const EdgeInsets.only(right: 15),
         height: 68,
         width: double.infinity,
         decoration: BoxDecoration(
-            color: const Color.fromRGBO(26, 132, 73, 1),
-            borderRadius: BorderRadius.circular(8)),
+            color: Colors.white, borderRadius: BorderRadius.circular(8)),
         child: Row(
           children: [
+            Container(
+                height: 68,
+                width: 10,
+                decoration: BoxDecoration(
+                    color: const Color.fromRGBO(253, 176, 34, 1),
+                    borderRadius: BorderRadius.circular(2))),
+            const SizedBox(
+              width: 15,
+            ),
             const Icon(
-              Icons.verified,
-              color: Colors.white,
+              Icons.info,
+              color: Color.fromRGBO(253, 176, 34, 1),
             ),
             const SizedBox(
               width: 15,
@@ -43,7 +51,7 @@ class _Alert3State extends State<Alert3> {
                             GoogleFonts.publicSans(fontWeight: FontWeight.w600)
                                 .fontFamily,
                         fontSize: 18,
-                        color: Colors.white),
+                        color: Colors.black),
                   ),
                   Text('Description',
                       style: TextStyle(
@@ -51,7 +59,7 @@ class _Alert3State extends State<Alert3> {
                                   fontWeight: FontWeight.w400)
                               .fontFamily,
                           fontSize: 18,
-                          color: Colors.white)),
+                          color: const Color.fromRGBO(100, 116, 139, 1))),
                 ],
               ),
             ),
@@ -63,7 +71,7 @@ class _Alert3State extends State<Alert3> {
               },
               child: const Icon(
                 Icons.cancel_sharp,
-                color: Colors.white,
+                color: Colors.black,
               ),
             )
           ],
