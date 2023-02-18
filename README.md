@@ -68,6 +68,13 @@ Do check the [Contribution guidelines](https://github.com/radar101/flutter-ui-co
  </table>
 
 
+ ## 👩🏽‍💻 Contribution
+
+- Contributions make the open source community such an amazing place to learn, inspire, and create.
+- Any contributions you make are greatly appreciated.
+- Check out our [contribution guidelines](/CONTRIBUTION.md) for more information.
+
+
 <h2 align='center'> Project maintainers </h2>
 <table align='center'>
 <tr>
