@@ -2,8 +2,9 @@
 
 <h3 align=center> Amazing UI Components for you to choose from. 📜 </h3>
 
-
-User Interface(UI) components are the most integral parts of any application or website. They can be thought of building blocks or pieces that come together to make the complete user interface. Flutter UI Components are  easy to use pre-designed plug and play collection of UI components which will be converted into a flutter package in the future. These make the layout of any iOS or Android application much **quicker**, **simpler**, **affordable**, **compatible** and **easier to implement**. Each one includes a variety of different widgets which can be customized to meet speicific needs of a project. Overall These will help you to save your time and efforts with a faster workflow.
+<p align="center">
+User Interface(UI) components are the most integral parts of any application or website. They can be thought of building blocks or pieces that come together to make the complete user interface. Flutter UI Components are  easy to use pre-designed plug and play collection of UI components which will be converted into a flutter package in the future. These make the layout of any iOS or Android application much <b>quicker</b>, <b>simpler</b>, <b>affordable</b>, <b>compatible</b> and <b>easier to implement</b>. Each one includes a variety of different widgets which can be customized to meet speicific needs of a project. Overall These will help you to save your time and efforts with a faster workflow.
+</p>
 
 <h1 align='center'>Contribute to this project under JWoC 2023.</h1>
 
@@ -12,7 +13,7 @@ User Interface(UI) components are the most integral parts of any application or 
 JWoC (JGEC Winter of Code) is a begineer friendly open-source coding event organised annually by JGEC which helps students to plunge into Open Source contribution and get the realm of Software Development.
 
 If you are willing to contibute to this project, you are warmly welcome.
-Do check the [Contribution guidelines](https://github.com/radar101/flutter-ui-components/blob/master/CONTRIBUTION.md) before contributing.
+Do check the [Contribution guidelines](https://github.com/Clueless-Community/flutter-ui-components/blob/master/CONTRIBUTION.md) before contributing.
 
 ## Tech Stacks used 💻
 
