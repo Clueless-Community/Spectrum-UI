@@ -52,9 +52,6 @@ Do check the [Contribution guidelines](https://github.com/Clueless-Community/flu
     <td><a href="https://docs.flutter.dev/development/ui/widgets/material" width=400>see more</a></td>
   </tr>
   </table>
-  <table>
-    
- </table>
 
 <hr>
 <br>
