@@ -42,30 +42,18 @@ Do check the [Contribution guidelines](https://github.com/Clueless-Community/flu
 
 ## Screenshots of some of the UI components :iphone:
 <table>
-  <tr>
-    <td>Mobile Header</td>
-     <td>Media Player</td>
-     <td>Progress Bar</td>
+<tr>
+     <td>Banner</td>
+     <td>Text Field</td>
   </tr>
   <tr>
-    <td><img src="assets/Screenshots/Mobile header.png" width=300 height=450></td>
-    <td><img src="assets/Screenshots/Media player.png" width=470 height=200></td>
-    <td><img src="assets/Screenshots/Progress Bar.png" width=270 height=450></td>
+    <td><img src="assets/Screenshots/banner.jpg" width=400 height=700></td>
+    <td><img src="assets/Screenshots/text field.jpg" width=400 height=700></td>
+    <td><a href="https://docs.flutter.dev/development/ui/widgets/material" width=400>see more</a></td>
   </tr>
   </table>
   <table>
-    <tr>
-    <td>Banner</td>
-     <td>CheckBox</td>
-    <td>Calender</td>
-      <td>Text Field</td>
-  </tr>
-  <tr>
-    <td><img src="assets/Screenshots/Banner alert.png" width=270 height=450></td>
-    <td><img src="assets/Screenshots/checkbox.png" width=270 height=450></td>
-    <td><img src="assets/Screenshots/calender.png" width=270 height=450></td>
-    <td><img src="assets/Screenshots/text field.png" width=270 height=450></td>
-  </tr>
+    
  </table>
 
 <hr>
