@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert1.dart';
+import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert10.dart';
+import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert11.dart';
+import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert12.dart';
 import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert3.dart';
 import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert4.dart';
 import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert5.dart';
 import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert6.dart';
 import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert7.dart';
+import 'package:flutter_component_ui/ui_components/alerts/All%20Alerts/alert9.dart';
 
 import 'All Alerts/alert2.dart';
 import 'All Alerts/alert8.dart';
@@ -21,6 +25,10 @@ class AlertScreen extends StatelessWidget {
     const Alert6(),
     const Alert7(),
     const Alert8(),
+    const Alert9(),
+    const Alert10(),
+    const Alert11(),
+    const Alert12(),
   ];
 
   @override
