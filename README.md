@@ -49,7 +49,7 @@ Do check the [Contribution guidelines](https://github.com/Clueless-Community/flu
   <tr>
     <td><img src="assets/Screenshots/banner.jpg" width=400 height=700></td>
     <td><img src="assets/Screenshots/text field.jpg" width=400 height=700></td>
-    <td><a href="https://docs.flutter.dev/development/ui/widgets/material" width=400>see more</a></td>
+    <td><a href="ScreensShots.md" width=400>see more</a></td>
   </tr>
   </table>
 
