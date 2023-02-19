@@ -20,10 +20,10 @@ class InputFieldScreen extends StatelessWidget {
     const InputField3(hinttext: "Place Holder"),
     const InputField4(hinttext: "Place Holder"),
     const InputField5(hinttext: "Place Holder"),
-    const TextArea_1(hinttext: "Place Holder"),
-    const TextArea_2(hinttext: "Place Holder"),
-    const TextArea_3(hinttext: "Place Holder"),
-    const TextArea_4(hinttext: "Place Holder")
+    const TextArea1(hinttext: "Place Holder"),
+    const TextArea2(hinttext: "Place Holder"),
+    const TextArea3(hinttext: "Place Holder"),
+    const TextArea4(hinttext: "Place Holder")
   ];
   @override
   Widget build(BuildContext context) {

@@ -12,11 +12,11 @@ class ButtonScreen extends StatelessWidget {
   ButtonScreen({super.key});
   final List<Widget> buttons1 = [
     const Button1("button"),
-    Button3("button"),
+    const Button3("button"),
     const Button5("button")
   ];
   final List<Widget> buttons2 = [
-    Button2("button"),
+    const Button2("button"),
     const Button4("button"),
     const Button6("button")
   ];
