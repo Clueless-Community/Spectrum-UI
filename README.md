@@ -2,8 +2,9 @@
 
 <h3 align=center> Amazing UI Components for you to choose from. 📜 </h3>
 
-
-User Interface(UI) components are the most integral parts of any application or website. They can be thought of building blocks or pieces that come together to make the complete user interface. Flutter UI Components are  easy to use pre-designed plug and play collection of UI components which will be converted into a flutter package in the future. These make the layout of any iOS or Android application much **quicker**, **simpler**, **affordable**, **compatible** and **easier to implement**. Each one includes a variety of different widgets which can be customized to meet speicific needs of a project. Overall These will help you to save your time and efforts with a faster workflow.
+<p align="center">
+User Interface(UI) components are the most integral parts of any application or website. They can be thought of building blocks or pieces that come together to make the complete user interface. Flutter UI Components are  easy to use pre-designed plug and play collection of UI components which will be converted into a flutter package in the future. These make the layout of any iOS or Android application much <b>quicker</b>, <b>simpler</b>, <b>affordable</b>, <b>compatible</b> and <b>easier to implement</b>. Each one includes a variety of different widgets which can be customized to meet speicific needs of a project. Overall These will help you to save your time and efforts with a faster workflow.
+</p>
 
 <h1 align='center'>Contribute to this project under JWoC 2023.</h1>
 
@@ -12,7 +13,7 @@ User Interface(UI) components are the most integral parts of any application or 
 JWoC (JGEC Winter of Code) is a begineer friendly open-source coding event organised annually by JGEC which helps students to plunge into Open Source contribution and get the realm of Software Development.
 
 If you are willing to contibute to this project, you are warmly welcome.
-Do check the [Contribution guidelines](https://github.com/radar101/flutter-ui-components/blob/master/CONTRIBUTION.md) before contributing.
+Do check the [Contribution guidelines](https://github.com/Clueless-Community/flutter-ui-components/blob/master/CONTRIBUTION.md) before contributing.
 
 ## Tech Stacks used 💻
 
@@ -41,31 +42,16 @@ Do check the [Contribution guidelines](https://github.com/radar101/flutter-ui-co
 
 ## Screenshots of some of the UI components :iphone:
 <table>
-  <tr>
-    <td>Mobile Header</td>
-     <td>Media Player</td>
-     <td>Progress Bar</td>
+<tr>
+     <td>Banner</td>
+     <td>Text Field</td>
   </tr>
   <tr>
-    <td><img src="assets/Screenshots/Mobile header.png" width=300 height=450></td>
-    <td><img src="assets/Screenshots/Media player.png" width=470 height=200></td>
-    <td><img src="assets/Screenshots/Progress Bar.png" width=270 height=450></td>
+    <td><img src="assets/Screenshots/banner.jpg" width=400 height=700></td>
+    <td><img src="assets/Screenshots/text field.jpg" width=400 height=700></td>
+    <td><a href="ScreensShots.md" width=400>see more</a></td>
   </tr>
   </table>
-  <table>
-    <tr>
-    <td>Banner</td>
-     <td>CheckBox</td>
-    <td>Calender</td>
-      <td>Text Field</td>
-  </tr>
-  <tr>
-    <td><img src="assets/Screenshots/Banner alert.png" width=270 height=450></td>
-    <td><img src="assets/Screenshots/checkbox.png" width=270 height=450></td>
-    <td><img src="assets/Screenshots/calender.png" width=270 height=450></td>
-    <td><img src="assets/Screenshots/text field.png" width=270 height=450></td>
-  </tr>
- </table>
 
 <hr>
 <br>
@@ -74,7 +60,7 @@ Do check the [Contribution guidelines](https://github.com/radar101/flutter-ui-co
 
 - Contributions make the open source community such an amazing place to learn, inspire, and create.
 - Any contributions you make are greatly appreciated.
-- Check out our [contribution guidelines](/CONTRIBUTION.md) for more information.
+- Check out our [contribution guidelines](https://github.com/Clueless-Community/flutter-ui-components/blob/master/CONTRIBUTION.md) for more information.
 
 <br>
 
