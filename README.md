@@ -60,7 +60,7 @@ Do check the [Contribution guidelines](https://github.com/Clueless-Community/flu
 
 - Contributions make the open source community such an amazing place to learn, inspire, and create.
 - Any contributions you make are greatly appreciated.
-- Check out our [contribution guidelines](/CONTRIBUTION.md) for more information.
+- Check out our [contribution guidelines](https://github.com/Clueless-Community/flutter-ui-components/blob/master/CONTRIBUTION.md) for more information.
 
 <br>
 
