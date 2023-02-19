@@ -1,40 +1,37 @@
 import 'package:flutter/material.dart';
 
-class InputField_4 extends StatelessWidget {
-  const InputField_4({required this.hinttext});
+class InputField4 extends StatelessWidget {
+  const InputField4({super.key, required this.hinttext});
   final String hinttext;
 
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "Label",
-            style: TextStyle(
-              color: Colors.grey,
-              fontWeight: FontWeight.w500,
-            ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          hinttext,
+          style: const TextStyle(
+            color: Colors.grey,
+            fontWeight: FontWeight.w500,
           ),
-          SizedBox(
-            width: width - 20,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: hinttext,
-                  hintStyle: TextStyle(color: Colors.grey, fontSize: 13),
-                  border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey)),
-                ),
+        ),
+        SizedBox(
+          width: width - 20,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: hinttext,
+                hintStyle: const TextStyle(color: Colors.grey, fontSize: 13),
+                border: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey)),
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

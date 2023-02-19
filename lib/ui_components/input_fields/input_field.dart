@@ -13,13 +13,13 @@ import 'allinputfields/input_field_4.dart';
 class InputFieldScreen extends StatelessWidget {
   InputFieldScreen({super.key});
   final List<Widget> inputfields = [
-    const InputField_1(
+    const InputField1(
       hinttext: "Hello world",
     ),
-    const InputField_2(hinttext: "Place Holder"),
-    const InputField_3(hinttext: "Place Holder"),
-    const InputField_4(hinttext: "Place Holder"),
-    const InputField_5(hinttext: "Place Holder"),
+    const InputField2(hinttext: "Place Holder"),
+    const InputField3(hinttext: "Place Holder"),
+    const InputField4(hinttext: "Place Holder"),
+    const InputField5(hinttext: "Place Holder"),
     const TextArea_1(hinttext: "Place Holder"),
     const TextArea_2(hinttext: "Place Holder"),
     const TextArea_3(hinttext: "Place Holder"),
