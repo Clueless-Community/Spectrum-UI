@@ -22,14 +22,10 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Avatars',
-    'categoryScreen': AlertScreen(),
+    'categoryScreen': AvatarScreen(),
   },
   {
     'categoryName': 'Cards',
-    'categoryScreen': AlertScreen(),
-  },
-  {
-    'categoryName': 'Inputs',
     'categoryScreen': AlertScreen(),
   },
   {
