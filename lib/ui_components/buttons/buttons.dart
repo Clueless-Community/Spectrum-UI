@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_component_ui/ui_components/buttons/All%20Buttons/button10.dart';
+import 'package:flutter_component_ui/ui_components/buttons/All%20Buttons/button7.dart';
+import 'package:flutter_component_ui/ui_components/buttons/All%20Buttons/button8.dart';
+import 'package:flutter_component_ui/ui_components/buttons/All%20Buttons/button9.dart';
 
 import 'All Buttons/button1.dart';
 import 'All Buttons/button2.dart';
@@ -13,12 +17,16 @@ class ButtonScreen extends StatelessWidget {
   final List<Widget> buttons1 = [
     const Button1("button"),
     const Button3("button"),
-    const Button5("button")
+    const Button5("button"),
+    const Button7("button"),
+    const Button9("button")
   ];
   final List<Widget> buttons2 = [
     const Button2("button"),
     const Button4("button"),
-    const Button6("button")
+    const Button6("button"),
+    const Button8("button"),
+    const Button10("button"),
   ];
   @override
   Widget build(BuildContext context) {
