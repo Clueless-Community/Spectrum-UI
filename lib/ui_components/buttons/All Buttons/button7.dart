@@ -9,7 +9,7 @@ class Button7 extends StatelessWidget {
     return TextButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
-            fixedSize: const Size(100, 100),
+            fixedSize: const Size(100, 60),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50))),
         child: Container(
@@ -27,7 +27,7 @@ class Button7 extends StatelessWidget {
             style: TextStyle(
               color: Color.fromARGB(255, 0, 194, 203),
 
-              decoration: TextDecoration.underline,
+              // decoration: TextDecoration.underline,
               // decorationThickness: 4,
             ),
           ),
