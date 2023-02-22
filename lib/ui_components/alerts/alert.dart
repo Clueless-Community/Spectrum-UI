@@ -17,7 +17,7 @@ class AlertScreen extends StatelessWidget {
   AlertScreen({super.key});
 
   final List<Widget> alerts = [
-    const Alert1(),
+    const Alert1("AMessage", "ADescriptions"),
     const Alert2(),
     const Alert3(),
     const Alert4(),
