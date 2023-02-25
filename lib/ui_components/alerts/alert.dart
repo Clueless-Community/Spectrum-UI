@@ -17,18 +17,18 @@ class AlertScreen extends StatelessWidget {
   AlertScreen({super.key});
 
   final List<Widget> alerts = [
-    const Alert1(),
-    const Alert2(),
-    const Alert3(),
-    const Alert4(),
-    const Alert5(),
-    const Alert6(),
-    const Alert7(),
-    const Alert8(),
-    const Alert9(),
-    const Alert10(),
-    const Alert11(),
-    const Alert12(),
+    const Alert1("AMessage", "ADescriptions"),
+    const Alert2("AMessage", "ADescriptions"),
+    const Alert3("AMessage", "ADescriptions"),
+    const Alert4("AMessage", "ADescriptions"),
+    const Alert5("AMessage", "ADescriptions"),
+    const Alert6("AMessage", "ADescriptions"),
+    const Alert7("AMessage", "ADescriptions"),
+    const Alert8("AMessage", "ADescriptions"),
+    const Alert9("AMessage", "ADescriptions"),
+    const Alert10("AMessage", "ADescriptions"),
+    const Alert11("AMessage", "ADescriptions"),
+    const Alert12("AMessage", "ADescriptions"),
   ];
 
   @override

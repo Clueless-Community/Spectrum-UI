@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Alert6 extends StatefulWidget {
-  const Alert6({super.key});
+  final String message;
+  final String description;
+
+  const Alert6(this.message, this.description, {super.key});
 
   @override
   State<Alert6> createState() => _Alert6State();
@@ -45,7 +48,7 @@ class _Alert6State extends State<Alert6> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Message',
+                    widget.message,
                     style: TextStyle(
                         fontFamily:
                             GoogleFonts.publicSans(fontWeight: FontWeight.w600)
@@ -53,7 +56,7 @@ class _Alert6State extends State<Alert6> {
                         fontSize: 18,
                         color: Colors.black),
                   ),
-                  Text('Description',
+                  Text(widget.description,
                       style: TextStyle(
                           fontFamily: GoogleFonts.publicSans(
                                   fontWeight: FontWeight.w400)
