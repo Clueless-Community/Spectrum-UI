@@ -1,4 +1,3 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/data/widget_category.dart';
 import 'package:flutter_component_ui/screens/main_app_widgets/components_card.dart';
@@ -13,44 +12,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _page = 0;
-  GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        key: _bottomNavigationKey,
-        index: 0,
-        height: 51.0,
-        items: <Widget>[
-          Image.asset((_page == 0)
-              ? "assets/icons/home_filled.png"
-              : "assets/icons/home.png"),
-          Image.asset((_page == 1)
-              ? "assets/icons/profile_filled.png"
-              : "assets/icons/profile.png"),
-          Image.asset((_page == 2)
-              ? "assets/icons/night_filled.png"
-              : "assets/icons/night.png"),
-          Image.asset((_page == 3)
-              ? "assets/icons/favs_filled.png"
-              : "assets/icons/favs.png"),
-          Image.asset((_page == 4)
-              ? "assets/icons/video_filled.png"
-              : "assets/icons/video.png"),
-        ],
-        color: Theme.of(context).colorScheme.background,
-        // buttonBackgroundColor: Colors.white,
-        backgroundColor: Colors.transparent,
-        animationCurve: Curves.easeInOut,
-        animationDuration: const Duration(milliseconds: 600),
-        onTap: (index) {
-          setState(() {
-            _page = index;
-          });
-        },
-        letIndexChange: (index) => true,
-      ),
       body: Padding(
         padding: const EdgeInsets.only(left: 20, top: 45, right: 20),
         child: SingleChildScrollView(
