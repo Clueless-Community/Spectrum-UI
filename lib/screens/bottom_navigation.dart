@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/screens/about.dart';
-import 'package:flutter_component_ui/screens/home.dart';
+import 'package:flutter_component_ui/screens/main_app_widgets/home.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter_component_ui/screens/request.dart';
 import 'package:flutter_component_ui/screens/search.dart';
