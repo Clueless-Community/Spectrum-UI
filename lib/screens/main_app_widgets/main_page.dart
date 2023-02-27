@@ -11,7 +11,7 @@ final screen = [
   const PersonalPage(),
   const RandomPage(),
   const FavPage(),
-  const VideosPage(),
+  const VideosPage()
 ];
 
 class MainPage extends StatefulWidget {
