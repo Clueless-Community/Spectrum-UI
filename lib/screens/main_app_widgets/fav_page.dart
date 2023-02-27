@@ -1,19 +1,17 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
 
-class FavPage extends StatefulWidget {
+class FavPage extends StatelessWidget {
   const FavPage({super.key});
 
-  @override
-  State<FavPage> createState() => _FavPageState();
-}
-
-class _FavPageState extends State<FavPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Favs Page"),
+        child: Text(
+          "Favs Page",
+        ),
       ),
     );
   }

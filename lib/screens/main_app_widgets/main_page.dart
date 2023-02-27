@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/screens/main_app_widgets/fav_page.dart';
 import 'package:flutter_component_ui/screens/main_app_widgets/home.dart';
 import 'package:flutter_component_ui/screens/main_app_widgets/personal_page.dart';
-import 'package:flutter_component_ui/screens/main_app_widgets/sleep.dart';
+import 'package:flutter_component_ui/screens/main_app_widgets/random_page.dart';
 import 'package:flutter_component_ui/screens/main_app_widgets/videos_page.dart';
 
 final screen = [
@@ -11,7 +11,7 @@ final screen = [
   const PersonalPage(),
   const RandomPage(),
   const FavPage(),
-  const VideosPage()
+  const VideosPage(),
 ];
 
 class MainPage extends StatefulWidget {
