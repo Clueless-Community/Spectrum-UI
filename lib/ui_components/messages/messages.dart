@@ -12,18 +12,18 @@ import 'allmessages/message_2.dart';
 class MessageScreen extends StatelessWidget {
   MessageScreen({super.key});
   final List<Widget> messages = [
-    Message_1(
-      message: "Hello boy",
-    ),
-    Message_2(
-      message: "Hello broo",
-    ),
-    Message_3(
-      message: "Hey whats up man",
-    ),
-    Message_4(
-      message: "Hello broo",
-    ),
+    // Message_1(
+    //   message: "Hello boy",
+    // ),
+    // Message_2(
+    //   message: "Hello broo",
+    // ),
+    // Message_3(
+    //   message: "Hey whats up man",
+    // ),
+    // Message_4(
+    //   message: "Hello broo",
+    // ),
     InboxMessage_1(
       name: "ClueLess",
       username: "clueless@gmail.com",
