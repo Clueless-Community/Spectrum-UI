@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_component_ui/screens/main_app_widgets/about_page.dart';
 import 'package:flutter_component_ui/screens/main_app_widgets/main_page.dart';
 import 'package:flutter_component_ui/theme/theme.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       darkTheme: MyTheme.darkTheme(context),
       theme: MyTheme.LightTheme(context),
-      home: const MainPage(),
+      home: const AboutProjectPage(),
     );
   }
 }
