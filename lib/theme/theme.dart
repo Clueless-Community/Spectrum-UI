@@ -30,7 +30,7 @@ class MyTheme {
   );
   static const int _lightAccentPrimaryValue = 0xFFFFFFFF;
 
-  static ThemeData LightTheme(BuildContext context) => ThemeData(
+  static ThemeData lightTheme(BuildContext context) => ThemeData(
         primarySwatch: light,
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.white,
