@@ -31,13 +31,12 @@ class MyTheme {
   static const int _lightAccentPrimaryValue = 0xFFFFFFFF;
 
   static ThemeData lightTheme(BuildContext context) => ThemeData(
-        primarySwatch: light,
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.white,
         canvasColor: creamColor,
-        buttonColor: darkBluishColor,
-        accentColor: darkBluishColor,
-        appBarTheme: AppBarTheme(
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: light)
+            .copyWith(secondary: darkBluishColor),
+        appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.black),
@@ -45,24 +44,25 @@ class MyTheme {
       );
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
-      brightness: Brightness.dark,
-      fontFamily: GoogleFonts.poppins().fontFamily,
-      cardColor: Colors.black,
-      canvasColor: darkcreamColor,
-      buttonColor: lightBluishColor,
-      accentColor: Colors.white,
-      appBarTheme: AppBarTheme(
-        color: Colors.white,
-        elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.white),
-        textTheme: Theme.of(context).textTheme.copyWith(
-            headline6:
-                context.textTheme.headline6?.copyWith(color: Colors.white)),
-      ));
+        brightness: Brightness.dark,
+        fontFamily: GoogleFonts.poppins().fontFamily,
+        cardColor: Colors.black,
+        canvasColor: darkcreamColor,
+        buttonColor: lightBluishColor,
+        accentColor: Colors.white,
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+          elevation: 0.0,
+          iconTheme: const IconThemeData(color: Colors.white),
+          textTheme: Theme.of(context).textTheme.copyWith(
+              headline6:
+                  context.textTheme.headline6?.copyWith(color: Colors.white)),
+        ),
+      );
 
 //colors
-  static Color creamColor = Color(0xfff5f5f5);
-  static Color darkcreamColor = Color.fromARGB(255, 36, 41, 51);
-  static Color darkBluishColor = Color(0xff403b58);
+  static Color creamColor = const Color(0xfff5f5f5);
+  static Color darkcreamColor = const Color.fromARGB(255, 36, 41, 51);
+  static Color darkBluishColor = const Color(0xff403b58);
   static Color lightBluishColor = Vx.indigo500;
 }
