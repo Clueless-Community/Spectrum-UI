@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_component_ui/screens/main_app_widgets/about_page.dart';
 import 'package:flutter_component_ui/screens/main_app_widgets/fav_page.dart';
 import 'package:flutter_component_ui/screens/main_app_widgets/home.dart';
 import 'package:flutter_component_ui/screens/main_app_widgets/personal_page.dart';
@@ -9,7 +10,8 @@ import 'package:flutter_component_ui/screens/main_app_widgets/videos_page.dart';
 final screen = [
   const Home(),
   const PersonalPage(),
-  const RandomPage(),
+  // const RandomPage(),
+  const AboutProjectPage(),
   const FavPage(),
   const VideosPage(),
 ];
