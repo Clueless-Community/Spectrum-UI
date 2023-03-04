@@ -44,19 +44,29 @@ class MyTheme {
       );
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
-        brightness: Brightness.dark,
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.black,
         canvasColor: darkcreamColor,
-        buttonColor: lightBluishColor,
-        accentColor: Colors.white,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: Colors.white,
+          brightness: Brightness.dark,
+        ),
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
           iconTheme: const IconThemeData(color: Colors.white),
-          textTheme: Theme.of(context).textTheme.copyWith(
-              headline6:
-                  context.textTheme.headline6?.copyWith(color: Colors.white)),
+          toolbarTextStyle: Theme.of(context)
+              .textTheme
+              .copyWith(
+                  titleLarge: context.textTheme.titleLarge
+                      ?.copyWith(color: Colors.white))
+              .bodyMedium,
+          titleTextStyle: Theme.of(context)
+              .textTheme
+              .copyWith(
+                  titleLarge: context.textTheme.titleLarge
+                      ?.copyWith(color: Colors.white))
+              .titleLarge,
         ),
       );
 

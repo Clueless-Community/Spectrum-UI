@@ -52,7 +52,7 @@ class Message2 extends StatelessWidget {
                     ),
                   ),
                 ),
-                CustomPaint(painter: CustomShape(const Color(0xff005F99)!)),
+                CustomPaint(painter: CustomShape(const Color(0xff005F99))),
               ],
             ),
           ),

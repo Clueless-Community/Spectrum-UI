@@ -14,7 +14,7 @@ class ButtonScreen extends StatelessWidget {
     const Button1("button"),
     const Button3("button"),
     const Button5("button"),
-    Button7("button")
+    const Button7("button")
   ];
   final List<Widget> buttons2 = [
     const Button2("button"),

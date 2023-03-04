@@ -35,7 +35,7 @@ class Message1 extends StatelessWidget {
                     ),
                   ),
                 ),
-                CustomPaint(painter: CustomShape(const Color(0xff00C2CB)!)),
+                CustomPaint(painter: CustomShape(const Color(0xff00C2CB))),
               ],
             ),
           ),
