@@ -23,50 +23,27 @@ class _AboutProjectPageState extends State<AboutProjectPage> {
               decoration: const BoxDecoration(
                 color: Color.fromRGBO(53, 63, 178, 0.85),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        flex: 2,
-                        child: Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "About",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: 12),
-                              Text(
-                                "search for the components here!",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Flexible(
+                    flex: 2,
+                    child: Text(
+                      "About",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
                       ),
-                      Flexible(
-                        flex: 1,
-                        child: Image.asset(
-                          "assets/about_page_top.png",
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
+                  Flexible(
+                    flex: 1,
+                    child: Image.asset(
+                      "assets/about_page_top.png",
+                    ),
+                  ),
+                ],
               ),
             ),
 
@@ -158,7 +135,7 @@ class _AboutProjectPageState extends State<AboutProjectPage> {
             ),
             const SizedBox(height: 18),
             const Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: EdgeInsets.fromLTRB(8, 8, 8, 0),
               child: Text(
                 "Contributors",
                 style: TextStyle(
@@ -168,9 +145,8 @@ class _AboutProjectPageState extends State<AboutProjectPage> {
                 ),
               ),
             ),
-            const SizedBox(height: 18),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
               child: Column(
                 children: [
                   GridView.builder(
