@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_component_ui/screens/bottom_navigation.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_component_ui/screens/bottom_navigation.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

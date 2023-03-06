@@ -22,6 +22,45 @@ Use the table of contents icon on the top left corner of this document to get to
 To get an overview of the project, read the [README](https://github.com/Clueless-Community/flutter-ui-components#readme)
 
 ---
+G## Getting Started
+
+### Issues
+
+#### Create a new issue
+
+If you spot a problem with the docs, search if an issue already exists. If a related issue doesn't exist, you can open a new issue using a relevant issue form.
+
+#### Solve an issue
+
+Scan through our existing issues to find one that interests you. You can narrow down the search using labels as filters. See Labels for more information.
+
+### Making Changes
+
+#### Fork our repo
+
+-   Create a branch related to the issue you plan on working.
+
+### Pull Requests
+
+-   Prior to opening your pull request add yourself as a contributor
+
+    ```
+    npm run contributors:add keonik doc
+    ```
+
+    where `keonik` is your github username and `doc` is the [type of contribution](https://allcontributors.org/docs/en/emoji-key)
+
+    Update all-contributors list
+
+    ```
+    npm run contributors:generate
+    ```
+
+-   Create a Pull Request from your `forked` repo's issue branch
+    -   If there are review comments, update them
+    -   Commit and push changes
+    
+-   👍🎉 Reviewer merges your PR! 👍🎉
 
 ### Table of Contents
 [How Can I Contribute?](#how-can-i-contribute)
@@ -102,10 +141,36 @@ It's always welcomed to report and fix the bugs.
 
 If you found any bug or the feature not working properly, you can create that issue and start working on it. We will merge your pull request if it will make improvement in the app.
 
+## Developing for Flutter
 
+If you would prefer to write code, you may wish to start with our list of [good first contributions]https://github.com/Clueless-Community/flutter-ui-components/issues
 
+1. [Setting up your engine development environment](https://github.com/flutter/flutter/wiki/Setting-up-the-Engine-development-environment),
+   which describes the steps you need to configure your computer to
+   work on Flutter's engine. If you only want to write code for the
+   Flutter framework, you can skip this step. Flutter's engine mainly
+   uses C++, Java, and Objective-C.
 
+2. [Setting up your framework development environment]
 
+   which describes the steps you need to configure your computer to
+   work on Flutter's framework. Flutter's framework mainly uses Dart.
+
+3. [Tree hygiene]
+   which covers how to land a PR, how to do code review, how to
+   handle breaking changes, how to handle regressions, and how to
+   handle post-commit test failures.
+
+4. [Our style guide]
+   which includes advice for designing APIs for Flutter, and how to
+   format code in the framework.
+  
+   which should be used when proposing a new technical design.  This is a good
+   practice to do before coding more intricate changes.
+
+## Social events in the contributor community
+
+Finally, one area where you could have a lot of impact is in contributing to social interactions among the Flutter contributor community itself
 
 
 
@@ -115,3 +180,4 @@ If you found any bug or the feature not working properly, you can create that is
 
 
 
+🥳 Hurray! You have contributed to our project! 🥳
