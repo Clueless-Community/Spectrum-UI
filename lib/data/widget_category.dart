@@ -3,6 +3,7 @@ import 'package:flutter_component_ui/ui_components/alerts/alerts.dart';
 import 'package:flutter_component_ui/ui_components/buttons/buttons.dart';
 import 'package:flutter_component_ui/ui_components/input_fields/input_fields.dart';
 import 'package:flutter_component_ui/ui_components/messages/messages.dart';
+import 'package:flutter_component_ui/ui_components/pricing_cards/pricing_cards.dart';
 
 final List<Map<String, dynamic>> widgetCategoryData = [
   {
@@ -36,5 +37,9 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   {
     'categoryName': 'Message',
     'categoryScreen': MessageScreen(),
+  },
+  {
+    'categoryName': 'Pricing Cards',
+    'categoryScreen': PricingCardScreen(),
   },
 ];
