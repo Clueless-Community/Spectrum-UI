@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class InputField2 extends StatelessWidget {
-  const InputField2({super.key, required this.hinttext});
+  const InputField2({super.key, required this.hinttext, required this.label});
   final String hinttext;
+  final String label;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class InputField2 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          hinttext,
+          label,
           style: const TextStyle(
             fontWeight: FontWeight.w500,
           ),

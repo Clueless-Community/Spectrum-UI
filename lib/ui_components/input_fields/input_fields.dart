@@ -13,16 +13,41 @@ class InputFieldScreen extends StatelessWidget {
   InputFieldScreen({super.key});
   final List<Widget> inputfields = [
     const InputField1(
-      hinttext: "Hello world",
+      label: "Title",
+      hinttext: "Input Title",
     ),
-    const InputField2(hinttext: "Place Holder"),
-    const InputField3(hinttext: "Place Holder"),
-    const InputField4(hinttext: "Place Holder"),
-    const InputField5(hinttext: "Place Holder"),
-    const TextArea1(hinttext: "Place Holder"),
-    const TextArea2(hinttext: "Place Holder"),
-    const TextArea3(hinttext: "Place Holder"),
-    const TextArea4(hinttext: "Place Holder")
+    const InputField2(
+      label: "Title Lite",
+      hinttext: "Input Title",
+    ),
+    const InputField3(
+      label: "Title Highlighted",
+      hinttext: "Input Title",
+    ),
+    const InputField4(
+      label: "Title Lite-X",
+      hinttext: "Input Title",
+    ),
+    const InputField5(
+      label: "Title Type B",
+      hinttext: "Input Title",
+    ),
+    const TextArea1(
+      label: "TextArea1",
+      hinttext: "Write Message",
+    ),
+    const TextArea2(
+      label: "TextArea2",
+      hinttext: "Write Description",
+    ),
+    const TextArea3(
+      label: "TextArea3",
+      hinttext: "Write Description",
+    ),
+    const TextArea4(
+      label: "TextArea4",
+      hinttext: "Write Description",
+    )
   ];
   @override
   Widget build(BuildContext context) {
