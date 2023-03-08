@@ -14,23 +14,17 @@ class CardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: const [
+            SizedBox(height: 20,),
             FirstCard(),
-            Padding(
-              padding: EdgeInsets.only(left: 0.1),
-              child: SecondCard()),
+            Padding(padding: EdgeInsets.only(left: 0.1), child: SecondCard()),
             SizedBox(height: 20),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8),
                 child: ThirdCard()),
             SizedBox(height: 20),
-
             Padding(
               padding: EdgeInsets.all(12.0),
               child: FourthCard(),
