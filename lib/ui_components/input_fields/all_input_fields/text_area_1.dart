@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TextArea1 extends StatelessWidget {
-  const TextArea1({super.key, required this.hinttext});
+  const TextArea1({super.key, required this.label, required this.hinttext});
   final String hinttext;
+  final String label;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class TextArea1 extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          hinttext,
+          label,
           style: const TextStyle(
             fontWeight: FontWeight.w500,
           ),
