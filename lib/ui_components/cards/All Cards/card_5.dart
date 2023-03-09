@@ -5,10 +5,7 @@ class FifthCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: MediaQuery.of(context).size.height / 1.5,
-        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
-        child: Card(
+    return Card(
           color: Colors.black,
           child: Column(
             children: [
@@ -17,7 +14,7 @@ class FifthCard extends StatelessWidget {
                 height: 20,
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -77,6 +74,6 @@ class FifthCard extends StatelessWidget {
               // Text(data)
             ],
           ),
-        ));
+        );
   }
 }
