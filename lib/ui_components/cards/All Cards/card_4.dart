@@ -8,7 +8,6 @@ class FourthCard extends StatelessWidget {
     return SizedBox(
       child: Card(
         elevation: 5,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: Center(
           child: Container(
             width: MediaQuery.of(context).size.width / 1.1,
@@ -226,24 +225,24 @@ class FourthCard extends StatelessWidget {
                     const Text(
                       "  Followed by ",
                       style:
-                          TextStyle(color: Color.fromARGB(255, 50, 111, 161,), fontSize: 13),
+                          TextStyle(color: Color.fromARGB(255, 50, 111, 161,), fontSize: 10),
                     ),
                     const Text(
                       "Sambam94",
                       style: TextStyle(
                           color: Color.fromARGB(255, 50, 111, 161),
-                          fontSize: 13,
+                          fontSize: 10,
                           fontWeight: FontWeight.bold),
                     ),
                     const Text(
                       " and ",
                       style:
-                          TextStyle(color: Color.fromARGB(255, 50, 111, 161), fontSize: 13),
+                          TextStyle(color: Color.fromARGB(255, 50, 111, 161), fontSize: 10),
                     ),
                     const Text(
                       "21 other",
                       style:
-                          TextStyle(color: Color.fromARGB(255, 50, 111, 161), fontSize: 13),
+                          TextStyle(color: Color.fromARGB(255, 50, 111, 161), fontSize: 10),
                     )
                   ],
                 ),

@@ -29,7 +29,7 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Cards',
-    'categoryScreen':const CardScreen(),
+    'categoryScreen':CardScreen(),
   },
   {
     'categoryName': 'Input Field',

@@ -8,8 +8,6 @@ class SeventhCard extends StatelessWidget {
     return Center(
         child: Card(
           color: Colors.black,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
           elevation: 7,
           child: Container(
             // height: 170,

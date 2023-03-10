@@ -1,79 +1,79 @@
 import 'package:flutter/material.dart';
 
-
 class SecondCard extends StatelessWidget {
   const SecondCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
     return Card(
-        child: SizedBox(
-          width: 350,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: 200,
-                child: SizedBox(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.only(left: 5, top: 2, bottom: 2),
+            height: (MediaQuery.of(context).size.width / 2.4) * 0.83,
+            width: MediaQuery.of(context).size.width -
+                MediaQuery.of(context).size.width / 2.4 -
+                8,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "Politics",
+                  style: TextStyle(fontSize: 10, color: Colors.grey),
+                ),
+                const Text(
+                  "EU funds won't be conditional upon European Values",
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: Color.fromARGB(255, 54, 103, 144),
+                      fontWeight: FontWeight.w500),
+                ),
+                const Text(
+                  "The European Union (EU) is a political and economic union of 27 European countries. It aims to promote cooperation",
+                  style: TextStyle(fontSize: 10, color: Colors.grey),
+                ),
+                FittedBox(
+                  fit: BoxFit.fitHeight,
+                  child: Row(
                     children: [
-                      const Padding(
-                        padding: EdgeInsets.only(left: 5,top: 5),
-                        child: Text(
-                          "POLITICS",
-                          style: TextStyle(color: Colors.grey, fontSize: 10),
-                        ),
+                      const CircleAvatar(
+                        radius: 15,
                       ),
                       const SizedBox(
-                        height: 5,
+                        width: 10,
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(left: 5),
-                        child:  Text(
-                          "EU funds won't we conditional upon Europen Values",
-                          style: TextStyle(
-                              color:Color.fromARGB(255, 50, 111, 161),
-                              fontWeight: FontWeight.w500,
-                              fontSize: 11),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(left: 5),
-                        child: const Text(
-                          "The European Union is a political and economic Union of 27 European countries. It does not aims to promote coopera....",
-                          style: TextStyle(color: Colors.grey, fontSize: 9),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 5, top: 5),
-                        child: Row(children: [
-                          const CircleAvatar(radius: 12,),
-                          const SizedBox(width: 5,),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                            Text("Ralph Edwards", style: TextStyle(color: Color.fromARGB(255, 50, 111, 161))),
-                            Text("April 22, 2022",style: TextStyle(color: Colors.grey, fontSize: 10),)
-                          ],)
-                        ],),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "Ralph Edwards",
+                            style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Color.fromARGB(255, 54, 103, 144)),
+                          ),
+                          Text(
+                            "April 22,2022",
+                            style: TextStyle(fontSize: 10, color: Colors.grey),
+                          )
+                        ],
                       )
                     ],
                   ),
-                ),
-              ),
-              SizedBox(
-                width: 150,
-                // color: Colors.black,
-                child: Image.asset('assets/card_image/cardo.png'),
-              )
-            ],
+                )
+              ],
+            ),
           ),
-        ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width / 2.4,
+            child: Image.asset(
+              'assets/card_image/cardo.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

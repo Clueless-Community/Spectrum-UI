@@ -6,7 +6,6 @@ class ThirdCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       elevation: 7,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
