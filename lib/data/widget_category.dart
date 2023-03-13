@@ -6,6 +6,8 @@ import 'package:flutter_component_ui/ui_components/input_fields/input_fields.dar
 import 'package:flutter_component_ui/ui_components/messages/messages.dart';
 import 'package:flutter_component_ui/ui_components/pricing_cards/pricing_cards.dart';
 
+import '../ui_components/sliders/sliders.dart';
+
 final List<Map<String, dynamic>> widgetCategoryData = [
   {
     'categoryName': 'Buttons',
@@ -29,11 +31,15 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Cards',
-    'categoryScreen':CardScreen(),
+    'categoryScreen': CardScreen(),
   },
   {
     'categoryName': 'Input Field',
     'categoryScreen': InputFieldScreen(),
+  },
+  {
+    'categoryName': 'Sliders',
+    'categoryScreen': SliderScreen(),
   },
   {
     'categoryName': 'Message',
