@@ -21,7 +21,9 @@ Use the table of contents icon on the top left corner of this document to get to
 
 To get an overview of the project, read the [README](https://github.com/Clueless-Community/flutter-ui-components#readme)
 
----
+
+# Submitting Contributions👩‍💻👨‍💻  
+Below you will find the process and workflow used to review and merge your changes.  
 G## Getting Started
 
 ### Issues
@@ -39,6 +41,14 @@ Scan through our existing issues to find one that interests you. You can narrow 
 #### Fork our repo
 
 -   Create a branch related to the issue you plan on working.
+## Need more help?🤔  
+You can refer to the following articles on basics of Git and Github and also contact the Project Mentors, in case you are stuck:  
+- [Forking a Repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)  
+- [Cloning a Repo](https://help.github.com/en/desktop/contributing-to-projects/creating-an-issue-or-pull-request)  
+- [How to create a Pull Request](https://opensource.com/article/19/7/create-pull-request-github)  
+- [Getting started with Git and GitHub](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6)  
+- [Learn GitHub from Scratch](https://lab.github.com/githubtraining/introduction-to-github)  
+  
 
 ### Pull Requests
 
@@ -177,7 +187,8 @@ Finally, one area where you could have a lot of impact is in contributing to soc
 
  
 
-
+## Tip from us😇  
+It always takes time to understand and learn. So, do not worry at all. We know **you have got this**!💪
 
 
 🥳 Hurray! You have contributed to our project! 🥳
