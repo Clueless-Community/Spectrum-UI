@@ -15,12 +15,12 @@ class SliderScreen extends StatefulWidget {
 
 class _SliderScreenState extends State<SliderScreen> {
   final List<Widget> sliders = [
-    const Slider1(),
-    const Slider2(),
-    const Slider3(),
-    const Slider4(),
-    const Slider5(),
-    const Slider6(),
+    const Slider1(activeColor: Colors.cyan, inactiveColor: Colors.black, maxRange: 100.0,),
+    Slider2(activeColor: const Color(0xFF005F99), inactiveColor: Colors.purple.shade600, maxRange: 100,),
+    const Slider3(activeColor: Colors.red, inactiveColor: Colors.white, maxRange: 100,),
+    const Slider4(activeColor: Colors.white, inactiveColor: Colors.black, maxRange: 100,),
+    const Slider5(activeColor: Colors.pink, inactiveColor: Colors.amberAccent, maxRange: 100,),
+    const Slider6(activeColor: Colors.lightBlueAccent, inactiveColor: Color(0xFF005F99), maxRange: 60,),
   ];
 
   @override

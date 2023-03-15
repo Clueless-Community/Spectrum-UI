@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Slider4 extends StatefulWidget {
-  const Slider4({Key? key}) : super(key: key);
-
+  const Slider4({Key? key, required this.activeColor, required this.inactiveColor, required this.maxRange}) : super(key: key);
+  final Color activeColor;
+  final Color inactiveColor;
+  final double maxRange;
   @override
   State<Slider4> createState() => _Slider4State();
 }
@@ -30,10 +32,10 @@ class _Slider4State extends State<Slider4> {
           ),
           width: 300,
           child: RangeSlider(
-            activeColor: Colors.white,
-            inactiveColor: Colors.black,
+            activeColor: widget.activeColor,
+            inactiveColor: widget.inactiveColor,
             values: _currentRangeValues,
-            max: 100,
+            max: widget.maxRange,
             divisions: 100,
             labels: RangeLabels(
               _currentRangeValues.start.round().toString(),

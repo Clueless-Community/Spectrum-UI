@@ -3,8 +3,10 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
 class Slider5 extends StatefulWidget {
-  const Slider5({super.key});
-
+  const Slider5({super.key, required this.activeColor, required this.inactiveColor, required this.maxRange});
+  final Color activeColor;
+  final Color inactiveColor;
+  final double maxRange;
   @override
   State<Slider5> createState() => _Slider5State();
 }
@@ -22,6 +24,8 @@ class _Slider5State extends State<Slider5> {
         SfSliderTheme(
           data: SfSliderThemeData(
             tooltipBackgroundColor: Colors.grey,
+            activeTrackColor: widget.activeColor,
+            inactiveTrackColor: widget.inactiveColor,
             activeLabelStyle: const TextStyle(
               color: Colors.greenAccent,
               fontSize: 18,
@@ -33,7 +37,7 @@ class _Slider5State extends State<Slider5> {
           ),
           child: SfSlider(
             min: 0.0,
-            max: 100.0,
+            max: widget.maxRange,
             value: _currentSliderValue,
             interval: 20,
             showTicks: true,
