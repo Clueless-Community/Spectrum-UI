@@ -9,6 +9,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.10.0"
+  auto_size_text:
+    dependency: transitive
+    description:
+      name: auto_size_text
+      sha256: "3f5261cd3fb5f2a9ab4e2fc3fba84fd9fcaac8821f20a1d4e71f557521b22599"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
   auto_size_text_pk:
     dependency: transitive
     description:
@@ -33,6 +41,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.1"
+  checkbox_grouped:
+    dependency: "direct main"
+    description:
+      name: checkbox_grouped
+      sha256: "0ec320985123f278b1c58ac4051689b523686f416a5c6dc4050cc2e7fcb7e45e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.8.2"
   clock:
     dependency: transitive
     description:
@@ -126,6 +142,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.1"
+  flutter_rating_bar:
+    dependency: "direct main"
+    description:
+      name: flutter_rating_bar
+      sha256: d2af03469eac832c591a1eba47c91ecc871fe5708e69967073c043b2d775ed93
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.1"
   flutter_staggered_grid_view:
     dependency: "direct main"
     description:
