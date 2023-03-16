@@ -41,8 +41,6 @@ dependencies:
   curved_navigation_bar: ^1.0.3
   velocity_x: ^3.6.0
   custom_sliding_segmented_control: ^1.7.4
-  flutter_rating_bar: ^4.0.1
-  checkbox_grouped: ^1.8.2
 
 dev_dependencies:
   flutter_test:
