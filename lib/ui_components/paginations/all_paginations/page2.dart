@@ -2,15 +2,29 @@ import 'package:flutter/material.dart';
 
 class Page2 extends StatefulWidget {
   const Page2({
-    super.key,
+    super.key, required this.iconColor, required this.textColor,
   });
+  final Color iconColor;
+  final Color textColor;
 
   @override
   State<Page2> createState() => _Page2State();
 }
 
 class _Page2State extends State<Page2> {
-  @override
+  int _page = 1;
+
+  void increasePage(){
+    _page = _page + 1;
+    setState(() {});
+  }
+
+  void decreasePage(){
+    if(_page > 1) {
+      _page = _page - 1;
+    }
+    setState(() {});
+  }
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,27 +50,35 @@ class _Page2State extends State<Page2> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () => decreasePage(),
                 icon: const Icon(Icons.arrow_back_ios),
-                color: Colors.black,
+                color: widget.iconColor,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () => decreasePage(),
                 child:
-                    const Text('Prev', style: TextStyle(color: Colors.black)),
+                Text('Prev', style: TextStyle(color: widget.textColor)),
               ),
-              const SizedBox(
-                width: 40,
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: CircleAvatar(
+                  backgroundColor: Colors.blue,
+                  child: Text(
+                    '$_page',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () => increasePage(),
                 child:
-                    const Text('Next', style: TextStyle(color: Colors.black)),
+                  Text('Next', style: TextStyle(color: widget.textColor)),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () => increasePage(),
                 icon: const Icon(Icons.arrow_forward_ios),
-                color: Colors.black,
+                color: widget.iconColor,
               ),
             ],
           ),

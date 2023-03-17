@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Page1 extends StatefulWidget {
-  const Page1({super.key,required this.iconColor,
-    required this.textColor,
-    required this.containerColor, required this.hightlightColor});
+  const Page1(
+      {super.key,
+      required this.iconColor,
+      required this.textColor,
+      required this.containerColor,
+      required this.hightlightColor});
 
   final Color iconColor;
   final Color textColor;
@@ -15,14 +18,60 @@ class Page1 extends StatefulWidget {
 }
 
 class _Page1State extends State<Page1> {
+  int _page = 1;
+  bool _three = false, _two = false, _one = false;
+
+  void increasePage() {
+    _page = _page + 1;
+    if (_page == 3) {
+      _three = true;
+      _two = false;
+      _one = false;
+    } else if (_page == 2) {
+      _two = true;
+      _three = false;
+      _one = false;
+    } else if (_page == 1) {
+      _one = true;
+      _two = false;
+      _three = false;
+    } else {
+      _three = false;
+    }
+    setState(() {});
+  }
+
+  void decreasePage() {
+    if (_page > 1) {
+      _page = _page - 1;
+    }
+    if (_page == 3) {
+      _three = true;
+      _two = false;
+      _one = false;
+    } else if (_page == 2) {
+      _two = true;
+      _three = false;
+      _one = false;
+    } else if (_page == 1) {
+      _one = true;
+      _two = false;
+      _three = false;
+    } else {
+      _three = false;
+    }
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       const Padding(
         padding: EdgeInsets.only(left: 20, top: 20),
-        child: Text('Pagination', style: TextStyle(fontSize: 20),),
+        child: Text(
+          'Pagination',
+          style: TextStyle(fontSize: 20),
+        ),
       ),
       const SizedBox(
         height: 10,
@@ -38,65 +87,94 @@ class _Page1State extends State<Page1> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () => decreasePage(),
               icon: const Icon(Icons.arrow_back_ios),
               color: widget.iconColor,
             ),
             InkWell(
-              onTap: (){},
+              onTap: () => decreasePage(),
               child: Text('Prev', style: TextStyle(color: widget.textColor)),
             ),
             const SizedBox(
               width: 20,
             ),
             InkWell(
-              onTap: (){},
-              child: Text('1', style: TextStyle(color: widget.textColor)),
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-             InkWell(
-              onTap: (){},
-              child: Text(
-                '2',
-                style: TextStyle(color: widget.textColor),
-              ),
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-             InkWell(
-              child: Text(
-                '...',
-                style: TextStyle(color: widget.textColor),
-              ),
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-             InkWell(
-              onTap: (){},
-              child: CircleAvatar(
-                backgroundColor: widget.hightlightColor,
-                child: const Text(
-                  '10',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
+              onTap: () {},
+              child: _one
+                  ? CircleAvatar(
+                      backgroundColor: widget.hightlightColor,
+                      child: const Text(
+                        '1',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )
+                  : Text(
+                      '1',
+                      style: TextStyle(color: widget.textColor),
+                    ),
             ),
             const SizedBox(
               width: 20,
             ),
             InkWell(
-              onTap: (){},
+              onTap: () {},
+              child: _two
+                  ? CircleAvatar(
+                      backgroundColor: widget.hightlightColor,
+                      child: const Text(
+                        '2',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )
+                  : Text(
+                      '2',
+                      style: TextStyle(color: widget.textColor),
+                    ),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            InkWell(
+              child: _three
+                  ? CircleAvatar(
+                      backgroundColor: widget.hightlightColor,
+                      child: const Text(
+                        '3',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )
+                  : Text(
+                      '...',
+                      style: TextStyle(color: widget.textColor),
+                    ),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            InkWell(
+              onTap: () {},
+              child: (_three || _one || _two)
+                  ? const Text('')
+                  : CircleAvatar(
+                      backgroundColor: widget.hightlightColor,
+                      child: Text(
+                        '$_page',
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                    ),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            InkWell(
+              onTap: () => increasePage(),
               child: Text(
                 'Next',
                 style: TextStyle(color: widget.textColor),
               ),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () => increasePage(),
               icon: const Icon(Icons.arrow_forward_ios),
               color: widget.iconColor,
             ),

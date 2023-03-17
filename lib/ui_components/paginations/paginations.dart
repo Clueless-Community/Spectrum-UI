@@ -20,7 +20,11 @@ class _PaginationScreenState extends State<PaginationScreen> {
       textColor: Colors.black,
       hightlightColor: Color(0xFF005F99),
     ),
-    const Page2(),
+    const Page2(
+      iconColor: Colors.black,
+      textColor: Colors.black,
+      // highlightedColor: Colors.blue,
+    ),
     const Page3(
       iconColor: Colors.white,
       containerColor: Colors.black,
