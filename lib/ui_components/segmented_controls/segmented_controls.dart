@@ -46,20 +46,18 @@ class _SegmentedControlWidgetState extends State<SegmentedControlWidget> {
 }
 
 Widget buildSegment(String text, Color? color) => Container(
-      child: Container(
-        width: 80,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Center(
-            child: Text(
-              text,
-              style: TextStyle(
-                fontSize: 15,
-                color: color,
-              ),
+      width: 80,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(50),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Center(
+          child: Text(
+            text,
+            style: TextStyle(
+              fontSize: 15,
+              color: color,
             ),
           ),
         ),
@@ -71,8 +69,9 @@ class RadioChips extends StatefulWidget {
   final int initialPosition;
   final Function(int index) onSelected;
 
-  RadioChips(
-      {required this.values,
+  const RadioChips(
+      {super.key,
+      required this.values,
       required this.onSelected,
       this.initialPosition = -1});
 
@@ -153,8 +152,9 @@ class RectangularSelections extends StatefulWidget {
   final int initialPosition;
   final Function(int index) onSelected;
 
-  RectangularSelections(
-      {required this.values,
+  const RectangularSelections(
+      {super.key,
+      required this.values,
       required this.onSelected,
       this.initialPosition = -1});
 
@@ -209,7 +209,8 @@ class _RectangularSelectionsState extends State<RectangularSelections> {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(Radius.circular(7)),
-                    border: Border.all(color: Color.fromRGBO(189, 189, 189, 1)),
+                    border: Border.all(
+                        color: const Color.fromRGBO(189, 189, 189, 1)),
                     color: index == current ? selected : bgcolor,
                   ),
                   child: Text(

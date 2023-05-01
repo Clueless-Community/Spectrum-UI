@@ -20,35 +20,36 @@ class _Page3State extends State<Page3> {
   int _large = 1;
   int _outOf = 8;
 
-  void increaseSmall(){
-    if(_small<23) {
+  void increaseSmall() {
+    if (_small < 23) {
       _small = _small + 1;
     }
     setState(() {});
   }
 
-  void decreaseSmall(){
-    if(_small>1) {
+  void decreaseSmall() {
+    if (_small > 1) {
       _small = _small - 1;
     }
     setState(() {});
   }
 
-  void increaseLarge(){
-    if(_large < 200){
+  void increaseLarge() {
+    if (_large < 200) {
       _large = _large + 1;
-      _outOf = ((_large / 8 ).toInt() +  1) * 8 ;
+      _outOf = (_large ~/ 8 + 1) * 8;
     }
     setState(() {});
   }
 
-  void decreaseLarge(){
-    if(_large > 1){
+  void decreaseLarge() {
+    if (_large > 1) {
       _large = _large - 1;
-      _outOf = ((_large / 8 ).toInt() + 1) * 8;
+      _outOf = (_large ~/ 8 + 1) * 8;
     }
     setState(() {});
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(

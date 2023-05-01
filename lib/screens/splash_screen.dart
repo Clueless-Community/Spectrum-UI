@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_component_ui/screens/bottom_navigation.dart';
+import 'package:flutter_component_ui/screens/main_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ComponentScreen()));
+                            builder: (context) => const MainPage()));
                   },
                   backgroundColor: Colors.white,
                   child: const Icon(

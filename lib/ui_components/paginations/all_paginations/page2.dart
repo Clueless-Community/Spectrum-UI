@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class Page2 extends StatefulWidget {
   const Page2({
-    super.key, required this.iconColor, required this.textColor,
+    super.key,
+    required this.iconColor,
+    required this.textColor,
   });
   final Color iconColor;
   final Color textColor;
@@ -14,17 +16,19 @@ class Page2 extends StatefulWidget {
 class _Page2State extends State<Page2> {
   int _page = 1;
 
-  void increasePage(){
+  void increasePage() {
     _page = _page + 1;
     setState(() {});
   }
 
-  void decreasePage(){
-    if(_page > 1) {
+  void decreasePage() {
+    if (_page > 1) {
       _page = _page - 1;
     }
     setState(() {});
   }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,24 +60,21 @@ class _Page2State extends State<Page2> {
               ),
               InkWell(
                 onTap: () => decreasePage(),
-                child:
-                Text('Prev', style: TextStyle(color: widget.textColor)),
+                child: Text('Prev', style: TextStyle(color: widget.textColor)),
               ),
-
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: CircleAvatar(
                   backgroundColor: Colors.blue,
                   child: Text(
                     '$_page',
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                 ),
               ),
               InkWell(
                 onTap: () => increasePage(),
-                child:
-                  Text('Next', style: TextStyle(color: widget.textColor)),
+                child: Text('Next', style: TextStyle(color: widget.textColor)),
               ),
               IconButton(
                 onPressed: () => increasePage(),

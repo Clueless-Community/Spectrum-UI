@@ -39,7 +39,7 @@ class SegmentedControlScreen extends StatelessWidget {
           ),
           Center(
             child: RadioChips(
-              values: ['Text', 'Text', 'Text'],
+              values: const ['Text', 'Text', 'Text'],
               onSelected: (index) {},
             ),
           ),
@@ -48,7 +48,7 @@ class SegmentedControlScreen extends StatelessWidget {
           ),
           Center(
             child: RectangularSelections(
-              values: ['Text', 'Text', 'Text'],
+              values: const ['Text', 'Text', 'Text'],
               onSelected: (index) {},
             ),
           ),

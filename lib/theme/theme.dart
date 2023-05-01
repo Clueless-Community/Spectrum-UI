@@ -3,39 +3,15 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class MyTheme {
-  static const MaterialColor light = MaterialColor(
-    _lightPrimaryValue,
-    <int, Color>{
-      50: Color(0xFFFFFFFF),
-      100: Color(0xFFFFFFFF),
-      200: Color(0xFFFFFFFF),
-      300: Color(0xFFFFFFFF),
-      400: Color(0xFFFFFFFF),
-      500: Color(0xFFFFFFFF),
-      600: Color(0xFFFFFFFF),
-      700: Color(0xFFFFFFFF),
-      800: Color(0xFFFFFFFF),
-      900: Color(0xFFFFFFFF),
-    },
-  );
-  static const int _lightPrimaryValue = 0xFFFFFFFF;
-  static const MaterialAccentColor lightAccent = MaterialAccentColor(
-    _lightAccentPrimaryValue,
-    <int, Color>{
-      100: Color(0xFFFFFFFF),
-      200: Color(_lightAccentPrimaryValue),
-      400: Color(0xFFFFFFFF),
-      700: Color(0xFFFFFFFF),
-    },
-  );
-  static const int _lightAccentPrimaryValue = 0xFFFFFFFF;
-
   static ThemeData lightTheme(BuildContext context) => ThemeData(
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.white,
         canvasColor: creamColor,
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: light)
-            .copyWith(secondary: darkBluishColor),
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: Colors.white,
+          brightness: Brightness.light,
+        ),
+        textTheme: GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme),
         appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
@@ -51,6 +27,7 @@ class MyTheme {
           secondary: Colors.white,
           brightness: Brightness.dark,
         ),
+        textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,

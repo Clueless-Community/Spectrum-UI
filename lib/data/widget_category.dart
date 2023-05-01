@@ -33,7 +33,7 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Cards',
-    'categoryScreen': CardScreen(),
+    'categoryScreen': const CardScreen(),
   },
   {
     'categoryName': 'Input Field',
@@ -41,7 +41,7 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Sliders',
-    'categoryScreen': SliderScreen(),
+    'categoryScreen': const SliderScreen(),
   },
   {
     'categoryName': 'Message',
@@ -56,7 +56,7 @@ final List<Map<String, dynamic>> widgetCategoryData = [
     'categoryScreen': const SegmentedControlScreen(),
   },
   {
-    'categoryName' : 'Pagination',
-    'categoryScreen' : const PaginationScreen(),
+    'categoryName': 'Pagination',
+    'categoryScreen': const PaginationScreen(),
   }
 ];

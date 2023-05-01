@@ -3,7 +3,11 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
 class Slider5 extends StatefulWidget {
-  const Slider5({super.key, required this.activeColor, required this.inactiveColor, required this.maxRange});
+  const Slider5(
+      {super.key,
+      required this.activeColor,
+      required this.inactiveColor,
+      required this.maxRange});
   final Color activeColor;
   final Color inactiveColor;
   final double maxRange;
@@ -31,9 +35,10 @@ class _Slider5State extends State<Slider5> {
               fontSize: 18,
             ),
             inactiveLabelStyle: const TextStyle(
-                color: Colors.red,
-                fontSize: 12,
-                fontStyle: FontStyle.italic,),
+              color: Colors.red,
+              fontSize: 12,
+              fontStyle: FontStyle.italic,
+            ),
           ),
           child: SfSlider(
             min: 0.0,
