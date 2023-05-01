@@ -145,6 +145,33 @@ Step 5 : Test it one more time. `Happy Coding🤗.`
 
 ---
 
+## Coding Guidelines
+
+1. Follow the [Dart Style Guide](https://dart.dev/guides/language/effective-dart/style).
+
+2. Do not use any external package library for UI's. If you want, you can see their source code from GitHub Repository.
+
+3. Don't use any State Management package apart from `Provider`. Consult the maintainers before using state-management logic in the code.
+
+4. Always adhere to the Folder Structure that is specified for your specified UI section.
+
+5. Try to write code as modular as possible.
+
+6. Use meaningful variable and function names.
+
+7. Keep the code clean and organized.
+
+8. Avoid duplicating code. Instead, create reusable widgets or functions.
+
+9. Use comments to explain complex code or describe the purpose of a function or variable.
+
+10. Always test the UI code on multiple devices and screen sizes.
+
+
+Following these guidelines and adhering to the folder structure will help ensure that your Flutter UI Kit is organized, easy to maintain, and follows best practices. Remember to keep the code clean, modular, and reusable.
+
+---
+
 ## Reporting Bugs 
 
 It's always welcomed to report and fix the bugs. 
