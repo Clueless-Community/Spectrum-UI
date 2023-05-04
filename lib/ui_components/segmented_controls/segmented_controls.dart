@@ -76,6 +76,7 @@ class RadioChips extends StatefulWidget {
       this.initialPosition = -1});
 
   @override
+  // ignore: library_private_types_in_public_api
   _RadioChipsState createState() => _RadioChipsState();
 }
 
@@ -159,6 +160,7 @@ class RectangularSelections extends StatefulWidget {
       this.initialPosition = -1});
 
   @override
+  // ignore: library_private_types_in_public_api
   _RectangularSelectionsState createState() => _RectangularSelectionsState();
 }
 

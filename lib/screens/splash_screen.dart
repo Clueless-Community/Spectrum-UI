@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: size.height * 0.55,
               ),
               Text(
-                'Flutter UI Components',
+                'Spectrum UI',
                 style: TextStyle(
                     color: Colors.white,
                     fontFamily: GoogleFonts.dmSans(

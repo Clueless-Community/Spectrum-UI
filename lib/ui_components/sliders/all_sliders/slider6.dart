@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
+// ignore: depend_on_referenced_packages
 import 'package:syncfusion_flutter_core/theme.dart';
 
 class Slider6 extends StatefulWidget {
-  const Slider6({super.key, required this.activeColor, required this.inactiveColor, required this.maxRange});
+  const Slider6(
+      {super.key,
+      required this.activeColor,
+      required this.inactiveColor,
+      required this.maxRange});
   final Color activeColor;
   final Color inactiveColor;
   final double maxRange;

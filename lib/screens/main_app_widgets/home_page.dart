@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'UI Components',
+                'Spectrum UI',
                 style: TextStyle(
                     color: Theme.of(context).brightness == Brightness.dark
                         ? Colors.white
@@ -36,7 +36,10 @@ class _HomeState extends State<Home> {
               const SizedBox(
                 height: 15,
               ),
-              const StagList()
+              const StagList(),
+              const SizedBox(
+                height: 15,
+              )
             ],
           ),
         ),

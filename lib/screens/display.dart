@@ -7,9 +7,6 @@ class Display extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter UI Component'),
-      ),
       body: ListView.builder(
         itemCount: widgetCategoryData.length,
         itemBuilder: ((context, index) {
@@ -18,10 +15,12 @@ class Display extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            widgetCategoryData[index]['categoryScreen']));
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        widgetCategoryData[index]['categoryScreen'],
+                  ),
+                );
               },
               child: Container(
                 height: 50,
@@ -32,9 +31,10 @@ class Display extends StatelessWidget {
                   child: Text(
                     widgetCategoryData[index]['categoryName'] as String,
                     style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black87),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black87,
+                    ),
                   ),
                 ),
               ),
