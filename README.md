@@ -1,4 +1,4 @@
-<h1 align=center> Flutter UI Components (Under Development) </h1>
+<h1 align=center> Spectrum UI (Under Development) </h1>
 
 <h3 align=center> Amazing UI Components for you to choose from. 📜 </h3>
 
