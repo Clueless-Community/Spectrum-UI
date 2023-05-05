@@ -3,7 +3,7 @@
 <h3 align=center> Amazing UI Components for you to choose from. 📜 </h3>
 
 <p align="center">
-User Interface(UI) components are the most integral parts of any application or website. They can be thought of building blocks or pieces that come together to make the complete user interface. Flutter UI Components are  easy to use pre-designed plug and play collection of UI components which will be converted into a flutter package in the future. These make the layout of any iOS or Android application much <b>quicker</b>, <b>simpler</b>, <b>affordable</b>, <b>compatible</b> and <b>easier to implement</b>. Each one includes a variety of different widgets which can be customized to meet speicific needs of a project. Overall These will help you to save your time and efforts with a faster workflow.
+Spectrum UI is a user-friendly Flutter UI library that offers a variety of beautifully designed widgets and components that are easy to use and can be integrated into your Flutter projects seamlessly. With Spectrum UI, you can quickly create stunning mobile app interfaces without spending a lot of time and effort on design and development. The library includes a range of pre-built UI elements such as buttons, text fields, cards, and more, all with a consistent look and feel that will make your app look polished and professional. Whether you're a beginner or an experienced Flutter developer, Spectrum UI makes it easy to create beautiful apps with minimal effort.
 </p>
 
 ## Tech Stacks used 💻
