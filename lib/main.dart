@@ -1,6 +1,4 @@
 import 'dart:async';
-
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/screens/splash_screen.dart';
@@ -23,16 +21,7 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.system,
         darkTheme: MyTheme.darkTheme(context),
         theme: MyTheme.lightTheme(context),
-        // home: AnimatedSplashScreen(
-        //   nextScreen: const MainPage(),
-        //   splash: const SplashScreen(),
-        //   backgroundColor: Colors.white,
-        //   centered: true,
-        //   duration: 2000,
-        //   splashTransition: SplashTransition.fadeTransition,
-        home: MyHome()
-        // ),
-        );
+        home: const MyHome());
   }
 }
 
