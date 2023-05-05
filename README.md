@@ -58,6 +58,13 @@ User Interface(UI) components are the most integral parts of any application or 
 <h2 align='center'> Project maintainers </h2>
 <table align='center'>
 <tr>
+ <td align="center">
+        <a href="https://github.com/Debajyoti14">
+            <img src="https://avatars.githubusercontent.com/u/91759192?v=4" width="100;" alt="Debajyoti Saha"/>
+            <br />
+            <sub><b>Debajyoti Saha</b></sub>
+        </a>
+    </td>
     <td align="center">
         <a href="https://github.com/roshaen">
             <img src="https://avatars.githubusercontent.com/u/58213083?v=4" width="100;" alt="Roshan Kumar"/>
