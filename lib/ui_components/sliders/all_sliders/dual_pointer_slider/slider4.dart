@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class Slider4 extends StatefulWidget {
-  const Slider4({Key? key, required this.activeColor, required this.inactiveColor, required this.maxRange}) : super(key: key);
+  const Slider4(
+      {Key? key,
+      required this.activeColor,
+      required this.inactiveColor,
+      required this.maxRange})
+      : super(key: key);
   final Color activeColor;
   final Color inactiveColor;
   final double maxRange;
@@ -12,15 +17,12 @@ class Slider4 extends StatefulWidget {
 class _Slider4State extends State<Slider4> {
   RangeValues _currentRangeValues = const RangeValues(40, 80);
 
+  
+
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        const Text(
-          'Range Slider',
-          style: TextStyle(fontSize: 18),
-        ),
         const SizedBox(
           height: 10,
         ),

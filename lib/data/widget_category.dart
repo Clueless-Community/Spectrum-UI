@@ -1,4 +1,4 @@
-import 'package:flutter_component_ui/ui_components/avatars/avatars.dart';
+import 'package:flutter_component_ui/ui_components/avatars/all_avatars/avatars.dart';
 import 'package:flutter_component_ui/ui_components/alerts/alerts.dart';
 import 'package:flutter_component_ui/ui_components/buttons/buttons.dart';
 import 'package:flutter_component_ui/ui_components/cards/cards.dart';

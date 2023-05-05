@@ -3,8 +3,8 @@ import 'package:syncfusion_flutter_sliders/sliders.dart';
 // ignore: depend_on_referenced_packages
 import 'package:syncfusion_flutter_core/theme.dart';
 
-class Slider5 extends StatefulWidget {
-  const Slider5(
+class Slider6 extends StatefulWidget {
+  const Slider6(
       {super.key,
       required this.activeColor,
       required this.inactiveColor,
@@ -13,27 +13,30 @@ class Slider5 extends StatefulWidget {
   final Color inactiveColor;
   final double maxRange;
   @override
-  State<Slider5> createState() => _Slider5State();
+  State<Slider6> createState() => _Slider6State();
 }
 
-class _Slider5State extends State<Slider5> {
+class _Slider6State extends State<Slider6> {
   double _currentSliderValue = 20;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(
-          height: 20,
-        ),
         SfSliderTheme(
           data: SfSliderThemeData(
-            tooltipBackgroundColor: Colors.grey,
+            inactiveTrackHeight: 10,
+            thumbRadius: 12,
+            thumbColor: Colors.blue,
             activeTrackColor: widget.activeColor,
             inactiveTrackColor: widget.inactiveColor,
+            activeTrackHeight: 16,
+            inactiveTickColor: Colors.orange,
+            activeTickColor: Colors.white,
+            tooltipBackgroundColor: Colors.orange,
             activeLabelStyle: const TextStyle(
               color: Colors.greenAccent,
-              fontSize: 18,
+              fontSize: 16,
             ),
             inactiveLabelStyle: const TextStyle(
               color: Colors.red,
@@ -45,7 +48,7 @@ class _Slider5State extends State<Slider5> {
             min: 0.0,
             max: widget.maxRange,
             value: _currentSliderValue,
-            interval: 20,
+            interval: 10,
             showTicks: true,
             showLabels: true,
             tooltipShape: const SfPaddleTooltipShape(),
@@ -58,9 +61,12 @@ class _Slider5State extends State<Slider5> {
             },
           ),
         ),
+        const SizedBox(
+          height: 10,
+        ),
         Text(
           _currentSliderValue.toInt().toString(),
-          style: const TextStyle(fontSize: 18),
+          style: const TextStyle(fontSize: 16),
         )
       ],
     );
