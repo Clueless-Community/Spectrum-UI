@@ -42,23 +42,6 @@ class _SplashScreenState extends State<SplashScreen> {
                         .fontFamily,
                     fontSize: 16),
               ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: FloatingActionButton(
-                  onPressed: () {
-                    Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const MainPage()));
-                  },
-                  backgroundColor: Colors.white,
-                  child: const Icon(
-                    Icons.keyboard_arrow_right_rounded,
-                    size: 50,
-                    color: Colors.black,
-                  ),
-                ),
-              )
             ],
           ),
         ),
