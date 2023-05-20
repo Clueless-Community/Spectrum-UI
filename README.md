@@ -79,6 +79,14 @@ Spectrum UI is a user-friendly Flutter UI library that offers a variety of beaut
             <sub><b>Bhavik Kothari</b></sub>
         </a>
     </td>
+      </td>
+      <td align="center">
+        <a href="https://github.com/ashdude1401">
+            <img src="https://avatars.githubusercontent.com/u/98846260?v=4" width="100;" alt="Ashutosh Jha"/>
+            <br />
+            <sub><b>Ashutosh Jha</b></sub>
+        </a>
+    </td>
   </tr>
 </table>
 
