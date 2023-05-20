@@ -5,6 +5,8 @@ import 'package:flutter_component_ui/ui_components/buttons/all_buttons/elevated_
 import 'package:flutter_component_ui/ui_components/buttons/all_buttons/elevated_button/button1.dart';
 
 import 'package:flutter_component_ui/ui_components/buttons/all_buttons/elevated_button/button3.dart';
+import 'package:flutter_component_ui/ui_components/buttons/all_buttons/elevated_button/button11.dart';
+
 
 import 'package:flutter_component_ui/ui_components/buttons/all_buttons/elevated_button/button5.dart';
 import 'package:flutter_component_ui/ui_components/buttons/all_buttons/text_button/button6.dart';
@@ -27,7 +29,8 @@ class ButtonScreen extends StatelessWidget {
     const Button3("button"),
     const Button5("button"),
     const Button7("button"),
-    const Button9("button")
+    const Button9("button"),
+    const Button11("button")
   ];
   final List<Widget> customTextButton = [
     const Button6("button"),
