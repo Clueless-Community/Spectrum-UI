@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:clipboard/clipboard.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -103,8 +104,8 @@ class _AboutPageState extends State<AboutPage> {
                       padding: const EdgeInsets.fromLTRB(23, 8, 25, 8),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Flexible(
+                        children: [
+                          const Flexible(
                             flex: 2,
                             child: Text(
                               "https://github.com/Clueless-Community/flutter-ui-components",
@@ -116,7 +117,14 @@ class _AboutPageState extends State<AboutPage> {
                           ),
                           Flexible(
                             flex: 1,
-                            child: Icon(Icons.copy),
+                            child: GestureDetector(
+                              child: Icon(Icons.copy),
+                              onTap: () {
+                                FlutterClipboard.copy(
+                                        "https://github.com/Clueless-Community/flutter-ui-components")
+                                    .then((value) => print('copied'));
+                              },
+                            ),
                           ),
                         ],
                       ),
