@@ -1,7 +1,8 @@
 import 'dart:convert';
-
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -25,7 +26,9 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
       body: showLoading
           ? const Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(
+                color: Colors.white,
+              ),
             )
           : SingleChildScrollView(
               child: Column(
@@ -164,29 +167,41 @@ class _AboutPageState extends State<AboutPage> {
                               itemBuilder: (context, index) {
                                 return Padding(
                                   padding: const EdgeInsets.all(11.0),
-                                  child: Column(
-                                    children: [
-                                      CircleAvatar(
-                                        backgroundColor: const Color.fromRGBO(
-                                            53, 63, 178, 0.85),
-                                        radius: 21,
-                                        child: CircleAvatar(
-                                          radius: 43,
-                                          backgroundImage: NetworkImage(
-                                              contributorsList[index]
-                                                  .avatarUrl),
+                                  child: InkWell(
+                                    onTap: () async {
+                                      Uri _url = Uri.parse(
+                                          contributorsList[index].url);
+                                      if (await canLaunchUrl(_url)) {
+                                        await launchUrl(_url);
+                                      } else {
+                                        throw 'Could not launch $_url';
+                                      }
+                                    },
+                                    child: Column(
+                                      children: [
+                                        CircleAvatar(
+                                          backgroundColor: const Color.fromRGBO(
+                                              53, 63, 178, 0.85),
+                                          radius: 21,
+                                          child: CircleAvatar(
+                                            radius: 43,
+                                            backgroundImage: NetworkImage(
+                                                contributorsList[index]
+                                                    .avatarUrl),
+                                          ),
                                         ),
-                                      ),
-                                      Expanded(
-                                        child: Text(
-                                          contributorsList[index].login,
-                                          textAlign: TextAlign.center,
-                                          maxLines: 2,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: const TextStyle(fontSize: 12),
-                                        ),
-                                      )
-                                    ],
+                                        Expanded(
+                                          child: Text(
+                                            contributorsList[index].login,
+                                            textAlign: TextAlign.center,
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
+                                            style:
+                                                const TextStyle(fontSize: 12),
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 );
                               },
@@ -229,12 +244,14 @@ class _AboutPageState extends State<AboutPage> {
 class ContributorModel {
   String login = "";
   String avatarUrl = "";
+  String url = "";
 
-  ContributorModel({this.login = "", this.avatarUrl = ""});
+  ContributorModel({this.login = "", this.avatarUrl = "", this.url = ""});
 
   ContributorModel.fromJson(Map<String, dynamic> json) {
     login = json['login'] ?? "";
     avatarUrl = json['avatar_url'] ?? "";
+    url = json['html_url'] ?? "";
   }
 
   Map<String, dynamic> toJson() {
