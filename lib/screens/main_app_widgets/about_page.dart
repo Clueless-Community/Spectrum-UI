@@ -118,11 +118,17 @@ class _AboutPageState extends State<AboutPage> {
                           Flexible(
                             flex: 1,
                             child: GestureDetector(
-                              child: Icon(Icons.copy),
+                              child: const Icon(Icons.copy),
                               onTap: () {
                                 FlutterClipboard.copy(
-                                        "https://github.com/Clueless-Community/flutter-ui-components")
-                                    .then((value) => print('copied'));
+                                  "https://github.com/Clueless-Community/flutter-ui-components",
+                                ).then((value) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content:
+                                            Text('Link copied to clipboard')),
+                                  );
+                                });
                               },
                             ),
                           ),
