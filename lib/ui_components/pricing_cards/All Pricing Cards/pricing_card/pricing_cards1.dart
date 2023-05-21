@@ -7,7 +7,11 @@ class PricingCard1 extends StatefulWidget {
       required this.supportingText,
       required this.price,
       required this.period,
-      required this.details, required this.cardColor, required this.textColor, required this.buttonColor, required this.buttonTextColor});
+      required this.details,
+      required this.cardColor,
+      required this.textColor,
+      required this.buttonColor,
+      required this.buttonTextColor});
   final Color cardColor;
   final Color textColor;
   final Color buttonTextColor;
@@ -118,7 +122,9 @@ class _PricingCard1State extends State<PricingCard1> {
                             ),
                           ),
                           Icon(
-                            Icons.keyboard_arrow_down_outlined,
+                            detailsTapped == false
+                                ? Icons.keyboard_arrow_down_outlined
+                                : Icons.keyboard_arrow_up_outlined,
                             color: widget.textColor,
                           ),
                         ],
