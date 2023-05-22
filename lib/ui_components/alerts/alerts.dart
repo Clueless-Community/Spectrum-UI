@@ -17,27 +17,40 @@ import 'package:provider/provider.dart';
 
 import '../../provider/favorite_provider.dart';
 
-class AlertScreen extends StatelessWidget {
-  AlertScreen({super.key});
+class AlertScreen extends StatefulWidget {
+  const AlertScreen({super.key});
 
+  @override
+  State<AlertScreen> createState() => _AlertScreenState();
+}
+
+class _AlertScreenState extends State<AlertScreen> {
   final List<Widget> coluredAlerts = [
     const Alert1("AMessage", "ADescriptions"),
     const Alert2("AMessage", "ADescriptions"),
     const Alert3("AMessage", "ADescriptions"),
     const Alert4("AMessage", "ADescriptions"),
   ];
+
+  List<Color?> coluredAlertsColor = [null, null, null, null];
+
   final List<Widget> simpleAlerts = [
     const Alert5("AMessage", "ADescriptions"),
     const Alert6("AMessage", "ADescriptions"),
     const Alert7("AMessage", "ADescriptions"),
     const Alert8("AMessage", "ADescriptions"),
   ];
+
+  List<Color?> simpleAlertsColor = [null, null, null, null];
+
   final List<Widget> simpleAlertsDarkMode = [
     const Alert9("AMessage", "ADescriptions"),
     const Alert10("AMessage", "ADescriptions"),
     const Alert11("AMessage", "ADescriptions"),
     const Alert12("AMessage", "ADescriptions"),
   ];
+
+  List<Color?> simpleAlertsDarkModeColor = [null, null, null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -86,9 +99,13 @@ class AlertScreen extends StatelessWidget {
                                       child: coluredAlerts[index],
                                     ),
                                   );
+                                  setState(() {
+                                    coluredAlertsColor[index] = Colors.amber;
+                                  });
                                 },
-                                child: const Icon(
+                                child: Icon(
                                   Icons.star_border_outlined,
+                                  color: coluredAlertsColor[index],
                                 ),
                               ),
                             ],
@@ -142,9 +159,13 @@ class AlertScreen extends StatelessWidget {
                                       child: simpleAlerts[index],
                                     ),
                                   );
+                                  setState(() {
+                                    simpleAlertsColor[index] = Colors.amber;
+                                  });
                                 },
-                                child: const Icon(
+                                child: Icon(
                                   Icons.star_border_outlined,
+                                  color: simpleAlertsColor[index],
                                 ),
                               ),
                             ],
@@ -198,9 +219,14 @@ class AlertScreen extends StatelessWidget {
                                       child: simpleAlertsDarkMode[index],
                                     ),
                                   );
+                                  setState(() {
+                                    simpleAlertsDarkModeColor[index] =
+                                        Colors.amber;
+                                  });
                                 },
-                                child: const Icon(
+                                child: Icon(
                                   Icons.star_border_outlined,
+                                  color: simpleAlertsDarkModeColor[index],
                                 ),
                               ),
                             ],

@@ -15,42 +15,42 @@ class FifthCard extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       "Politics",
                       style: TextStyle(color: Colors.grey),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 10,
                     ),
-                    const Text(
+                    Text(
                       "EU funds won't be conditional upon European Values",
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 20,
                           color:Colors.cyan),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 10,
                     ),
-                    const Text(
+                    Text(
                       "The European Union(EU) is a political and economic union of 27 European countries. It aims to promote cooperation.....",
                       style: TextStyle(color: Colors.grey, fontSize: 16),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 10,
                     ),
                     Row(
                       children: [
-                        const CircleAvatar(),
-                        const SizedBox(
+                        CircleAvatar(),
+                        SizedBox(
                           width: 5,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               "Ralph Edward",
                               style: TextStyle(

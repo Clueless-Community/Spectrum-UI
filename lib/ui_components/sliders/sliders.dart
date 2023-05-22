@@ -26,6 +26,7 @@ class _SliderScreenState extends State<SliderScreen> {
       maxRange: 100,
     ),
   ];
+  List<Color?> dualPointSliderColor = [null];
 
   final List<Widget> singlePointSlider = [
     const Slider1(
@@ -54,6 +55,7 @@ class _SliderScreenState extends State<SliderScreen> {
       maxRange: 100,
     ),
   ];
+  List<Color?> singlePointSliderColor = [null, null, null, null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -94,9 +96,13 @@ class _SliderScreenState extends State<SliderScreen> {
                             GestureDetector(
                               onTap: () {
                                 favProviderModel.add(singlePointSlider[index]);
+                                setState(() {
+                                  singlePointSliderColor[index] = Colors.amber;
+                                });
                               },
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
+                                color: singlePointSliderColor[index],
                               ),
                             ),
                           ],
@@ -143,9 +149,13 @@ class _SliderScreenState extends State<SliderScreen> {
                                     child: dualPointSlider[index],
                                   ),
                                 );
+                                setState(() {
+                                  dualPointSliderColor[index] = Colors.amber;
+                                });
                               },
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
+                                color: dualPointSliderColor[index],
                               ),
                             ),
                           ],

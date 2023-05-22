@@ -5,9 +5,14 @@ import '../../provider/favorite_provider.dart';
 import '../../theme/theme.dart';
 import 'All Pricing Cards/pricing_card/pricing_cards1.dart';
 
-class PricingCardScreen extends StatelessWidget {
+class PricingCardScreen extends StatefulWidget {
   PricingCardScreen({super.key});
 
+  @override
+  State<PricingCardScreen> createState() => _PricingCardScreenState();
+}
+
+class _PricingCardScreenState extends State<PricingCardScreen> {
   final List<Widget> pricingCards = [
     const PricingCard1(
       tier: 'FREE',
@@ -25,6 +30,7 @@ class PricingCardScreen extends StatelessWidget {
       buttonTextColor: Color(0xff0f172a),
     ),
   ];
+  List<Color?> pricingCardsColor = [null];
 
   @override
   Widget build(BuildContext context) {
@@ -74,9 +80,13 @@ class PricingCardScreen extends StatelessWidget {
                                       child: pricingCards[index],
                                     ),
                                   );
+                                  setState(() {
+                                    pricingCardsColor[index] = Colors.amber;
+                                  });
                                 },
-                                child: const Icon(
+                                child: Icon(
                                   Icons.star_border_outlined,
+                                  color: pricingCardsColor[index],
                                 ),
                               ),
                             ],

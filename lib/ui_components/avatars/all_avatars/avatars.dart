@@ -8,9 +8,14 @@ import 'package:provider/provider.dart';
 import '../../../provider/favorite_provider.dart';
 import '../../../theme/theme.dart';
 
-class AvatarScreen extends StatelessWidget {
-  AvatarScreen({super.key});
+class AvatarScreen extends StatefulWidget {
+  const AvatarScreen({super.key});
 
+  @override
+  State<AvatarScreen> createState() => _AvatarScreenState();
+}
+
+class _AvatarScreenState extends State<AvatarScreen> {
   final List<Widget> textAvatars = [
     const Avatar2(
       size: 100,
@@ -24,9 +29,16 @@ class AvatarScreen extends StatelessWidget {
       backgroundColor: Colors.black,
     ),
   ];
+
+  List<Color?> textAvatarsColor = [null];
+
   final List<Widget> imageAvatars = [
     const Avatar1(size: 100, imagePath: 'assets/bored.png'),
   ];
+  List<Color?> imageAvatarsColor = [null];
+
+  List<Color?> customElevatedButtonColorColor = [null];
+
   final List<Widget> iconAvatars = [
     const Avatar3(
       size: 100,
@@ -38,6 +50,8 @@ class AvatarScreen extends StatelessWidget {
       backgroundColor: Colors.black,
     ),
   ];
+
+  List<Color?> iconAvatarsColor = [null];
 
   @override
   Widget build(BuildContext context) {
@@ -85,9 +99,13 @@ class AvatarScreen extends StatelessWidget {
                                       child: textAvatars[index],
                                     ),
                                   );
+                                  setState(() {
+                                    textAvatarsColor[index] = Colors.amber;
+                                  });
                                 },
-                                child: const Icon(
+                                child: Icon(
                                   Icons.star_border_outlined,
+                                  color: textAvatarsColor[index],
                                 ),
                               ),
                             ],
@@ -134,9 +152,13 @@ class AvatarScreen extends StatelessWidget {
                                       child: imageAvatars[index],
                                     ),
                                   );
+                                  setState(() {
+                                    imageAvatarsColor[index] = Colors.amber;
+                                  });
                                 },
-                                child: const Icon(
+                                child: Icon(
                                   Icons.star_border_outlined,
+                                  color: imageAvatarsColor[index],
                                 ),
                               ),
                             ],
@@ -183,9 +205,13 @@ class AvatarScreen extends StatelessWidget {
                                       child: iconAvatars[index],
                                     ),
                                   );
+                                  setState(() {
+                                    iconAvatarsColor[index] = Colors.amber;
+                                  });
                                 },
-                                child: const Icon(
+                                child: Icon(
                                   Icons.star_border_outlined,
+                                  color: iconAvatarsColor[index],
                                 ),
                               ),
                             ],

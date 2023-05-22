@@ -44,6 +44,7 @@ class _PaginationScreenState extends State<PaginationScreen> {
       hightlightColor: Color(0xFF00C2CB),
     ),
   ];
+  List<Color?> pagesLikeButtonColor = [null, null, null, null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -79,9 +80,13 @@ class _PaginationScreenState extends State<PaginationScreen> {
                               child: pages[index],
                             ),
                           );
+                          setState(() {
+                            pagesLikeButtonColor[index] = Colors.amber;
+                          });
                         },
-                        child: const Icon(
+                        child: Icon(
                           Icons.star_border_outlined,
+                          color: pagesLikeButtonColor[index],
                         ),
                       ),
                     ],

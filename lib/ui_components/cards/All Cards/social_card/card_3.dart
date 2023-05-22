@@ -12,8 +12,8 @@ class ThirdCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
@@ -62,14 +62,14 @@ class ThirdCard extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Row(
+            const Row(
               children: [
-                const CircleAvatar(),
-                const SizedBox(
+                CircleAvatar(),
+                SizedBox(
                   width: 7,
                 ),
                 Column(
-                  children: const [
+                  children: [
                     Text(
                       "Ralph Edward",
                       style: TextStyle(

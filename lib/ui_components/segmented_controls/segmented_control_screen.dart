@@ -3,9 +3,14 @@ import 'package:provider/provider.dart';
 import '../../provider/favorite_provider.dart';
 import 'segmented_controls.dart';
 
-class SegmentedControlScreen extends StatelessWidget {
+class SegmentedControlScreen extends StatefulWidget {
   const SegmentedControlScreen({super.key});
 
+  @override
+  State<SegmentedControlScreen> createState() => _SegmentedControlScreenState();
+}
+
+class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
   @override
   Widget build(BuildContext context) {
     Color? color;
@@ -19,6 +24,7 @@ class SegmentedControlScreen extends StatelessWidget {
       1: buildSegment("Text", color),
       2: buildSegment("Text", color),
     };
+    List<Color?> segmentedControlFavColor = [null, null, null, null];
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -50,9 +56,13 @@ class SegmentedControlScreen extends StatelessWidget {
                               ),
                             ),
                           );
+                          setState(() {
+                            segmentedControlFavColor[0] = Colors.amber;
+                          });
                         },
-                        child: const Icon(
+                        child: Icon(
                           Icons.star_border_outlined,
+                          color: segmentedControlFavColor[0],
                         ),
                       ),
                     ],
@@ -91,9 +101,13 @@ class SegmentedControlScreen extends StatelessWidget {
                               ),
                             ),
                           );
+                          setState(() {
+                            segmentedControlFavColor[1] = Colors.amber;
+                          });
                         },
-                        child: const Icon(
+                        child: Icon(
                           Icons.star_border_outlined,
+                          color: segmentedControlFavColor[1],
                         ),
                       ),
                     ],
@@ -134,9 +148,13 @@ class SegmentedControlScreen extends StatelessWidget {
                               ),
                             ),
                           );
+                          setState(() {
+                            segmentedControlFavColor[2] = Colors.amber;
+                          });
                         },
-                        child: const Icon(
+                        child: Icon(
                           Icons.star_border_outlined,
+                          color: segmentedControlFavColor[2],
                         ),
                       ),
                     ],
@@ -178,8 +196,9 @@ class SegmentedControlScreen extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const Icon(
+                        child: Icon(
                           Icons.star_border_outlined,
+                          color: segmentedControlFavColor[3],
                         ),
                       ),
                     ],

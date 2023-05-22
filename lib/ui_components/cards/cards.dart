@@ -12,27 +12,37 @@ import 'All Cards/blog_card_dark_mode/card_6.dart';
 import 'All Cards/social_card_dark_mode/card_7.dart';
 import 'All Cards/social_card_dark_mode/card_8.dart';
 
-class CardScreen extends StatelessWidget {
+class CardScreen extends StatefulWidget {
   const CardScreen({super.key});
 
+  @override
+  State<CardScreen> createState() => _CardScreenState();
+}
+
+class _CardScreenState extends State<CardScreen> {
   final blogCardList = const [
     FirstCard(),
     SecondCard(),
   ];
+  List<Color?> blogCardListColor = [null, null];
 
   final socialCardList = const [
     ThirdCard(),
     FourthCard(),
   ];
+  List<Color?> socialCardListColor = [null, null];
+
   final blogCardDarKModeList = const [
     FifthCard(),
     SixthCard(),
   ];
+  List<Color?> blogCardDarKModeListColor = [null, null];
 
   final socialCardDarkModeList = const [
     SeventhCard(),
     EightCard(),
   ];
+  List<Color?> socialCardDarkModeListColor = [null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -89,9 +99,13 @@ class CardScreen extends StatelessWidget {
                                     child: blogCardList[index],
                                   ),
                                 );
+                                setState(() {
+                                  blogCardListColor[index] = Colors.amber;
+                                });
                               },
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
+                                color: blogCardListColor[index],
                               ),
                             ),
                           ],
@@ -150,9 +164,13 @@ class CardScreen extends StatelessWidget {
                                     child: socialCardList[index],
                                   ),
                                 );
+                                setState(() {
+                                  socialCardListColor[index] = Colors.amber;
+                                });
                               },
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
+                                color: socialCardListColor[index],
                               ),
                             ),
                           ],
@@ -211,9 +229,14 @@ class CardScreen extends StatelessWidget {
                                     child: blogCardDarKModeList[index],
                                   ),
                                 );
+                                setState(() {
+                                  blogCardDarKModeListColor[index] =
+                                      Colors.amber;
+                                });
                               },
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
+                                color: blogCardDarKModeListColor[index],
                               ),
                             ),
                           ],
@@ -272,9 +295,14 @@ class CardScreen extends StatelessWidget {
                                     child: socialCardDarkModeList[index],
                                   ),
                                 );
+                                setState(() {
+                                  socialCardDarkModeListColor[index] =
+                                      Colors.amber;
+                                });
                               },
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
+                                color: socialCardDarkModeListColor[index],
                               ),
                             ),
                           ],

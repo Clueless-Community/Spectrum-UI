@@ -13,8 +13,14 @@ import 'package:provider/provider.dart';
 
 import '../../provider/favorite_provider.dart';
 
-class MessageScreen extends StatelessWidget {
+class MessageScreen extends StatefulWidget {
   MessageScreen({super.key});
+
+  @override
+  State<MessageScreen> createState() => _MessageScreenState();
+}
+
+class _MessageScreenState extends State<MessageScreen> {
   final List<Widget> inboxMessages = [
     const InboxMessage1(
       name: "ClueLess",
@@ -42,6 +48,8 @@ class MessageScreen extends StatelessWidget {
     ),
   ];
 
+  List<Color?> inboxMessagesColor = [null, null, null, null];
+
   final List<Widget> bubbleChat = [
     const Message1(
       message: "Hello boy",
@@ -56,6 +64,9 @@ class MessageScreen extends StatelessWidget {
       message: "Hello broo",
     ),
   ];
+
+  List<Color?> bubbleChatColor = [null, null, null, null];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -105,9 +116,13 @@ class MessageScreen extends StatelessWidget {
                                     child: bubbleChat[index],
                                   ),
                                 );
+                                setState(() {
+                                  bubbleChatColor[index] = Colors.amber;
+                                });
                               },
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
+                                color: bubbleChatColor[index],
                               ),
                             ),
                           ],
@@ -160,9 +175,13 @@ class MessageScreen extends StatelessWidget {
                                     child: inboxMessages[index],
                                   ),
                                 );
+                                setState(() {
+                                  inboxMessagesColor[index] = Colors.amber;
+                                });
                               },
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
+                                color: inboxMessagesColor[index],
                               ),
                             ),
                           ],

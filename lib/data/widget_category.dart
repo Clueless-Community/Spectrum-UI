@@ -13,23 +13,23 @@ import '../ui_components/sliders/sliders.dart';
 final List<Map<String, dynamic>> widgetCategoryData = [
   {
     'categoryName': 'Buttons',
-    'categoryScreen': ButtonScreen(),
+    'categoryScreen': const ButtonScreen(),
   },
   {
     'categoryName': 'Alerts',
-    'categoryScreen': AlertScreen(),
+    'categoryScreen': const AlertScreen(),
   },
   {
     'categoryName': 'Labels',
-    'categoryScreen': AvatarScreen(),
+    'categoryScreen': const AvatarScreen(),
   },
   {
     'categoryName': 'Bottom Navigation Bars',
-    'categoryScreen': AlertScreen(),
+    'categoryScreen': const AlertScreen(),
   },
   {
     'categoryName': 'Avatars',
-    'categoryScreen': AvatarScreen(),
+    'categoryScreen': const AvatarScreen(),
   },
   {
     'categoryName': 'Cards',

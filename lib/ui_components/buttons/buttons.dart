@@ -18,7 +18,7 @@ import 'all_buttons/outline_button/button2.dart';
 import 'all_buttons/outline_button/button4.dart';
 
 class ButtonScreen extends StatefulWidget {
-  ButtonScreen({super.key});
+  const ButtonScreen({super.key});
 
   @override
   State<ButtonScreen> createState() => _ButtonScreenState();
@@ -31,6 +31,8 @@ class _ButtonScreenState extends State<ButtonScreen> {
     const Button10("button"),
   ];
 
+  List<Color?> customOutlineButtonColor = [null, null, null];
+
   final List<Widget> customElevatedButton = [
     const Button1("button"),
     const Button3("button"),
@@ -38,10 +40,12 @@ class _ButtonScreenState extends State<ButtonScreen> {
     const Button7("button"),
     const Button9("button")
   ];
+  List<Color?> customElevatedButtonColor = [null, null, null, null, null];
 
   final List<Widget> customTextButton = [
     const Button6("button"),
   ];
+  List<Color?> customTextButtonColor = [null];
 
   @override
   Widget build(BuildContext context) {
@@ -99,9 +103,14 @@ class _ButtonScreenState extends State<ButtonScreen> {
                                       child: customElevatedButton[index],
                                     ),
                                   );
+                                  setState(() {
+                                    customElevatedButtonColor[index] =
+                                        Colors.amber;
+                                  });
                                 },
-                                child: const Icon(
+                                child: Icon(
                                   Icons.star_border_outlined,
+                                  color: customElevatedButtonColor[index],
                                 ),
                               ),
                             ],
@@ -160,9 +169,14 @@ class _ButtonScreenState extends State<ButtonScreen> {
                                       child: customOutlineButton[index],
                                     ),
                                   );
+                                  setState(() {
+                                    customOutlineButtonColor[index] =
+                                        Colors.amber;
+                                  });
                                 },
-                                child: const Icon(
+                                child: Icon(
                                   Icons.star_border_outlined,
+                                  color: customOutlineButtonColor[index],
                                 ),
                               ),
                             ],
@@ -221,9 +235,13 @@ class _ButtonScreenState extends State<ButtonScreen> {
                                       child: customTextButton[index],
                                     ),
                                   );
+                                  setState(() {
+                                    customTextButtonColor[index] = Colors.amber;
+                                  });
                                 },
-                                child: const Icon(
+                                child: Icon(
                                   Icons.star_border_outlined,
+                                  color: customTextButtonColor[index],
                                 ),
                               ),
                             ],

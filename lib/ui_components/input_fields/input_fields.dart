@@ -13,9 +13,14 @@ import 'package:provider/provider.dart';
 
 import '../../provider/favorite_provider.dart';
 
-class InputFieldScreen extends StatelessWidget {
+class InputFieldScreen extends StatefulWidget {
   InputFieldScreen({super.key});
 
+  @override
+  State<InputFieldScreen> createState() => _InputFieldScreenState();
+}
+
+class _InputFieldScreenState extends State<InputFieldScreen> {
   final List<Widget> textareas = [
     const TextArea1(
       label: "TextArea1",
@@ -34,6 +39,7 @@ class InputFieldScreen extends StatelessWidget {
       hinttext: "Write Description",
     )
   ];
+  List<Color?> textareasColor = [null, null, null, null];
 
   final List<Widget> inputfields = [
     const InputField1(
@@ -57,6 +63,7 @@ class InputFieldScreen extends StatelessWidget {
       hinttext: "Input Title",
     ),
   ];
+  List<Color?> inputfieldsColor = [null, null, null, null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -111,9 +118,13 @@ class InputFieldScreen extends StatelessWidget {
                                     child: inputfields[index],
                                   ),
                                 );
+                                setState(() {
+                                  inputfieldsColor[index] = Colors.amber;
+                                });
                               },
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
+                                color: inputfieldsColor[index],
                               ),
                             ),
                           ],
@@ -170,9 +181,13 @@ class InputFieldScreen extends StatelessWidget {
                                     child: textareas[index],
                                   ),
                                 );
+                                setState(() {
+                                  textareasColor[index] = Colors.amber;
+                                });
                               },
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
+                                color: textareasColor[index],
                               ),
                             ),
                           ],
