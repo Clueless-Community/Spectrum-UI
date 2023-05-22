@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/ui_components/avatars/all_avatars/image_avatar/avatar1.dart';
 import 'package:flutter_component_ui/ui_components/avatars/all_avatars/text_avatars/avatar2.dart';
 import 'package:flutter_component_ui/ui_components/avatars/all_avatars/icon_avator/avatar3.dart';
+import 'package:provider/provider.dart';
 
+import '../../../provider/favorite_provider.dart';
 import '../../../theme/theme.dart';
 
 class AvatarScreen extends StatelessWidget {
@@ -57,11 +59,44 @@ class AvatarScreen extends StatelessWidget {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                    textAvatars.length,
-                    (index) => Padding(
+                  textAvatars.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: textAvatars[index],
-                        )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: textAvatars[index],
+                                    ),
+                                  );
+                                },
+                                child: const Icon(
+                                  Icons.star_border_outlined,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
               Align(
                   alignment: Alignment.centerLeft,
@@ -73,11 +108,44 @@ class AvatarScreen extends StatelessWidget {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                    imageAvatars.length,
-                    (index) => Padding(
+                  imageAvatars.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: imageAvatars[index],
-                        )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: imageAvatars[index],
+                                    ),
+                                  );
+                                },
+                                child: const Icon(
+                                  Icons.star_border_outlined,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
               Align(
                   alignment: Alignment.centerLeft,
@@ -89,11 +157,44 @@ class AvatarScreen extends StatelessWidget {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                    iconAvatars.length,
-                    (index) => Padding(
+                  iconAvatars.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: iconAvatars[index],
-                        )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: iconAvatars[index],
+                                    ),
+                                  );
+                                },
+                                child: const Icon(
+                                  Icons.star_border_outlined,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ],
           ),

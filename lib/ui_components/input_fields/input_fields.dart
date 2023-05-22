@@ -9,6 +9,9 @@ import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/text_areas/text_area_2.dart';
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/text_areas/text_area_3.dart';
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/text_areas/ttext_area_4.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/favorite_provider.dart';
 
 class InputFieldScreen extends StatelessWidget {
   InputFieldScreen({super.key});
@@ -77,12 +80,47 @@ class InputFieldScreen extends StatelessWidget {
               direction: Axis.horizontal,
               children: List.generate(
                 inputfields.length,
-                (index) => Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 8,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        child: inputfields[index],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 8,
+                                    ),
+                                    child: inputfields[index],
+                                  ),
+                                );
+                              },
+                              child: const Icon(
+                                Icons.star_border_outlined,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  child: inputfields[index],
                 ),
               ),
             ),
@@ -101,12 +139,47 @@ class InputFieldScreen extends StatelessWidget {
               direction: Axis.horizontal,
               children: List.generate(
                 textareas.length,
-                (index) => Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 8,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        child: textareas[index],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 8,
+                                    ),
+                                    child: textareas[index],
+                                  ),
+                                );
+                              },
+                              child: const Icon(
+                                Icons.star_border_outlined,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  child: textareas[index],
                 ),
               ),
             ),

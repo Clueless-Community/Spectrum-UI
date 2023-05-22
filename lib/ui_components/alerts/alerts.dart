@@ -13,6 +13,9 @@ import 'package:flutter_component_ui/ui_components/alerts/all_alerts/dark_mode_a
 import 'package:flutter_component_ui/ui_components/alerts/all_alerts/dark_mode_alert/alert10.dart';
 import 'package:flutter_component_ui/ui_components/alerts/all_alerts/dark_mode_alert/alert11.dart';
 import 'package:flutter_component_ui/ui_components/alerts/all_alerts/dark_mode_alert/alert12.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/favorite_provider.dart';
 
 class AlertScreen extends StatelessWidget {
   AlertScreen({super.key});
@@ -43,7 +46,6 @@ class AlertScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-
               //Colured Alerts
               Align(
                   alignment: Alignment.centerLeft,
@@ -58,11 +60,44 @@ class AlertScreen extends StatelessWidget {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                    coluredAlerts.length,
-                    (index) => Padding(
+                  coluredAlerts.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: coluredAlerts[index],
-                        )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: coluredAlerts[index],
+                                    ),
+                                  );
+                                },
+                                child: const Icon(
+                                  Icons.star_border_outlined,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
 
               //Simple Alerts
@@ -81,11 +116,44 @@ class AlertScreen extends StatelessWidget {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                    simpleAlerts.length,
-                    (index) => Padding(
+                  simpleAlerts.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: simpleAlerts[index],
-                        )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: simpleAlerts[index],
+                                    ),
+                                  );
+                                },
+                                child: const Icon(
+                                  Icons.star_border_outlined,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
 
               //Dark Mode Alerts
@@ -104,11 +172,44 @@ class AlertScreen extends StatelessWidget {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                    simpleAlertsDarkMode.length,
-                    (index) => Padding(
+                  simpleAlertsDarkMode.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: simpleAlertsDarkMode[index],
-                        )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: simpleAlertsDarkMode[index],
+                                    ),
+                                  );
+                                },
+                                child: const Icon(
+                                  Icons.star_border_outlined,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ],
           ),

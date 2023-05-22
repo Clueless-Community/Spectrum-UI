@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../../provider/favorite_provider.dart';
 import 'segmented_controls.dart';
 
 class SegmentedControlScreen extends StatelessWidget {
@@ -21,35 +23,169 @@ class SegmentedControlScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-            child: SegmentedControlWidget(
-              choices: choices1,
+          Consumer<FavoritesProvider>(
+            builder: (context, favProviderModel, child) => Column(
+              children: [
+                Center(
+                  child: SegmentedControlWidget(
+                    choices: choices1,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Add to favorite'),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          favProviderModel.add(
+                            Center(
+                              child: SegmentedControlWidget(
+                                choices: choices1,
+                              ),
+                            ),
+                          );
+                        },
+                        child: const Icon(
+                          Icons.star_border_outlined,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
           const SizedBox(
             height: 20,
           ),
-          Center(
-            child: SegmentedControlWidget(
-              choices: choices,
+          Consumer<FavoritesProvider>(
+            builder: (context, favProviderModel, child) => Column(
+              children: [
+                Center(
+                  child: SegmentedControlWidget(
+                    choices: choices,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Add to favorite'),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          favProviderModel.add(
+                            Center(
+                              child: SegmentedControlWidget(
+                                choices: choices,
+                              ),
+                            ),
+                          );
+                        },
+                        child: const Icon(
+                          Icons.star_border_outlined,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
           const SizedBox(
             height: 20,
           ),
-          Center(
-            child: RadioChips(
-              values: const ['Text', 'Text', 'Text'],
-              onSelected: (index) {},
+          Consumer<FavoritesProvider>(
+            builder: (context, favProviderModel, child) => Column(
+              children: [
+                Center(
+                  child: RadioChips(
+                    values: const ['Text', 'Text', 'Text'],
+                    onSelected: (index) {},
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Add to favorite'),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          favProviderModel.add(
+                            Center(
+                              child: RadioChips(
+                                values: const ['Text', 'Text', 'Text'],
+                                onSelected: (index) {},
+                              ),
+                            ),
+                          );
+                        },
+                        child: const Icon(
+                          Icons.star_border_outlined,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
           const SizedBox(
             height: 20,
           ),
-          Center(
-            child: RectangularSelections(
-              values: const ['Text', 'Text', 'Text'],
-              onSelected: (index) {},
+          Consumer<FavoritesProvider>(
+            builder: (context, favProviderModel, child) => Column(
+              children: [
+                Center(
+                  child: RectangularSelections(
+                    values: const ['Text', 'Text', 'Text'],
+                    onSelected: (index) {},
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Add to favorite'),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          favProviderModel.add(
+                            Center(
+                              child: RectangularSelections(
+                                values: const ['Text', 'Text', 'Text'],
+                                onSelected: (index) {},
+                              ),
+                            ),
+                          );
+                        },
+                        child: const Icon(
+                          Icons.star_border_outlined,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ],

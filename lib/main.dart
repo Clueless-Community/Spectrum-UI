@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_component_ui/provider/favorite_provider.dart';
 import 'package:flutter_component_ui/screens/splash_screen.dart';
 import 'package:flutter_component_ui/theme/theme.dart';
+import 'package:provider/provider.dart';
 
 import 'screens/main_page.dart';
 
@@ -15,13 +17,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Spectrum UI',
-        debugShowCheckedModeBanner: false,
-        themeMode: ThemeMode.system,
-        darkTheme: MyTheme.darkTheme(context),
-        theme: MyTheme.lightTheme(context),
-        home: const MyHome());
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => FavoritesProvider(),
+        )
+      ],
+      child: MaterialApp(
+          title: 'Spectrum UI',
+          debugShowCheckedModeBanner: false,
+          themeMode: ThemeMode.system,
+          darkTheme: MyTheme.darkTheme(context),
+          theme: MyTheme.lightTheme(context),
+          home: const MyHome()),
+    );
   }
 }
 

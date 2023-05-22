@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/ui_components/paginations/all_paginations/page1.dart';
+import 'package:provider/provider.dart';
+import '../../provider/favorite_provider.dart';
 import 'all_paginations/page2.dart';
 import 'all_paginations/page3.dart';
 import 'all_paginations/page4.dart';
@@ -50,9 +52,43 @@ class _PaginationScreenState extends State<PaginationScreen> {
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-            child: pages[index],
+          return Consumer<FavoritesProvider>(
+            builder: (context, favProviderModel, child) => Column(
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                  child: pages[index],
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Add to favorite'),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          favProviderModel.add(
+                            Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 8),
+                              child: pages[index],
+                            ),
+                          );
+                        },
+                        child: const Icon(
+                          Icons.star_border_outlined,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           );
         },
         itemCount: pages.length,

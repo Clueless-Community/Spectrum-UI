@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/theme/theme.dart';
+import 'package:provider/provider.dart';
 
+import '../../provider/favorite_provider.dart';
 import 'all_sliders/single_pointer_slider/slider1.dart';
 import 'all_sliders/single_pointer_slider/slider2.dart';
 import 'all_sliders/single_pointer_slider/slider3.dart';
@@ -73,8 +75,37 @@ class _SliderScreenState extends State<SliderScreen> {
             ),
             Wrap(
               direction: Axis.horizontal,
-              children: List.generate(singlePointSlider.length,
-                  (index) => singlePointSlider[index]),
+              children: List.generate(
+                singlePointSlider.length,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      singlePointSlider[index],
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(singlePointSlider[index]);
+                              },
+                              child: const Icon(
+                                Icons.star_border_outlined,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
             Align(
                 alignment: Alignment.centerLeft,
@@ -86,11 +117,44 @@ class _SliderScreenState extends State<SliderScreen> {
             Wrap(
               direction: Axis.horizontal,
               children: List.generate(
-                  dualPointSlider.length,
-                  (index) => Padding(
+                dualPointSlider.length,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: dualPointSlider[index],
-                      )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: dualPointSlider[index],
+                                  ),
+                                );
+                              },
+                              child: const Icon(
+                                Icons.star_border_outlined,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
           ]),
         ),

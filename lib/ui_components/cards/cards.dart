@@ -4,7 +4,9 @@ import 'package:flutter_component_ui/ui_components/cards/All%20Cards/blog_card/c
 import 'package:flutter_component_ui/ui_components/cards/All%20Cards/social_card/card_3.dart';
 import 'package:flutter_component_ui/ui_components/cards/All%20Cards/social_card/card_4.dart';
 import 'package:flutter_component_ui/ui_components/cards/All%20Cards/blog_card_dark_mode/card_5.dart';
+import 'package:provider/provider.dart';
 
+import '../../provider/favorite_provider.dart';
 import '../../theme/theme.dart';
 import 'All Cards/blog_card_dark_mode/card_6.dart';
 import 'All Cards/social_card_dark_mode/card_7.dart';
@@ -54,13 +56,49 @@ class CardScreen extends StatelessWidget {
               direction: Axis.horizontal,
               children: List.generate(
                 blogCardList.length,
-                (index) => Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 8,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        width: double.infinity,
+                        child: blogCardList[index],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 8,
+                                    ),
+                                    width: double.infinity,
+                                    child: blogCardList[index],
+                                  ),
+                                );
+                              },
+                              child: const Icon(
+                                Icons.star_border_outlined,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  width: double.infinity,
-                  child: blogCardList[index],
                 ),
               ),
             ),
@@ -79,13 +117,49 @@ class CardScreen extends StatelessWidget {
               direction: Axis.horizontal,
               children: List.generate(
                 socialCardList.length,
-                (index) => Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 8,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        width: double.infinity,
+                        child: socialCardList[index],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 8,
+                                    ),
+                                    width: double.infinity,
+                                    child: socialCardList[index],
+                                  ),
+                                );
+                              },
+                              child: const Icon(
+                                Icons.star_border_outlined,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  width: double.infinity,
-                  child: socialCardList[index],
                 ),
               ),
             ),
@@ -104,13 +178,49 @@ class CardScreen extends StatelessWidget {
               direction: Axis.horizontal,
               children: List.generate(
                 blogCardDarKModeList.length,
-                (index) => Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 8,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        width: double.infinity,
+                        child: blogCardDarKModeList[index],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 8,
+                                    ),
+                                    width: double.infinity,
+                                    child: blogCardDarKModeList[index],
+                                  ),
+                                );
+                              },
+                              child: const Icon(
+                                Icons.star_border_outlined,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  width: double.infinity,
-                  child: blogCardDarKModeList[index],
                 ),
               ),
             ),
@@ -129,13 +239,49 @@ class CardScreen extends StatelessWidget {
               direction: Axis.horizontal,
               children: List.generate(
                 socialCardDarkModeList.length,
-                (index) => Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 8,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        width: double.infinity,
+                        child: socialCardDarkModeList[index],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 8,
+                                    ),
+                                    width: double.infinity,
+                                    child: socialCardDarkModeList[index],
+                                  ),
+                                );
+                              },
+                              child: const Icon(
+                                Icons.star_border_outlined,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  width: double.infinity,
-                  child: socialCardDarkModeList[index],
                 ),
               ),
             ),

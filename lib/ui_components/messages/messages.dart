@@ -9,6 +9,9 @@ import 'package:flutter_component_ui/ui_components/messages/all_messages/bubble_
 import 'package:flutter_component_ui/ui_components/messages/all_messages/bubble_message/message_2.dart';
 import 'package:flutter_component_ui/ui_components/messages/all_messages/bubble_message/message_3.dart';
 import 'package:flutter_component_ui/ui_components/messages/all_messages/bubble_message/message_4.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/favorite_provider.dart';
 
 class MessageScreen extends StatelessWidget {
   MessageScreen({super.key});
@@ -76,11 +79,44 @@ class MessageScreen extends StatelessWidget {
             Wrap(
               direction: Axis.horizontal,
               children: List.generate(
-                  bubbleChat.length,
-                  (index) => Padding(
+                bubbleChat.length,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: bubbleChat[index],
-                      )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: bubbleChat[index],
+                                  ),
+                                );
+                              },
+                              child: const Icon(
+                                Icons.star_border_outlined,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
             Align(
               alignment: Alignment.centerLeft,
@@ -98,11 +134,44 @@ class MessageScreen extends StatelessWidget {
             Wrap(
               direction: Axis.horizontal,
               children: List.generate(
-                  inboxMessages.length,
-                  (index) => Padding(
+                inboxMessages.length,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: inboxMessages[index],
-                      )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: inboxMessages[index],
+                                  ),
+                                );
+                              },
+                              child: const Icon(
+                                Icons.star_border_outlined,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
           ],
         ),
