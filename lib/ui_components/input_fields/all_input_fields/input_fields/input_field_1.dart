@@ -28,10 +28,8 @@ class InputField1 extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: hinttext,
                   hintStyle: const TextStyle(color: Colors.grey, fontSize: 13),
-                  contentPadding: EdgeInsets.only(left: 15)
-                  // border: const OutlineInputBorder(
-                  //   borderSide: BorderSide(color: Colors.black),
-                  // ),
+                  contentPadding: EdgeInsets.only(left: 15),
+                  border: InputBorder.none
                 ),
               ),
             ),
