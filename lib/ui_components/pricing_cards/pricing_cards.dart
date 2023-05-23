@@ -6,7 +6,7 @@ import '../../theme/theme.dart';
 import 'All Pricing Cards/pricing_card/pricing_cards1.dart';
 
 class PricingCardScreen extends StatefulWidget {
-  PricingCardScreen({super.key});
+  const PricingCardScreen({super.key});
 
   @override
   State<PricingCardScreen> createState() => _PricingCardScreenState();

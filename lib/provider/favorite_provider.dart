@@ -6,4 +6,9 @@ class FavoritesProvider extends ChangeNotifier {
     favs.add(item);
     notifyListeners();
   }
+
+  void remove(Widget item) {
+    favs.remove(item);
+    notifyListeners();
+  }
 }

@@ -14,7 +14,7 @@ import 'package:provider/provider.dart';
 import '../../provider/favorite_provider.dart';
 
 class InputFieldScreen extends StatefulWidget {
-  InputFieldScreen({super.key});
+  const InputFieldScreen({super.key});
 
   @override
   State<InputFieldScreen> createState() => _InputFieldScreenState();

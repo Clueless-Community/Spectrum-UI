@@ -37,7 +37,7 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Input Field',
-    'categoryScreen': InputFieldScreen(),
+    'categoryScreen': const InputFieldScreen(),
   },
   {
     'categoryName': 'Sliders',
@@ -45,11 +45,11 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Message',
-    'categoryScreen': MessageScreen(),
+    'categoryScreen': const MessageScreen(),
   },
   {
     'categoryName': 'Pricing Cards',
-    'categoryScreen': PricingCardScreen(),
+    'categoryScreen': const PricingCardScreen(),
   },
   {
     'categoryName': 'Segmented Controls',

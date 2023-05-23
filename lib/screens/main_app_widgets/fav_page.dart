@@ -9,6 +9,43 @@ class FavPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future<void> _showMyDialog(Widget item) async {
+      return showDialog<void>(
+        context: context,
+        barrierDismissible: false, // user must tap button!
+        builder: (BuildContext context) {
+          return Consumer<FavoritesProvider>(
+            builder: (context, favProviderModel, child) => AlertDialog(
+              title: const Text('Remove'),
+              content: const SingleChildScrollView(
+                child: ListBody(
+                  children: <Widget>[
+                    Text(
+                        'Do you want to remove this widget from the favorites list?'),
+                  ],
+                ),
+              ),
+              actions: <Widget>[
+                TextButton(
+                  child: const Text('Cancel'),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                TextButton(
+                  child: const Text('Remove'),
+                  onPressed: () {
+                    favProviderModel.remove(item);
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            ),
+          );
+        },
+      );
+    }
+
     return Scaffold(
       body: Consumer<FavoritesProvider>(
         builder: (context, favProviderModel, child) => SafeArea(
@@ -30,8 +67,25 @@ class FavPage extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: favProviderModel.favs.length,
                   itemBuilder: (context, index) {
-                    return Center(
-                      child: favProviderModel.favs[index],
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            _showMyDialog(favProviderModel.favs[index]);
+                          },
+                          child: const Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                            child: Icon(
+                              Icons.cancel,
+                              size: 24,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: favProviderModel.favs[index],
+                        ),
+                      ],
                     );
                   },
                 ),

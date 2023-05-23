@@ -14,7 +14,7 @@ import 'package:provider/provider.dart';
 import '../../provider/favorite_provider.dart';
 
 class MessageScreen extends StatefulWidget {
-  MessageScreen({super.key});
+  const MessageScreen({super.key});
 
   @override
   State<MessageScreen> createState() => _MessageScreenState();
