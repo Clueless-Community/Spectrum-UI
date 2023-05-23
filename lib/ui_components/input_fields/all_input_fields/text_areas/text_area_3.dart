@@ -14,7 +14,7 @@ class TextArea3 extends StatelessWidget {
         Text(
           label,
           style: const TextStyle(
-            color: Colors.grey,
+            // color: Colors.grey,
             fontWeight: FontWeight.w500,
           ),
         ),
@@ -23,12 +23,12 @@ class TextArea3 extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
             child: TextField(
-              maxLines: 5,
+              maxLines: 4,
               decoration: InputDecoration(
                 hintText: hinttext,
                 hintStyle: const TextStyle(color: Colors.grey, fontSize: 13),
-                border: const OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey)),
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey),borderRadius: BorderRadius.circular(20)),
               ),
             ),
           ),

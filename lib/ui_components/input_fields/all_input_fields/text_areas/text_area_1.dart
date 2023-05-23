@@ -22,7 +22,8 @@ class TextArea1 extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
             child: TextField(
-              maxLines: 5,
+              maxLines: 1,
+              maxLength: 2500,
               decoration: InputDecoration(
                 hintText: hinttext,
                 hintStyle: const TextStyle(color: Colors.grey, fontSize: 13),

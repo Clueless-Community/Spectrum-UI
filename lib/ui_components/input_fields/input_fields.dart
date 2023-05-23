@@ -16,19 +16,19 @@ class InputFieldScreen extends StatelessWidget {
 
   final List<Widget> textareas = [
     const TextArea1(
-      label: "TextArea1",
-      hinttext: "Write Message",
+      label: "OneLine Text",
+      hinttext: "Write Description",
     ),
     const TextArea2(
-      label: "TextArea2",
+      label: "Multiline Text",
       hinttext: "Write Description",
     ),
     const TextArea3(
-      label: "TextArea3",
+      label: "Text Circular",
       hinttext: "Write Description",
     ),
     const TextArea4(
-      label: "TextArea4",
+      label: "Colored Border Text",
       hinttext: "Write Description",
     )
   ];
@@ -65,6 +65,7 @@ class InputFieldScreen extends StatelessWidget {
     return Scaffold(
         body: SafeArea(
       child: SingleChildScrollView(
+        physics: AlwaysScrollableScrollPhysics(parent: BouncingScrollPhysics()),
         child: Column(
           children: [
             Align(
@@ -116,6 +117,9 @@ class InputFieldScreen extends StatelessWidget {
                   child: textareas[index],
                 ),
               ),
+            ),
+            SizedBox(
+              height: 20,
             ),
           ],
         ),

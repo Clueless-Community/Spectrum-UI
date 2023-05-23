@@ -22,22 +22,19 @@ class TextArea4 extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
             child: Container(
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.red, width: 2),
+                border: Border.all(color: Colors.purple, width: 2),borderRadius: BorderRadius.circular(5)
               ),
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
-                child: TextField(
-                  maxLines: 5,
-                  decoration: InputDecoration(
-                    hintText: hinttext,
-                    hintStyle:
-                        const TextStyle(color: Colors.grey, fontSize: 13),
-                    border: InputBorder.none,
-                    // border: OutlineInputBorder(
-                    //   borderSide: BorderSide(color: Colors.black),
-                    // ),
-                  ),
+              height: 70,
+              padding: EdgeInsets.only(left: 15),
+              child: TextField(
+                maxLines: null,
+                decoration: InputDecoration(
+                  hintText: hinttext,
+                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 13),
+                  border: InputBorder.none,
                 ),
+                cursorOpacityAnimates: true,
+                expands: true,
               ),
             ),
           ),
