@@ -21,12 +21,18 @@ class InputField1 extends StatelessWidget {
           width: width - 20,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: hinttext,
-                hintStyle: const TextStyle(color: Colors.grey, fontSize: 13),
-                border: const OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey, width: 2)),
+            child: Container(
+              height: 50,
+              decoration: BoxDecoration(border: Border.all(color: Colors.black),borderRadius: BorderRadius.circular(3)),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: hinttext,
+                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 13),
+                  contentPadding: EdgeInsets.only(left: 15)
+                  // border: const OutlineInputBorder(
+                  //   borderSide: BorderSide(color: Colors.black),
+                  // ),
+                ),
               ),
             ),
           ),

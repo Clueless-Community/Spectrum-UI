@@ -5,6 +5,7 @@ import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/input_fields/input_field_3.dart';
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/input_fields/input_field_4.dart';
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/input_fields/input_field_5.dart';
+import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/input_fields/input_field_6.dart';
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/text_areas/text_area_1.dart';
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/text_areas/text_area_2.dart';
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/text_areas/text_area_3.dart';
@@ -38,7 +39,7 @@ class InputFieldScreen extends StatelessWidget {
       hinttext: "Input Title",
     ),
     const InputField2(
-      label: "Title Lite",
+      label: "Title Circular",
       hinttext: "Input Title",
     ),
     const InputField3(
@@ -46,12 +47,16 @@ class InputFieldScreen extends StatelessWidget {
       hinttext: "Input Title",
     ),
     const InputField4(
-      label: "Title Lite-X",
-      hinttext: "Input Title",
+      label: "Email ID",
+      hinttext: "Email",
     ),
     const InputField5(
-      label: "Title Type B",
-      hinttext: "Input Title",
+      label: "Password",
+      hinttext: "password",
+    ),
+    const InputField6(
+      label: "Phone Number",
+      hinttext: "phone",
     ),
   ];
 
@@ -66,11 +71,13 @@ class InputFieldScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Input Fields",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: MyTheme.lightBluishColor)),
+                child: Text(
+                  "Input Fields",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: MyTheme.lightBluishColor),
+                ),
               ),
             ),
             Wrap(
