@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import '../../provider/favorite_provider.dart';
 import '../../theme/theme.dart';
 import 'All Pricing Cards/pricing_card/pricing_cards1.dart';
+import 'All Pricing Cards/pricing_card/pricing_cards3.dart';
+import 'All Pricing Cards/pricing_card/pricing_cards2.dart';
 
 class PricingCardScreen extends StatefulWidget {
   const PricingCardScreen({super.key});
@@ -29,8 +31,23 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
       buttonColor: Color(0xff00c2cb),
       buttonTextColor: Color(0xff0f172a),
     ),
+    const PricingCard2(
+      tier: 'FREE',
+      supportingText:
+      'For those who want to try our services with no commitment',
+      price: '\$0',
+      period: 'month',
+      details: [
+        'Easily receive new glasses on a regular basis',
+        'More cost-effective than buying glasses individually',
+      ],
+      textColor: Color(0xff0f172a),
+      cardColor: Colors.white,
+      buttonColor: Color(0xff0f172a),
+      buttonTextColor: Colors.white,
+    ),
   ];
-  List<Color?> pricingCardsColor = [null];
+  List<Color?> pricingCardsColor = [null, null, null];
 
   @override
   Widget build(BuildContext context) {
