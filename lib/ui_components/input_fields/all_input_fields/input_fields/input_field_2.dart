@@ -22,25 +22,25 @@ class InputField2 extends StatelessWidget {
           width: width - 20,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
-            child: Container(
-              height: 50,
-              decoration: BoxDecoration(
-                border: Border.all(),
-              ),
+            // child: Container(
+            //   height: 50,
+            //   decoration: BoxDecoration(
+            //     border: Border.all(),
+            //   ),
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
                 child: TextField(
                   decoration: InputDecoration(
                       hintText: hinttext,
                       hintStyle:
                           const TextStyle(color: Colors.grey, fontSize: 13),
-                      border: InputBorder.none
-                      // enabledBorder: OutlineInputBorder(
-                      //     borderSide: BorderSide(color: Colors.black, width: 1.0),
+                      border: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey, width: 2)),
+                      
                       ),
                 ),
               ),
-            ),
+            //),
           ),
         ),
       ],

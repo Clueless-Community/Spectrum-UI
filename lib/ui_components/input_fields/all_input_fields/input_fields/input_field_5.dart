@@ -23,18 +23,19 @@ class InputField5 extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                     border: Border.all(
-                  color: Colors.red,
+                  color: Colors.grey,
                   width: 2,
                 )),
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
+                // child: Padding(
+                //   padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: hinttext,
-                      border: InputBorder.none,
+                      border: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey)),
                     ),
                   ),
-                ),
+              //  ),
               )),
         ),
       ],

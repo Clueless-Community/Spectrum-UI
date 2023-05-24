@@ -22,7 +22,7 @@ class TextArea4 extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
             child: Container(
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.red, width: 2),
+                border: Border.all( width: 2),
               ),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),

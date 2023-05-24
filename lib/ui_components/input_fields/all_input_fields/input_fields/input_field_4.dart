@@ -14,7 +14,7 @@ class InputField4 extends StatelessWidget {
         Text(
           label,
           style: const TextStyle(
-            color: Colors.grey,
+            //color: Colors.grey,
             fontWeight: FontWeight.w500,
           ),
         ),
