@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../provider/favorite_provider.dart';
 import '../../theme/theme.dart';
 import 'All Pricing Cards/pricing_card/pricing_cards1.dart';
 
-class PricingCardScreen extends StatelessWidget {
-  PricingCardScreen({super.key});
+class PricingCardScreen extends StatefulWidget {
+  const PricingCardScreen({super.key});
 
+  @override
+  State<PricingCardScreen> createState() => _PricingCardScreenState();
+}
+
+class _PricingCardScreenState extends State<PricingCardScreen> {
   final List<Widget> pricingCards = [
     const PricingCard1(
       tier: 'FREE',
@@ -23,6 +30,7 @@ class PricingCardScreen extends StatelessWidget {
       buttonTextColor: Color(0xff0f172a),
     ),
   ];
+  List<Color?> pricingCardsColor = [null];
 
   @override
   Widget build(BuildContext context) {
@@ -46,11 +54,48 @@ class PricingCardScreen extends StatelessWidget {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                    pricingCards.length,
-                    (index) => Padding(
+                  pricingCards.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: pricingCards[index],
-                        )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: pricingCards[index],
+                                    ),
+                                  );
+                                  setState(() {
+                                    pricingCardsColor[index] = Colors.amber;
+                                  });
+                                },
+                                child: Icon(
+                                  Icons.star_border_outlined,
+                                  color: pricingCardsColor[index],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ]),
           ),

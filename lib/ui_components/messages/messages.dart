@@ -9,9 +9,18 @@ import 'package:flutter_component_ui/ui_components/messages/all_messages/bubble_
 import 'package:flutter_component_ui/ui_components/messages/all_messages/bubble_message/message_2.dart';
 import 'package:flutter_component_ui/ui_components/messages/all_messages/bubble_message/message_3.dart';
 import 'package:flutter_component_ui/ui_components/messages/all_messages/bubble_message/message_4.dart';
+import 'package:provider/provider.dart';
 
-class MessageScreen extends StatelessWidget {
-  MessageScreen({super.key});
+import '../../provider/favorite_provider.dart';
+
+class MessageScreen extends StatefulWidget {
+  const MessageScreen({super.key});
+
+  @override
+  State<MessageScreen> createState() => _MessageScreenState();
+}
+
+class _MessageScreenState extends State<MessageScreen> {
   final List<Widget> inboxMessages = [
     const InboxMessage1(
       name: "ClueLess",
@@ -39,6 +48,8 @@ class MessageScreen extends StatelessWidget {
     ),
   ];
 
+  List<Color?> inboxMessagesColor = [null, null, null, null];
+
   final List<Widget> bubbleChat = [
     const Message1(
       message: "Hello boy",
@@ -53,6 +64,9 @@ class MessageScreen extends StatelessWidget {
       message: "Hello broo",
     ),
   ];
+
+  List<Color?> bubbleChatColor = [null, null, null, null];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,11 +90,48 @@ class MessageScreen extends StatelessWidget {
             Wrap(
               direction: Axis.horizontal,
               children: List.generate(
-                  bubbleChat.length,
-                  (index) => Padding(
+                bubbleChat.length,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: bubbleChat[index],
-                      )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: bubbleChat[index],
+                                  ),
+                                );
+                                setState(() {
+                                  bubbleChatColor[index] = Colors.amber;
+                                });
+                              },
+                              child: Icon(
+                                Icons.star_border_outlined,
+                                color: bubbleChatColor[index],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
             Align(
               alignment: Alignment.centerLeft,
@@ -98,11 +149,48 @@ class MessageScreen extends StatelessWidget {
             Wrap(
               direction: Axis.horizontal,
               children: List.generate(
-                  inboxMessages.length,
-                  (index) => Padding(
+                inboxMessages.length,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: inboxMessages[index],
-                      )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: inboxMessages[index],
+                                  ),
+                                );
+                                setState(() {
+                                  inboxMessagesColor[index] = Colors.amber;
+                                });
+                              },
+                              child: Icon(
+                                Icons.star_border_outlined,
+                                color: inboxMessagesColor[index],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
           ],
         ),
