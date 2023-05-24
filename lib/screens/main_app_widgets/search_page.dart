@@ -11,6 +11,7 @@ import '../../ui_components/messages/all_messages/bubble_message/message_4.dart'
 
 Color? color;
 
+//add differnt categories of widgets as a form of List<Widget> and the label you want to search of it as in the next list
 List<List<Widget>> allwidgets = [
   [
     const Button2("button"),
@@ -281,9 +282,11 @@ List<List<Widget>> allwidgets = [
     ),
   ]
 ];
-
+//results get added to this list
 List<Widget> results = [];
+//this list is for converting the stared icon to amber color.
 List<Color?> resultStar = [];
+//the tags wil not search for exact name if it just contains the searched word it will add it
 List<String> tags = [
   'Custom Outline Buttons',
   'Custom Elevated Buttons',
