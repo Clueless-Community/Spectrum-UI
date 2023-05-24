@@ -4,38 +4,12 @@ import 'package:flutter_component_ui/ui_components/alerts/all_alerts/dark_mode_a
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-import '../../provider/favorite_provider.dart';
-import '../../ui_components/alerts/all_alerts/coloured_alert/alert1.dart';
-import '../../ui_components/alerts/all_alerts/coloured_alert/alert2.dart';
-import '../../ui_components/alerts/all_alerts/coloured_alert/alert3.dart';
-import '../../ui_components/alerts/all_alerts/coloured_alert/alert4.dart';
-import '../../ui_components/alerts/all_alerts/dark_mode_alert/alert10.dart';
-import '../../ui_components/alerts/all_alerts/dark_mode_alert/alert11.dart';
-import '../../ui_components/alerts/all_alerts/dark_mode_alert/alert9.dart';
-import '../../ui_components/alerts/all_alerts/simple_alert/alert5.dart';
-import '../../ui_components/alerts/all_alerts/simple_alert/alert6.dart';
-import '../../ui_components/alerts/all_alerts/simple_alert/alert7.dart';
-import '../../ui_components/alerts/all_alerts/simple_alert/alert8.dart';
-import '../../ui_components/avatars/all_avatars/icon_avator/avatar3.dart';
-import '../../ui_components/avatars/all_avatars/image_avatar/avatar1.dart';
-import '../../ui_components/avatars/all_avatars/text_avatars/avatar2.dart';
-import '../../ui_components/buttons/all_buttons/elevated_button/button1.dart';
-import '../../ui_components/buttons/all_buttons/elevated_button/button3.dart';
-import '../../ui_components/buttons/all_buttons/elevated_button/button5.dart';
-import '../../ui_components/buttons/all_buttons/elevated_button/button7.dart';
-import '../../ui_components/buttons/all_buttons/elevated_button/button9.dart';
-import '../../ui_components/buttons/all_buttons/outline_button/button10.dart';
-import '../../ui_components/buttons/all_buttons/outline_button/button2.dart';
-import '../../ui_components/buttons/all_buttons/outline_button/button4.dart';
-import '../../ui_components/buttons/all_buttons/text_button/button6.dart';
-import '../../ui_components/cards/All Cards/blog_card/card_1.dart';
-import '../../ui_components/cards/All Cards/blog_card/card_2.dart';
-import '../../ui_components/cards/All Cards/blog_card_dark_mode/card_5.dart';
-import '../../ui_components/cards/All Cards/blog_card_dark_mode/card_6.dart';
-import '../../ui_components/cards/All Cards/social_card/card_3.dart';
-import '../../ui_components/cards/All Cards/social_card/card_4.dart';
-import '../../ui_components/cards/All Cards/social_card_dark_mode/card_7.dart';
-import '../../ui_components/cards/All Cards/social_card_dark_mode/card_8.dart';
+import '../../data/export.dart';
+import '../../ui_components/messages/all_messages/bubble_message/message_2.dart';
+import '../../ui_components/messages/all_messages/bubble_message/message_3.dart';
+import '../../ui_components/messages/all_messages/bubble_message/message_4.dart';
+
+Color? color;
 
 List<List<Widget>> allwidgets = [
   [
@@ -113,25 +87,226 @@ List<List<Widget>> allwidgets = [
       ),
       backgroundColor: Colors.black,
     ),
+  ],
+  [
+    const TextArea1(
+      label: "TextArea1",
+      hinttext: "Write Message",
+    ),
+    const TextArea2(
+      label: "TextArea2",
+      hinttext: "Write Description",
+    ),
+    const TextArea3(
+      label: "TextArea3",
+      hinttext: "Write Description",
+    ),
+    const TextArea4(
+      label: "TextArea4",
+      hinttext: "Write Description",
+    )
+  ],
+  [
+    const InputField1(
+      label: "Title",
+      hinttext: "Input Title",
+    ),
+    const InputField2(
+      label: "Title Lite",
+      hinttext: "Input Title",
+    ),
+    const InputField3(
+      label: "Title Highlighted",
+      hinttext: "Input Title",
+    ),
+    const InputField4(
+      label: "Title Lite-X",
+      hinttext: "Input Title",
+    ),
+    const InputField5(
+      label: "Title Type B",
+      hinttext: "Input Title",
+    ),
+  ],
+  [
+    const Slider4(
+      activeColor: Colors.white,
+      inactiveColor: Colors.black,
+      maxRange: 100,
+    ),
+  ],
+  [
+    const Slider1(
+      activeColor: Colors.cyan,
+      inactiveColor: Colors.black,
+      maxRange: 100.0,
+    ),
+    const Slider3(
+      activeColor: Colors.red,
+      inactiveColor: Colors.white,
+      maxRange: 100,
+    ),
+    const Slider5(
+      activeColor: Colors.pink,
+      inactiveColor: Colors.amberAccent,
+      maxRange: 100,
+    ),
+    const Slider6(
+      activeColor: Colors.lightBlueAccent,
+      inactiveColor: Color(0xFF005F99),
+      maxRange: 60,
+    ),
+    Slider2(
+      activeColor: const Color(0xFF005F99),
+      inactiveColor: Colors.purple.shade600,
+      maxRange: 100,
+    ),
+  ],
+  [
+    const InboxMessage1(
+      name: "ClueLess",
+      username: "clueless@gmail.com",
+      msg: "Hey let's start",
+      imgUrl: 'https://picsum.photos/seed/407/600',
+    ),
+    const InboxMessage2(
+      name: "ClueLess",
+      username: "clueless@gmail.com",
+      msg: "Hey let's start",
+      imgUrl: 'https://picsum.photos/seed/407/600',
+    ),
+    const InboxMessage3(
+      name: "ClueLess",
+      username: "clueless@gmail.com",
+      msg: "Hey let's start",
+      imgUrl: 'https://picsum.photos/seed/407/600',
+    ),
+    const InboxMessage4(
+      name: "ClueLess",
+      username: "clueless@gmail.com",
+      msg: "Hey let's start ",
+      imgUrl: 'https://picsum.photos/seed/407/600',
+    ),
+  ],
+  [
+    const Message1(
+      message: "Hello boy",
+    ),
+    const Message2(
+      message: "Hello broo",
+    ),
+    const Message3(
+      message: "Hey whats up man",
+    ),
+    const Message4(
+      message: "Hello broo",
+    ),
+  ],
+  [
+    const PricingCard1(
+      tier: 'FREE',
+      supportingText:
+          'For those who want to try our services with no commitment',
+      price: '\$0',
+      period: 'month',
+      details: [
+        'Easily receive new glasses on a regular basis',
+        'More cost-effective than buying glasses individually',
+      ],
+      cardColor: Color(0xff0f172a),
+      textColor: Colors.white,
+      buttonColor: Color(0xff00c2cb),
+      buttonTextColor: Color(0xff0f172a),
+    ),
+  ],
+  [
+    Center(
+      child: SegmentedControlWidget(
+        choices: {
+          0: buildSegment("week", color),
+          1: buildSegment("Month", color),
+          2: buildSegment("Year", color),
+        },
+      ),
+    ),
+    Center(
+      child: SegmentedControlWidget(
+        choices: {
+          0: buildSegment("week", color),
+          1: buildSegment("Month", color),
+          2: buildSegment("Year", color),
+        },
+      ),
+    ),
+    Center(
+      child: RadioChips(
+        values: const ['Text', 'Text', 'Text'],
+        onSelected: (index) {},
+      ),
+    ),
+    Center(
+      child: RectangularSelections(
+        values: const ['Text', 'Text', 'Text'],
+        onSelected: (index) {},
+      ),
+    ),
+  ],
+  [
+    const Page1(
+      iconColor: Colors.black,
+      containerColor: Colors.white,
+      textColor: Colors.black,
+      hightlightColor: Color(0xFF005F99),
+    ),
+    const Page2(
+      iconColor: Colors.black,
+      textColor: Colors.black,
+      // highlightedColor: Colors.blue,
+    ),
+    const Page3(
+      iconColor: Colors.white,
+      containerColor: Colors.black,
+      textColor: Colors.white,
+    ),
+    const Page4(
+      iconColor: Colors.black,
+      containerColor: Colors.white,
+      textColor: Colors.black,
+    ),
+    const Page5(
+      iconColor: Colors.black,
+      containerColor: Colors.white,
+      textColor: Colors.black,
+      hightlightColor: Color(0xFF00C2CB),
+    ),
   ]
 ];
 
 List<Widget> results = [];
 List<Color?> resultStar = [];
 List<String> tags = [
-  'Custom Outline Button',
-  'Custom Elevated Button',
-  'Custom Text Button',
+  'Custom Outline Buttons',
+  'Custom Elevated Buttons',
+  'Custom Text Buttons',
   'Colured Alerts',
   'Simple Alerts',
   'Simple Alerts DarkMode',
-  'Blog Card List',
-  'Social Card List',
-  'Blog Card DarKMode List',
-  'Social Card DarkMode List',
+  'Blog Cards List',
+  'Social Cards List',
+  'Blog Cards DarKMode List',
+  'Social Cards DarkMode List',
   'Text Avatars',
   'Image Avatars',
-  'Icon Avatars'
+  'Icon Avatars',
+  'textareas inputfields',
+  'inputfields',
+  'dual Point Sliders',
+  'single Point Slider',
+  'inbox Messages chats',
+  'bubble Chats Messages',
+  'price Cards',
+  'segmented controls',
+  'pagination',
 ];
 
 class SearchPage extends StatefulWidget {
@@ -143,10 +318,12 @@ class SearchPage extends StatefulWidget {
 
 class _SearchPageState extends State<SearchPage> {
   TextEditingController _controller = TextEditingController();
+
   @override
   void dispose() {
     _controller.dispose();
     results.clear();
+    resultStar.clear();
     super.dispose();
   }
 
@@ -155,7 +332,7 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(7.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -177,7 +354,7 @@ class _SearchPageState extends State<SearchPage> {
               Row(
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.82,
+                    width: MediaQuery.of(context).size.width * 0.8,
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
                       child: TextField(
@@ -196,7 +373,7 @@ class _SearchPageState extends State<SearchPage> {
                     ),
                   ),
                   const SizedBox(
-                    width: 12,
+                    width: 5,
                   ),
                   GestureDetector(
                     onTap: () {
@@ -205,7 +382,6 @@ class _SearchPageState extends State<SearchPage> {
                         if (tags[i]
                             .toLowerCase()
                             .contains(_controller.text.toLowerCase())) {
-                          print(tags[i]);
                           for (int j = 0; j < allwidgets[i].length; j++) {
                             results.add(allwidgets[i][j]);
                             resultStar.add(null);
@@ -214,13 +390,23 @@ class _SearchPageState extends State<SearchPage> {
                       }
                       setState(() {
                         results;
-                        print(results);
                       });
                     },
-                    child: const Icon(
-                      Icons.search_outlined,
-                      size: 35,
-                      color: Colors.grey,
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.15,
+                      height: MediaQuery.of(context).size.width * 0.17,
+                      decoration: BoxDecoration(
+                        color: MyTheme.lightBluishColor,
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(2.0),
+                        child: Icon(
+                          Icons.search_outlined,
+                          size: 36,
+                          color: Colors.white70,
+                        ),
+                      ),
                     ),
                   ),
                 ],
