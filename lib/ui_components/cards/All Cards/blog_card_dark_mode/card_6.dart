@@ -15,7 +15,7 @@ class SixthCard extends StatelessWidget {
             width: MediaQuery.of(context).size.width -
                 MediaQuery.of(context).size.width / 2.4 -
                 8,
-            child: const Column(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

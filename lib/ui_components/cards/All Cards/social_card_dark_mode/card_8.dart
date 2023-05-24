@@ -17,7 +17,7 @@ class EightCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10),
               child: Column(
                 children: [
-                  const Row(
+                   Row(
                     children: [
                       CircleAvatar(),
                       SizedBox(
@@ -85,7 +85,7 @@ class EightCard extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 10),
-                  const Row(
+                   Row(
                     children: [
                       Text(
                         "Roshan Kumar",
@@ -104,7 +104,7 @@ class EightCard extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                  const Row(
+                  Row(
                     children: [
                       Text(
                         "@HSmith78",
@@ -115,7 +115,7 @@ class EightCard extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Row(
+                   Row(
                     children: [
                       Text(
                         "Hey I'm Henry",
@@ -134,7 +134,7 @@ class EightCard extends StatelessWidget {
                       )
                     ],
                   ),
-                  const Row(
+                   Row(
                     children: [
                       Icon(
                         Icons.color_lens,
@@ -149,7 +149,7 @@ class EightCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Row(
+                   Row(
                     children: [
                       Icon(
                         Icons.baby_changing_station,
@@ -167,7 +167,7 @@ class EightCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Row(
+                   Row(
                     children: [
                       Icon(
                         Icons.circle,
@@ -185,7 +185,7 @@ class EightCard extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Row(
+                  Row(
                     children: [
                       SizedBox(
                         // width: double.infinity,
