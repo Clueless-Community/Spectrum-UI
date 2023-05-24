@@ -13,28 +13,44 @@ import 'package:flutter_component_ui/ui_components/alerts/all_alerts/dark_mode_a
 import 'package:flutter_component_ui/ui_components/alerts/all_alerts/dark_mode_alert/alert10.dart';
 import 'package:flutter_component_ui/ui_components/alerts/all_alerts/dark_mode_alert/alert11.dart';
 import 'package:flutter_component_ui/ui_components/alerts/all_alerts/dark_mode_alert/alert12.dart';
+import 'package:provider/provider.dart';
 
-class AlertScreen extends StatelessWidget {
-  AlertScreen({super.key});
+import '../../provider/favorite_provider.dart';
 
+class AlertScreen extends StatefulWidget {
+  const AlertScreen({super.key});
+
+  @override
+  State<AlertScreen> createState() => _AlertScreenState();
+}
+
+class _AlertScreenState extends State<AlertScreen> {
   final List<Widget> coluredAlerts = [
     const Alert1("AMessage", "ADescriptions"),
     const Alert2("AMessage", "ADescriptions"),
     const Alert3("AMessage", "ADescriptions"),
     const Alert4("AMessage", "ADescriptions"),
   ];
+
+  List<Color?> coluredAlertsColor = [null, null, null, null];
+
   final List<Widget> simpleAlerts = [
     const Alert5("AMessage", "ADescriptions"),
     const Alert6("AMessage", "ADescriptions"),
     const Alert7("AMessage", "ADescriptions"),
     const Alert8("AMessage", "ADescriptions"),
   ];
+
+  List<Color?> simpleAlertsColor = [null, null, null, null];
+
   final List<Widget> simpleAlertsDarkMode = [
     const Alert9("AMessage", "ADescriptions"),
     const Alert10("AMessage", "ADescriptions"),
     const Alert11("AMessage", "ADescriptions"),
     const Alert12("AMessage", "ADescriptions"),
   ];
+
+  List<Color?> simpleAlertsDarkModeColor = [null, null, null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +59,6 @@ class AlertScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-
               //Colured Alerts
               Align(
                   alignment: Alignment.centerLeft,
@@ -58,11 +73,48 @@ class AlertScreen extends StatelessWidget {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                    coluredAlerts.length,
-                    (index) => Padding(
+                  coluredAlerts.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: coluredAlerts[index],
-                        )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: coluredAlerts[index],
+                                    ),
+                                  );
+                                  setState(() {
+                                    coluredAlertsColor[index] = Colors.amber;
+                                  });
+                                },
+                                child: Icon(
+                                  Icons.star_border_outlined,
+                                  color: coluredAlertsColor[index],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
 
               //Simple Alerts
@@ -81,11 +133,48 @@ class AlertScreen extends StatelessWidget {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                    simpleAlerts.length,
-                    (index) => Padding(
+                  simpleAlerts.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: simpleAlerts[index],
-                        )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: simpleAlerts[index],
+                                    ),
+                                  );
+                                  setState(() {
+                                    simpleAlertsColor[index] = Colors.amber;
+                                  });
+                                },
+                                child: Icon(
+                                  Icons.star_border_outlined,
+                                  color: simpleAlertsColor[index],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
 
               //Dark Mode Alerts
@@ -104,11 +193,49 @@ class AlertScreen extends StatelessWidget {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                    simpleAlertsDarkMode.length,
-                    (index) => Padding(
+                  simpleAlertsDarkMode.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: simpleAlertsDarkMode[index],
-                        )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: simpleAlertsDarkMode[index],
+                                    ),
+                                  );
+                                  setState(() {
+                                    simpleAlertsDarkModeColor[index] =
+                                        Colors.amber;
+                                  });
+                                },
+                                child: Icon(
+                                  Icons.star_border_outlined,
+                                  color: simpleAlertsDarkModeColor[index],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ],
           ),

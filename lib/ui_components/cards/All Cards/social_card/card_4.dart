@@ -15,14 +15,14 @@ class FourthCard extends StatelessWidget {
                 const EdgeInsets.only(left: 5, top: 10, bottom: 10, right: 5),
             child: Column(
               children: [
-                Row(
+                const Row(
                   children: [
-                    const CircleAvatar(),
-                    const SizedBox(
+                    CircleAvatar(),
+                    SizedBox(
                       width: 20,
                     ),
                     Column(
-                      children: const [
+                      children: [
                         Text(
                           "Post",
                           style: TextStyle(
@@ -44,11 +44,11 @@ class FourthCard extends StatelessWidget {
                         )
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 20,
                     ),
                     Column(
-                      children: const [
+                      children: [
                         Text("Followers",
                             style: TextStyle(
                                 color: Color.fromARGB(255, 133, 131, 131),
@@ -62,11 +62,11 @@ class FourthCard extends StatelessWidget {
                         )
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 20,
                     ),
                     Column(
-                      children: const [
+                      children: [
                         Text("Following",
                             style: TextStyle(
                                 color: Color.fromARGB(255, 133, 131, 131),
@@ -83,8 +83,8 @@ class FourthCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Text(
                       "Roshan Kumar",
                       style: TextStyle(
@@ -104,8 +104,8 @@ class FourthCard extends StatelessWidget {
                 const SizedBox(
                   height: 3,
                 ),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Text(
                       "@HSmith78",
                       style: TextStyle(color: Colors.grey, fontSize: 17),
@@ -115,8 +115,8 @@ class FourthCard extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Text(
                       "Hey I'm Henry",
                       style: TextStyle(
@@ -134,8 +134,8 @@ class FourthCard extends StatelessWidget {
                     )
                   ],
                 ),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Icon(
                       Icons.color_lens,
                       color: Colors.amber,
@@ -151,8 +151,8 @@ class FourthCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Icon(
                       Icons.baby_changing_station,
                       color: Colors.brown,
@@ -169,8 +169,8 @@ class FourthCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Icon(
                       Icons.circle,
                       color: Color.fromARGB(255, 195, 253, 129),
@@ -189,13 +189,13 @@ class FourthCard extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Row(
+                const Row(
                   children: [
                     SizedBox(
                       // width: double.infinity,
                       width: 103,
                       child: Stack(
-                        children: const [
+                        children: [
                           CircleAvatar(
                             radius: 12,
                           ),
@@ -222,24 +222,24 @@ class FourthCard extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const Text(
+                    Text(
                       "  Followed by ",
                       style:
                           TextStyle(color: Color.fromARGB(255, 50, 111, 161,), fontSize: 10),
                     ),
-                    const Text(
+                    Text(
                       "Sambam94",
                       style: TextStyle(
                           color: Color.fromARGB(255, 50, 111, 161),
                           fontSize: 10,
                           fontWeight: FontWeight.bold),
                     ),
-                    const Text(
+                    Text(
                       " and ",
                       style:
                           TextStyle(color: Color.fromARGB(255, 50, 111, 161), fontSize: 10),
                     ),
-                    const Text(
+                    Text(
                       "21 other",
                       style:
                           TextStyle(color: Color.fromARGB(255, 50, 111, 161), fontSize: 10),

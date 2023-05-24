@@ -15,8 +15,8 @@ class SeventhCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Icon(
                       Icons.star,
                       color: Colors.amber,
@@ -60,16 +60,16 @@ class SeventhCard extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                Row(
+                const Row(
                   children: [
-                    const CircleAvatar(),
-                    const SizedBox(
+                    CircleAvatar(),
+                    SizedBox(
                       width: 7,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(children:const [
+                        Row(children:[
                           Text(
                           "Ralph Edward",
                           style: TextStyle(
@@ -84,10 +84,10 @@ class SeventhCard extends StatelessWidget {
 
                         ],),
                         
-                        const SizedBox(
+                        SizedBox(
                           height: 3,
                         ),
-                        const Text(
+                        Text(
                           "April 22, 2022",
                           style: TextStyle(
                               fontWeight: FontWeight.normal,

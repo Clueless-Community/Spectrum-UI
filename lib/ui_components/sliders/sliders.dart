@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/theme/theme.dart';
+import 'package:provider/provider.dart';
 
+import '../../provider/favorite_provider.dart';
 import 'all_sliders/single_pointer_slider/slider1.dart';
 import 'all_sliders/single_pointer_slider/slider2.dart';
 import 'all_sliders/single_pointer_slider/slider3.dart';
@@ -24,6 +26,7 @@ class _SliderScreenState extends State<SliderScreen> {
       maxRange: 100,
     ),
   ];
+  List<Color?> dualPointSliderColor = [null];
 
   final List<Widget> singlePointSlider = [
     const Slider1(
@@ -52,6 +55,7 @@ class _SliderScreenState extends State<SliderScreen> {
       maxRange: 100,
     ),
   ];
+  List<Color?> singlePointSliderColor = [null, null, null, null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -73,8 +77,41 @@ class _SliderScreenState extends State<SliderScreen> {
             ),
             Wrap(
               direction: Axis.horizontal,
-              children: List.generate(singlePointSlider.length,
-                  (index) => singlePointSlider[index]),
+              children: List.generate(
+                singlePointSlider.length,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      singlePointSlider[index],
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(singlePointSlider[index]);
+                                setState(() {
+                                  singlePointSliderColor[index] = Colors.amber;
+                                });
+                              },
+                              child: Icon(
+                                Icons.star_border_outlined,
+                                color: singlePointSliderColor[index],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
             Align(
                 alignment: Alignment.centerLeft,
@@ -86,11 +123,48 @@ class _SliderScreenState extends State<SliderScreen> {
             Wrap(
               direction: Axis.horizontal,
               children: List.generate(
-                  dualPointSlider.length,
-                  (index) => Padding(
+                dualPointSlider.length,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: dualPointSlider[index],
-                      )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: dualPointSlider[index],
+                                  ),
+                                );
+                                setState(() {
+                                  dualPointSliderColor[index] = Colors.amber;
+                                });
+                              },
+                              child: Icon(
+                                Icons.star_border_outlined,
+                                color: dualPointSliderColor[index],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
           ]),
         ),
