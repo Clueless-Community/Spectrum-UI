@@ -9,10 +9,18 @@ import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/text_areas/text_area_2.dart';
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/text_areas/text_area_3.dart';
 import 'package:flutter_component_ui/ui_components/input_fields/all_input_fields/text_areas/ttext_area_4.dart';
+import 'package:provider/provider.dart';
 
-class InputFieldScreen extends StatelessWidget {
-  InputFieldScreen({super.key});
+import '../../provider/favorite_provider.dart';
 
+class InputFieldScreen extends StatefulWidget {
+  const InputFieldScreen({super.key});
+
+  @override
+  State<InputFieldScreen> createState() => _InputFieldScreenState();
+}
+
+class _InputFieldScreenState extends State<InputFieldScreen> {
   final List<Widget> textareas = [
     const TextArea1(
       label: "TextArea1",
@@ -31,6 +39,7 @@ class InputFieldScreen extends StatelessWidget {
       hinttext: "Write Description",
     )
   ];
+  List<Color?> textareasColor = [null, null, null, null];
 
   final List<Widget> inputfields = [
     const InputField1(
@@ -54,6 +63,7 @@ class InputFieldScreen extends StatelessWidget {
       hinttext: "Input Title",
     ),
   ];
+  List<Color?> inputfieldsColor = [null, null, null, null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -77,12 +87,51 @@ class InputFieldScreen extends StatelessWidget {
               direction: Axis.horizontal,
               children: List.generate(
                 inputfields.length,
-                (index) => Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 8,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        child: inputfields[index],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 8,
+                                    ),
+                                    child: inputfields[index],
+                                  ),
+                                );
+                                setState(() {
+                                  inputfieldsColor[index] = Colors.amber;
+                                });
+                              },
+                              child: Icon(
+                                Icons.star_border_outlined,
+                                color: inputfieldsColor[index],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  child: inputfields[index],
                 ),
               ),
             ),
@@ -101,12 +150,51 @@ class InputFieldScreen extends StatelessWidget {
               direction: Axis.horizontal,
               children: List.generate(
                 textareas.length,
-                (index) => Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 12,
-                    vertical: 8,
+                (index) => Consumer<FavoritesProvider>(
+                  builder: (context, favProviderModel, child) => Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        child: textareas[index],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text('Add to favorite'),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                favProviderModel.add(
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 12,
+                                      vertical: 8,
+                                    ),
+                                    child: textareas[index],
+                                  ),
+                                );
+                                setState(() {
+                                  textareasColor[index] = Colors.amber;
+                                });
+                              },
+                              child: Icon(
+                                Icons.star_border_outlined,
+                                color: textareasColor[index],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  child: textareas[index],
                 ),
               ),
             ),

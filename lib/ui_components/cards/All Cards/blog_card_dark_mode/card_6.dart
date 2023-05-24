@@ -15,22 +15,22 @@ class SixthCard extends StatelessWidget {
             width: MediaQuery.of(context).size.width -
                 MediaQuery.of(context).size.width / 2.4 -
                 8,
-            child: Column(
+            child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
+                Text(
                   "Politics",
                   style: TextStyle(fontSize: 10, color: Colors.grey),
                 ),
-                const Text(
+                Text(
                   "EU funds won't be conditional upon European Values",
                   style: TextStyle(
                       fontSize: 12,
                       color: Colors.cyan,
                       fontWeight: FontWeight.w500,),
                 ),
-                const Text(
+                Text(
                   "The European Union (EU) is a political and economic union of 27 European countries. It aims to promote cooperation",
                   style: TextStyle(fontSize: 10, color: Colors.grey),
                 ),
@@ -38,15 +38,15 @@ class SixthCard extends StatelessWidget {
                   fit: BoxFit.fitHeight,
                   child: Row(
                     children: [
-                      const CircleAvatar(
+                      CircleAvatar(
                         radius: 15,
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 10,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
+                        children: [
                           Text(
                             "Ralph Edwards",
                             style: TextStyle(
