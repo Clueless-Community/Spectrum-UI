@@ -16,6 +16,9 @@ import '../../ui_components/alerts/all_alerts/simple_alert/alert5.dart';
 import '../../ui_components/alerts/all_alerts/simple_alert/alert6.dart';
 import '../../ui_components/alerts/all_alerts/simple_alert/alert7.dart';
 import '../../ui_components/alerts/all_alerts/simple_alert/alert8.dart';
+import '../../ui_components/avatars/all_avatars/icon_avator/avatar3.dart';
+import '../../ui_components/avatars/all_avatars/image_avatar/avatar1.dart';
+import '../../ui_components/avatars/all_avatars/text_avatars/avatar2.dart';
 import '../../ui_components/buttons/all_buttons/elevated_button/button1.dart';
 import '../../ui_components/buttons/all_buttons/elevated_button/button3.dart';
 import '../../ui_components/buttons/all_buttons/elevated_button/button5.dart';
@@ -83,6 +86,33 @@ List<List<Widget>> allwidgets = [
   const [
     SeventhCard(),
     EightCard(),
+  ],
+  [
+    const Avatar2(
+      size: 100,
+      text: Text(
+        'AZ',
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 30,
+        ),
+      ),
+      backgroundColor: Colors.black,
+    ),
+  ],
+  [
+    const Avatar1(size: 100, imagePath: 'assets/bored.png'),
+  ],
+  [
+    const Avatar3(
+      size: 100,
+      icon: Icon(
+        Icons.person_2_outlined,
+        color: Colors.white,
+        size: 50,
+      ),
+      backgroundColor: Colors.black,
+    ),
   ]
 ];
 
@@ -98,7 +128,10 @@ List<String> tags = [
   'Blog Card List',
   'Social Card List',
   'Blog Card DarKMode List',
-  'Social Card DarkMode List'
+  'Social Card DarkMode List',
+  'Text Avatars',
+  'Image Avatars',
+  'Icon Avatars'
 ];
 
 class SearchPage extends StatefulWidget {
@@ -167,6 +200,7 @@ class _SearchPageState extends State<SearchPage> {
                   ),
                   GestureDetector(
                     onTap: () {
+                      results.clear();
                       for (int i = 0; i < tags.length; i++) {
                         if (tags[i]
                             .toLowerCase()

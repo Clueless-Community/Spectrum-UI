@@ -37,8 +37,6 @@ class _AvatarScreenState extends State<AvatarScreen> {
   ];
   List<Color?> imageAvatarsColor = [null];
 
-  List<Color?> customElevatedButtonColorColor = [null];
-
   final List<Widget> iconAvatars = [
     const Avatar3(
       size: 100,
