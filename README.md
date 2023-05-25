@@ -6,7 +6,7 @@
      <img src="https://img.shields.io/github/repo-size/Clueless-Community/Spectrum-UI?color=red&style=for-the-badge" />
      <img src="https://img.shields.io/github/issues/Clueless-Community/Spectrum-UI?style=for-the-badge" />
      <img src="https://img.shields.io/github/issues-closed-raw/Clueless-Community/Spectrum-UI?color=green&style=for-the-badge" />
-     <img src="https://img.shields.io/github/issues-closed-raw/Clueless-Community/Spectrum-UI?color=blue&style=for-the-badge" />
+     <img src="https://img.shields.io/github/contributors/Clueless-Community/Spectrum-UI?color=blue&style=for-the-badge" />
      <br>
      <img src="https://img.shields.io/github/license/Clueless-Community/Spectrum-UI?color=red&style=for-the-badge" />
      <img src="https://img.shields.io/github/forks/Clueless-Community/Spectrum-UI?color=yellow&style=for-the-badge" />
