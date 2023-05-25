@@ -11,11 +11,11 @@ class SixthCard extends StatelessWidget {
           Container(
             color: Colors.black,
             padding: const EdgeInsets.only(left: 5, top: 2, bottom: 2),
-            height: (MediaQuery.of(context).size.width / 2.4) * 0.83,
+            height: (MediaQuery.of(context).size.width / 2.4) * 0.95,
             width: MediaQuery.of(context).size.width -
                 MediaQuery.of(context).size.width / 2.4 -
-                8,
-            child: const Column(
+                32,
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -68,6 +68,7 @@ class SixthCard extends StatelessWidget {
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width / 2.4,
+            height: (MediaQuery.of(context).size.width / 2.4) * 0.95,
             child: Image.asset(
               'assets/card_image/cardo.png',
               fit: BoxFit.cover,
