@@ -320,7 +320,7 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> {
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
 
   @override
   void dispose() {
@@ -381,19 +381,23 @@ class _SearchPageState extends State<SearchPage> {
                   GestureDetector(
                     onTap: () {
                       results.clear();
-                      for (int i = 0; i < tags.length; i++) {
-                        if (tags[i]
-                            .toLowerCase()
-                            .contains(_controller.text.toLowerCase())) {
-                          for (int j = 0; j < allwidgets[i].length; j++) {
-                            results.add(allwidgets[i][j]);
-                            resultStar.add(null);
+                      if (_controller.text.isEmpty) {
+                        results.clear();
+                      } else {
+                        for (int i = 0; i < tags.length; i++) {
+                          if (tags[i]
+                              .toLowerCase()
+                              .contains(_controller.text.toLowerCase())) {
+                            for (int j = 0; j < allwidgets[i].length; j++) {
+                              results.add(allwidgets[i][j]);
+                              resultStar.add(null);
+                            }
                           }
                         }
+                        setState(() {
+                          results;
+                        });
                       }
-                      setState(() {
-                        results;
-                      });
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.15,
