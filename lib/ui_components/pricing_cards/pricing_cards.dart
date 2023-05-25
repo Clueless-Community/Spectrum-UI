@@ -49,6 +49,21 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
   ];
   List<Color?> pricingCardsColor = [null, null, null];
 
+  final List<Widget> priceCards = [
+  PricingCard3(
+  tier: 'FREE',
+    supportingText:
+    'For those who want to try our services with no commitment',
+    price: '\$0',
+    period: 'month',
+  cardColor: Colors.blueAccent.shade100,
+  textColor: Color(0xff0f172a),
+  buttonTextColor: Colors.white,
+  buttonColor: Color(0xff0f172a),
+  ),
+  ];
+  List<Color?> pricingCardColor = [null];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,6 +119,52 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
                                 child: Icon(
                                   Icons.star_border_outlined,
                                   color: pricingCardsColor[index],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Wrap(
+                direction: Axis.horizontal,
+                children: List.generate(
+                  priceCards.length,
+                      (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: priceCards[index],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: priceCards[index],
+                                    ),
+                                  );
+                                  setState(() {
+                                    pricingCardColor[index] = Colors.amber;
+                                  });
+                                },
+                                child: Icon(
+                                  Icons.star_border_outlined,
+                                  color: pricingCardColor[index],
                                 ),
                               ),
                             ],
