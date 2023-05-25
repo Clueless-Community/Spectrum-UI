@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_component_ui/ui_components/pricing_cards/All%20Pricing%20Cards/pricing_card/pricing_cards4.dart';
 import 'package:provider/provider.dart';
 
 import '../../provider/favorite_provider.dart';
@@ -52,8 +53,6 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
   final List<Widget> priceCards = [
   PricingCard3(
   tier: 'FREE',
-    supportingText:
-    'For those who want to try our services with no commitment',
     price: '\$0',
     period: 'month',
   cardColor: Colors.blueAccent.shade100,
@@ -63,6 +62,25 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
   ),
   ];
   List<Color?> pricingCardColor = [null];
+
+  final List<Widget> choosePlans = [
+    PricingCard4(
+      supportingText:
+      'Plans for everyone and for every time period',
+      price: '\$12',
+      period: '12 month',
+      price1: '\$0',
+      period1: '1 month',
+      price2: '\$6',
+      period2: '6 month',
+      cardColor: Color(0xff0f172a),
+      textColor: Colors.white,
+      buttonTextColor: Color(0xff0f172a),
+      buttonColor: Colors.greenAccent.shade200,
+    ),
+  ];
+  List<Color?> choosePlansColor = [null];
+
 
   @override
   Widget build(BuildContext context) {
@@ -165,6 +183,52 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
                                 child: Icon(
                                   Icons.star_border_outlined,
                                   color: pricingCardColor[index],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Wrap(
+                direction: Axis.horizontal,
+                children: List.generate(
+                  choosePlans.length,
+                      (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: choosePlans[index],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: choosePlans[index],
+                                    ),
+                                  );
+                                  setState(() {
+                                    choosePlansColor[index] = Colors.amber;
+                                  });
+                                },
+                                child: Icon(
+                                  Icons.star_border_outlined,
+                                  color: choosePlansColor[index],
                                 ),
                               ),
                             ],
