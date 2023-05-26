@@ -8,28 +8,29 @@ import 'package:flutter_component_ui/ui_components/paginations/paginations.dart'
 import 'package:flutter_component_ui/ui_components/pricing_cards/pricing_cards.dart';
 import 'package:flutter_component_ui/ui_components/segmented_controls/segmented_control_screen.dart';
 
+import '../ui_components/radios/radios.dart';
 import '../ui_components/sliders/sliders.dart';
 
 final List<Map<String, dynamic>> widgetCategoryData = [
   {
     'categoryName': 'Buttons',
-    'categoryScreen': const ButtonScreen(),
+    'categoryScreen': ButtonScreen(),
   },
   {
     'categoryName': 'Alerts',
-    'categoryScreen': const AlertScreen(),
+    'categoryScreen': AlertScreen(),
   },
   {
     'categoryName': 'Labels',
-    'categoryScreen': const AvatarScreen(),
+    'categoryScreen': AvatarScreen(),
   },
   {
     'categoryName': 'Bottom Navigation Bars',
-    'categoryScreen': const AlertScreen(),
+    'categoryScreen': AlertScreen(),
   },
   {
     'categoryName': 'Avatars',
-    'categoryScreen': const AvatarScreen(),
+    'categoryScreen': AvatarScreen(),
   },
   {
     'categoryName': 'Cards',
@@ -37,7 +38,7 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Input Field',
-    'categoryScreen': const InputFieldScreen(),
+    'categoryScreen': InputFieldScreen(),
   },
   {
     'categoryName': 'Sliders',
@@ -45,11 +46,11 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Message',
-    'categoryScreen': const MessageScreen(),
+    'categoryScreen': MessageScreen(),
   },
   {
     'categoryName': 'Pricing Cards',
-    'categoryScreen': const PricingCardScreen(),
+    'categoryScreen': PricingCardScreen(),
   },
   {
     'categoryName': 'Segmented Controls',
@@ -58,5 +59,9 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   {
     'categoryName': 'Pagination',
     'categoryScreen': const PaginationScreen(),
-  }
+  },
+  {
+    'categoryName': 'Radio',
+    'categoryScreen': RadioScreen(),
+  },
 ];
