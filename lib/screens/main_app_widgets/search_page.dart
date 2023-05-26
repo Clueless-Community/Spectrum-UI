@@ -29,6 +29,12 @@ List<List<Widget>> allwidgets = [
     const Button6("button"),
   ],
   [
+    const BasicRadioButton(),
+    const RadioButtonwithTextandStyles(),
+    const RadioButtonwithCustomColor(),
+    const RadioButtonwithHorizontalLayout(),
+  ],
+  [
     const Alert1("AMessage", "ADescriptions"),
     const Alert2("AMessage", "ADescriptions"),
     const Alert3("AMessage", "ADescriptions"),
@@ -291,6 +297,7 @@ List<String> tags = [
   'Custom Outline Buttons',
   'Custom Elevated Buttons',
   'Custom Text Buttons',
+  'Radio Buttons',
   'Colured Alerts',
   'Simple Alerts',
   'Simple Alerts DarkMode',
@@ -357,9 +364,9 @@ class _SearchPageState extends State<SearchPage> {
               Row(
                 children: [
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.8,
+                    width: MediaQuery.of(context).size.width * 0.785,
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                      padding: const EdgeInsets.fromLTRB(10, 5, 5, 5),
                       child: TextField(
                         controller: _controller,
                         maxLines: 1,
@@ -374,9 +381,6 @@ class _SearchPageState extends State<SearchPage> {
                         ),
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    width: 5,
                   ),
                   GestureDetector(
                     onTap: () {
@@ -401,7 +405,7 @@ class _SearchPageState extends State<SearchPage> {
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width * 0.15,
-                      height: MediaQuery.of(context).size.width * 0.17,
+                      height: MediaQuery.of(context).size.width * 0.163,
                       decoration: BoxDecoration(
                         color: MyTheme.lightBluishColor,
                         borderRadius: BorderRadius.circular(25),
