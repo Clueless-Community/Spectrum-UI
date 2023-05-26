@@ -17,14 +17,14 @@ class EightCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10),
               child: Column(
                 children: [
-                  const Row(
+                   Row(
                     children: [
-                      CircleAvatar(),
-                      SizedBox(
+                      const CircleAvatar(),
+                      const SizedBox(
                         width: 20,
                       ),
                       Column(
-                        children: [
+                        children: const [
                           Text(
                             "Post",
                             style: TextStyle(
@@ -46,11 +46,11 @@ class EightCard extends StatelessWidget {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Column(
-                        children: [
+                        children: const [
                           Text("Followers",
                               style: TextStyle(
                                   color: Color.fromARGB(255, 133, 131, 131),
@@ -64,11 +64,11 @@ class EightCard extends StatelessWidget {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       Column(
-                        children: [
+                        children: const [
                           Text("Following",
                               style: TextStyle(
                                   color: Color.fromARGB(255, 133, 131, 131),
@@ -85,8 +85,8 @@ class EightCard extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 10),
-                  const Row(
-                    children: [
+                   Row(
+                    children: const [
                       Text(
                         "Roshan Kumar",
                         style: TextStyle(color: Colors.cyan, fontSize: 18),
@@ -104,8 +104,8 @@ class EightCard extends StatelessWidget {
                   const SizedBox(
                     height: 3,
                   ),
-                  const Row(
-                    children: [
+                   Row(
+                    children: const [
                       Text(
                         "@HSmith78",
                         style: TextStyle(color: Colors.grey, fontSize: 17),
@@ -115,8 +115,8 @@ class EightCard extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Row(
-                    children: [
+                   Row(
+                    children: const [
                       Text(
                         "Hey I'm Henry",
                         style: TextStyle(
@@ -134,8 +134,8 @@ class EightCard extends StatelessWidget {
                       )
                     ],
                   ),
-                  const Row(
-                    children: [
+                   Row(
+                    children: const [
                       Icon(
                         Icons.color_lens,
                         color: Colors.amber,
@@ -149,8 +149,8 @@ class EightCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Row(
-                    children: [
+                   Row(
+                    children: const [
                       Icon(
                         Icons.baby_changing_station,
                         color: Colors.brown,
@@ -167,8 +167,8 @@ class EightCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Row(
-                    children: [
+                   Row(
+                    children: const [
                       Icon(
                         Icons.circle,
                         color: Color.fromARGB(255, 195, 253, 129),
@@ -185,13 +185,13 @@ class EightCard extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Row(
+                   Row(
                     children: [
                       SizedBox(
                         // width: double.infinity,
                         width: 78,
                         child: Stack(
-                          children: [
+                          children: const [
                             CircleAvatar(
                               radius: 12,
                             ),
@@ -218,32 +218,44 @@ class EightCard extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Text(
-                        "  Followed by ",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      Text(
-                        "Sambam94",
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
+
+
+                      Row(children: const [
+                        Text(
+                          "  Followed by ",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        Text(
+                          "Sambam94",
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                      ],),
+                      ]
+                   ),
+
+                      Row(children:[
+                        SizedBox(width: MediaQuery.of(context).size.width/4.4,),
+                      const Text(
                         " and ",
                         style: TextStyle(color: Colors.white),
                       ),
-                      Text(
+                      const Text(
                         "21 other",
                         style: TextStyle(color: Colors.white),
                       )
-                    ],
-                  ),
+                        ]
+                      ),
+
+
                   const SizedBox(
                     height: 10,
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(
-                        width: MediaQuery.of(context).size.width / 3,
+                        width: MediaQuery.of(context).size.width / 3.5,
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
@@ -264,7 +276,7 @@ class EightCard extends StatelessWidget {
                           decoration: BoxDecoration(
                               border: Border.all(color: Colors.cyan),
                               borderRadius: BorderRadius.circular(5)),
-                          width: MediaQuery.of(context).size.width / 3,
+                          width: MediaQuery.of(context).size.width / 3.5,
                           child: const Center(
                             child: Text(
                               "Message",
