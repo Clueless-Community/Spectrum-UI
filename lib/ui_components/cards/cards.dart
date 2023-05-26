@@ -55,11 +55,11 @@ class _CardScreenState extends State<CardScreen> {
               alignment: Alignment.centerLeft,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Blog Cards",
+                child: Center(child:Text("Blog Cards",
                     style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: MyTheme.lightBluishColor)),
+                        color: MyTheme.lightBluishColor)),)
               ),
             ),
             Wrap(
@@ -74,7 +74,7 @@ class _CardScreenState extends State<CardScreen> {
                           horizontal: 12,
                           vertical: 8,
                         ),
-                        width: double.infinity,
+                        //width: double.infinity,
                         child: blogCardList[index],
                       ),
                       Padding(
@@ -95,7 +95,7 @@ class _CardScreenState extends State<CardScreen> {
                                       horizontal: 12,
                                       vertical: 8,
                                     ),
-                                    width: double.infinity,
+                                    //width: double.infinity,
                                     child: blogCardList[index],
                                   ),
                                 );
@@ -139,7 +139,7 @@ class _CardScreenState extends State<CardScreen> {
                           horizontal: 12,
                           vertical: 8,
                         ),
-                        width: double.infinity,
+                        //width: double.infinity,
                         child: socialCardList[index],
                       ),
                       Padding(
@@ -160,7 +160,7 @@ class _CardScreenState extends State<CardScreen> {
                                       horizontal: 12,
                                       vertical: 8,
                                     ),
-                                    width: double.infinity,
+                                    //width: double.infinity,
                                     child: socialCardList[index],
                                   ),
                                 );
@@ -204,7 +204,7 @@ class _CardScreenState extends State<CardScreen> {
                           horizontal: 12,
                           vertical: 8,
                         ),
-                        width: double.infinity,
+                        //width: double.infinity,
                         child: blogCardDarKModeList[index],
                       ),
                       Padding(
@@ -225,7 +225,7 @@ class _CardScreenState extends State<CardScreen> {
                                       horizontal: 12,
                                       vertical: 8,
                                     ),
-                                    width: double.infinity,
+                                    //width: double.infinity,
                                     child: blogCardDarKModeList[index],
                                   ),
                                 );
@@ -270,7 +270,7 @@ class _CardScreenState extends State<CardScreen> {
                           horizontal: 12,
                           vertical: 8,
                         ),
-                        width: double.infinity,
+                        //width: double.infinity,
                         child: socialCardDarkModeList[index],
                       ),
                       Padding(
@@ -291,7 +291,7 @@ class _CardScreenState extends State<CardScreen> {
                                       horizontal: 12,
                                       vertical: 8,
                                     ),
-                                    width: double.infinity,
+                                    //width: double.infinity,
                                     child: socialCardDarkModeList[index],
                                   ),
                                 );
