@@ -10,7 +10,7 @@ class SecondCard extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.only(left: 5, top: 2, bottom: 2),
-            height: (MediaQuery.of(context).size.width / 2.4) * 0.95,
+
             width: MediaQuery.of(context).size.width -
                 MediaQuery.of(context).size.width / 2.4 -
                 32,
@@ -18,18 +18,18 @@ class SecondCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Politics",
                   style: TextStyle(fontSize: 10, color: Colors.grey),
                 ),
-                Text(
+                const Text(
                   "EU funds won't be conditional upon European Values",
                   style: TextStyle(
                       fontSize: 12,
                       color: Color.fromARGB(255, 54, 103, 144),
                       fontWeight: FontWeight.w500),
                 ),
-                Text(
+                const Text(
                   "The European Union (EU) is a political and economic union of 27 European countries. It aims to promote cooperation",
                   style: TextStyle(fontSize: 10, color: Colors.grey),
                 ),
@@ -37,15 +37,15 @@ class SecondCard extends StatelessWidget {
                   fit: BoxFit.fitHeight,
                   child: Row(
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 15,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             "Ralph Edwards",
                             style: TextStyle(
@@ -66,7 +66,7 @@ class SecondCard extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: (MediaQuery.of(context).size.width / 2.4) * 0.95,
+            width: (MediaQuery.of(context).size.width / 2.4),
             child: Image.asset(
               'assets/card_image/cardo.png',
               fit: BoxFit.cover,
