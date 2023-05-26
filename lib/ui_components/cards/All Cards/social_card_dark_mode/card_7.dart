@@ -15,8 +15,8 @@ class SeventhCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Row(
-                  children: [
+                 Row(
+                  children: const [
                     Icon(
                       Icons.star,
                       color: Colors.amber,
@@ -60,16 +60,16 @@ class SeventhCard extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Row(
+                 Row(
                   children: [
-                    CircleAvatar(),
-                    SizedBox(
-                      width: 7,
+                    const CircleAvatar(),
+                    const SizedBox(
+                      width: 5,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(children:[
+                        Row(children:const [
                           Text(
                           "Ralph Edward",
                           style: TextStyle(
@@ -77,17 +77,17 @@ class SeventhCard extends StatelessWidget {
                             color: Colors.cyan,
                           ),
                         ),
-                        SizedBox(width: 5,),
+                        SizedBox(width: 2,),
                         Icon(Icons.verified, color: Colors.white,size: 13,),
-                         SizedBox(width: 5,),
+                         SizedBox(width: 2,),
                         Text("verified customer", style: TextStyle(color: Colors.grey),)
 
                         ],),
                         
-                        SizedBox(
+                        const SizedBox(
                           height: 3,
                         ),
-                        Text(
+                        const Text(
                           "April 22, 2022",
                           style: TextStyle(
                               fontWeight: FontWeight.normal,
