@@ -43,6 +43,7 @@ dependencies:
   url_launcher: ^6.1.11
   clipboard: ^0.1.3
   provider: ^6.0.5
+  flashy_tab_bar2: ^0.0.6
 
 dev_dependencies:
   flutter_test:

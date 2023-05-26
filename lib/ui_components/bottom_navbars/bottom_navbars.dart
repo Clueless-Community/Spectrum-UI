@@ -6,6 +6,7 @@ import 'package:flutter_component_ui/ui_components/bottom_navbars/allBottomNavig
 import 'package:provider/provider.dart';
 
 import '../../theme/theme.dart';
+import 'allBottomNavigationBars/bottom_navbar3.dart';
 
 class BottomNavBarScreen extends StatefulWidget {
   const BottomNavBarScreen({super.key});
@@ -18,8 +19,9 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
   final bottomNavbar = [
     const Bottom_Navbar1(),
     const Bottom_Navbar2(),
+    const Bottom_NavBar3(),
   ];
-  List<Color?> bottomNavbarColor = [null, null];
+  List<Color?> bottomNavbarColor = [null, null, null];
 
   @override
   Widget build(BuildContext context) {
