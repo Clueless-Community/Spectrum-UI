@@ -15,7 +15,7 @@ class SeventhCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Row(
+                 Row(
                   children: [
                     Icon(
                       Icons.star,
@@ -60,7 +60,7 @@ class SeventhCard extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Row(
+                 Row(
                   children: [
                     CircleAvatar(),
                     SizedBox(
