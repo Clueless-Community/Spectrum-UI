@@ -11,10 +11,10 @@ class FifthCard extends StatelessWidget {
             children: [
               Image.asset('assets/card_image/cardo.png'),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                padding: const EdgeInsets.all(15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -46,7 +46,7 @@ class FifthCard extends StatelessWidget {
                       children: [
                         CircleAvatar(),
                         SizedBox(
-                          width: 5,
+                          width: 10,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

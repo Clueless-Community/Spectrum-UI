@@ -12,33 +12,32 @@ class ThirdCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             Row(
               children: [
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
-                  size: 20,
+                  size: 25,
                 ),
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
-                  size: 20,
+                  size: 25,
                 ),
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
-                  size: 20,
+                  size: 25,
                 ),
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
-                  size: 20,
+                  size: 25,
                 ),
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
-                  size: 20,
+                  size: 25,
                 )
               ],
             ),

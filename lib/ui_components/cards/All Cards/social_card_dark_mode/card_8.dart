@@ -185,33 +185,36 @@ class EightCard extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                   Row(
+
+                  Row(
                     children: [
                       SizedBox(
                         // width: double.infinity,
-                        width: 78,
+                        width: 80,
                         child: Stack(
                           children: [
                             CircleAvatar(
                               radius: 12,
                             ),
                             Positioned(
-                                left: 13,
+                                left: 12,
+                                child: CircleAvatar(
+                                  radius: 12,
+                                  backgroundColor: Colors.amber,
+                                )),
+                            Positioned(
+                                left: 25,
                                 child: CircleAvatar(
                                   radius: 12,
                                 )),
                             Positioned(
-                                left: 27,
+                                left: 38,
                                 child: CircleAvatar(
                                   radius: 12,
+                                  backgroundColor: Colors.amber,
                                 )),
                             Positioned(
-                                left: 40,
-                                child: CircleAvatar(
-                                  radius: 12,
-                                )),
-                            Positioned(
-                                left: 50,
+                                left: 53,
                                 child: CircleAvatar(
                                   radius: 12,
                                 )),

@@ -17,7 +17,7 @@ class FavPage extends StatelessWidget {
           return Consumer<FavoritesProvider>(
             builder: (context, favProviderModel, child) => AlertDialog(
               title: const Text('Remove'),
-              content: const SingleChildScrollView(
+              content: SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
                     Text(
