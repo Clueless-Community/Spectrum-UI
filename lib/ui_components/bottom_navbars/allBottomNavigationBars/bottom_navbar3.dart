@@ -20,7 +20,7 @@ class _Bottom_NavBar3State extends State<Bottom_NavBar3> {
         selectedIndex: _selectedIndex,
         iconSize: 30,
         animationDuration: const Duration(milliseconds: 400),
-        showElevation: false, // use this to remove appBar's elevation
+        showElevation: true,
         onItemSelected: (index) => setState(() {
           _selectedIndex = index;
         }),
@@ -28,24 +28,32 @@ class _Bottom_NavBar3State extends State<Bottom_NavBar3> {
           FlashyTabBarItem(
             icon: const Icon(Icons.event),
             title: const Text('Events'),
-            activeColor: Colors.purpleAccent,
+            activeColor: Colors.amberAccent,
             inactiveColor: Colors.grey,
           ),
           FlashyTabBarItem(
             icon: const Icon(Icons.home),
             title: const Text('Home'),
+            activeColor: Colors.amberAccent,
+            inactiveColor: Colors.grey,
           ),
           FlashyTabBarItem(
             icon: const Icon(Icons.search),
             title: const Text('Search'),
+            activeColor: Colors.amberAccent,
+            inactiveColor: Colors.grey,
           ),
           FlashyTabBarItem(
             icon: const Icon(Icons.highlight),
             title: const Text('Highlights'),
+            activeColor: Colors.amberAccent,
+            inactiveColor: Colors.grey,
           ),
           FlashyTabBarItem(
             icon: const Icon(Icons.settings),
             title: const Text('Settings'),
+            activeColor: Colors.amberAccent,
+            inactiveColor: Colors.grey,
           ),
         ],
       ),

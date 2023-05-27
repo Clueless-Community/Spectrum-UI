@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/provider/favorite_provider.dart';
 import 'package:flutter_component_ui/ui_components/bottom_navbars/allBottomNavigationBars/bottom_navbar1.dart';
 import 'package:flutter_component_ui/ui_components/bottom_navbars/allBottomNavigationBars/bottom_navbar2.dart';
+import 'package:flutter_component_ui/ui_components/bottom_navbars/allBottomNavigationBars/bottom_navbar4.dart';
 
 import 'package:provider/provider.dart';
 
 import '../../theme/theme.dart';
 import 'allBottomNavigationBars/bottom_navbar3.dart';
+import 'allBottomNavigationBars/bottom_navbar5.dart';
 
 class BottomNavBarScreen extends StatefulWidget {
   const BottomNavBarScreen({super.key});
@@ -20,8 +22,11 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
     const Bottom_Navbar1(),
     const Bottom_Navbar2(),
     const Bottom_NavBar3(),
+    const Bottom_Navbar4(),
+    const Bottom_Navbar5(),
+    // const Bottom_Navbar6(),
   ];
-  List<Color?> bottomNavbarColor = [null, null, null];
+  List<Color?> bottomNavbarColor = [null, null, null, null, null];
 
   @override
   Widget build(BuildContext context) {
