@@ -7,6 +7,7 @@ import 'package:flutter_component_ui/ui_components/messages/messages.dart';
 import 'package:flutter_component_ui/ui_components/paginations/paginations.dart';
 import 'package:flutter_component_ui/ui_components/pricing_cards/pricing_cards.dart';
 import 'package:flutter_component_ui/ui_components/segmented_controls/segmented_control_screen.dart';
+import 'package:flutter_component_ui/ui_components/steppers/steppers.dart';
 
 import '../ui_components/bottom_navbars/bottom_navbars.dart';
 import '../ui_components/radios/radios.dart';
@@ -64,5 +65,9 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   {
     'categoryName': 'Radio',
     'categoryScreen': RadioScreen(),
+  },
+  {
+    'categoryName': 'Stepper',
+    'categoryScreen': StepperScreen(),
   },
 ];
