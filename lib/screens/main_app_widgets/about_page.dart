@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
@@ -184,12 +183,12 @@ class _AboutPageState extends State<AboutPage> {
                                   padding: const EdgeInsets.all(11.0),
                                   child: InkWell(
                                     onTap: () async {
-                                      Uri _url = Uri.parse(
+                                      Uri url = Uri.parse(
                                           contributorsList[index].url);
-                                      if (await canLaunchUrl(_url)) {
-                                        await launchUrl(_url);
+                                      if (await canLaunchUrl(url)) {
+                                        await launchUrl(url);
                                       } else {
-                                        throw 'Could not launch $_url';
+                                        throw 'Could not launch $url';
                                       }
                                     },
                                     child: Column(

@@ -30,7 +30,7 @@ class _BasicRadioButtonState extends State<BasicRadioButton> {
         ),
         const SizedBox(height: 10),
         ListTile(
-          title: Text('Option 1'),
+          title: const Text('Option 1'),
           leading: Radio(
             value: 0,
             groupValue: _selectedOption,
@@ -42,7 +42,7 @@ class _BasicRadioButtonState extends State<BasicRadioButton> {
           ),
         ),
         ListTile(
-          title: Text('Option 2'),
+          title: const Text('Option 2'),
           leading: Radio(
             value: 1,
             groupValue: _selectedOption,
