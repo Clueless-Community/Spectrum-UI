@@ -5,102 +5,100 @@ class SeventhCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Card(
-          color: Colors.black,
-          elevation: 7,
-          child: Container(
-            // height: 170,
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+    return Card(
+      color: Colors.black,
+      elevation: 7,
+      child: Container(
+        // height: 170,
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+             Row(
               children: [
-                const Row(
-                  children: [
-                    Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                      size: 30,
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                      size: 30,
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                      size: 30,
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                      size: 30,
-                    ),
-                    Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                      size: 30,
-                    )
-                  ],
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 25,
                 ),
-                const SizedBox(
-                  height: 5,
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 25,
                 ),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 25,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 25,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 25,
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width / 1.1,
+              child: const Text(
+                "I was ready to delete my account, but the customer service team reached out and helped me with my issues and i'm glad i gave them a chance and now i'm having a better experience on the platform. ",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+             Row(
+              children: [
+                CircleAvatar(),
                 SizedBox(
-                  width: MediaQuery.of(context).size.width / 1.1,
-                  child: const Text(
-                    "I was ready to delete my account, but the customer service team reached out and helped me with my issues and i'm glad i gave them a chance and now i'm having a better experience on the platform. ",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 14),
-                  ),
+                  width: 7,
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Row(
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CircleAvatar(),
-                    SizedBox(
-                      width: 7,
+                    Row(children:[
+                      Text(
+                      "Ralph Edward",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        color: Colors.cyan,
+                      ),
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(children:[
-                          Text(
-                          "Ralph Edward",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            color: Colors.cyan,
-                          ),
-                        ),
-                        SizedBox(width: 5,),
-                        Icon(Icons.verified, color: Colors.white,size: 13,),
-                         SizedBox(width: 5,),
-                        Text("verified customer", style: TextStyle(color: Colors.grey),)
+                    SizedBox(width: 5,),
+                    Icon(Icons.verified, color: Colors.white,size: 13,),
+                     SizedBox(width: 5,),
+                    Text("verified customer", style: TextStyle(color: Colors.grey),)
 
-                        ],),
-                        
-                        SizedBox(
-                          height: 3,
-                        ),
-                        Text(
-                          "April 22, 2022",
-                          style: TextStyle(
-                              fontWeight: FontWeight.normal,
-                              color: Color.fromARGB(255, 128, 126, 126)),
-                        )
-                      ],
+                    ],),
+
+                    SizedBox(
+                      height: 3,
+                    ),
+                    Text(
+                      "April 22, 2022",
+                      style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          color: Color.fromARGB(255, 128, 126, 126)),
                     )
                   ],
                 )
               ],
-            ),
-          ),
+            )
+          ],
         ),
-      );
+      ),
+    );
   }
 }

@@ -14,7 +14,7 @@ class FirstCard extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20),
-              child: const Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
