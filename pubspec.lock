@@ -401,17 +401,10 @@ packages:
     dependency: transitive
     description:
       name: url_launcher_android
-<<<<<<< HEAD
-      sha256: "1a5848f598acc5b7d8f7c18b8cb834ab667e59a13edc3c93e9d09cf38cc6bc87"
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.0.34"
-=======
       sha256: eed4e6a1164aa9794409325c3b707ff424d4d1c2a785e7db67f8bbda00e36e51
       url: "https://pub.dev"
     source: hosted
     version: "6.0.35"
->>>>>>> d618e5449a0c7e6dae8adcbddad72e6382530053
   url_launcher_ios:
     dependency: transitive
     description:

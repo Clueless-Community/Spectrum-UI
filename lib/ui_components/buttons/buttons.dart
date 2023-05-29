@@ -12,6 +12,8 @@ import 'package:flutter_component_ui/ui_components/buttons/all_buttons/text_butt
 import 'package:provider/provider.dart';
 
 import '../../theme/theme.dart';
+import 'all_buttons/animated_buttons/button11.dart';
+import 'all_buttons/animated_buttons/button12.dart';
 import 'all_buttons/elevated_button/button7.dart';
 import 'all_buttons/outline_button/button10.dart';
 import 'all_buttons/outline_button/button2.dart';
@@ -46,6 +48,13 @@ class _ButtonScreenState extends State<ButtonScreen> {
     const Button6("button"),
   ];
   List<Color?> customTextButtonColor = [null];
+
+  final List<Widget> customAnimatedButton = [
+    const Button11("button"),
+    const Button12("button"),
+  ];
+
+  List<Color?> customAnimatedButtonColor = [null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -242,6 +251,72 @@ class _ButtonScreenState extends State<ButtonScreen> {
                                 child: Icon(
                                   Icons.star_border_outlined,
                                   color: customTextButtonColor[index],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Animated Buttons",
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: MyTheme.lightBluishColor)),
+                ),
+              ),
+              Wrap(
+                direction: Axis.horizontal,
+                children: List.generate(
+                  customAnimatedButton.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 8,
+                          ),
+                          width: double.infinity,
+                          child: customAnimatedButton[index],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel.add(
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 8,
+                                      ),
+                                      width: double.infinity,
+                                      child: customAnimatedButton[index],
+                                    ),
+                                  );
+                                  setState(() {
+                                    customAnimatedButtonColor[index] =
+                                        Colors.amber;
+                                  });
+                                },
+                                child: Icon(
+                                  Icons.star_border_outlined,
+                                  color: customAnimatedButtonColor[index],
                                 ),
                               ),
                             ],
