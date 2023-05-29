@@ -6,12 +6,12 @@
      <img src="https://img.shields.io/github/repo-size/Clueless-Community/Spectrum-UI?color=red&style=for-the-badge" />
      <img src="https://img.shields.io/github/issues/Clueless-Community/Spectrum-UI?style=for-the-badge" />
      <img src="https://img.shields.io/github/issues-closed-raw/Clueless-Community/Spectrum-UI?color=green&style=for-the-badge" />
-     <img src="https://img.shields.io/github/contributors/Clueless-Community/Spectrum-UI?color=blue&style=for-the-badge" />
+     <img src="https://img.shields.io/github/contributors/Clueless-Community/Spectrum-UI?color=%233F51B5&style=for-the-badge" />
      <br>
      <img src="https://img.shields.io/github/license/Clueless-Community/Spectrum-UI?color=red&style=for-the-badge" />
      <img src="https://img.shields.io/github/forks/Clueless-Community/Spectrum-UI?color=yellow&style=for-the-badge" />
      <img src="https://img.shields.io/github/stars/Clueless-Community/Spectrum-UI?color=green&style=for-the-badge" />
-     <img src="https://img.shields.io/github/issues-pr/Clueless-Community/Spectrum-UI?color=blue&style=for-the-badge" />
+     <img src="https://img.shields.io/github/issues-pr/Clueless-Community/Spectrum-UI?color=%233F51B5&style=for-the-badge" />
      
 Spectrum UI is a user-friendly Flutter UI library that offers a variety of beautifully designed widgets and components that are easy to use and can be integrated into your Flutter projects seamlessly. With Spectrum UI, you can quickly create stunning mobile app interfaces without spending a lot of time and effort on design and development. The library includes a range of pre-built UI elements such as buttons, text fields, cards, and more, all with a consistent look and feel that will make your app look polished and professional. Whether you're a beginner or an experienced Flutter developer, Spectrum UI makes it easy to create beautiful apps with minimal effort.
 </p>
