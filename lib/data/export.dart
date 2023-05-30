@@ -55,8 +55,6 @@ export '../../ui_components/sliders/all_sliders/dual_pointer_slider/slider4.dart
 export '../../ui_components/sliders/all_sliders/single_pointer_slider/slider1.dart';
 export '../../ui_components/sliders/all_sliders/single_pointer_slider/slider2.dart';
 export '../../ui_components/sliders/all_sliders/single_pointer_slider/slider3.dart';
-export '../../ui_components/sliders/all_sliders/single_pointer_slider/slider5.dart';
-export '../../ui_components/sliders/all_sliders/single_pointer_slider/slider6.dart';
 export '../../ui_components/radios/radio_widgets/basic_radio_button.dart';
 export '../../ui_components/radios/radio_widgets/radio_button_with_custom_color.dart';
 export '../../ui_components/radios/radio_widgets/radio_button_with_horizontal_layout.dart';

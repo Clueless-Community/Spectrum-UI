@@ -16,6 +16,11 @@ class AvatarScreen extends StatefulWidget {
 }
 
 class _AvatarScreenState extends State<AvatarScreen> {
+
+  bool isFavorite2 = false;
+  bool isFavorite1 = false;
+  bool isFavorite = false;
+
   final List<Widget> textAvatars = [
     const Avatar2(
       size: 100,
@@ -90,21 +95,16 @@ class _AvatarScreenState extends State<AvatarScreen> {
                                 width: 5,
                               ),
                               GestureDetector(
+                                child: Icon(
+                                  isFavorite ? Icons.star : Icons.star_border_outlined,
+                                  color: Colors.amber,
+                                ),
+
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: textAvatars[index],
-                                    ),
-                                  );
                                   setState(() {
-                                    textAvatarsColor[index] = Colors.amber;
+                                    isFavorite = !isFavorite;
                                   });
                                 },
-                                child: Icon(
-                                  Icons.star_border_outlined,
-                                  color: textAvatarsColor[index],
-                                ),
                               ),
                             ],
                           ),
@@ -143,21 +143,16 @@ class _AvatarScreenState extends State<AvatarScreen> {
                                 width: 5,
                               ),
                               GestureDetector(
+                                child: Icon(
+                                  isFavorite1 ? Icons.star : Icons.star_border_outlined,
+                                  color: Colors.amber,
+                                ),
+
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: imageAvatars[index],
-                                    ),
-                                  );
                                   setState(() {
-                                    imageAvatarsColor[index] = Colors.amber;
+                                    isFavorite1 = !isFavorite1;
                                   });
                                 },
-                                child: Icon(
-                                  Icons.star_border_outlined,
-                                  color: imageAvatarsColor[index],
-                                ),
                               ),
                             ],
                           ),
@@ -196,21 +191,16 @@ class _AvatarScreenState extends State<AvatarScreen> {
                                 width: 5,
                               ),
                               GestureDetector(
+                                child: Icon(
+                                  isFavorite2 ? Icons.star : Icons.star_border_outlined,
+                                  color: Colors.amber,
+                                ),
+
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: iconAvatars[index],
-                                    ),
-                                  );
                                   setState(() {
-                                    iconAvatarsColor[index] = Colors.amber;
+                                    isFavorite2 = !isFavorite2;
                                   });
                                 },
-                                child: Icon(
-                                  Icons.star_border_outlined,
-                                  color: iconAvatarsColor[index],
-                                ),
                               ),
                             ],
                           ),
