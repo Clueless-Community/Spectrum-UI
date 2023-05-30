@@ -73,14 +73,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
-  curved_navigation_bar:
-    dependency: "direct main"
-    description:
-      name: curved_navigation_bar
-      sha256: ea6412d00c5d83501bbf1cf9d1ac2ff11a20fbaf910c103c95ace7de82910334
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.3"
   fake_async:
     dependency: transitive
     description:
@@ -105,14 +97,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.4"
-  flashy_tab_bar2:
-    dependency: "direct main"
-    description:
-      name: flashy_tab_bar2
-      sha256: "895affd69b757ae2a1461ddc42a3c04954a5bb4e2292373697e40c377e836153"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.6"
   fluentui_icons:
     dependency: "direct main"
     description:
@@ -156,18 +140,10 @@ packages:
     dependency: "direct main"
     description:
       name: google_fonts
-      sha256: "927573f2e8a8d65c17931e21918ad0ab0666b1b636537de7c4932bdb487b190f"
+      sha256: "6b6f10f0ce3c42f6552d1c70d2c28d764cf22bb487f50f66cca31dcd5194f4d6"
       url: "https://pub.dev"
     source: hosted
     version: "4.0.3"
-  google_nav_bar:
-    dependency: "direct main"
-    description:
-      name: google_nav_bar
-      sha256: "1c8e3882fa66ee7b74c24320668276ca23affbd58f0b14a24c1e5590f4d07ab0"
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.0.6"
   http:
     dependency: "direct main"
     description:
@@ -401,6 +377,7 @@ packages:
     dependency: transitive
     description:
       name: url_launcher_android
+
       sha256: eed4e6a1164aa9794409325c3b707ff424d4d1c2a785e7db67f8bbda00e36e51
       url: "https://pub.dev"
     source: hosted
@@ -409,6 +386,12 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.34"
+
+      sha256: eed4e6a1164aa9794409325c3b707ff424d4d1c2a785e7db67f8bbda00e36e51
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.0.35"
+
   url_launcher_ios:
     dependency: transitive
     description:
@@ -465,14 +448,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
-  water_drop_nav_bar:
-    dependency: "direct main"
-    description:
-      name: water_drop_nav_bar
-      sha256: f8be3696ce184f043ffdcb28b17418a4e46c83678b5d8d270b6393a9e5d5f36b
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.2.0+5"
   win32:
     dependency: transitive
     description:
@@ -490,6 +465,8 @@ packages:
     source: hosted
     version: "1.0.0"
 sdks:
+
   dart: ">=2.19.0 <3.0.0"
   dart: ">=3.0.0-0 <4.0.0"
+  dart: ">=2.19.0 <3.0.0"
   flutter: ">=3.3.0"
