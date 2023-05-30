@@ -8,9 +8,6 @@ import 'all_sliders/single_pointer_slider/slider2.dart';
 import 'all_sliders/single_pointer_slider/slider3.dart';
 import 'all_sliders/dual_pointer_slider/slider4.dart';
 
-import 'all_sliders/single_pointer_slider/slider5.dart';
-import 'all_sliders/single_pointer_slider/slider6.dart';
-
 class SliderScreen extends StatefulWidget {
   const SliderScreen({super.key});
 
@@ -34,24 +31,14 @@ class _SliderScreenState extends State<SliderScreen> {
       inactiveColor: Colors.black,
       maxRange: 100.0,
     ),
-    const Slider3(
-      activeColor: Colors.red,
-      inactiveColor: Colors.white,
-      maxRange: 100,
-    ),
-    const Slider5(
-      activeColor: Colors.pink,
-      inactiveColor: Colors.amberAccent,
-      maxRange: 100,
-    ),
-    const Slider6(
-      activeColor: Colors.lightBlueAccent,
-      inactiveColor: Color(0xFF005F99),
-      maxRange: 60,
-    ),
     Slider2(
       activeColor: const Color(0xFF005F99),
       inactiveColor: Colors.purple.shade600,
+      maxRange: 100,
+    ),
+    const Slider3(
+      activeColor: Colors.red,
+      inactiveColor: Colors.white,
       maxRange: 100,
     ),
   ];
