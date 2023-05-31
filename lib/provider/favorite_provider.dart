@@ -10,7 +10,7 @@ Color? color;
 
 class FavoritesProvider extends ChangeNotifier {
   List<int> favs = [];
-  Map<int, Widget> widget_map = {
+  Map<int, Widget> widgetMap = {
     1: const Button2("button"),
     2: const Button4("button"),
     3: const Button10("button"),
@@ -241,13 +241,13 @@ class FavoritesProvider extends ChangeNotifier {
     ),
   };
   void add(Widget item) {
-    var index = widget_map.keys.firstWhere((k) => widget_map[k] == item);
+    var index = widgetMap.keys.firstWhere((k) => widgetMap[k] == item);
     favs.add(index);
     notifyListeners();
   }
 
   void remove(Widget item) {
-    var index = widget_map.keys.firstWhere((k) => widget_map[k] == item);
+    var index = widgetMap.keys.firstWhere((k) => widgetMap[k] == item);
     favs.remove(index);
     notifyListeners();
   }
