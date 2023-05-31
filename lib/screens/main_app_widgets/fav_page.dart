@@ -17,7 +17,7 @@ class FavPage extends StatelessWidget {
           return Consumer<FavoritesProvider>(
             builder: (context, favProviderModel, child) => AlertDialog(
               title: const Text('Remove'),
-              content: SingleChildScrollView(
+              content: const SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
                     Text(
@@ -72,7 +72,7 @@ class FavPage extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            _showMyDialog(favProviderModel.favs[index]);
+                            _showMyDialog(favProviderModel.widgetMap[index]!);
                           },
                           child: const Padding(
                             padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
@@ -83,7 +83,7 @@ class FavPage extends StatelessWidget {
                           ),
                         ),
                         Center(
-                          child: favProviderModel.favs[index],
+                          child: favProviderModel.widgetMap[index],
                         ),
                       ],
                     );
