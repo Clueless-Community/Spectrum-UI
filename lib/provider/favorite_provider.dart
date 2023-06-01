@@ -11,15 +11,78 @@ Color? color;
 class FavoritesProvider extends ChangeNotifier {
   List<int> favs = [];
   Map<int, Widget> widgetMap = {
-    1: const Button2("button"),
-    2: const Button4("button"),
-    3: const Button10("button"),
-    4: const Button1("button"),
-    5: const Button3("button"),
-    6: const Button5("button"),
-    7: const Button7("button"),
-    8: const Button9("button"),
-    9: const Button6("button"),
+    1: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      width: double.infinity,
+      child: const Button2("button"),
+    ),
+    2: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      width: double.infinity,
+      child: const Button4("button"),
+    ),
+    3: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      width: double.infinity,
+      child: const Button10("button"),
+    ),
+    4: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      width: double.infinity,
+      child: const Button1("button"),
+    ),
+    5: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      width: double.infinity,
+      child: const Button3("button"),
+    ),
+    6: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      width: double.infinity,
+      child: const Button5("button"),
+    ),
+    7: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      width: double.infinity,
+      child: const Button7("button"),
+    ),
+    8: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      width: double.infinity,
+      child: const Button9("button"),
+    ),
+    9: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      width: double.infinity,
+      child: const Button6("button"),
+    ),
     10: const BasicRadioButton(),
     11: const RadioButtonwithTextandStyles(),
     12: const RadioButtonwithCustomColor(),
@@ -241,7 +304,10 @@ class FavoritesProvider extends ChangeNotifier {
     ),
   };
   void add(Widget item) {
-    var index = widgetMap.keys.firstWhere((k) => widgetMap[k] == item);
+    var index =
+        widgetMap.keys.firstWhere((k) => widgetMap[k] == item, orElse: () => 0);
+    print(index);
+
     favs.add(index);
     notifyListeners();
   }
