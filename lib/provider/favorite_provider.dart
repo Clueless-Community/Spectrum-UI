@@ -180,16 +180,16 @@ class FavoritesProvider extends ChangeNotifier {
       inactiveColor: Colors.white,
       maxRange: 100,
     ),
-    49: const Slider5(
-      activeColor: Colors.pink,
-      inactiveColor: Colors.amberAccent,
-      maxRange: 100,
-    ),
-    50: const Slider6(
-      activeColor: Colors.lightBlueAccent,
-      inactiveColor: Color(0xFF005F99),
-      maxRange: 60,
-    ),
+    // 49: const Slider5(
+    //   activeColor: Colors.pink,
+    //   inactiveColor: Colors.amberAccent,
+    //   maxRange: 100,
+    // ),
+    // 50: const Slider6(
+    //   activeColor: Colors.lightBlueAccent,
+    //   inactiveColor: Color(0xFF005F99),
+    //   maxRange: 60,
+    // ),
     51: Slider2(
       activeColor: const Color(0xFF005F99),
       inactiveColor: Colors.purple.shade600,
