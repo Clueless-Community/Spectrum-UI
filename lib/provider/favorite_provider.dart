@@ -301,7 +301,7 @@ class FavoritesProvider extends ChangeNotifier {
       containerColor: Colors.white,
       textColor: Colors.black,
       hightlightColor: Color(0xFF00C2CB),
-    ),
+    )
   };
   void add(Widget item) {
     var index =

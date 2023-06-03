@@ -40,6 +40,7 @@ class _InputFieldScreenState extends State<InputFieldScreen> {
     )
   ];
   List<Color?> textareasColor = [null, null, null, null];
+  List<int> textareasIndex = [37, 38, 39, 40];
 
   final List<Widget> inputfields = [
     const InputField1(
@@ -64,6 +65,7 @@ class _InputFieldScreenState extends State<InputFieldScreen> {
     ),
   ];
   List<Color?> inputfieldsColor = [null, null, null, null, null];
+  List<int> inputfieldsIndex = [41, 42, 43, 44, 45];
 
   @override
   Widget build(BuildContext context) {

@@ -32,6 +32,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
   ];
 
   List<Color?> customOutlineButtonColor = [null, null, null];
+  List<int> customOutlineButtonIndex = [1, 2, 3];
 
   final List<Widget> customElevatedButton = [
     const Button1("button"),
@@ -41,11 +42,13 @@ class _ButtonScreenState extends State<ButtonScreen> {
     const Button9("button")
   ];
   List<Color?> customElevatedButtonColor = [null, null, null, null, null];
+  List<int> customElevatedButtonIndex = [4, 5, 6, 7, 8];
 
   final List<Widget> customTextButton = [
     const Button6("button"),
   ];
   List<Color?> customTextButtonColor = [null];
+  List<int> customTextButtonIndex = [9];
 
   @override
   Widget build(BuildContext context) {

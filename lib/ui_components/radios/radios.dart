@@ -4,7 +4,6 @@ import 'package:flutter_component_ui/ui_components/radios/radio_widgets/radio_bu
 import 'package:flutter_component_ui/ui_components/radios/radio_widgets/radio_button_with_horizontal_layout.dart';
 import 'package:flutter_component_ui/ui_components/radios/radio_widgets/radio_button_with_text_and_styles.dart';
 
-
 class RadioScreen extends StatelessWidget {
   RadioScreen({super.key});
 
@@ -14,6 +13,8 @@ class RadioScreen extends StatelessWidget {
     const RadioButtonwithCustomColor(),
     const RadioButtonwithHorizontalLayout(),
   ];
+
+  List<int> radiosIndex = [10, 11, 12, 13];
 
   @override
   Widget build(BuildContext context) {

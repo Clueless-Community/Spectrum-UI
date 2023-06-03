@@ -33,6 +33,7 @@ class _AlertScreenState extends State<AlertScreen> {
   ];
 
   List<Color?> coluredAlertsColor = [null, null, null, null];
+  List<int> coluredAlertsIndex = [14, 15, 16, 17];
 
   final List<Widget> simpleAlerts = [
     const Alert5("AMessage", "ADescriptions"),
@@ -42,6 +43,7 @@ class _AlertScreenState extends State<AlertScreen> {
   ];
 
   List<Color?> simpleAlertsColor = [null, null, null, null];
+  List<int> simpleAlertsIndex = [18, 19, 20, 21];
 
   final List<Widget> simpleAlertsDarkMode = [
     const Alert9("AMessage", "ADescriptions"),
@@ -51,6 +53,7 @@ class _AlertScreenState extends State<AlertScreen> {
   ];
 
   List<Color?> simpleAlertsDarkModeColor = [null, null, null, null];
+  List<int> simpleAlertsDarkModeIndex = [22, 23, 24, 25];
 
   @override
   Widget build(BuildContext context) {

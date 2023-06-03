@@ -31,11 +31,13 @@ class _AvatarScreenState extends State<AvatarScreen> {
   ];
 
   List<Color?> textAvatarsColor = [null];
+  List<int> textAvatarsIndex = [34];
 
   final List<Widget> imageAvatars = [
     const Avatar1(size: 100, imagePath: 'assets/bored.png'),
   ];
   List<Color?> imageAvatarsColor = [null];
+  List<int> imageAvatarsIndex = [35];
 
   final List<Widget> iconAvatars = [
     const Avatar3(
@@ -50,6 +52,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
   ];
 
   List<Color?> iconAvatarsColor = [null];
+  List<int?> iconAvatarsIndex = [36];
 
   @override
   Widget build(BuildContext context) {

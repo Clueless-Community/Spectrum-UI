@@ -27,6 +27,7 @@ class _SliderScreenState extends State<SliderScreen> {
     ),
   ];
   List<Color?> dualPointSliderColor = [null];
+  List<int> dualPointSliderIndex = [46];
 
   final List<Widget> singlePointSlider = [
     const Slider1(
@@ -56,6 +57,7 @@ class _SliderScreenState extends State<SliderScreen> {
     ),
   ];
   List<Color?> singlePointSliderColor = [null, null, null, null, null];
+  List<int> singlePointSliderIndex = [47, 48, 49, 50, 51];
 
   @override
   Widget build(BuildContext context) {

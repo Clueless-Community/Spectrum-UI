@@ -26,6 +26,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
       2: buildSegment("Text", color),
     };
     List<Color?> segmentedControlFavColor = [null, null, null, null];
+    List<int> segmentedControlFavIndex = [61, 62, 63, 64];
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -88,7 +89,6 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
           Consumer<FavoritesProvider>(
             builder: (context, favProviderModel, child) => Column(
               children: [
-
                 Center(
                   child: RadioChips(
                     values: const ['Text', 'Text', 'Text'],
@@ -133,7 +133,6 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
           const SizedBox(
             height: 20,
           ),
-
           Consumer<FavoritesProvider>(
             builder: (context, favProviderModel, child) => Column(
               children: [
@@ -232,7 +231,6 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
               ],
             ),
           ),
-
         ],
       ),
     );

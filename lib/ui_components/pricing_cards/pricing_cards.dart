@@ -31,6 +31,7 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
     ),
   ];
   List<Color?> pricingCardsColor = [null];
+  List<int> pricingCardsIndex = [60];
 
   @override
   Widget build(BuildContext context) {

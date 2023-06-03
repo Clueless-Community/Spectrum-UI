@@ -25,24 +25,28 @@ class _CardScreenState extends State<CardScreen> {
     SecondCard(),
   ];
   List<Color?> blogCardListColor = [null, null];
+  List<int> blogCardListIndex = [26, 27];
 
   final socialCardList = const [
     ThirdCard(),
     FourthCard(),
   ];
   List<Color?> socialCardListColor = [null, null];
+  List<int> socialCardListIndex = [28, 29];
 
   final blogCardDarKModeList = const [
     FifthCard(),
     SixthCard(),
   ];
   List<Color?> blogCardDarKModeListColor = [null, null];
+  List<int> blogCardDarKModeListIndex = [30, 31];
 
   final socialCardDarkModeList = const [
     SeventhCard(),
     EightCard(),
   ];
   List<Color?> socialCardDarkModeListColor = [null, null];
+  List<int> socialCardDarkModeListIndex = [32, 33];
 
   @override
   Widget build(BuildContext context) {
