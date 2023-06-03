@@ -155,7 +155,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
                               GestureDetector(
                                 onTap: () {
                                   favProviderModel
-                                      .add(customElevatedButtonIndex[index]);
+                                      .add(customOutlineButtonIndex[index]);
                                   setState(() {
                                     customOutlineButtonColor[index] =
                                         Colors.amber;
@@ -213,7 +213,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
                               GestureDetector(
                                 onTap: () {
                                   favProviderModel
-                                      .add(customElevatedButtonIndex[index]);
+                                      .add(customTextButtonIndex[index]);
                                   setState(() {
                                     customTextButtonColor[index] = Colors.amber;
                                   });

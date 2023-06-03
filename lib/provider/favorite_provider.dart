@@ -310,9 +310,10 @@ class FavoritesProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void remove(Widget item) {
-    var index = widgetMap.keys.firstWhere((k) => widgetMap[k] == item);
+  void remove(int index) {
     favs.remove(index);
+    print(index);
+    print(favs);
     notifyListeners();
   }
 }

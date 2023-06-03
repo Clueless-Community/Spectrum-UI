@@ -19,7 +19,7 @@ class _FavPageState extends State<FavPage> {
 
   @override
   Widget build(BuildContext context) {
-    Future<void> _showMyDialog(Widget item) async {
+    Future<void> _showMyDialog(int item) async {
       return showDialog<void>(
         context: context,
         barrierDismissible: false, // user must tap button!
@@ -82,7 +82,7 @@ class _FavPageState extends State<FavPage> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            _showMyDialog(favProviderModel.widgetMap[index]!);
+                            _showMyDialog(favProviderModel.favs[index]);
                           },
                           child: const Padding(
                             padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
