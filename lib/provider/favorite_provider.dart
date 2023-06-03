@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_component_ui/data/hive_database.dart';
 
 import '../data/export.dart';
 import '../ui_components/alerts/all_alerts/dark_mode_alert/alert12.dart';
@@ -303,10 +304,22 @@ class FavoritesProvider extends ChangeNotifier {
       hightlightColor: Color(0xFF00C2CB),
     )
   };
+
+  final db = HiveDatabase();
+  void prepareData() {
+    if (db.readData().isNotEmpty) {
+      print(db.readData());
+      favs = db.readData();
+      print(favs);
+    }
+  }
+
   void add(int index) {
     favs.add(index);
     print(index);
     print(favs);
+    db.saveData(favs);
+    print(db.readData());
     notifyListeners();
   }
 
@@ -314,6 +327,8 @@ class FavoritesProvider extends ChangeNotifier {
     favs.remove(index);
     print(index);
     print(favs);
+    db.saveData(favs);
+    print(db.readData());
     notifyListeners();
   }
 }
