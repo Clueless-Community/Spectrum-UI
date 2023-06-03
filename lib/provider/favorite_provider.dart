@@ -308,27 +308,19 @@ class FavoritesProvider extends ChangeNotifier {
   final db = HiveDatabase();
   void prepareData() {
     if (db.readData().isNotEmpty) {
-      print(db.readData());
       favs = db.readData();
-      print(favs);
     }
   }
 
   void add(int index) {
     favs.add(index);
-    print(index);
-    print(favs);
     db.saveData(favs);
-    print(db.readData());
     notifyListeners();
   }
 
   void remove(int index) {
     favs.remove(index);
-    print(index);
-    print(favs);
     db.saveData(favs);
-    print(db.readData());
     notifyListeners();
   }
 }
