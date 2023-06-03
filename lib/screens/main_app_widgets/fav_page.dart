@@ -4,8 +4,18 @@ import 'package:flutter_component_ui/theme/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class FavPage extends StatelessWidget {
+class FavPage extends StatefulWidget {
   const FavPage({super.key});
+
+  @override
+  State<FavPage> createState() => _FavPageState();
+}
+
+class _FavPageState extends State<FavPage> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +93,8 @@ class FavPage extends StatelessWidget {
                           ),
                         ),
                         Center(
-                          child: favProviderModel.widgetMap[index],
+                          child: favProviderModel
+                              .widgetMap[favProviderModel.favs[index]],
                         ),
                       ],
                     );

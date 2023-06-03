@@ -97,7 +97,8 @@ class _SliderScreenState extends State<SliderScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(singlePointSlider[index]);
+                                favProviderModel
+                                    .add(singlePointSliderIndex[index]);
                                 setState(() {
                                   singlePointSliderColor[index] = Colors.amber;
                                 });
@@ -145,12 +146,8 @@ class _SliderScreenState extends State<SliderScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Padding(
-                                    padding: const EdgeInsets.all(12.0),
-                                    child: dualPointSlider[index],
-                                  ),
-                                );
+                                favProviderModel
+                                    .add(dualPointSliderIndex[index]);
                                 setState(() {
                                   dualPointSliderColor[index] = Colors.amber;
                                 });

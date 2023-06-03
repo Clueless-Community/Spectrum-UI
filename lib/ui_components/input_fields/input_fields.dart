@@ -111,15 +111,7 @@ class _InputFieldScreenState extends State<InputFieldScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 12,
-                                      vertical: 8,
-                                    ),
-                                    child: inputfields[index],
-                                  ),
-                                );
+                                favProviderModel.add(inputfieldsIndex[index]);
                                 setState(() {
                                   inputfieldsColor[index] = Colors.amber;
                                 });
@@ -174,15 +166,7 @@ class _InputFieldScreenState extends State<InputFieldScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 12,
-                                      vertical: 8,
-                                    ),
-                                    child: textareas[index],
-                                  ),
-                                );
+                                favProviderModel.add(textareasIndex[index]);
                                 setState(() {
                                   textareasColor[index] = Colors.amber;
                                 });

@@ -52,7 +52,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
   ];
 
   List<Color?> iconAvatarsColor = [null];
-  List<int?> iconAvatarsIndex = [36];
+  List<int> iconAvatarsIndex = [36];
 
   @override
   Widget build(BuildContext context) {
@@ -94,12 +94,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: textAvatars[index],
-                                    ),
-                                  );
+                                  favProviderModel.add(textAvatarsIndex[index]);
                                   setState(() {
                                     textAvatarsColor[index] = Colors.amber;
                                   });
@@ -147,12 +142,8 @@ class _AvatarScreenState extends State<AvatarScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: imageAvatars[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(imageAvatarsIndex[index]);
                                   setState(() {
                                     imageAvatarsColor[index] = Colors.amber;
                                   });
@@ -200,12 +191,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: iconAvatars[index],
-                                    ),
-                                  );
+                                  favProviderModel.add(iconAvatarsIndex[index]);
                                   setState(() {
                                     iconAvatarsColor[index] = Colors.amber;
                                   });

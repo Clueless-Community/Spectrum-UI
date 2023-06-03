@@ -303,12 +303,10 @@ class FavoritesProvider extends ChangeNotifier {
       hightlightColor: Color(0xFF00C2CB),
     )
   };
-  void add(Widget item) {
-    var index =
-        widgetMap.keys.firstWhere((k) => widgetMap[k] == item, orElse: () => 0);
-    print(index);
-
+  void add(int index) {
     favs.add(index);
+    print(index);
+    print(favs);
     notifyListeners();
   }
 

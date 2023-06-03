@@ -96,12 +96,8 @@ class _AlertScreenState extends State<AlertScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: coluredAlerts[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(coluredAlertsIndex[index]);
                                   setState(() {
                                     coluredAlertsColor[index] = Colors.amber;
                                   });
@@ -156,12 +152,8 @@ class _AlertScreenState extends State<AlertScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: simpleAlerts[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(simpleAlertsIndex[index]);
                                   setState(() {
                                     simpleAlertsColor[index] = Colors.amber;
                                   });
@@ -216,12 +208,8 @@ class _AlertScreenState extends State<AlertScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: simpleAlertsDarkMode[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(simpleAlertsIndex[index]);
                                   setState(() {
                                     simpleAlertsDarkModeColor[index] =
                                         Colors.amber;

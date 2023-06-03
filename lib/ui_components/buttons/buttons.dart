@@ -96,16 +96,8 @@ class _ButtonScreenState extends State<ButtonScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 12,
-                                        vertical: 8,
-                                      ),
-                                      width: double.infinity,
-                                      child: customElevatedButton[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(customElevatedButtonIndex[index]);
                                   setState(() {
                                     customElevatedButtonColor[index] =
                                         Colors.amber;
@@ -162,16 +154,8 @@ class _ButtonScreenState extends State<ButtonScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 12,
-                                        vertical: 8,
-                                      ),
-                                      width: double.infinity,
-                                      child: customOutlineButton[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(customElevatedButtonIndex[index]);
                                   setState(() {
                                     customOutlineButtonColor[index] =
                                         Colors.amber;
@@ -228,16 +212,8 @@ class _ButtonScreenState extends State<ButtonScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 12,
-                                        vertical: 8,
-                                      ),
-                                      width: double.infinity,
-                                      child: customTextButton[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(customElevatedButtonIndex[index]);
                                   setState(() {
                                     customTextButtonColor[index] = Colors.amber;
                                   });

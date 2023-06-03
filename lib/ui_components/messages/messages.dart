@@ -112,12 +112,7 @@ class _MessageScreenState extends State<MessageScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: bubbleChat[index],
-                                  ),
-                                );
+                                favProviderModel.add(bubbleChatIndex[index]);
                                 setState(() {
                                   bubbleChatColor[index] = Colors.amber;
                                 });
@@ -171,12 +166,7 @@ class _MessageScreenState extends State<MessageScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Padding(
-                                    padding: const EdgeInsets.all(12.0),
-                                    child: inboxMessages[index],
-                                  ),
-                                );
+                                favProviderModel.add(bubbleChatIndex[index]);
                                 setState(() {
                                   inboxMessagesColor[index] = Colors.amber;
                                 });

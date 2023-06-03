@@ -63,14 +63,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: RectangularSelections(
-                                values: const ['Text', 'Text', 'Text'],
-                                onSelected: (index) {},
-                              ),
-                            ),
-                          );
+                          favProviderModel.add(segmentedControlFavIndex[0]);
                         },
                         child: Icon(
                           Icons.star_border_outlined,
@@ -107,14 +100,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: RadioChips(
-                                values: const ['Text', 'Text', 'Text'],
-                                onSelected: (index) {},
-                              ),
-                            ),
-                          );
+                          favProviderModel.add(segmentedControlFavIndex[1]);
                           setState(() {
                             segmentedControlFavColor[2] = Colors.amber;
                           });
@@ -164,13 +150,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: SegmentedControlWidget(
-                                choices: choices1,
-                              ),
-                            ),
-                          );
+                          favProviderModel.add(segmentedControlFavIndex[2]);
                           setState(() {
                             segmentedControlFavColor[0] = Colors.amber;
                           });
@@ -209,13 +189,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: SegmentedControlWidget(
-                                choices: choices,
-                              ),
-                            ),
-                          );
+                          favProviderModel.add(segmentedControlFavIndex[3]);
                           setState(() {
                             segmentedControlFavColor[1] = Colors.amber;
                           });

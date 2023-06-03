@@ -74,13 +74,7 @@ class _PaginationScreenState extends State<PaginationScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 8),
-                              child: pages[index],
-                            ),
-                          );
+                          favProviderModel.add(pagesLikeButtonIndex[index]);
                           setState(() {
                             pagesLikeButtonColor[index] = Colors.amber;
                           });
