@@ -10,6 +10,9 @@ class MyTheme {
           secondary: Colors.white,
           brightness: Brightness.light,
         ),
+     snackBarTheme: const SnackBarThemeData(
+            backgroundColor: Colors.black,
+            contentTextStyle: TextStyle(color: Colors.white)),
         textTheme: GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme),
         appBarTheme: const AppBarTheme(
           color: Colors.white,
@@ -26,6 +29,9 @@ class MyTheme {
           secondary: Colors.white,
           brightness: Brightness.dark,
         ),
+     snackBarTheme: const SnackBarThemeData(
+            backgroundColor: Colors.white,
+            contentTextStyle: TextStyle(color: Colors.black)),
         textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
         appBarTheme: const AppBarTheme(
           color: Colors.white,

@@ -12,7 +12,7 @@ class ThirdCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
+            const Row(
               children: [
                 Icon(
                   Icons.star_outline,
@@ -62,7 +62,7 @@ class ThirdCard extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Row(
+            const Row(
               children: [
                 CircleAvatar(),
                 SizedBox(

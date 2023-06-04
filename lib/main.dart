@@ -4,11 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/provider/favorite_provider.dart';
 import 'package:flutter_component_ui/screens/splash_screen.dart';
 import 'package:flutter_component_ui/theme/theme.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:provider/provider.dart';
 
 import 'screens/main_page.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  await Hive.openBox("favorites_database");
   runApp(const MyApp());
 }
 

@@ -64,10 +64,14 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Radio',
-    'categoryScreen': RadioScreen(),
+    'categoryScreen': const RadioScreen(),
   },
   {
     'categoryName': 'Stepper',
     'categoryScreen': StepperScreen(),
   },
+  // {
+  //   'categoryName': 'Progress Bars',
+  //   'categoryScreen': const ProgressBar(),
+  // },
 ];

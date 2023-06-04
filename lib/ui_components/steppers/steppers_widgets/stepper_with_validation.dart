@@ -11,7 +11,7 @@ class StepperwithValidation extends StatefulWidget {
 
 class _StepperwithValidationState extends State<StepperwithValidation> {
   int _currentStep = 0;
-  List<bool> _isStepValid = [false, false, false];
+  final List<bool> _isStepValid = [false, false, false];
 
   @override
   Widget build(BuildContext context) {
@@ -47,11 +47,11 @@ class _StepperwithValidationState extends State<StepperwithValidation> {
           },
           steps: [
             Step(
-              title: Text('Step 1'),
+              title: const Text('Step 1'),
               content: Column(
                 children: [
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'Name'),
+                    decoration: const InputDecoration(labelText: 'Name'),
                     onChanged: (value) {
                       setState(() {
                         _isStepValid[0] = value.isNotEmpty;
@@ -64,11 +64,11 @@ class _StepperwithValidationState extends State<StepperwithValidation> {
               state: _isStepValid[0] ? StepState.complete : StepState.error,
             ),
             Step(
-              title: Text('Step 2'),
+              title: const Text('Step 2'),
               content: Column(
                 children: [
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'Email'),
+                    decoration: const InputDecoration(labelText: 'Email'),
                     onChanged: (value) {
                       setState(() {
                         _isStepValid[1] = value.isNotEmpty;
@@ -81,11 +81,11 @@ class _StepperwithValidationState extends State<StepperwithValidation> {
               state: _isStepValid[1] ? StepState.complete : StepState.error,
             ),
             Step(
-              title: Text('Step 3'),
+              title: const Text('Step 3'),
               content: Column(
                 children: [
                   TextFormField(
-                    decoration: InputDecoration(labelText: 'Address'),
+                    decoration: const InputDecoration(labelText: 'Address'),
                     onChanged: (value) {
                       setState(() {
                         _isStepValid[2] = value.isNotEmpty;

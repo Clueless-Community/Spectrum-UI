@@ -4,12 +4,22 @@ import 'package:flutter_component_ui/theme/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class FavPage extends StatelessWidget {
+class FavPage extends StatefulWidget {
   const FavPage({super.key});
 
   @override
+  State<FavPage> createState() => _FavPageState();
+}
+
+class _FavPageState extends State<FavPage> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    Future<void> _showMyDialog(Widget item) async {
+    Future<void> showMyDialog(int item) async {
       return showDialog<void>(
         context: context,
         barrierDismissible: false, // user must tap button!
@@ -17,7 +27,7 @@ class FavPage extends StatelessWidget {
           return Consumer<FavoritesProvider>(
             builder: (context, favProviderModel, child) => AlertDialog(
               title: const Text('Remove'),
-              content: SingleChildScrollView(
+              content: const SingleChildScrollView(
                 child: ListBody(
                   children: <Widget>[
                     Text(
@@ -72,7 +82,7 @@ class FavPage extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            _showMyDialog(favProviderModel.favs[index]);
+                            showMyDialog(favProviderModel.favs[index]);
                           },
                           child: const Padding(
                             padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
@@ -83,7 +93,8 @@ class FavPage extends StatelessWidget {
                           ),
                         ),
                         Center(
-                          child: favProviderModel.favs[index],
+                          child: favProviderModel
+                              .widgetMap[favProviderModel.favs[index]],
                         ),
                       ],
                     );
