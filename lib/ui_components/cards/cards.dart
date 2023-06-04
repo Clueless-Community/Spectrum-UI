@@ -25,24 +25,28 @@ class _CardScreenState extends State<CardScreen> {
     SecondCard(),
   ];
   List<Color?> blogCardListColor = [null, null];
+  List<int> blogCardListIndex = [26, 27];
 
   final socialCardList = const [
     ThirdCard(),
     FourthCard(),
   ];
   List<Color?> socialCardListColor = [null, null];
+  List<int> socialCardListIndex = [28, 29];
 
   final blogCardDarKModeList = const [
     FifthCard(),
     SixthCard(),
   ];
   List<Color?> blogCardDarKModeListColor = [null, null];
+  List<int> blogCardDarKModeListIndex = [30, 31];
 
   final socialCardDarkModeList = const [
     SeventhCard(),
     EightCard(),
   ];
   List<Color?> socialCardDarkModeListColor = [null, null];
+  List<int> socialCardDarkModeListIndex = [32, 33];
 
   @override
   Widget build(BuildContext context) {
@@ -89,16 +93,7 @@ class _CardScreenState extends State<CardScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 12,
-                                      vertical: 8,
-                                    ),
-                                    width: double.infinity,
-                                    child: blogCardList[index],
-                                  ),
-                                );
+                                favProviderModel.add(blogCardListIndex[index]);
                                 setState(() {
                                   blogCardListColor[index] = Colors.amber;
                                 });
@@ -154,16 +149,8 @@ class _CardScreenState extends State<CardScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 12,
-                                      vertical: 8,
-                                    ),
-                                    width: double.infinity,
-                                    child: socialCardList[index],
-                                  ),
-                                );
+                                favProviderModel
+                                    .add(socialCardListIndex[index]);
                                 setState(() {
                                   socialCardListColor[index] = Colors.amber;
                                 });
@@ -219,16 +206,8 @@ class _CardScreenState extends State<CardScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 12,
-                                      vertical: 8,
-                                    ),
-                                    width: double.infinity,
-                                    child: blogCardDarKModeList[index],
-                                  ),
-                                );
+                                favProviderModel
+                                    .add(blogCardDarKModeListIndex[index]);
                                 setState(() {
                                   blogCardDarKModeListColor[index] =
                                       Colors.amber;
@@ -285,16 +264,8 @@ class _CardScreenState extends State<CardScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 12,
-                                      vertical: 8,
-                                    ),
-                                    width: double.infinity,
-                                    child: socialCardDarkModeList[index],
-                                  ),
-                                );
+                                favProviderModel
+                                    .add(socialCardDarkModeListIndex[index]);
                                 setState(() {
                                   socialCardDarkModeListColor[index] =
                                       Colors.amber;

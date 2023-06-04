@@ -16,7 +16,6 @@ class AvatarScreen extends StatefulWidget {
 }
 
 class _AvatarScreenState extends State<AvatarScreen> {
-
   bool isFavorite2 = false;
   bool isFavorite1 = false;
   bool isFavorite = false;
@@ -36,11 +35,13 @@ class _AvatarScreenState extends State<AvatarScreen> {
   ];
 
   List<Color?> textAvatarsColor = [null];
+  List<int> textAvatarsIndex = [34];
 
   final List<Widget> imageAvatars = [
     const Avatar1(size: 100, imagePath: 'assets/bored.png'),
   ];
   List<Color?> imageAvatarsColor = [null];
+  List<int> imageAvatarsIndex = [35];
 
   final List<Widget> iconAvatars = [
     const Avatar3(
@@ -55,6 +56,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
   ];
 
   List<Color?> iconAvatarsColor = [null];
+  List<int> iconAvatarsIndex = [36];
 
   @override
   Widget build(BuildContext context) {
@@ -96,11 +98,13 @@ class _AvatarScreenState extends State<AvatarScreen> {
                               ),
                               GestureDetector(
                                 child: Icon(
-                                  isFavorite ? Icons.star : Icons.star_border_outlined,
+                                  isFavorite
+                                      ? Icons.star
+                                      : Icons.star_border_outlined,
                                   color: Colors.amber,
                                 ),
-
                                 onTap: () {
+                                  favProviderModel.add(textAvatarsIndex[index]);
                                   setState(() {
                                     isFavorite = !isFavorite;
                                   });
@@ -144,11 +148,14 @@ class _AvatarScreenState extends State<AvatarScreen> {
                               ),
                               GestureDetector(
                                 child: Icon(
-                                  isFavorite1 ? Icons.star : Icons.star_border_outlined,
+                                  isFavorite1
+                                      ? Icons.star
+                                      : Icons.star_border_outlined,
                                   color: Colors.amber,
                                 ),
-
                                 onTap: () {
+                                  favProviderModel
+                                      .add(imageAvatarsIndex[index]);
                                   setState(() {
                                     isFavorite1 = !isFavorite1;
                                   });
@@ -192,11 +199,13 @@ class _AvatarScreenState extends State<AvatarScreen> {
                               ),
                               GestureDetector(
                                 child: Icon(
-                                  isFavorite2 ? Icons.star : Icons.star_border_outlined,
+                                  isFavorite2
+                                      ? Icons.star
+                                      : Icons.star_border_outlined,
                                   color: Colors.amber,
                                 ),
-
                                 onTap: () {
+                                  favProviderModel.add(iconAvatarsIndex[index]);
                                   setState(() {
                                     isFavorite2 = !isFavorite2;
                                   });

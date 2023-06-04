@@ -45,6 +45,7 @@ class _PaginationScreenState extends State<PaginationScreen> {
     ),
   ];
   List<Color?> pagesLikeButtonColor = [null, null, null, null, null];
+  List<int> pagesLikeButtonIndex = [65, 66, 67, 68, 69];
 
   @override
   Widget build(BuildContext context) {
@@ -73,13 +74,7 @@ class _PaginationScreenState extends State<PaginationScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 10, vertical: 8),
-                              child: pages[index],
-                            ),
-                          );
+                          favProviderModel.add(pagesLikeButtonIndex[index]);
                           setState(() {
                             pagesLikeButtonColor[index] = Colors.amber;
                           });
