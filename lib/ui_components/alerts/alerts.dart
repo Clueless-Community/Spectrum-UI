@@ -33,6 +33,7 @@ class _AlertScreenState extends State<AlertScreen> {
   ];
 
   List<Color?> coluredAlertsColor = [null, null, null, null];
+  List<int> coluredAlertsIndex = [14, 15, 16, 17];
 
   final List<Widget> simpleAlerts = [
     const Alert5("AMessage", "ADescriptions"),
@@ -42,6 +43,7 @@ class _AlertScreenState extends State<AlertScreen> {
   ];
 
   List<Color?> simpleAlertsColor = [null, null, null, null];
+  List<int> simpleAlertsIndex = [18, 19, 20, 21];
 
   final List<Widget> simpleAlertsDarkMode = [
     const Alert9("AMessage", "ADescriptions"),
@@ -51,6 +53,7 @@ class _AlertScreenState extends State<AlertScreen> {
   ];
 
   List<Color?> simpleAlertsDarkModeColor = [null, null, null, null];
+  List<int> simpleAlertsDarkModeIndex = [22, 23, 24, 25];
 
   @override
   Widget build(BuildContext context) {
@@ -93,12 +96,8 @@ class _AlertScreenState extends State<AlertScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: coluredAlerts[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(coluredAlertsIndex[index]);
                                   setState(() {
                                     coluredAlertsColor[index] = Colors.amber;
                                   });
@@ -153,12 +152,8 @@ class _AlertScreenState extends State<AlertScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: simpleAlerts[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(simpleAlertsIndex[index]);
                                   setState(() {
                                     simpleAlertsColor[index] = Colors.amber;
                                   });
@@ -213,12 +208,8 @@ class _AlertScreenState extends State<AlertScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: simpleAlertsDarkMode[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(simpleAlertsIndex[index]);
                                   setState(() {
                                     simpleAlertsDarkModeColor[index] =
                                         Colors.amber;

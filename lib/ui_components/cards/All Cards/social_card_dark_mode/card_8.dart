@@ -14,7 +14,7 @@ class EightCard extends StatelessWidget {
           padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10),
           child: Column(
             children: [
-               Row(
+               const Row(
                 children: [
                   CircleAvatar(),
                   SizedBox(
@@ -82,7 +82,7 @@ class EightCard extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10),
-               Row(
+               const Row(
                 children: [
                   Text(
                     "Roshan Kumar",
@@ -101,7 +101,7 @@ class EightCard extends StatelessWidget {
               const SizedBox(
                 height: 3,
               ),
-               Row(
+               const Row(
                 children: [
                   Text(
                     "@HSmith78",
@@ -112,7 +112,7 @@ class EightCard extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-               Row(
+               const Row(
                 children: [
                   Text(
                     "Hey I'm Henry",
@@ -131,7 +131,7 @@ class EightCard extends StatelessWidget {
                   )
                 ],
               ),
-               Row(
+               const Row(
                 children: [
                   Icon(
                     Icons.color_lens,
@@ -146,7 +146,7 @@ class EightCard extends StatelessWidget {
                   ),
                 ],
               ),
-               Row(
+               const Row(
                 children: [
                   Icon(
                     Icons.baby_changing_station,
@@ -164,7 +164,7 @@ class EightCard extends StatelessWidget {
                   ),
                 ],
               ),
-               Row(
+               const Row(
                 children: [
                   Icon(
                     Icons.circle,
@@ -183,7 +183,7 @@ class EightCard extends StatelessWidget {
                 height: 10,
               ),
 
-              Row(
+              const Row(
                 children: [
                   SizedBox(
                     // width: double.infinity,

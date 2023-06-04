@@ -26,6 +26,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
       2: buildSegment("Text", color),
     };
     List<Color?> segmentedControlFavColor = [null, null, null, null];
+    List<int> segmentedControlFavIndex = [61, 62, 63, 64];
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -62,14 +63,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: RectangularSelections(
-                                values: const ['Text', 'Text', 'Text'],
-                                onSelected: (index) {},
-                              ),
-                            ),
-                          );
+                          favProviderModel.add(segmentedControlFavIndex[0]);
                         },
                         child: Icon(
                           Icons.star_border_outlined,
@@ -88,7 +82,6 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
           Consumer<FavoritesProvider>(
             builder: (context, favProviderModel, child) => Column(
               children: [
-
                 Center(
                   child: RadioChips(
                     values: const ['Text', 'Text', 'Text'],
@@ -107,14 +100,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: RadioChips(
-                                values: const ['Text', 'Text', 'Text'],
-                                onSelected: (index) {},
-                              ),
-                            ),
-                          );
+                          favProviderModel.add(segmentedControlFavIndex[1]);
                           setState(() {
                             segmentedControlFavColor[2] = Colors.amber;
                           });
@@ -133,7 +119,6 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
           const SizedBox(
             height: 20,
           ),
-
           Consumer<FavoritesProvider>(
             builder: (context, favProviderModel, child) => Column(
               children: [
@@ -165,13 +150,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: SegmentedControlWidget(
-                                choices: choices1,
-                              ),
-                            ),
-                          );
+                          favProviderModel.add(segmentedControlFavIndex[2]);
                           setState(() {
                             segmentedControlFavColor[0] = Colors.amber;
                           });
@@ -210,13 +189,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: SegmentedControlWidget(
-                                choices: choices,
-                              ),
-                            ),
-                          );
+                          favProviderModel.add(segmentedControlFavIndex[3]);
                           setState(() {
                             segmentedControlFavColor[1] = Colors.amber;
                           });
@@ -232,7 +205,6 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
               ],
             ),
           ),
-
         ],
       ),
     );

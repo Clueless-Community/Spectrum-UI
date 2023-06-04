@@ -47,22 +47,22 @@ class _StepperwihCustomIconState extends State<StepperwihCustomIcon> {
           },
           steps: [
             Step(
-              title: Text('Step 1'),
-              content: Text('This is the content of Step 1.'),
+              title: const Text('Step 1'),
+              content: const Text('This is the content of Step 1.'),
               isActive: _currentStep >= 0,
               state:
                   _currentStep >= 0 ? StepState.complete : StepState.disabled,
             ),
             Step(
-              title: Text('Step 2'),
-              content: Text('This is the content of Step 2.'),
+              title: const Text('Step 2'),
+              content: const Text('This is the content of Step 2.'),
               isActive: _currentStep >= 1,
               state:
                   _currentStep >= 1 ? StepState.complete : StepState.disabled,
             ),
             Step(
-              title: Text('Step 3'),
-              content: Text('This is the content of Step 3.'),
+              title: const Text('Step 3'),
+              content: const Text('This is the content of Step 3.'),
               isActive: _currentStep >= 2,
               state:
                   _currentStep >= 2 ? StepState.complete : StepState.disabled,

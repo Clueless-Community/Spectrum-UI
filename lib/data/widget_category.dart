@@ -9,6 +9,7 @@ import 'package:flutter_component_ui/ui_components/pricing_cards/pricing_cards.d
 import 'package:flutter_component_ui/ui_components/segmented_controls/segmented_control_screen.dart';
 import 'package:flutter_component_ui/ui_components/steppers/steppers.dart';
 
+// import '../ui_components/progress_bars/progress_bars.dart';
 import '../ui_components/radios/radios.dart';
 import '../ui_components/sliders/sliders.dart';
 
@@ -63,10 +64,14 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Radio',
-    'categoryScreen': RadioScreen(),
+    'categoryScreen': const RadioScreen(),
   },
   {
     'categoryName': 'Stepper',
     'categoryScreen': StepperScreen(),
   },
+  // {
+  //   'categoryName': 'Progress Bars',
+  //   'categoryScreen': const ProgressBar(),
+  // },
 ];
