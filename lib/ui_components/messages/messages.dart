@@ -166,7 +166,7 @@ class _MessageScreenState extends State<MessageScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(bubbleChatIndex[index]);
+                                favProviderModel.add(inboxMessagesIndex[index]);
                                 setState(() {
                                   inboxMessagesColor[index] = Colors.amber;
                                 });
