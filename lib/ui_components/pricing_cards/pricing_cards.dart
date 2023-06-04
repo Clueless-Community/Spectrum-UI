@@ -31,6 +31,7 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
     ),
   ];
   List<Color?> pricingCardsColor = [null];
+  List<int> pricingCardsIndex = [60];
 
   @override
   Widget build(BuildContext context) {
@@ -74,12 +75,8 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: pricingCards[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(pricingCardsIndex[index]);
                                   setState(() {
                                     pricingCardsColor[index] = Colors.amber;
                                   });

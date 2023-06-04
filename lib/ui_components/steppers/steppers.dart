@@ -4,7 +4,6 @@ import 'package:flutter_component_ui/ui_components/steppers/steppers_widgets/ste
 import 'package:flutter_component_ui/ui_components/steppers/steppers_widgets/stepper_with_custom_icon.dart';
 import 'package:flutter_component_ui/ui_components/steppers/steppers_widgets/stepper_with_validation.dart';
 
-import '../../theme/theme.dart';
 
 class StepperScreen extends StatelessWidget {
   StepperScreen({super.key});
