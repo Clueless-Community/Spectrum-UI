@@ -38,7 +38,7 @@ class _StepperwithCustomColorState extends State<StepperwithCustomColor> {
                     backgroundColor: Colors.red,
                   ),
                   onPressed: details.onStepCancel,
-                  child: Text(
+                  child: const Text(
                     'Cancel',
                     style: TextStyle(color: Colors.white),
                   ),
@@ -72,18 +72,18 @@ class _StepperwithCustomColorState extends State<StepperwithCustomColor> {
           },
           steps: [
             Step(
-              title: Text('Step 1'),
-              content: Text('This is the content for Step 1'),
+              title: const Text('Step 1'),
+              content: const Text('This is the content for Step 1'),
               isActive: _currentStep == 0,
             ),
             Step(
-              title: Text('Step 2'),
-              content: Text('This is the content for Step 2'),
+              title: const Text('Step 2'),
+              content: const Text('This is the content for Step 2'),
               isActive: _currentStep == 1,
             ),
             Step(
-              title: Text('Step 3'),
-              content: Text('This is the content for Step 3'),
+              title: const Text('Step 3'),
+              content: const Text('This is the content for Step 3'),
               isActive: _currentStep == 2,
             ),
           ],

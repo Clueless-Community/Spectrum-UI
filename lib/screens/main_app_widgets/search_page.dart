@@ -12,63 +12,63 @@ import '../../ui_components/messages/all_messages/bubble_message/message_4.dart'
 Color? color;
 
 //add differnt categories of widgets as a form of List<Widget> and the label you want to search of it as in the next list
-List<List<Widget>> allwidgets = [
-  [
-    const Button2("button"),
-    const Button4("button"),
-    const Button10("button"),
-  ],
-  [
-    const Button1("button"),
-    const Button3("button"),
-    const Button5("button"),
-    const Button7("button"),
-    const Button9("button")
-  ],
-  [
-    const Button6("button"),
-  ],
-  [
-    const BasicRadioButton(),
-    const RadioButtonwithTextandStyles(),
-    const RadioButtonwithCustomColor(),
-    const RadioButtonwithHorizontalLayout(),
-  ],
-  [
-    const Alert1("AMessage", "ADescriptions"),
-    const Alert2("AMessage", "ADescriptions"),
-    const Alert3("AMessage", "ADescriptions"),
-    const Alert4("AMessage", "ADescriptions"),
-  ],
-  [
-    const Alert5("AMessage", "ADescriptions"),
-    const Alert6("AMessage", "ADescriptions"),
-    const Alert7("AMessage", "ADescriptions"),
-    const Alert8("AMessage", "ADescriptions"),
-  ],
-  [
-    const Alert9("AMessage", "ADescriptions"),
-    const Alert10("AMessage", "ADescriptions"),
-    const Alert11("AMessage", "ADescriptions"),
-    const Alert12("AMessage", "ADescriptions"),
-  ],
-  [
-    const FirstCard(),
-    const SecondCard(),
-  ],
-  const [
-    ThirdCard(),
-    FourthCard(),
-  ],
-  const [
-    FifthCard(),
-    SixthCard(),
-  ],
-  const [
-    SeventhCard(),
-    EightCard(),
-  ],
-  [
+List<Map<Widget, int>> allwidgets = [
+  {
+    const Button2("button"): 1,
+    const Button4("button"): 2,
+    const Button10("button"): 3,
+  },
+  {
+    const Button1("button"): 4,
+    const Button3("button"): 5,
+    const Button5("button"): 6,
+    const Button7("button"): 7,
+    const Button9("button"): 8,
+  },
+  {
+    const Button6("button"): 9,
+  },
+  {
+    const BasicRadioButton(): 10,
+    const RadioButtonwithTextandStyles(): 11,
+    const RadioButtonwithCustomColor(): 12,
+    const RadioButtonwithHorizontalLayout(): 13,
+  },
+  {
+    const Alert1("AMessage", "ADescriptions"): 14,
+    const Alert2("AMessage", "ADescriptions"): 15,
+    const Alert3("AMessage", "ADescriptions"): 16,
+    const Alert4("AMessage", "ADescriptions"): 17,
+  },
+  {
+    const Alert5("AMessage", "ADescriptions"): 18,
+    const Alert6("AMessage", "ADescriptions"): 19,
+    const Alert7("AMessage", "ADescriptions"): 20,
+    const Alert8("AMessage", "ADescriptions"): 21,
+  },
+  {
+    const Alert9("AMessage", "ADescriptions"): 22,
+    const Alert10("AMessage", "ADescriptions"): 23,
+    const Alert11("AMessage", "ADescriptions"): 24,
+    const Alert12("AMessage", "ADescriptions"): 25,
+  },
+  {
+    const FirstCard(): 26,
+    const SecondCard(): 27,
+  },
+  {
+    const ThirdCard(): 28,
+    const FourthCard(): 29,
+  },
+  {
+    const FifthCard(): 30,
+    const SixthCard(): 31,
+  },
+  {
+    const SeventhCard(): 32,
+    const EightCard(): 33,
+  },
+  {
     const Avatar2(
       size: 100,
       text: Text(
@@ -79,12 +79,12 @@ List<List<Widget>> allwidgets = [
         ),
       ),
       backgroundColor: Colors.black,
-    ),
-  ],
-  [
-    const Avatar1(size: 100, imagePath: 'assets/bored.png'),
-  ],
-  [
+    ): 34,
+  },
+  {
+    const Avatar1(size: 100, imagePath: 'assets/bored.png'): 35,
+  },
+  {
     const Avatar3(
       size: 100,
       icon: Icon(
@@ -93,113 +93,123 @@ List<List<Widget>> allwidgets = [
         size: 50,
       ),
       backgroundColor: Colors.black,
-    ),
-  ],
-  [
+    ): 36,
+  },
+  {
     const TextArea1(
       label: "TextArea1",
       hinttext: "Write Message",
-    ),
+    ): 37,
     const TextArea2(
       label: "TextArea2",
       hinttext: "Write Description",
-    ),
+    ): 38,
     const TextArea3(
       label: "TextArea3",
       hinttext: "Write Description",
-    ),
+    ): 39,
     const TextArea4(
       label: "TextArea4",
       hinttext: "Write Description",
-    )
-  ],
-  [
+    ): 40
+  },
+  {
     const InputField1(
       label: "Title",
       hinttext: "Input Title",
-    ),
+    ): 41,
     const InputField2(
       label: "Title Lite",
       hinttext: "Input Title",
-    ),
+    ): 42,
     const InputField3(
       label: "Title Highlighted",
       hinttext: "Input Title",
-    ),
+    ): 43,
     const InputField4(
       label: "Title Lite-X",
       hinttext: "Input Title",
-    ),
+    ): 44,
     const InputField5(
       label: "Title Type B",
       hinttext: "Input Title",
-    ),
-  ],
-  [
+    ): 45,
+  },
+  {
     const Slider4(
       activeColor: Colors.white,
       inactiveColor: Colors.black,
       maxRange: 100,
-    ),
-  ],
-  [
+    ): 46,
+  },
+  {
     const Slider1(
       activeColor: Colors.cyan,
       inactiveColor: Colors.black,
       maxRange: 100.0,
-    ),
-    Slider2(
-      activeColor: const Color(0xFF005F99),
-      inactiveColor: Colors.purple.shade600,
-      maxRange: 100,
-    ),
+    ): 47,
     const Slider3(
       activeColor: Colors.red,
       inactiveColor: Colors.white,
       maxRange: 100,
-    ),
-  ],
-  [
+    ): 48,
+    // const Slider5(
+    //   activeColor: Colors.pink,
+    //   inactiveColor: Colors.amberAccent,
+    //   maxRange: 100,
+    // ):49,
+    // const Slider6(
+    //   activeColor: Colors.lightBlueAccent,
+    //   inactiveColor: Color(0xFF005F99),
+    //   maxRange: 60,
+    // ):50,
+    Slider2(
+      activeColor: const Color(0xFF005F99),
+      inactiveColor: Colors.purple.shade600,
+      maxRange: 100,
+    ): 51,
+  },
+  {
     const InboxMessage1(
       name: "ClueLess",
       username: "clueless@gmail.com",
       msg: "Hey let's start",
       imgUrl: 'https://picsum.photos/seed/407/600',
-    ),
+    ): 52,
     const InboxMessage2(
       name: "ClueLess",
       username: "clueless@gmail.com",
       msg: "Hey let's start",
       imgUrl: 'https://picsum.photos/seed/407/600',
-    ),
+    ): 53,
     const InboxMessage3(
       name: "ClueLess",
       username: "clueless@gmail.com",
       msg: "Hey let's start",
       imgUrl: 'https://picsum.photos/seed/407/600',
-    ),
+    ): 54,
     const InboxMessage4(
       name: "ClueLess",
       username: "clueless@gmail.com",
       msg: "Hey let's start ",
       imgUrl: 'https://picsum.photos/seed/407/600',
-    ),
-  ],
-  [
+    ): 55,
+  },
+  {
     const Message1(
       message: "Hello boy",
-    ),
+    ): 56,
     const Message2(
       message: "Hello broo",
-    ),
+    ): 57,
     const Message3(
       message: "Hey whats up man",
-    ),
+    ): 58,
     const Message4(
       message: "Hello broo",
-    ),
-  ],
-  [
+    ): 59,
+  },
+  {
     const PricingCard1(
       tier: 'FREE',
       supportingText:
@@ -214,9 +224,9 @@ List<List<Widget>> allwidgets = [
       textColor: Colors.white,
       buttonColor: Color(0xff00c2cb),
       buttonTextColor: Color(0xff0f172a),
-    ),
-  ],
-  [
+    ): 60,
+  },
+  {
     Center(
       child: SegmentedControlWidget(
         choices: {
@@ -225,7 +235,7 @@ List<List<Widget>> allwidgets = [
           2: buildSegment("Year", color),
         },
       ),
-    ),
+    ): 61,
     Center(
       child: SegmentedControlWidget(
         choices: {
@@ -234,52 +244,53 @@ List<List<Widget>> allwidgets = [
           2: buildSegment("Year", color),
         },
       ),
-    ),
+    ): 62,
     Center(
       child: RadioChips(
         values: const ['Text', 'Text', 'Text'],
         onSelected: (index) {},
       ),
-    ),
+    ): 63,
     Center(
       child: RectangularSelections(
         values: const ['Text', 'Text', 'Text'],
         onSelected: (index) {},
       ),
-    ),
-  ],
-  [
+    ): 64,
+  },
+  {
     const Page1(
       iconColor: Colors.black,
       containerColor: Colors.white,
       textColor: Colors.black,
       hightlightColor: Color(0xFF005F99),
-    ),
+    ): 65,
     const Page2(
       iconColor: Colors.black,
       textColor: Colors.black,
       // highlightedColor: Colors.blue,
-    ),
+    ): 66,
     const Page3(
       iconColor: Colors.white,
       containerColor: Colors.black,
       textColor: Colors.white,
-    ),
+    ): 67,
     const Page4(
       iconColor: Colors.black,
       containerColor: Colors.white,
       textColor: Colors.black,
-    ),
+    ): 68,
     const Page5(
       iconColor: Colors.black,
       containerColor: Colors.white,
       textColor: Colors.black,
       hightlightColor: Color(0xFF00C2CB),
-    ),
-  ]
+    ): 69,
+  }
 ];
 //results get added to this list
 List<Widget> results = [];
+List<int> resultindex = [];
 //this list is for converting the stared icon to amber color.
 List<Color?> resultStar = [];
 //the tags wil not search for exact name if it just contains the searched word it will add it
@@ -382,8 +393,11 @@ class _SearchPageState extends State<SearchPage> {
                           if (tags[i]
                               .toLowerCase()
                               .contains(_controller.text.toLowerCase())) {
+                            allwidgets[i].forEach((key, value) {
+                              results.add(key);
+                              resultindex.add(value);
+                            });
                             for (int j = 0; j < allwidgets[i].length; j++) {
-                              results.add(allwidgets[i][j]);
                               resultStar.add(null);
                             }
                           }
@@ -439,16 +453,7 @@ class _SearchPageState extends State<SearchPage> {
                                 ),
                                 GestureDetector(
                                   onTap: () {
-                                    favProviderModel.add(
-                                      Container(
-                                        padding: const EdgeInsets.symmetric(
-                                          horizontal: 12,
-                                          vertical: 8,
-                                        ),
-                                        width: double.infinity,
-                                        child: results[index],
-                                      ),
-                                    );
+                                    favProviderModel.add(resultindex[index]);
                                     setState(() {
                                       resultStar[index] = Colors.amber;
                                     });

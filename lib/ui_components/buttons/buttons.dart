@@ -34,6 +34,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
   ];
 
   List<Color?> customOutlineButtonColor = [null, null, null];
+  List<int> customOutlineButtonIndex = [1, 2, 3];
 
   final List<Widget> customElevatedButton = [
     const Button1("button"),
@@ -43,11 +44,13 @@ class _ButtonScreenState extends State<ButtonScreen> {
     const Button9("button")
   ];
   List<Color?> customElevatedButtonColor = [null, null, null, null, null];
+  List<int> customElevatedButtonIndex = [4, 5, 6, 7, 8];
 
   final List<Widget> customTextButton = [
     const Button6("button"),
   ];
   List<Color?> customTextButtonColor = [null];
+  List<int> customTextButtonIndex = [9];
 
   final List<Widget> customAnimatedButton = [
     const Button11("button"),
@@ -102,16 +105,8 @@ class _ButtonScreenState extends State<ButtonScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 12,
-                                        vertical: 8,
-                                      ),
-                                      width: double.infinity,
-                                      child: customElevatedButton[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(customElevatedButtonIndex[index]);
                                   setState(() {
                                     customElevatedButtonColor[index] =
                                         Colors.amber;
@@ -168,16 +163,8 @@ class _ButtonScreenState extends State<ButtonScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 12,
-                                        vertical: 8,
-                                      ),
-                                      width: double.infinity,
-                                      child: customOutlineButton[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(customOutlineButtonIndex[index]);
                                   setState(() {
                                     customOutlineButtonColor[index] =
                                         Colors.amber;
@@ -234,16 +221,8 @@ class _ButtonScreenState extends State<ButtonScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 12,
-                                        vertical: 8,
-                                      ),
-                                      width: double.infinity,
-                                      child: customTextButton[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(customTextButtonIndex[index]);
                                   setState(() {
                                     customTextButtonColor[index] = Colors.amber;
                                   });
