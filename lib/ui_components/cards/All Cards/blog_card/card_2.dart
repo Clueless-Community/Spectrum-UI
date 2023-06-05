@@ -8,9 +8,21 @@ class SecondCard extends StatelessWidget {
     return Card(
       child: Row(
         children: [
+
+          Container(
+            padding: const EdgeInsets.only(left: 5, top: 2, bottom: 2),
+            height: (MediaQuery.of(context).size.width / 2.4) * 0.83,
+            width: MediaQuery.of(context).size.width -
+                MediaQuery.of(context).size.width / 2.4 -
+                8,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
+
               children: [
                 Container(
                   padding: const EdgeInsets.only(left: 5, top: 2, bottom: 2),

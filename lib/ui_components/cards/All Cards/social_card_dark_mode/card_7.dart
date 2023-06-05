@@ -16,10 +16,40 @@ class SeventhCard extends StatelessWidget {
           children: [
              const Row(
               children: [
+                 Row(
+                  children: [
+                    Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                      size: 30,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                      size: 30,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                      size: 30,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                      size: 30,
+                    ),
+                    Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                      size: 30,
+                    )
+                  ],
+
                 Icon(
                   Icons.star,
                   color: Colors.amber,
                   size: 25,
+
                 ),
                 Icon(
                   Icons.star,
@@ -65,6 +95,9 @@ class SeventhCard extends StatelessWidget {
                 SizedBox(
                   width: 7,
                 ),
+
+                 Row(
+
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

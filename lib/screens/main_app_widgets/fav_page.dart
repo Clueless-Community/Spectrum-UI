@@ -28,12 +28,12 @@ class _FavPageState extends State<FavPage> {
             builder: (context, favProviderModel, child) => AlertDialog(
               title: const Text('Remove'),
               content: const SingleChildScrollView(
-                child: ListBody(
-                  children: <Widget>[
-                    Text(
-                        'Do you want to remove this widget from the favorites list?'),
-                  ],
-                ),
+                //child: ListBody(
+                 // children: <Widget>[
+                    //Text(
+                        //'Do you want to remove this widget from the favorites list?'),
+                  //],
+               // ),
               ),
               actions: <Widget>[
                 TextButton(

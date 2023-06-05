@@ -15,7 +15,7 @@ class FourthCard extends StatelessWidget {
                 const EdgeInsets.only(left: 5, top: 10, bottom: 10, right: 5),
             child: Column(
               children: [
-                const Row(
+                 Row(
                   children: [
                     CircleAvatar(),
                     SizedBox(
@@ -83,6 +83,7 @@ class FourthCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
+               Row(
                  const Row(
                   children: [
                     Text(
@@ -101,6 +102,10 @@ class FourthCard extends StatelessWidget {
                     )
                   ],
                 ),
+                const SizedBox(
+                  height: 3,
+                ),
+                Row(
 
                  const Row(
                   children: [
@@ -113,6 +118,7 @@ class FourthCard extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
+                   Row(
                  const Row(
                   children: [
                     Text(
@@ -132,7 +138,7 @@ class FourthCard extends StatelessWidget {
                     )
                   ],
                 ),
-                const Row(
+                 Row(
                   children: [
                     Icon(
                       Icons.color_lens,
@@ -150,7 +156,7 @@ class FourthCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Row(
+                Row(
                   children: [
                     Icon(
                       Icons.baby_changing_station,
@@ -169,7 +175,7 @@ class FourthCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Row(
+                 Row(
                   children: [
                     Icon(
                       Icons.circle,
@@ -190,6 +196,8 @@ class FourthCard extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
+                 Row(
+                  children: [
                  const Row(
                    children: [
                     SizedBox(

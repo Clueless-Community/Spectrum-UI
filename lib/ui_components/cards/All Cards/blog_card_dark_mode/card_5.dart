@@ -15,8 +15,13 @@ class FifthCard extends StatelessWidget {
                 height: 10,
               ),
               Container(
+
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                child: Column(
+
                 padding: const EdgeInsets.all(15),
                 child: const Column(
+
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(

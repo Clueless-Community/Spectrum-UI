@@ -16,6 +16,75 @@ class EightCard extends StatelessWidget {
             children: [
                const Row(
                 children: [
+                   Row(
+                    children: [
+                      CircleAvatar(),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        children: [
+                          Text(
+                            "Post",
+                            style: TextStyle(
+                                color: Color.fromARGB(
+                                  255,
+                                  133,
+                                  131,
+                                  131,
+                                ),
+                                fontSize: 18),
+                          ),
+                          Text(
+                            "200",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        children: [
+                          Text("Followers",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 133, 131, 131),
+                                  fontSize: 18)),
+                          Text(
+                            "1920",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Column(
+                        children: [
+                          Text("Following",
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 133, 131, 131),
+                                  fontSize: 18)),
+                          Text(
+                            "303",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                   Row(
                   CircleAvatar(),
                   SizedBox(
                     width: 20,
@@ -46,6 +115,9 @@ class EightCard extends StatelessWidget {
                   SizedBox(
                     width: 20,
                   ),
+
+                  Row(
+
                   Column(
                     children: [
                       Text("Followers",
@@ -64,6 +136,8 @@ class EightCard extends StatelessWidget {
                   SizedBox(
                     width: 20,
                   ),
+                   Row(
+
                   Column(
                     children: [
                       Text("Following",
@@ -88,6 +162,53 @@ class EightCard extends StatelessWidget {
                     "Roshan Kumar",
                     style: TextStyle(color: Colors.cyan, fontSize: 18),
                   ),
+                   Row(
+                    children: [
+                      Icon(
+                        Icons.color_lens,
+                        color: Colors.amber,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "UX Designer",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
+                    ],
+                  ),
+                   Row(
+                    children: [
+                      Icon(
+                        Icons.baby_changing_station,
+                        color: Colors.brown,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "Proud Dad",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                   Row(
+                    children: [
+                      Icon(
+                        Icons.circle,
+                        color: Color.fromARGB(255, 195, 253, 129),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "Avid Tennis Player",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
+                    ],
                   SizedBox(
                     width: 5,
                   ),
@@ -137,6 +258,37 @@ class EightCard extends StatelessWidget {
                     Icons.color_lens,
                     color: Colors.amber,
                   ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        // width: double.infinity,
+                        width: 78,
+                        child: Stack(
+                          children: [
+                            CircleAvatar(
+                              radius: 12,
+                            ),
+                            Positioned(
+                                left: 13,
+                                child: CircleAvatar(
+                                  radius: 12,
+                                )),
+                            Positioned(
+                                left: 27,
+                                child: CircleAvatar(
+                                  radius: 12,
+                                )),
+                            Positioned(
+                                left: 40,
+                                child: CircleAvatar(
+                                  radius: 12,
+                                )),
+                            Positioned(
+                                left: 50,
+                                child: CircleAvatar(
+                                  radius: 12,
+                                )),
+                          ],
                   SizedBox(
                     width: 5,
                   ),
