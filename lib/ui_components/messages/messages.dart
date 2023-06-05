@@ -49,6 +49,7 @@ class _MessageScreenState extends State<MessageScreen> {
   ];
 
   List<Color?> inboxMessagesColor = [null, null, null, null];
+  List<int> inboxMessagesIndex = [52, 53, 54, 55];
 
   final List<Widget> bubbleChat = [
     const Message1(
@@ -66,6 +67,7 @@ class _MessageScreenState extends State<MessageScreen> {
   ];
 
   List<Color?> bubbleChatColor = [null, null, null, null];
+  List<int> bubbleChatIndex = [56, 57, 58, 59];
 
   @override
   Widget build(BuildContext context) {
@@ -110,12 +112,7 @@ class _MessageScreenState extends State<MessageScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: bubbleChat[index],
-                                  ),
-                                );
+                                favProviderModel.add(bubbleChatIndex[index]);
                                 setState(() {
                                   bubbleChatColor[index] = Colors.amber;
                                 });
@@ -169,12 +166,7 @@ class _MessageScreenState extends State<MessageScreen> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                favProviderModel.add(
-                                  Padding(
-                                    padding: const EdgeInsets.all(12.0),
-                                    child: inboxMessages[index],
-                                  ),
-                                );
+                                favProviderModel.add(inboxMessagesIndex[index]);
                                 setState(() {
                                   inboxMessagesColor[index] = Colors.amber;
                                 });

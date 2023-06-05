@@ -8,7 +8,7 @@ class ThirdCard extends StatelessWidget {
     return Card(
       elevation: 7,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -17,27 +17,27 @@ class ThirdCard extends StatelessWidget {
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
-                  size: 30,
+                  size: 25,
                 ),
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
-                  size: 30,
+                  size: 25,
                 ),
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
-                  size: 30,
+                  size: 25,
                 ),
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
-                  size: 30,
+                  size: 25,
                 ),
                 Icon(
                   Icons.star_outline,
                   color: Colors.amber,
-                  size: 30,
+                  size: 25,
                 )
               ],
             ),

@@ -16,6 +16,10 @@ class AvatarScreen extends StatefulWidget {
 }
 
 class _AvatarScreenState extends State<AvatarScreen> {
+  bool isFavorite2 = false;
+  bool isFavorite1 = false;
+  bool isFavorite = false;
+
   final List<Widget> textAvatars = [
     const Avatar2(
       size: 100,
@@ -31,13 +35,13 @@ class _AvatarScreenState extends State<AvatarScreen> {
   ];
 
   List<Color?> textAvatarsColor = [null];
+  List<int> textAvatarsIndex = [34];
 
   final List<Widget> imageAvatars = [
     const Avatar1(size: 100, imagePath: 'assets/bored.png'),
   ];
   List<Color?> imageAvatarsColor = [null];
-
-  List<Color?> customElevatedButtonColorColor = [null];
+  List<int> imageAvatarsIndex = [35];
 
   final List<Widget> iconAvatars = [
     const Avatar3(
@@ -52,6 +56,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
   ];
 
   List<Color?> iconAvatarsColor = [null];
+  List<int> iconAvatarsIndex = [36];
 
   @override
   Widget build(BuildContext context) {
@@ -92,21 +97,18 @@ class _AvatarScreenState extends State<AvatarScreen> {
                                 width: 5,
                               ),
                               GestureDetector(
+                                child: Icon(
+                                  isFavorite
+                                      ? Icons.star
+                                      : Icons.star_border_outlined,
+                                  color: Colors.amber,
+                                ),
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: textAvatars[index],
-                                    ),
-                                  );
+                                  favProviderModel.add(textAvatarsIndex[index]);
                                   setState(() {
-                                    textAvatarsColor[index] = Colors.amber;
+                                    isFavorite = !isFavorite;
                                   });
                                 },
-                                child: Icon(
-                                  Icons.star_border_outlined,
-                                  color: textAvatarsColor[index],
-                                ),
                               ),
                             ],
                           ),
@@ -145,21 +147,19 @@ class _AvatarScreenState extends State<AvatarScreen> {
                                 width: 5,
                               ),
                               GestureDetector(
+                                child: Icon(
+                                  isFavorite1
+                                      ? Icons.star
+                                      : Icons.star_border_outlined,
+                                  color: Colors.amber,
+                                ),
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: imageAvatars[index],
-                                    ),
-                                  );
+                                  favProviderModel
+                                      .add(imageAvatarsIndex[index]);
                                   setState(() {
-                                    imageAvatarsColor[index] = Colors.amber;
+                                    isFavorite1 = !isFavorite1;
                                   });
                                 },
-                                child: Icon(
-                                  Icons.star_border_outlined,
-                                  color: imageAvatarsColor[index],
-                                ),
                               ),
                             ],
                           ),
@@ -198,21 +198,18 @@ class _AvatarScreenState extends State<AvatarScreen> {
                                 width: 5,
                               ),
                               GestureDetector(
+                                child: Icon(
+                                  isFavorite2
+                                      ? Icons.star
+                                      : Icons.star_border_outlined,
+                                  color: Colors.amber,
+                                ),
                                 onTap: () {
-                                  favProviderModel.add(
-                                    Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: iconAvatars[index],
-                                    ),
-                                  );
+                                  favProviderModel.add(iconAvatarsIndex[index]);
                                   setState(() {
-                                    iconAvatarsColor[index] = Colors.amber;
+                                    isFavorite2 = !isFavorite2;
                                   });
                                 },
-                                child: Icon(
-                                  Icons.star_border_outlined,
-                                  color: iconAvatarsColor[index],
-                                ),
                               ),
                             ],
                           ),

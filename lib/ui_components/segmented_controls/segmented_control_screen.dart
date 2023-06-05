@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../provider/favorite_provider.dart';
+import '../../theme/theme.dart';
 import 'segmented_controls.dart';
 
 class SegmentedControlScreen extends StatefulWidget {
@@ -25,6 +26,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
       2: buildSegment("Text", color),
     };
     List<Color?> segmentedControlFavColor = [null, null, null, null];
+    List<int> segmentedControlFavIndex = [61, 62, 63, 64];
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -32,6 +34,105 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
           Consumer<FavoritesProvider>(
             builder: (context, favProviderModel, child) => Column(
               children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Segment Control Light Mode",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: MyTheme.lightBluishColor)),
+                  ),
+                ),
+                Center(
+                  child: RectangularSelections(
+                    values: const ['Text', 'Text', 'Text'],
+                    onSelected: (index) {},
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Add to favorite'),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          favProviderModel.add(segmentedControlFavIndex[0]);
+                        },
+                        child: Icon(
+                          Icons.star_border_outlined,
+                          color: segmentedControlFavColor[3],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Consumer<FavoritesProvider>(
+            builder: (context, favProviderModel, child) => Column(
+              children: [
+                Center(
+                  child: RadioChips(
+                    values: const ['Text', 'Text', 'Text'],
+                    onSelected: (index) {},
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text('Add to favorite'),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          favProviderModel.add(segmentedControlFavIndex[1]);
+                          setState(() {
+                            segmentedControlFavColor[2] = Colors.amber;
+                          });
+                        },
+                        child: Icon(
+                          Icons.star_border_outlined,
+                          color: segmentedControlFavColor[2],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Consumer<FavoritesProvider>(
+            builder: (context, favProviderModel, child) => Column(
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Segment Control Dark Mode",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: MyTheme.lightBluishColor)),
+                  ),
+                ),
                 Center(
                   child: SegmentedControlWidget(
                     choices: choices1,
@@ -49,13 +150,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: SegmentedControlWidget(
-                                choices: choices1,
-                              ),
-                            ),
-                          );
+                          favProviderModel.add(segmentedControlFavIndex[2]);
                           setState(() {
                             segmentedControlFavColor[0] = Colors.amber;
                           });
@@ -94,13 +189,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: SegmentedControlWidget(
-                                choices: choices,
-                              ),
-                            ),
-                          );
+                          favProviderModel.add(segmentedControlFavIndex[3]);
                           setState(() {
                             segmentedControlFavColor[1] = Colors.amber;
                           });
@@ -108,97 +197,6 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
                         child: Icon(
                           Icons.star_border_outlined,
                           color: segmentedControlFavColor[1],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Consumer<FavoritesProvider>(
-            builder: (context, favProviderModel, child) => Column(
-              children: [
-                Center(
-                  child: RadioChips(
-                    values: const ['Text', 'Text', 'Text'],
-                    onSelected: (index) {},
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text('Add to favorite'),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: RadioChips(
-                                values: const ['Text', 'Text', 'Text'],
-                                onSelected: (index) {},
-                              ),
-                            ),
-                          );
-                          setState(() {
-                            segmentedControlFavColor[2] = Colors.amber;
-                          });
-                        },
-                        child: Icon(
-                          Icons.star_border_outlined,
-                          color: segmentedControlFavColor[2],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Consumer<FavoritesProvider>(
-            builder: (context, favProviderModel, child) => Column(
-              children: [
-                Center(
-                  child: RectangularSelections(
-                    values: const ['Text', 'Text', 'Text'],
-                    onSelected: (index) {},
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text('Add to favorite'),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          favProviderModel.add(
-                            Center(
-                              child: RectangularSelections(
-                                values: const ['Text', 'Text', 'Text'],
-                                onSelected: (index) {},
-                              ),
-                            ),
-                          );
-                        },
-                        child: Icon(
-                          Icons.star_border_outlined,
-                          color: segmentedControlFavColor[3],
                         ),
                       ),
                     ],

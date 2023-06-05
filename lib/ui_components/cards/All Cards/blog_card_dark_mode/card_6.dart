@@ -10,7 +10,7 @@ class SixthCard extends StatelessWidget {
         children: [
           Container(
             color: Colors.black,
-            padding: const EdgeInsets.only(left: 5, top: 2, bottom: 2),
+            padding: const EdgeInsets.all(6),
             height: (MediaQuery.of(context).size.width / 2.4) * 0.83,
             width: MediaQuery.of(context).size.width -
                 MediaQuery.of(context).size.width / 2.4 -
@@ -67,7 +67,8 @@ class SixthCard extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: MediaQuery.of(context).size.width / 2.4,
+            width: MediaQuery.of(context).size.width/2.78,
+        height: MediaQuery.of(context).size.width/2.9,
             child: Image.asset(
               'assets/card_image/cardo.png',
               fit: BoxFit.cover,

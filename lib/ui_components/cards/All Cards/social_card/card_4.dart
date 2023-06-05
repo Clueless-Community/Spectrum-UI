@@ -84,6 +84,7 @@ class FourthCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                Row(
+                 const Row(
                   children: [
                     Text(
                       "Roshan Kumar",
@@ -105,17 +106,20 @@ class FourthCard extends StatelessWidget {
                   height: 3,
                 ),
                 Row(
+
+                 const Row(
                   children: [
                     Text(
                       "@HSmith78",
-                      style: TextStyle(color: Colors.grey, fontSize: 17),
+                      style: TextStyle(color: Colors.grey, fontSize: 15),
                     )
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                    Row(
+                 const Row(
                   children: [
                     Text(
                       "Hey I'm Henry",
@@ -139,6 +143,7 @@ class FourthCard extends StatelessWidget {
                     Icon(
                       Icons.color_lens,
                       color: Colors.amber,
+                      size: 20,
                     ),
                     SizedBox(
                       width: 5,
@@ -147,7 +152,7 @@ class FourthCard extends StatelessWidget {
                       "UX Designer",
                       style: TextStyle(
                           color: Color.fromARGB(255, 50, 111, 161),
-                          fontSize: 18),
+                          fontSize: 16 ),
                     ),
                   ],
                 ),
@@ -156,6 +161,7 @@ class FourthCard extends StatelessWidget {
                     Icon(
                       Icons.baby_changing_station,
                       color: Colors.brown,
+                      size: 20,
                     ),
                     SizedBox(
                       width: 5,
@@ -163,7 +169,7 @@ class FourthCard extends StatelessWidget {
                     Text(
                       "Proud Dad",
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Color.fromARGB(255, 50, 111, 161),
                       ),
                     ),
@@ -174,6 +180,7 @@ class FourthCard extends StatelessWidget {
                     Icon(
                       Icons.circle,
                       color: Color.fromARGB(255, 195, 253, 129),
+                      size: 20,
                     ),
                     SizedBox(
                       width: 5,
@@ -182,7 +189,7 @@ class FourthCard extends StatelessWidget {
                       "Avid Tennis Player",
                       style: TextStyle(
                           color: Color.fromARGB(255, 50, 111, 161),
-                          fontSize: 18),
+                          fontSize: 16),
                     ),
                   ],
                 ),
@@ -191,31 +198,35 @@ class FourthCard extends StatelessWidget {
                 ),
                  Row(
                   children: [
+                 const Row(
+                   children: [
                     SizedBox(
                       // width: double.infinity,
-                      width: 103,
+                      width: 90,
                       child: Stack(
                         children: [
                           CircleAvatar(
                             radius: 12,
                           ),
                           Positioned(
-                              left: 17,
+                              left: 12,
+                              child: CircleAvatar(
+                                radius: 12,
+                                backgroundColor: Colors.amber,
+                              )),
+                          Positioned(
+                              left: 25,
                               child: CircleAvatar(
                                 radius: 12,
                               )),
                           Positioned(
-                              left: 37,
+                              left: 38,
                               child: CircleAvatar(
                                 radius: 12,
+                                backgroundColor: Colors.amber,
                               )),
                           Positioned(
-                              left: 57,
-                              child: CircleAvatar(
-                                radius: 12,
-                              )),
-                          Positioned(
-                              left: 77,
+                              left: 53,
                               child: CircleAvatar(
                                 radius: 12,
                               )),
@@ -223,7 +234,7 @@ class FourthCard extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "  Followed by ",
+                      "Followed by ",
                       style:
                           TextStyle(color: Color.fromARGB(255, 50, 111, 161,), fontSize: 10),
                     ),
@@ -245,6 +256,9 @@ class FourthCard extends StatelessWidget {
                           TextStyle(color: Color.fromARGB(255, 50, 111, 161), fontSize: 10),
                     )
                   ],
+                ),
+                const SizedBox(
+                  height: 5,
                 ),
                 Row(
                   children: [
@@ -280,14 +294,16 @@ class FourthCard extends StatelessWidget {
                     const SizedBox(
                       width: 10,
                     ),
-                    ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white),
-                        child: const Icon(
-                          Icons.person_add_outlined,
-                          color: Colors.black,
-                        ))
+                    Expanded(
+                      child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white),
+                          child: const Icon(
+                            Icons.person_add_outlined,
+                            color: Colors.black,
+                          )),
+                    )
                   ],
                 )
               ],
