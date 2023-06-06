@@ -105,7 +105,7 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
                                             100.0, // Set the maximum height constraint
                                       ),
                                       child: basicbottomNavbar[index],
-                                    ),
+                                    ) as int,
                                   );
                                   setState(() {
                                     basicbottomNavbarColor[index] =
@@ -187,7 +187,7 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
                                             100.0, // Set the maximum height constraint
                                       ),
                                       child: animatedbottomNavbar[index],
-                                    ),
+                                    ) as int,
                                   );
                                   setState(() {
                                     animatedbottomNavbarColor[index] =
@@ -269,7 +269,7 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
                                             100.0, // Set the maximum height constraint
                                       ),
                                       child: fabbottomNavbar[index],
-                                    ),
+                                    ) as int,
                                   );
                                   setState(() {
                                     fabbottomNavbarColor[index] = Colors.amber;
