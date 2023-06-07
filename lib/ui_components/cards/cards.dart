@@ -24,28 +24,24 @@ class _CardScreenState extends State<CardScreen> {
     FirstCard(),
     SecondCard(),
   ];
-  List<Color?> blogCardListColor = [null, null];
   List<int> blogCardListIndex = [26, 27];
 
   final socialCardList = const [
     ThirdCard(),
     FourthCard(),
   ];
-  List<Color?> socialCardListColor = [null, null];
   List<int> socialCardListIndex = [28, 29];
 
   final blogCardDarKModeList = const [
     FifthCard(),
     SixthCard(),
   ];
-  List<Color?> blogCardDarKModeListColor = [null, null];
   List<int> blogCardDarKModeListIndex = [30, 31];
 
   final socialCardDarkModeList = const [
     SeventhCard(),
     EightCard(),
   ];
-  List<Color?> socialCardDarkModeListColor = [null, null];
   List<int> socialCardDarkModeListIndex = [32, 33];
 
   @override
@@ -94,13 +90,14 @@ class _CardScreenState extends State<CardScreen> {
                             GestureDetector(
                               onTap: () {
                                 favProviderModel.add(blogCardListIndex[index]);
-                                setState(() {
-                                  blogCardListColor[index] = Colors.amber;
-                                });
+                                setState(() {});
                               },
                               child: Icon(
                                 Icons.star_border_outlined,
-                                color: blogCardListColor[index],
+                                color: (favProviderModel
+                                        .starred(blogCardListIndex[index]))
+                                    ? Colors.amber
+                                    : null,
                               ),
                             ),
                           ],
@@ -151,13 +148,14 @@ class _CardScreenState extends State<CardScreen> {
                               onTap: () {
                                 favProviderModel
                                     .add(socialCardListIndex[index]);
-                                setState(() {
-                                  socialCardListColor[index] = Colors.amber;
-                                });
+                                setState(() {});
                               },
                               child: Icon(
                                 Icons.star_border_outlined,
-                                color: socialCardListColor[index],
+                                color: (favProviderModel
+                                        .starred(socialCardListIndex[index]))
+                                    ? Colors.amber
+                                    : null,
                               ),
                             ),
                           ],
@@ -208,14 +206,14 @@ class _CardScreenState extends State<CardScreen> {
                               onTap: () {
                                 favProviderModel
                                     .add(blogCardDarKModeListIndex[index]);
-                                setState(() {
-                                  blogCardDarKModeListColor[index] =
-                                      Colors.amber;
-                                });
+                                setState(() {});
                               },
                               child: Icon(
                                 Icons.star_border_outlined,
-                                color: blogCardDarKModeListColor[index],
+                                color: (favProviderModel.starred(
+                                        blogCardDarKModeListIndex[index]))
+                                    ? Colors.amber
+                                    : null,
                               ),
                             ),
                           ],
@@ -266,14 +264,14 @@ class _CardScreenState extends State<CardScreen> {
                               onTap: () {
                                 favProviderModel
                                     .add(socialCardDarkModeListIndex[index]);
-                                setState(() {
-                                  socialCardDarkModeListColor[index] =
-                                      Colors.amber;
-                                });
+                                setState(() {});
                               },
                               child: Icon(
                                 Icons.star_border_outlined,
-                                color: socialCardDarkModeListColor[index],
+                                color: (favProviderModel.starred(
+                                        socialCardDarkModeListIndex[index]))
+                                    ? Colors.amber
+                                    : null,
                               ),
                             ),
                           ],

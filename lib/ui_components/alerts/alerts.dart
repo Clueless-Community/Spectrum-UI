@@ -32,7 +32,6 @@ class _AlertScreenState extends State<AlertScreen> {
     const Alert4("AMessage", "ADescriptions"),
   ];
 
-  List<Color?> coluredAlertsColor = [null, null, null, null];
   List<int> coluredAlertsIndex = [14, 15, 16, 17];
 
   final List<Widget> simpleAlerts = [
@@ -42,7 +41,6 @@ class _AlertScreenState extends State<AlertScreen> {
     const Alert8("AMessage", "ADescriptions"),
   ];
 
-  List<Color?> simpleAlertsColor = [null, null, null, null];
   List<int> simpleAlertsIndex = [18, 19, 20, 21];
 
   final List<Widget> simpleAlertsDarkMode = [
@@ -52,7 +50,6 @@ class _AlertScreenState extends State<AlertScreen> {
     const Alert12("AMessage", "ADescriptions"),
   ];
 
-  List<Color?> simpleAlertsDarkModeColor = [null, null, null, null];
   List<int> simpleAlertsDarkModeIndex = [22, 23, 24, 25];
 
   @override
@@ -98,13 +95,14 @@ class _AlertScreenState extends State<AlertScreen> {
                                 onTap: () {
                                   favProviderModel
                                       .add(coluredAlertsIndex[index]);
-                                  setState(() {
-                                    coluredAlertsColor[index] = Colors.amber;
-                                  });
+                                  setState(() {});
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: coluredAlertsColor[index],
+                                  color: (favProviderModel
+                                          .starred(coluredAlertsIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],
@@ -154,13 +152,14 @@ class _AlertScreenState extends State<AlertScreen> {
                                 onTap: () {
                                   favProviderModel
                                       .add(simpleAlertsIndex[index]);
-                                  setState(() {
-                                    simpleAlertsColor[index] = Colors.amber;
-                                  });
+                                  setState(() {});
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: simpleAlertsColor[index],
+                                  color: (favProviderModel
+                                          .starred(simpleAlertsIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],
@@ -210,14 +209,14 @@ class _AlertScreenState extends State<AlertScreen> {
                                 onTap: () {
                                   favProviderModel
                                       .add(simpleAlertsIndex[index]);
-                                  setState(() {
-                                    simpleAlertsDarkModeColor[index] =
-                                        Colors.amber;
-                                  });
+                                  setState(() {});
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: simpleAlertsDarkModeColor[index],
+                                  color: (favProviderModel
+                                          .starred(simpleAlertsIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],

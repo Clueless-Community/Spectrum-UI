@@ -31,7 +31,6 @@ class _ButtonScreenState extends State<ButtonScreen> {
     const Button10("button"),
   ];
 
-  List<Color?> customOutlineButtonColor = [null, null, null];
   List<int> customOutlineButtonIndex = [1, 2, 3];
 
   final List<Widget> customElevatedButton = [
@@ -41,13 +40,11 @@ class _ButtonScreenState extends State<ButtonScreen> {
     const Button7("button"),
     const Button9("button")
   ];
-  List<Color?> customElevatedButtonColor = [null, null, null, null, null];
   List<int> customElevatedButtonIndex = [4, 5, 6, 7, 8];
 
   final List<Widget> customTextButton = [
     const Button6("button"),
   ];
-  List<Color?> customTextButtonColor = [null];
   List<int> customTextButtonIndex = [9];
 
   @override
@@ -98,14 +95,14 @@ class _ButtonScreenState extends State<ButtonScreen> {
                                 onTap: () {
                                   favProviderModel
                                       .add(customElevatedButtonIndex[index]);
-                                  setState(() {
-                                    customElevatedButtonColor[index] =
-                                        Colors.amber;
-                                  });
+                                  setState(() {});
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: customElevatedButtonColor[index],
+                                  color: (favProviderModel.starred(
+                                          customElevatedButtonIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],
@@ -156,14 +153,14 @@ class _ButtonScreenState extends State<ButtonScreen> {
                                 onTap: () {
                                   favProviderModel
                                       .add(customOutlineButtonIndex[index]);
-                                  setState(() {
-                                    customOutlineButtonColor[index] =
-                                        Colors.amber;
-                                  });
+                                  setState(() {});
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: customOutlineButtonColor[index],
+                                  color: (favProviderModel.starred(
+                                          customOutlineButtonIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],
@@ -214,13 +211,14 @@ class _ButtonScreenState extends State<ButtonScreen> {
                                 onTap: () {
                                   favProviderModel
                                       .add(customTextButtonIndex[index]);
-                                  setState(() {
-                                    customTextButtonColor[index] = Colors.amber;
-                                  });
+                                  setState(() {});
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: customTextButtonColor[index],
+                                  color: (favProviderModel.starred(
+                                          customTextButtonIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],
