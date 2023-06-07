@@ -28,7 +28,7 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   },
   {
     'categoryName': 'Bottom Navigation Bars',
-    'categoryScreen': const BottomNavBarScreen(),
+    // 'categoryScreen': const BottomNavBarScreen(),
   },
   {
     'categoryName': 'Avatars',
