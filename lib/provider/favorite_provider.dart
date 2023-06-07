@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/data/hive_database.dart';
 
 import '../data/export.dart';
-import '../ui_components/alerts/all_alerts/dark_mode_alert/alert12.dart';
 import '../ui_components/messages/all_messages/bubble_message/message_2.dart';
 import '../ui_components/messages/all_messages/bubble_message/message_3.dart';
 import '../ui_components/messages/all_messages/bubble_message/message_4.dart';
@@ -506,6 +505,143 @@ class FavoritesProvider extends ChangeNotifier {
         textColor: Colors.black,
         hightlightColor: Color(0xFF00C2CB),
       ),
+    ),
+    70: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 8,
+        ),
+        width: double.infinity,
+        child: const BasicStepper(),
+      ),
+    ),
+    71: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 8,
+        ),
+        width: double.infinity,
+        child: const StepperwihCustomIcon(),
+      ),
+    ),
+    72: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 8,
+        ),
+        width: double.infinity,
+        child: const StepperwithValidation(),
+      ),
+    ),
+    73: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 8,
+        ),
+        width: double.infinity,
+        child: const StepperwithCustomColor(),
+      ),
+    ),
+    74: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 8,
+        ),
+        constraints: const BoxConstraints(
+          minWidth: 400.0,
+          maxWidth: 500.0,
+          minHeight: 50.0,
+          maxHeight: 100.0,
+        ),
+        child: const Bottom_Navbar1(),
+      ),
+    ),
+    75: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 8,
+        ),
+        constraints: const BoxConstraints(
+          minWidth: 400.0,
+          maxWidth: 500.0,
+          minHeight: 50.0,
+          maxHeight: 100.0,
+        ),
+        child: const Bottom_Navbar2(),
+      ),
+    ),
+    76: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 8,
+        ),
+        constraints: const BoxConstraints(
+          minWidth: 400.0,
+          maxWidth: 500.0,
+          minHeight: 50.0,
+          maxHeight: 100.0,
+        ),
+        child: const Bottom_Navbar3(),
+      ),
+    ),
+    77: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 8,
+        ),
+        constraints: const BoxConstraints(
+          minWidth: 400.0,
+          maxWidth: 500.0,
+          minHeight: 50.0,
+          maxHeight: 100.0,
+        ),
+        child: const Bottom_Navbar5(),
+      ),
+    ),
+    78: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 12,
+          vertical: 8,
+        ),
+        constraints: const BoxConstraints(
+          minWidth: 400.0,
+          maxWidth: 500.0,
+          minHeight: 50.0,
+          maxHeight: 100.0,
+        ),
+        child: const Bottom_Navbar6(),
+      ),
+    ),
+    79: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      constraints: const BoxConstraints(
+        minWidth: 400.0,
+        maxWidth: 500.0,
+        minHeight: 50.0,
+        maxHeight: 100.0,
+      ),
+      child: const Bottom_Navbar4(),
     ),
   };
 
