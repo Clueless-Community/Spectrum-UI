@@ -50,7 +50,7 @@ export '../../ui_components/paginations/all_paginations/page3.dart';
 export '../../ui_components/paginations/all_paginations/page4.dart';
 export '../../ui_components/paginations/all_paginations/page5.dart';
 export '../../ui_components/pricing_cards/All Pricing Cards/pricing_card/pricing_cards1.dart';
-export '../../ui_components/segmented_controls/segmented_controls.dart';
+export '../ui_components/segmented_controls/all_segmented_controls/segmented_controls.dart';
 export '../../ui_components/sliders/all_sliders/dual_pointer_slider/slider4.dart';
 export '../../ui_components/sliders/all_sliders/single_pointer_slider/slider1.dart';
 export '../../ui_components/sliders/all_sliders/single_pointer_slider/slider2.dart';

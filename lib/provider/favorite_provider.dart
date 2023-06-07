@@ -527,4 +527,8 @@ class FavoritesProvider extends ChangeNotifier {
     db.saveData(favs);
     notifyListeners();
   }
+
+  bool starred(int index) {
+    return favs.contains(index);
+  }
 }
