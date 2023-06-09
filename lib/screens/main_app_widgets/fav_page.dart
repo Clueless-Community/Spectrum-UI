@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/provider/favorite_provider.dart';
-import 'package:flutter_component_ui/theme/theme.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
