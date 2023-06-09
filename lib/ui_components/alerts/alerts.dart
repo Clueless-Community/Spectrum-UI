@@ -65,10 +65,7 @@ class _AlertScreenState extends State<AlertScreen> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text("Coloured Alerts",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: MyTheme.lightBluishColor)),
+                        style:  Theme.of(context).textTheme.displayLarge,),
                   )),
               Wrap(
                 direction: Axis.horizontal,
@@ -121,10 +118,7 @@ class _AlertScreenState extends State<AlertScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "Simple Alerts",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: MyTheme.lightBluishColor),
+                      style:  Theme.of(context).textTheme.displayLarge,
                     ),
                   )),
               Wrap(
@@ -178,10 +172,7 @@ class _AlertScreenState extends State<AlertScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "Dark Mode Alerts",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: MyTheme.lightBluishColor),
+                      style:  Theme.of(context).textTheme.displayLarge,
                     ),
                   )),
               Wrap(
