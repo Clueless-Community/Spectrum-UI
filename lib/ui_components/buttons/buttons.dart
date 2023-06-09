@@ -122,7 +122,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("Ouline Buttons",
+                  child: Text("Outline Buttons",
                       style:  Theme.of(context).textTheme.displayLarge),
                 ),
               ),
