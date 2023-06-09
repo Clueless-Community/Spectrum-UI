@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/theme.dart';
+
 
 class StepperwithValidation extends StatefulWidget {
   const StepperwithValidation({super.key});
@@ -22,11 +22,7 @@ class _StepperwithValidationState extends State<StepperwithValidation> {
           padding: const EdgeInsets.only(left: 20, top: 20),
           child: Text(
             "Stepper with Validation",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: MyTheme.lightBluishColor,
-            ),
+            style: Theme.of(context).textTheme.displayLarge
           ),
         ),
         Stepper(
