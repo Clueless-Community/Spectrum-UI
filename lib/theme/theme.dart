@@ -13,7 +13,12 @@ class MyTheme {
      snackBarTheme: const SnackBarThemeData(
             backgroundColor: Colors.black,
             contentTextStyle: TextStyle(color: Colors.white)),
-        textTheme: GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme),
+        textTheme:TextTheme(
+            displayLarge: GoogleFonts.poppins(
+          color: MyTheme.lightBluishColor,
+          fontSize: 20,
+          fontWeight: FontWeight.w600,
+        )),
         appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
@@ -32,7 +37,13 @@ class MyTheme {
      snackBarTheme: const SnackBarThemeData(
             backgroundColor: Colors.white,
             contentTextStyle: TextStyle(color: Colors.black)),
-        textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
+       textTheme: TextTheme(
+          displayLarge: GoogleFonts.poppins(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         appBarTheme: const AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
