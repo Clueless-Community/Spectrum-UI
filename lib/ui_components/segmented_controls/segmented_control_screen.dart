@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../provider/favorite_provider.dart';
-import '../../theme/theme.dart';
+
 import 'all_segmented_controls/segmented_controls.dart';
 
 class SegmentedControlScreen extends StatefulWidget {
@@ -61,10 +61,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
             alignment: Alignment.centerLeft,
             child: Text(
               "Segment Control Light Mode",
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: MyTheme.lightBluishColor),
+              style: Theme.of(context).textTheme.displayLarge
             ),
           ),
           const SizedBox(height: 10),
@@ -115,10 +112,7 @@ class _SegmentedControlScreenState extends State<SegmentedControlScreen> {
             alignment: Alignment.centerLeft,
             child: Text(
               "Segment Control Dark Mode",
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: MyTheme.lightBluishColor),
+              style: Theme.of(context).textTheme.displayLarge
             ),
           ),
           const SizedBox(height: 10),
