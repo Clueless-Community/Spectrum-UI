@@ -77,10 +77,7 @@ class _InputFieldScreenState extends State<InputFieldScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("Input Fields",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: MyTheme.lightBluishColor)),
+                    style: Theme.of(context).textTheme.displayLarge),
               ),
             ),
             Wrap(
@@ -133,10 +130,7 @@ class _InputFieldScreenState extends State<InputFieldScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("Text Areas",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: MyTheme.lightBluishColor)),
+                    style:  Theme.of(context).textTheme.displayLarge),
               ),
             ),
             Wrap(
