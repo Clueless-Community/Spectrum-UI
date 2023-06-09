@@ -351,7 +351,9 @@ class _SearchPageState extends State<SearchPage> {
                 child: Text(
                   "Search",
                   style: TextStyle(
-                    color: MyTheme.lightBluishColor,
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white
+                        : const Color.fromRGBO(55, 80, 206, 1),
                     fontSize: 24,
                     fontFamily: GoogleFonts.dmSans(
                       fontWeight: FontWeight.w700,
