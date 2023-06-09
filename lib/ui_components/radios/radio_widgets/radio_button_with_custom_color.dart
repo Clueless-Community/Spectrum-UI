@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/theme.dart';
+
 
 class RadioButtonwithCustomColor extends StatefulWidget {
   const RadioButtonwithCustomColor({super.key});
@@ -23,11 +23,7 @@ class _RadioButtonwithCustomColorState
           padding: const EdgeInsets.only(left: 20, top: 20),
           child: Text(
             "Radio Button with Custom Colors",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: MyTheme.lightBluishColor,
-            ),
+            style:  Theme.of(context).textTheme.displayLarge
           ),
         ),
         const SizedBox(height: 10),
