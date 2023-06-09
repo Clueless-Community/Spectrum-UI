@@ -44,10 +44,7 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Pricing Cards",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: MyTheme.lightBluishColor),
+                  style: Theme.of(context).textTheme.displayLarge,
                 ),
               ),
               const SizedBox(height: 10),
