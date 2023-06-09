@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_component_ui/theme/theme.dart';
+
 import 'package:provider/provider.dart';
 
 import '../../provider/favorite_provider.dart';
@@ -56,10 +56,7 @@ class _SliderScreenState extends State<SliderScreen> {
               alignment: Alignment.centerLeft,
               child: Text(
                 "Single Point Slider",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: MyTheme.lightBluishColor),
+                style:  Theme.of(context).textTheme.displayLarge
               ),
             ),
             Wrap(
@@ -105,10 +102,7 @@ class _SliderScreenState extends State<SliderScreen> {
             Align(
                 alignment: Alignment.centerLeft,
                 child: Text("Dual Point Slider",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: MyTheme.lightBluishColor))),
+                    style:  Theme.of(context).textTheme.displayLarge)),
             Wrap(
               direction: Axis.horizontal,
               children: List.generate(
