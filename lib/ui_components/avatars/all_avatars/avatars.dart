@@ -71,10 +71,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
               Align(
                   alignment: Alignment.centerLeft,
                   child: Text("Text Avatars",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: MyTheme.lightBluishColor))),
+                      style:  Theme.of(context).textTheme.displayLarge)),
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
@@ -121,10 +118,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
               Align(
                   alignment: Alignment.centerLeft,
                   child: Text("Image Avatars",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: MyTheme.lightBluishColor))),
+                      style:  Theme.of(context).textTheme.displayLarge)),
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
@@ -172,10 +166,7 @@ class _AvatarScreenState extends State<AvatarScreen> {
               Align(
                   alignment: Alignment.centerLeft,
                   child: Text("Icon Avatars",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: MyTheme.lightBluishColor))),
+                      style:  Theme.of(context).textTheme.displayLarge)),
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
