@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/theme.dart';
+
 
 class StepperwihCustomIcon extends StatefulWidget {
   const StepperwihCustomIcon({super.key});
@@ -21,11 +21,7 @@ class _StepperwihCustomIconState extends State<StepperwihCustomIcon> {
           padding: const EdgeInsets.only(left: 20, top: 20),
           child: Text(
             "Stepper with Right Icons",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: MyTheme.lightBluishColor,
-            ),
+            style:  Theme.of(context).textTheme.displayLarge
           ),
         ),
         Stepper(
