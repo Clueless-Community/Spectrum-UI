@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/theme.dart';
+
 
 class BasicRadioButton extends StatefulWidget {
   const BasicRadioButton({super.key});
@@ -21,11 +21,7 @@ class _BasicRadioButtonState extends State<BasicRadioButton> {
           padding: const EdgeInsets.only(left: 20, top: 20),
           child: Text(
             "Basic Radio Button",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: MyTheme.lightBluishColor,
-            ),
+            style:  Theme.of(context).textTheme.displayLarge
           ),
         ),
         const SizedBox(height: 10),
