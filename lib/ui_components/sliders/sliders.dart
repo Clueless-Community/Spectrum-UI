@@ -23,7 +23,6 @@ class _SliderScreenState extends State<SliderScreen> {
       maxRange: 100,
     ),
   ];
-  List<Color?> dualPointSliderColor = [null];
   List<int> dualPointSliderIndex = [46];
 
   final List<Widget> singlePointSlider = [
@@ -43,7 +42,6 @@ class _SliderScreenState extends State<SliderScreen> {
       maxRange: 100,
     ),
   ];
-  List<Color?> singlePointSliderColor = [null, null, null, null, null];
   List<int> singlePointSliderIndex = [47, 48, 49, 50, 51];
 
   @override
@@ -86,13 +84,14 @@ class _SliderScreenState extends State<SliderScreen> {
                               onTap: () {
                                 favProviderModel
                                     .add(singlePointSliderIndex[index]);
-                                setState(() {
-                                  singlePointSliderColor[index] = Colors.amber;
-                                });
+                                setState(() {});
                               },
                               child: Icon(
                                 Icons.star_border_outlined,
-                                color: singlePointSliderColor[index],
+                                color: (favProviderModel
+                                        .starred(singlePointSliderIndex[index]))
+                                    ? Colors.amber
+                                    : null,
                               ),
                             ),
                           ],
@@ -135,13 +134,14 @@ class _SliderScreenState extends State<SliderScreen> {
                               onTap: () {
                                 favProviderModel
                                     .add(dualPointSliderIndex[index]);
-                                setState(() {
-                                  dualPointSliderColor[index] = Colors.amber;
-                                });
+                                setState(() {});
                               },
                               child: Icon(
                                 Icons.star_border_outlined,
-                                color: dualPointSliderColor[index],
+                                color: (favProviderModel
+                                        .starred(dualPointSliderIndex[index]))
+                                    ? Colors.amber
+                                    : null,
                               ),
                             ),
                           ],

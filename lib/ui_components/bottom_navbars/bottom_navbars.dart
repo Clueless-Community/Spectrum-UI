@@ -21,19 +21,19 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
     const Bottom_Navbar1(),
     const Bottom_Navbar2(),
   ];
-  List<Color?> basicbottomNavbarColor = [null, null];
+  List<int> basicbottomNavbarIndex = [74, 75];
 
   final fabbottomNavbar = [
     const Bottom_Navbar3(),
     const Bottom_Navbar5(),
     const Bottom_Navbar6(),
   ];
-  List<Color?> fabbottomNavbarColor = [null, null, null];
+  List<int> fabbottomNavbarIndex = [76, 77, 78];
 
   final animatedbottomNavbar = [
     const Bottom_Navbar4(),
   ];
-  List<Color?> animatedbottomNavbarColor = [null];
+  List<int> animatedbottomNavbarIndex = [79];
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                  basicbottomNavbar.length,
+                  basicbottomNavbarIndex.length,
                   (index) => Consumer<FavoritesProvider>(
                     builder: (context, favProviderModel, child) => Column(
                       children: [
@@ -111,10 +111,14 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
                                     basicbottomNavbarColor[index] =
                                         Colors.amber;
                                   });
+
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: basicbottomNavbarColor[index],
+                                  color: (favProviderModel.starred(
+                                          basicbottomNavbarIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],
@@ -139,7 +143,7 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                  animatedbottomNavbar.length,
+                  animatedbottomNavbarIndex.length,
                   (index) => Consumer<FavoritesProvider>(
                     builder: (context, favProviderModel, child) => Column(
                       children: [
@@ -196,7 +200,10 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: animatedbottomNavbarColor[index],
+                                  color: (favProviderModel.starred(
+                                          animatedbottomNavbarIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],
@@ -221,7 +228,7 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
               Wrap(
                 direction: Axis.horizontal,
                 children: List.generate(
-                  fabbottomNavbar.length,
+                  fabbottomNavbarIndex.length,
                   (index) => Consumer<FavoritesProvider>(
                     builder: (context, favProviderModel, child) => Column(
                       children: [
@@ -277,7 +284,10 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: fabbottomNavbarColor[index],
+                                  color: (favProviderModel
+                                          .starred(fabbottomNavbarIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],

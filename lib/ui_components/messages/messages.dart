@@ -48,7 +48,6 @@ class _MessageScreenState extends State<MessageScreen> {
     ),
   ];
 
-  List<Color?> inboxMessagesColor = [null, null, null, null];
   List<int> inboxMessagesIndex = [52, 53, 54, 55];
 
   final List<Widget> bubbleChat = [
@@ -66,7 +65,6 @@ class _MessageScreenState extends State<MessageScreen> {
     ),
   ];
 
-  List<Color?> bubbleChatColor = [null, null, null, null];
   List<int> bubbleChatIndex = [56, 57, 58, 59];
 
   @override
@@ -113,13 +111,14 @@ class _MessageScreenState extends State<MessageScreen> {
                             GestureDetector(
                               onTap: () {
                                 favProviderModel.add(bubbleChatIndex[index]);
-                                setState(() {
-                                  bubbleChatColor[index] = Colors.amber;
-                                });
+                                setState(() {});
                               },
                               child: Icon(
                                 Icons.star_border_outlined,
-                                color: bubbleChatColor[index],
+                                color: (favProviderModel
+                                        .starred(bubbleChatIndex[index]))
+                                    ? Colors.amber
+                                    : null,
                               ),
                             ),
                           ],
@@ -167,13 +166,14 @@ class _MessageScreenState extends State<MessageScreen> {
                             GestureDetector(
                               onTap: () {
                                 favProviderModel.add(inboxMessagesIndex[index]);
-                                setState(() {
-                                  inboxMessagesColor[index] = Colors.amber;
-                                });
+                                setState(() {});
                               },
                               child: Icon(
                                 Icons.star_border_outlined,
-                                color: inboxMessagesColor[index],
+                                color: (favProviderModel
+                                        .starred(inboxMessagesIndex[index]))
+                                    ? Colors.amber
+                                    : null,
                               ),
                             ),
                           ],

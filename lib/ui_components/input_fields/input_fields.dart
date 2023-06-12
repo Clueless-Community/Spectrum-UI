@@ -39,7 +39,6 @@ class _InputFieldScreenState extends State<InputFieldScreen> {
       hinttext: "Write Description",
     )
   ];
-  List<Color?> textareasColor = [null, null, null, null];
   List<int> textareasIndex = [37, 38, 39, 40];
 
   final List<Widget> inputfields = [
@@ -64,7 +63,6 @@ class _InputFieldScreenState extends State<InputFieldScreen> {
       hinttext: "Input Title",
     ),
   ];
-  List<Color?> inputfieldsColor = [null, null, null, null, null];
   List<int> inputfieldsIndex = [41, 42, 43, 44, 45];
 
   @override
@@ -112,13 +110,14 @@ class _InputFieldScreenState extends State<InputFieldScreen> {
                             GestureDetector(
                               onTap: () {
                                 favProviderModel.add(inputfieldsIndex[index]);
-                                setState(() {
-                                  inputfieldsColor[index] = Colors.amber;
-                                });
+                                setState(() {});
                               },
                               child: Icon(
                                 Icons.star_border_outlined,
-                                color: inputfieldsColor[index],
+                                color: (favProviderModel
+                                        .starred(inputfieldsIndex[index]))
+                                    ? Colors.amber
+                                    : null,
                               ),
                             ),
                           ],
@@ -167,13 +166,14 @@ class _InputFieldScreenState extends State<InputFieldScreen> {
                             GestureDetector(
                               onTap: () {
                                 favProviderModel.add(textareasIndex[index]);
-                                setState(() {
-                                  textareasColor[index] = Colors.amber;
-                                });
+                                setState(() {});
                               },
                               child: Icon(
                                 Icons.star_border_outlined,
-                                color: textareasColor[index],
+                                color: (favProviderModel
+                                        .starred(textareasIndex[index]))
+                                    ? Colors.amber
+                                    : null,
                               ),
                             ),
                           ],

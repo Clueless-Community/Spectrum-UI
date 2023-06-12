@@ -30,7 +30,6 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
       buttonTextColor: Color(0xff0f172a),
     ),
   ];
-  List<Color?> pricingCardsColor = [null];
   List<int> pricingCardsIndex = [60];
 
   @override
@@ -77,13 +76,14 @@ class _PricingCardScreenState extends State<PricingCardScreen> {
                                 onTap: () {
                                   favProviderModel
                                       .add(pricingCardsIndex[index]);
-                                  setState(() {
-                                    pricingCardsColor[index] = Colors.amber;
-                                  });
+                                  setState(() {});
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: pricingCardsColor[index],
+                                  color: (favProviderModel
+                                          .starred(pricingCardsIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],
