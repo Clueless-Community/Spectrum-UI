@@ -10,8 +10,9 @@ import 'package:flutter_component_ui/ui_components/buttons/all_buttons/elevated_
 import 'package:flutter_component_ui/ui_components/buttons/all_buttons/elevated_button/button5.dart';
 import 'package:flutter_component_ui/ui_components/buttons/all_buttons/text_button/button6.dart';
 import 'package:provider/provider.dart';
-
 import '../../theme/theme.dart';
+import 'all_buttons/animated_button/button11.dart';
+import 'all_buttons/animated_button/button12.dart';
 import 'all_buttons/elevated_button/button7.dart';
 import 'all_buttons/outline_button/button10.dart';
 import 'all_buttons/outline_button/button2.dart';
@@ -31,7 +32,6 @@ class _ButtonScreenState extends State<ButtonScreen> {
     const Button10("button"),
   ];
 
-  List<Color?> customOutlineButtonColor = [null, null, null];
   List<int> customOutlineButtonIndex = [1, 2, 3];
 
   final List<Widget> customElevatedButton = [
@@ -41,14 +41,19 @@ class _ButtonScreenState extends State<ButtonScreen> {
     const Button7("button"),
     const Button9("button")
   ];
-  List<Color?> customElevatedButtonColor = [null, null, null, null, null];
   List<int> customElevatedButtonIndex = [4, 5, 6, 7, 8];
 
   final List<Widget> customTextButton = [
     const Button6("button"),
   ];
-  List<Color?> customTextButtonColor = [null];
   List<int> customTextButtonIndex = [9];
+
+  final List<Widget> customAnimatedButton = [
+    const Button11("button"),
+    const Button12("button"),
+  ];
+
+  List<Color?> customAnimatedButtonColor = [null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -98,14 +103,14 @@ class _ButtonScreenState extends State<ButtonScreen> {
                                 onTap: () {
                                   favProviderModel
                                       .add(customElevatedButtonIndex[index]);
-                                  setState(() {
-                                    customElevatedButtonColor[index] =
-                                        Colors.amber;
-                                  });
+                                  setState(() {});
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: customElevatedButtonColor[index],
+                                  color: (favProviderModel.starred(
+                                          customElevatedButtonIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],
@@ -156,14 +161,14 @@ class _ButtonScreenState extends State<ButtonScreen> {
                                 onTap: () {
                                   favProviderModel
                                       .add(customOutlineButtonIndex[index]);
-                                  setState(() {
-                                    customOutlineButtonColor[index] =
-                                        Colors.amber;
-                                  });
+                                  setState(() {});
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: customOutlineButtonColor[index],
+                                  color: (favProviderModel.starred(
+                                          customOutlineButtonIndex[index]))
+                                      ? Colors.amber
+                                      : null,
                                 ),
                               ),
                             ],
@@ -214,13 +219,71 @@ class _ButtonScreenState extends State<ButtonScreen> {
                                 onTap: () {
                                   favProviderModel
                                       .add(customTextButtonIndex[index]);
+                                  setState(() {});
+                                },
+                                child: Icon(
+                                  Icons.star_border_outlined,
+                                  color: (favProviderModel.starred(
+                                          customTextButtonIndex[index]))
+                                      ? Colors.amber
+                                      : null,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("Animated Buttons",
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: MyTheme.lightBluishColor)),
+                ),
+              ),
+              Wrap(
+                direction: Axis.horizontal,
+                children: List.generate(
+                  customAnimatedButton.length,
+                  (index) => Consumer<FavoritesProvider>(
+                    builder: (context, favProviderModel, child) => Column(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 8,
+                          ),
+                          width: double.infinity,
+                          child: customAnimatedButton[index],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 3, 20, 3),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Add to favorite'),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  favProviderModel
+                                      .add(customTextButtonIndex[index]);
                                   setState(() {
                                     customTextButtonColor[index] = Colors.amber;
                                   });
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
-                                  color: customTextButtonColor[index],
+                                  color: customAnimatedButtonColor[index],
                                 ),
                               ),
                             ],
