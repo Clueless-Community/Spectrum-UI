@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/provider/favorite_provider.dart';
-import 'package:flutter_component_ui/theme/theme.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -65,7 +65,10 @@ class _FavPageState extends State<FavPage> {
                 child: Text(
                   "Favourite",
                   style: TextStyle(
-                    color: MyTheme.lightBluishColor,
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white
+                        : const Color.fromRGBO(55, 80, 206, 1),
+                   
                     fontSize: 24,
                     fontFamily: GoogleFonts.dmSans(
                       fontWeight: FontWeight.w700,

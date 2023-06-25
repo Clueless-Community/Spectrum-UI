@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/theme.dart';
+
 
 class RadioButtonwithHorizontalLayout extends StatefulWidget {
   const RadioButtonwithHorizontalLayout({super.key});
@@ -22,11 +22,7 @@ class _RadioButtonwithHorizontalLayoutState
           padding: const EdgeInsets.only(left: 20, top: 20),
           child: Text(
             "Radio Button with Horizontal Layout",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: MyTheme.lightBluishColor,
-            ),
+            style:  Theme.of(context).textTheme.displayLarge
           ),
         ),
         const SizedBox(height: 10),

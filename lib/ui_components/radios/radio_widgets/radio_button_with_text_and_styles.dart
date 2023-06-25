@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/theme.dart';
 
 class RadioButtonwithTextandStyles extends StatefulWidget {
   const RadioButtonwithTextandStyles({super.key});
@@ -23,11 +22,7 @@ class _RadioButtonwithTextandStylesState
           padding: const EdgeInsets.only(left: 20, top: 20),
           child: Text(
             "Radio Button with Tile Color and Gesture",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: MyTheme.lightBluishColor,
-            ),
+            style:  Theme.of(context).textTheme.displayLarge
           ),
         ),
         const SizedBox(height: 10),

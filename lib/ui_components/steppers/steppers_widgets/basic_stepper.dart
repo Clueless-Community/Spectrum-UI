@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/theme.dart';
+
 
 class BasicStepper extends StatefulWidget {
   const BasicStepper({super.key});
@@ -21,11 +21,7 @@ class _BasicStepperState extends State<BasicStepper> {
           padding: const EdgeInsets.only(left: 20, top: 20),
           child: Text(
             "Basic Stepper",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: MyTheme.lightBluishColor,
-            ),
+            style:  Theme.of(context).textTheme.displayLarge
           ),
         ),
         Stepper(

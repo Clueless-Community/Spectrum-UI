@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../theme/theme.dart';
+
 
 class StepperwithCustomColor extends StatefulWidget {
   const StepperwithCustomColor({super.key});
@@ -20,11 +20,7 @@ class _StepperwithCustomColorState extends State<StepperwithCustomColor> {
           padding: const EdgeInsets.only(left: 20, top: 20),
           child: Text(
             "Stepper with Custom Color",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: MyTheme.lightBluishColor,
-            ),
+            style:  Theme.of(context).textTheme.displayLarge
           ),
         ),
         Stepper(

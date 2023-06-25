@@ -80,10 +80,7 @@ class _MessageScreenState extends State<MessageScreen> {
                 padding: const EdgeInsets.only(left: 12.0, top: 20),
                 child: Text(
                   "Bubble Chat",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: MyTheme.lightBluishColor),
+                  style: Theme.of(context).textTheme.displayLarge
                 ),
               ),
             ),
@@ -135,10 +132,7 @@ class _MessageScreenState extends State<MessageScreen> {
                 padding: const EdgeInsets.only(left: 12.0, top: 20),
                 child: Text(
                   "Inbox Messages",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: MyTheme.lightBluishColor),
+                  style:  Theme.of(context).textTheme.displayLarge
                 ),
               ),
             ),

@@ -68,10 +68,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text("Elevated Buttons",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: MyTheme.lightBluishColor)),
+                      style:  Theme.of(context).textTheme.displayLarge),
                 ),
               ),
               Wrap(
@@ -125,11 +122,8 @@ class _ButtonScreenState extends State<ButtonScreen> {
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text("Ouline Buttons",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: MyTheme.lightBluishColor)),
+                  child: Text("Outline Buttons",
+                      style:  Theme.of(context).textTheme.displayLarge),
                 ),
               ),
               Wrap(
@@ -184,10 +178,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text("Text Buttons",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: MyTheme.lightBluishColor)),
+                      style: Theme.of(context).textTheme.displayLarge),
                 ),
               ),
               Wrap(
@@ -242,10 +233,7 @@ class _ButtonScreenState extends State<ButtonScreen> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text("Animated Buttons",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: MyTheme.lightBluishColor)),
+                      style:  Theme.of(context).textTheme.displayLarge),
                 ),
               ),
               Wrap(

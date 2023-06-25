@@ -56,10 +56,7 @@ class _CardScreenState extends State<CardScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("Blog Cards",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: MyTheme.lightBluishColor)),
+                    style: Theme.of(context).textTheme.displayLarge),
               ),
             ),
             Wrap(
@@ -113,10 +110,7 @@ class _CardScreenState extends State<CardScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("Social Cards",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: MyTheme.lightBluishColor)),
+                    style:  Theme.of(context).textTheme.displayLarge),
               ),
             ),
             Wrap(
@@ -171,10 +165,7 @@ class _CardScreenState extends State<CardScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("Blog Cards Dark Mode",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: MyTheme.lightBluishColor)),
+                    style:  Theme.of(context).textTheme.displayLarge),
               ),
             ),
             Wrap(
@@ -229,10 +220,7 @@ class _CardScreenState extends State<CardScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("Social Cards Dark Mode",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: MyTheme.lightBluishColor)),
+                    style: Theme.of(context).textTheme.displayLarge),
               ),
             ),
             Wrap(
