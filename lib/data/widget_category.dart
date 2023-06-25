@@ -13,6 +13,7 @@ import 'package:flutter_component_ui/ui_components/steppers/steppers.dart';
 import '../ui_components/labels/lables.dart';
 import '../ui_components/radios/radios.dart';
 import '../ui_components/sliders/sliders.dart';
+import '../ui_components/toggles/toggles.dart';
 
 final List<Map<String, dynamic>> widgetCategoryData = [
   {
@@ -30,6 +31,10 @@ final List<Map<String, dynamic>> widgetCategoryData = [
   {
     'categoryName': 'Bottom Navigation Bars',
     'categoryScreen': const BottomNavBarScreen(),
+  },
+  {
+    'categoryName': 'Toggle Buttons',
+    'categoryScreen': const ToggelButtonScreen(),
   },
   {
     'categoryName': 'Avatars',

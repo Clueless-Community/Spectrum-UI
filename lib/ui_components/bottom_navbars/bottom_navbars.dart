@@ -88,9 +88,30 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel
-                                      .add(basicbottomNavbarIndex[index]);
-                                  setState(() {});
+                                  favProviderModel.add(
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 8,
+                                      ),
+                                      constraints: const BoxConstraints(
+                                        minWidth:
+                                            400.0, // Set the minimum width constraint
+                                        maxWidth:
+                                            500.0, // Set the maximum width constraint
+                                        minHeight:
+                                            50.0, // Set the minimum height constraint
+                                        maxHeight:
+                                            100.0, // Set the maximum height constraint
+                                      ),
+                                      child: basicbottomNavbar[index],
+                                    ) as int,
+                                  );
+                                  setState(() {
+                                    basicbottomNavbarColor[index] =
+                                        Colors.amber;
+                                  });
+
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
@@ -153,9 +174,29 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel
-                                      .add(animatedbottomNavbarIndex[index]);
-                                  setState(() {});
+                                  favProviderModel.add(
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 8,
+                                      ),
+                                      constraints: const BoxConstraints(
+                                        minWidth:
+                                            400.0, // Set the minimum width constraint
+                                        maxWidth:
+                                            500.0, // Set the maximum width constraint
+                                        minHeight:
+                                            50.0, // Set the minimum height constraint
+                                        maxHeight:
+                                            100.0, // Set the maximum height constraint
+                                      ),
+                                      child: animatedbottomNavbar[index],
+                                    ) as int,
+                                  );
+                                  setState(() {
+                                    animatedbottomNavbarColor[index] =
+                                        Colors.amber;
+                                  });
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
@@ -218,9 +259,28 @@ class BottomNavBarScreenState extends State<BottomNavBarScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  favProviderModel
-                                      .add(fabbottomNavbarIndex[index]);
-                                  setState(() {});
+                                  favProviderModel.add(
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 12,
+                                        vertical: 8,
+                                      ),
+                                      constraints: const BoxConstraints(
+                                        minWidth:
+                                            400.0, // Set the minimum width constraint
+                                        maxWidth:
+                                            500.0, // Set the maximum width constraint
+                                        minHeight:
+                                            50.0, // Set the minimum height constraint
+                                        maxHeight:
+                                            100.0, // Set the maximum height constraint
+                                      ),
+                                      child: fabbottomNavbar[index],
+                                    ) as int,
+                                  );
+                                  setState(() {
+                                    fabbottomNavbarColor[index] = Colors.amber;
+                                  });
                                 },
                                 child: Icon(
                                   Icons.star_border_outlined,
