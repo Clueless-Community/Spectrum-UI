@@ -21,7 +21,7 @@ class Button12State extends State<Button12> {
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeIn,
       alignment: Alignment.center,
-      width: state == ButtonState.init ? width : 100,
+      width: state == ButtonState.init ? width : 200,
       height: 70,
       onEnd: () => setState(() => _isAnimating = !_isAnimating),
       child: isStretched ? buildButton() : smallButton(isDone),
@@ -38,7 +38,7 @@ class Button12State extends State<Button12> {
         },
         style: ElevatedButton.styleFrom(
             backgroundColor: const Color.fromARGB(255, 0, 194, 203),
-            fixedSize: const Size(100, 60),
+            fixedSize: const Size(200, 60),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(50))),
         child: Text(widget.title,

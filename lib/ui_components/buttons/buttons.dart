@@ -48,6 +48,8 @@ class _ButtonScreenState extends State<ButtonScreen> {
   ];
   List<int> customTextButtonIndex = [9];
 
+  List<Color?> customTextButtonColor = [null];
+
   final List<Widget> customAnimatedButton = [
     const Button11("button"),
     const Button12("button"),
