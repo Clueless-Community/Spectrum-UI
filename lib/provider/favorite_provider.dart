@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_component_ui/data/hive_database.dart';
+import 'package:flutter/display.dart';
 
 import '../data/export.dart';
 import '../ui_components/messages/all_messages/bubble_message/message_2.dart';
@@ -8,7 +9,10 @@ import '../ui_components/messages/all_messages/bubble_message/message_4.dart';
 
 Color? color;
 
-class FavoritesProvider extends ChangeNotifier {
+class Color {
+}
+
+class FavoritesProvider {
   List<int> favs = [];
 
   Map<int, Widget> widgetMap = {
@@ -641,9 +645,11 @@ class FavoritesProvider extends ChangeNotifier {
         minHeight: 50.0,
         maxHeight: 100.0,
       ),
-      child: const Bottom_Navbar4(),
+      child: const Bottom_Navbar4(), width: null,
     ),
   };
+
+  Bottom_Navbar4 get newMethod1 => const Bottom_Navbar4();
 
   final db = HiveDatabase();
   void prepareData() {
@@ -667,4 +673,18 @@ class FavoritesProvider extends ChangeNotifier {
   bool starred(int index) {
     return favs.contains(index);
   }
+
+  static HiveDatabase() {}
+  
+  static Container({required padding, required double width, required Button2 child}) {}
+}
+
+class BoxConstraints {
+  const BoxConstraints();
+}
+
+void notifyListeners() {}
+
+class Button2 {
+  const Button2();
 }
